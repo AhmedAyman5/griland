@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriland Egypt | Cultivating Agriculture</title>
+    <meta name="description"
+        content="Agriland Egypt has been supporting farmers for nearly 35 years in the exploitation, management and development of agricultural land.">
+
+    <!-- Google Fonts: Cairo supports both English and Arabic beautifully -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A8C5C',
+                        dark: '#1B3A2D',
+                        light: '#F7F7F2',
+                        body: '#333333',
+                        muted: '#777777',
+                        border: '#E0E0E0'
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-body font-sans antialiased overflow-x-hidden">
+
+    <!-- 1. Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white z-50 transition-all duration-300 py-4 px-6 md:px-10">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between shadow-sm">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div
+                    class="text-primary text-3xl font-bold tracking-tighter group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-leaf"></i> GRILAND
+                </div>
+                <div class="text-dark font-semibold leading-none text-sm hidden sm:block">EGYPT</div>
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="hidden md:flex items-center gap-8 font-semibold text-[15px]">
+                <li><a href="#" class="hover:text-primary transition-colors text-primary" data-i18n="nav_home">Home</a>
+                </li>
+                <li><a href="#about" class="hover:text-primary transition-colors" data-i18n="nav_about">About</a></li>
+                <li class="relative group">
+                    <a href="#services"
+                        class="hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
+                        <span data-i18n="nav_services">Services</span>
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </a>
+                    <!-- Dropdown -->
+                    <ul
+                        class="absolute top-full start-0 mt-2 bg-white shadow-lg rounded-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-2 border border-border">
+                        <li><a href="#services"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_service_plus">Service Plus</a></li>
+                        <li><a href="#pesticides"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_pesticides">Pesticides</a></li>
+                        <li><a href="#import"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_seeds">Seeds</a></li>
+                        <li><a href="#breeding"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_dairy">Dairy Farm</a></li>
+                        <li><a href="#palms" class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_palms">Palms</a></li>
+                    </ul>
+                </li>
+                <li><a href="#projects" class="hover:text-primary transition-colors"
+                        data-i18n="nav_portfolio">Portfolio</a></li>
+                <li><a href="#footer" class="hover:text-primary transition-colors" data-i18n="nav_contact">Contacts</a>
+                </li>
+
+                <!-- Language Switcher -->
+                <li>
+                    <button id="lang-toggle"
+                        class="bg-light text-dark px-3 py-1 rounded-full text-sm font-bold border border-border hover:bg-primary hover:text-white transition-colors">
+                        عربي
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-dark hover:text-primary transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer"
+        class="fixed inset-y-0 start-0 w-64 bg-white z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-border">
+            <span class="text-xl font-bold text-primary"><i class="fa-solid fa-leaf"></i> GRILAND</span>
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle-mobile"
+                    class="bg-light text-dark px-3 py-1 rounded-full text-xs font-bold border border-border hover:bg-primary hover:text-white transition-colors">
+                    عربي
+                </button>
+                <button id="close-drawer" class="text-2xl text-dark hover:text-primary"><i
+                        class="fa-solid fa-times"></i></button>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 text-lg font-semibold overflow-y-auto">
+            <a href="#" class="mobile-link text-primary" data-i18n="nav_home">Home</a>
+            <a href="#about" class="mobile-link hover:text-primary" data-i18n="nav_about">About</a>
+            <div class="border-y border-border py-4 my-2 flex flex-col gap-3">
+                <span class="text-muted text-sm uppercase" data-i18n="nav_services">Services</span>
+                <a href="#services" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_service_plus">-
+                    Service Plus</a>
+                <a href="#pesticides" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_pesticides">-
+                    Pesticides</a>
+                <a href="#import" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_seeds">-
+                    Seeds</a>
+                <a href="#breeding" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_dairy">- Dairy
+                    Farm</a>
+                <a href="#palms" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_palms">- Palms</a>
+            </div>
+            <a href="#projects" class="mobile-link hover:text-primary" data-i18n="nav_portfolio">Portfolio</a>
+            <a href="#footer" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contacts</a>
+        </div>
+    </div>
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300">
+    </div>
+
+    <!-- 2. Hero Section -->
+    <section id="hero"
+        class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-16 px-6 sm:px-10 bg-dark overflow-hidden">
+        <!-- Hero Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80" alt="Farmland"
+                class="w-full h-full object-cover opacity-60 mix-blend-overlay">
+            <div class="absolute inset-0 bg-dark/60"></div>
+        </div>
+
+        <div
+            class="relative z-10 max-w-[1200px] w-full mx-auto flex flex-col items-center md:items-start text-center md:text-start mt-10">
+            <h1 class="text-4xl md:text-6xl text-white font-bold max-w-3xl leading-tight mb-6 animate-fade-in"
+                data-i18n="hero_title">
+                Cultivating Agriculture that Works for the Future
+            </h1>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl font-light animate-slide-up" data-i18n="hero_subtitle">
+                Enhance your heritage and offer you the best yield while respecting your project, the land and the
+                environment.
+            </p>
+            <a href="#footer" class="btn-primary animate-slide-up" data-i18n="hero_cta">Contact Us now</a>
+        </div>
+
+        <!-- Badge Strip -->
+        <div class="absolute bottom-0 w-full bg-dark/90 backdrop-blur border-t border-white/10 z-20">
+            <div
+                class="max-w-[1200px] mx-auto hidden md:flex justify-between items-center px-4 overflow-hidden h-[60px]">
+                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
+                        Products</span></div>
+                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
+                        Foods</span></div>
+                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_env">Environmental
+                        Benefits</span></div>
+                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_chemicals">No Synthetic
+                        Chemicals</span></div>
+                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_prices">Best Prices</span>
+                </div>
+            </div>
+            <!-- Mobile badge scroller -->
+            <div class="flex md:hidden overflow-x-auto px-4 py-3 gap-6 hide-scrollbar h-[60px]">
+                <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
+                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
+                        Products</span></div>
+                <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
+                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
+                        Foods</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About / Mission Section -->
+    <section id="about" class="py-20 px-6 sm:px-10 bg-white">
+        <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+            <!-- Text Content -->
+            <div class="md:w-[55%] section-element">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block"
+                    data-i18n="about_eyebrow">OUR GRILAND EGYPT</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6" data-i18n="about_header">Together, let's give
+                    value to your farmland.</h2>
+                <p class="text-body leading-relaxed mb-6" data-i18n="about_body">
+                    Farmers, farmers and owners of agricultural land, griland has been supporting you for nearly 35
+                    years in the exploitation, management and development of your agricultural land. Our goal: to
+                    enhance your heritage and offer you the best yield while respecting your project, the land and the
+                    environment.
+                </p>
+                <a href="#about" class="text-primary font-bold hover:underline decoration-2 underline-offset-4"
+                    data-i18n="btn_more_about">More about Agriland &rarr;</a>
+            </div>
+            <!-- Cards Column -->
+            <div class="md:w-[45%] flex flex-col gap-6 w-full">
+                <!-- Card 1 -->
+                <a href="#"
+                    class="group relative rounded-xl overflow-hidden h-[220px] shadow-md border border-border block section-element delay-100">
+                    <img src="./images/fresh-fruit.avif" alt="Fresh Fruits"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    <div class="absolute bottom-0 start-0 p-6 w-full">
+                        <span
+                            class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase mb-2 inline-block"
+                            data-i18n="about_card1_tag">Fresh Products</span>
+                        <h3 class="text-white text-xl font-bold" data-i18n="about_card1_title">We Grow And Sell The Best
+                            Fruits!</h3>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="#"
+                    class="group relative rounded-xl overflow-hidden h-[220px] shadow-md border border-border block section-element delay-200">
+                    <img src="./images/frozen.avif" alt="Frozen Products"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    <div class="absolute bottom-0 start-0 p-6 w-full">
+                        <span
+                            class="bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase mb-2 inline-block"
+                            data-i18n="about_card2_tag">Frozen products</span>
+                        <h3 class="text-white text-xl font-bold" data-i18n="about_card2_title">Explore Our Frozen
+                            Products</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. What We Do Values Section -->
+    <section class="py-20 px-6 sm:px-10 bg-light">
+        <div class="max-w-[1200px] mx-auto text-center">
+            <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block section-element"
+                data-i18n="values_eyebrow">WHAT WE DO</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 section-element delay-100"
+                data-i18n="values_header">Alongside the owners and operators of agricultural land.</h2>
+            <p class="text-body max-w-3xl mx-auto mb-16 section-element delay-200" data-i18n="values_body">
+                A competent and passionate team working every day at your side to achieve your heritage and economic
+                objectives, in compliance with a sustainable and responsible approach.
+            </p>
+
+            <!-- Value Pillars Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <!-- Pillar 1 -->
+                <div class="flex flex-col items-center group section-element">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center mb-4 text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <span class="font-semibold text-dark text-sm" data-i18n="value1">Coordination of local
+                        acteurs</span>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="flex flex-col items-center group section-element delay-100">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center mb-4 text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <span class="font-semibold text-dark text-sm" data-i18n="value2">Transparency and
+                        traceability</span>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="flex flex-col items-center group section-element delay-200">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center mb-4 text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-earth-africa"></i>
+                    </div>
+                    <span class="font-semibold text-dark text-sm" data-i18n="value3">Respect for land and
+                        biodiversity</span>
+                </div>
+                <!-- Pillar 4 -->
+                <div class="flex flex-col items-center group section-element delay-300">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center mb-4 text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <span class="font-semibold text-dark text-sm" data-i18n="value4">Objectivity and neutrality</span>
+                </div>
+                <!-- Pillar 5 -->
+                <div class="flex flex-col items-center group section-element delay-400">
+                    <div
+                        class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center mb-4 text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <span class="font-semibold text-dark text-sm" data-i18n="value5">Trust, integrity and
+                        solidarity</span>
+                </div>
+            </div>
+
+            <div class="mt-12 section-element delay-500">
+                <a href="#about" class="text-primary font-bold hover:underline decoration-2 underline-offset-4"
+                    data-i18n="btn_read_values">Read more about our values &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. "Find Out How We Could Help You" -->
+    <section id="services" class="py-20 px-6 sm:px-10 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark text-center mb-12 section-element"
+                data-i18n="help_header">Find out how we could help you</h2>
+
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Left Card -->
+                <div
+                    class="flex-1 bg-light border-t-4 border-primary p-8 rounded-b-xl shadow-sm hover:shadow-md transition-shadow section-element">
+                    <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="help_card1_title">Owner of agricultural
+                        land</h3>
+                    <h4 class="text-lg font-semibold text-primary mb-2 hidden md:block" data-i18n="help_card1_title">
+                        Owner of agricultural land</h4>
+                    <p class="text-body leading-relaxed" data-i18n="help_card1_body">Do you want to maximize the yield
+                        of your farmland? griland offers tailor-made solutions that balance transparency, security and
+                        profitability.</p>
+                </div>
+                <!-- Right Card -->
+                <div
+                    class="flex-1 bg-light border-t-4 border-primary p-8 rounded-b-xl shadow-sm hover:shadow-md transition-shadow section-element delay-100">
+                    <h3 class="text-2xl font-bold text-dark mb-4" data-i18n="help_card2_title">Farmer or farmland
+                        operator</h3>
+                    <h4 class="text-lg font-semibold text-primary mb-2 hidden md:block" data-i18n="help_card2_title">
+                        Farmer or farmland operator</h4>
+                    <p class="text-body leading-relaxed" data-i18n="help_card2_body">Do you want to rethink the
+                        management of your agricultural land? griland supports you in your projects and offers you real
+                        solutions to sustain your operation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Import & Export Section -->
+    <section id="import" class="py-20 px-6 sm:px-10 bg-dark text-white">
+        <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+            <!-- Left Image -->
+            <div class="md:w-[45%] w-full relative rounded-xl overflow-hidden shadow-2xl section-element">
+                <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80" alt="Export Storage"
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+            <!-- Right Text -->
+            <div class="md:w-[55%] section-element delay-100">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block"
+                    data-i18n="ie_eyebrow">IMPORT & EXPORT</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-8" data-i18n="ie_header">Import, export, sorting
+                    and packing of agricultural crops and pesticides.</h2>
+
+                <!-- Simple accordion style display -->
+                <div class="space-y-6">
+                    <div class="bg-white/5 p-6 rounded-lg border-s-4 border-primary">
+                        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2"><i
+                                class="fa-solid fa-seedling text-primary"></i> <span
+                                data-i18n="ie_tab1_title">Seeds</span></h3>
+                        <p class="text-white/80 text-sm" data-i18n="ie_tab1_body">We have a wide range of the best seeds
+                            of vegetables and fruits… resistant to diseases, viruses and heat resistance.</p>
+                    </div>
+
+                    <div class="bg-white/5 p-6 rounded-lg border-s-4 border-primary">
+                        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2"><i
+                                class="fa-solid fa-vial text-primary"></i> <span
+                                data-i18n="ie_tab2_title">Fertilizers</span></h3>
+                        <p class="text-white/80 text-sm" data-i18n="ie_tab2_body">Grilandeg is characterized by a unique
+                            blend of fertilizers… (NPKs – growth regulators – amino acids – Humic acid)…</p>
+                    </div>
+
+                    <div class="bg-white/5 p-6 rounded-lg border-s-4 border-primary">
+                        <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2"><i
+                                class="fa-solid fa-spray-can text-primary"></i> <span
+                                data-i18n="ie_tab3_title">Pesticides</span></h3>
+                        <p class="text-white/80 text-sm" data-i18n="ie_tab3_body">The company owns a wide range of plant
+                            protection products. We have 31 registered products in the Egyptian Ministry of Agriculture.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-white/20">
+                    <h3 class="text-lg font-bold mb-4" data-i18n="ie_export_header">Export Expertise:</h3>
+                    <ul class="space-y-2 text-white/80 text-sm list-disc ms-5">
+                        <li data-i18n="ie_exp_li1">Growers and exporters of vegetables and fruits (grapes, mangoes,
+                            oranges)</li>
+                        <li data-i18n="ie_exp_li2">Leaders in grapes field — "Superior" and "Seedless Flame" varieties
+                        </li>
+                        <li data-i18n="ie_exp_li3">Export to EU and Gulf area for 10+ years</li>
+                        <li data-i18n="ie_exp_li4">Holders of Global Gap Certificate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Organic Agriculture Section -->
+    <section
+        class="py-20 px-6 sm:px-10 bg-white bg-[url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&q=80')] bg-cover bg-fixed bg-center relative">
+        <div class="absolute inset-0 bg-white/90"></div>
+        <div class="max-w-[1200px] mx-auto relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 section-element" data-i18n="org_header1">Organic
+                agriculture</h2>
+            <p class="text-body max-w-3xl mx-auto mb-16 section-element delay-100" data-i18n="org_body1">
+                Organic agriculture in Egypt dates back to the mid-1970s… Prior to the construction of the Aswan High
+                Dam, the Nile's annual flood swamped farmland and left behind a thick layer of fertile soil.
+            </p>
+
+            <h2 class="text-3xl font-bold text-dark mb-10 section-element" data-i18n="org_header2">Explore Our Organic
+                Agriculture</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-start">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-primary hover:-translate-y-2 transition-transform duration-300 section-element delay-100">
+                    <i class="fa-solid fa-users-gear text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-bold text-dark mb-4" data-i18n="org_card1_title">Networking Events</h3>
+                    <p class="text-body text-sm" data-i18n="org_card1_body">We facilitate networking and collaboration
+                        in Egypt's organic agriculture sector through various events, fostering knowledge exchange.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-primary hover:-translate-y-2 transition-transform duration-300 section-element delay-200">
+                    <i class="fa-solid fa-book-open text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-bold text-dark mb-4" data-i18n="org_card2_title">Knowledge Materials</h3>
+                    <p class="text-body text-sm" data-i18n="org_card2_body">We offer comprehensive learning programs to
+                        enhance the skills and knowledge of farmers and stakeholders in organic agriculture.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-primary hover:-translate-y-2 transition-transform duration-300 section-element delay-300">
+                    <i class="fa-solid fa-chalkboard-user text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-bold text-dark mb-4" data-i18n="org_card3_title">Capacity Learning</h3>
+                    <p class="text-body text-sm" data-i18n="org_card3_body">We strengthen the organic farming community
+                        through comprehensive learning programs, and practical training with field visits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Equipment & 9. Pesticides Split Section -->
+    <section id="pesticides" class="py-20 px-6 sm:px-10 bg-light">
+        <div class="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12">
+
+            <!-- Agricultural Equipment -->
+            <div class="lg:w-1/2 section-element flex flex-col justify-center">
+                <h2 class="text-3xl font-bold text-dark mb-6" data-i18n="equip_header">Agricultural Equipment</h2>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-border">
+                    <p class="text-body mb-6 text-sm md:text-base leading-relaxed" data-i18n="equip_body">
+                        <strong>Agricultural Tractor:</strong> The idea of the agricultural tractor appeared in the
+                        mid-nineteenth century… Tractors are used for plowing the land, transporting waste from fields
+                        to market, and transporting heavy agricultural equipment.
+                    </p>
+                    <h3 class="text-xl font-bold text-primary mb-4" data-i18n="equip_sub">Import of Agricultural
+                        Equipment</h3>
+                    <a href="#" class="btn-primary inline-block text-sm" data-i18n="btn_more_about">More about
+                        Agriland</a>
+                </div>
+            </div>
+
+            <!-- Pesticides Product Card -->
+            <div class="lg:w-1/2 section-element delay-100 flex flex-col justify-center">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block"
+                    data-i18n="pest_eyebrow">PESTICIDES</span>
+                <div
+                    class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-2 border-primary/20 relative overflow-hidden group">
+                    <!-- decorative shape -->
+                    <div
+                        class="absolute -end-10 -top-10 w-32 h-32 bg-primary/10 rounded-full group-hover:scale-150 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-6 relative z-10" data-i18n="pest_title">Colvid 25% EC
+                    </h3>
+
+                    <dl class="space-y-3 mb-6 relative z-10 text-sm">
+                        <div class="flex flex-col sm:flex-row sm:gap-2 border-b border-border pb-2">
+                            <dt class="font-bold text-dark sm:w-1/3" data-i18n="pest_lbl1">Active ingredient:</dt>
+                            <dd class="text-body sm:w-2/3" data-i18n="pest_val1">Difenoconazole 25%</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:gap-2 border-b border-border pb-2">
+                            <dt class="font-bold text-dark sm:w-1/3" data-i18n="pest_lbl2">Type:</dt>
+                            <dd class="text-body sm:w-2/3" data-i18n="pest_val2">Systemic, preventive and curative
+                                fungicide</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:gap-2 border-b border-border pb-2">
+                            <dt class="font-bold text-dark sm:w-1/3" data-i18n="pest_lbl3">Use:</dt>
+                            <dd class="text-body sm:w-2/3" data-i18n="pest_val3">Control late blight</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:gap-2 border-b border-border pb-2">
+                            <dt class="font-bold text-dark sm:w-1/3" data-i18n="pest_lbl4">Rates:</dt>
+                            <dd class="text-body sm:w-2/3" data-i18n="pest_val4">50 cm / 100 liters of water</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:gap-2">
+                            <dt class="font-bold text-dark sm:w-1/3" data-i18n="pest_lbl5">Crop:</dt>
+                            <dd class="text-body sm:w-2/3" data-i18n="pest_val5">Potatoes</dd>
+                        </div>
+                    </dl>
+                    <a href="#"
+                        class="text-primary font-bold hover:underline decoration-2 underline-offset-4 relative z-10 block mt-4"
+                        data-i18n="btn_more_about">More about Agriland &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Date Palm Section -->
+    <section id="palms" class="py-20 px-6 sm:px-10 bg-primary/10">
+        <div class="max-w-[1200px] mx-auto flex flex-col-reverse md:flex-row gap-12 items-center">
+            <div class="md:w-1/2 section-element">
+                <h2 class="text-3xl font-bold text-dark mb-6" data-i18n="palm_header">Date Palm Cultivation</h2>
+                <p class="text-body leading-relaxed mb-8" data-i18n="palm_body">
+                    Our vision is to offer a fruitful opportunity for young people to be part of our success story
+                    through investing in date palm cultivation… connecting the ambitions of young people with
+                    sustainable investment opportunities… achieve attractive returns and foster sustainable economic
+                    growth.
+                </p>
+                <a href="#palms" class="btn-primary" data-i18n="btn_more_about">More about Agriland</a>
+            </div>
+            <div class="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl section-element delay-100">
+                <img src="./images/date-palm.avif" alt="Date Palms"
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Breeding and Fattening -->
+    <section id="breeding" class="py-20 px-6 sm:px-10 bg-white">
+        <div class="max-w-[800px] mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 section-element" data-i18n="breed_header">Breeding
+                and fattening</h2>
+            <p class="text-body mb-10 text-lg section-element delay-100" data-i18n="breed_intro">
+                We offer comprehensive services for animal breeding and fattening, from building sheds to providing the
+                appropriate feed to enhance productivity.
+            </p>
+
+            <ul
+                class="text-start space-y-4 mb-12 bg-light p-8 rounded-xl shadow-sm section-element delay-200 border-l-4 border-primary">
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-house-chimney text-primary text-xl mt-1"></i>
+                    <div>
+                        <strong class="text-dark block" data-i18n="breed_li1_title">Sheds and Breeding:</strong>
+                        <span class="text-body text-sm" data-i18n="breed_li1_body">For birds using natural
+                            materials.</span>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-layer-group text-primary text-xl mt-1"></i>
+                    <div>
+                        <strong class="text-dark block" data-i18n="breed_li2_title">Rabbit Batteries:</strong>
+                        <span class="text-body text-sm" data-i18n="breed_li2_body">For effective rabbit breeding.</span>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <i class="fa-solid fa-cow text-primary text-xl mt-1"></i>
+                    <div>
+                        <strong class="text-dark block" data-i18n="breed_li3_title">Calf Fattening:</strong>
+                        <span class="text-body text-sm" data-i18n="breed_li3_body">Utilizing diverse feed to increase
+                            productivity.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="section-element delay-300">
+                <p class="text-xl font-semibold text-dark mb-6" data-i18n="breed_cta_text">Are you looking for a close
+                    and committed partner to enhance your agricultural land?</p>
+                <a href="#footer" class="btn-primary" data-i18n="btn_contact">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Stats / Trust Section -->
+    <section class="py-24 px-6 sm:px-10 relative bg-dark text-white overflow-hidden" id="stats-section">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80" alt="Fields"
+                class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+        </div>
+        <div class="max-w-[1200px] mx-auto text-center relative z-10">
+            <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block section-element"
+                data-i18n="stat_eyebrow">QUALITY PRODUCT</span>
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 section-element delay-100" data-i18n="stat_header">We
+                Appreciate Your Trust Greatly</h2>
+
+            <div class="flex flex-col md:flex-row justify-center gap-16 md:gap-32">
+                <div class="flex flex-col items-center section-element delay-200">
+                    <div class="text-6xl font-bold text-white mb-2 flex items-center">
+                        <span class="counter" data-target="99">0</span><span class="text-primary">%</span>
+                    </div>
+                    <span class="text-lg font-medium text-white/80" data-i18n="stat_1">Projects completed</span>
+                </div>
+                <div class="flex flex-col items-center section-element delay-300">
+                    <div class="text-6xl font-bold text-white mb-2 flex items-center">
+                        <span class="counter" data-target="90">0</span><span class="text-primary">%</span>
+                    </div>
+                    <span class="text-lg font-medium text-white/80" data-i18n="stat_2">Special Equipment</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Projects / Blog Section -->
+    <section id="projects" class="py-20 px-6 sm:px-10 bg-white">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block section-element"
+                    data-i18n="proj_eyebrow">PROJECTS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark section-element delay-100" data-i18n="proj_header">
+                    They trust us</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Large Card (Span 2 cols on tablet+) -->
+                <div
+                    class="group relative rounded-xl overflow-hidden shadow-md block lg:col-span-2 lg:row-span-2 section-element">
+                    <div class="relative h-[300px] lg:h-full w-full">
+                        <img src="./images/project1.jpeg" alt="Project 1"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 start-0 p-6 w-full">
+                        <div class="flex gap-4 text-xs font-bold text-white mb-3">
+                            <span class="bg-primary px-2 py-1 rounded uppercase" data-i18n="proj_tag">projects</span>
+                            <span class="flex items-center gap-1 text-white/80"><i class="fa-regular fa-calendar"></i>
+                                Dec 23, 2024</span>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold group-hover:text-primary transition-colors"
+                            data-i18n="proj_1">griland enhances carbon storage on rapeseed cultivation</h3>
+                    </div>
+                </div>
+
+                <!-- Small Card 1 -->
+                <div
+                    class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto section-element delay-100">
+                    <div class="relative h-full w-full">
+                        <img src="./images/project2.jpeg" alt="Project 2"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 start-0 p-5 w-full">
+                        <div class="flex gap-4 text-[10px] font-bold text-white mb-2">
+                            <span class="text-primary uppercase" data-i18n="proj_tag">projects</span>
+                            <span class="text-white/80">Dec 23, 2024</span>
+                        </div>
+                        <h3 class="text-white text-lg font-bold group-hover:text-primary transition-colors leading-tight"
+                            data-i18n="proj_2">Green architecture for green infrastructure</h3>
+                    </div>
+                </div>
+
+                <!-- Small Card 2 -->
+                <div
+                    class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto section-element delay-200">
+                    <div class="relative h-full w-full">
+                        <img src="./images/project3.jpeg" alt="Project 3"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 start-0 p-5 w-full">
+                        <div class="flex gap-4 text-[10px] font-bold text-white mb-2">
+                            <span class="text-primary uppercase" data-i18n="proj_tag">projects</span>
+                            <span class="text-white/80">Dec 23, 2024</span>
+                        </div>
+                        <h3 class="text-white text-lg font-bold group-hover:text-primary transition-colors leading-tight"
+                            data-i18n="proj_3">Connected weather stations</h3>
+                    </div>
+                </div>
+
+                <!-- Small Card 3 -->
+                <div
+                    class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto lg:col-span-2 section-element delay-300">
+                    <div class="relative h-full w-full">
+                        <img src="./images/bees.avif" alt="Bees"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 start-0 p-5 w-full">
+                        <div class="flex gap-4 text-[10px] font-bold text-white mb-2">
+                            <span class="text-primary uppercase" data-i18n="proj_tag">projects</span>
+                            <span class="text-white/80">Dec 23, 2024</span>
+                        </div>
+                        <h3 class="text-white text-xl md:text-2xl font-bold group-hover:text-primary transition-colors leading-tight"
+                            data-i18n="proj_4">Bees also work with Agrilandeg</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 section-element">
+                <a href="#" class="btn-primary" data-i18n="btn_view_posts">View more posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Client Logos Slider -->
+    <section class="py-12 bg-light border-y border-border overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4">
+            <div class="logo-slider-container w-full overflow-hidden">
+                <div class="logo-slider-track flex items-center justify-between gap-10 md:gap-20">
+                    <!-- Repeated logos for infinite loop effect -->
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/organic-food.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/farmer-life.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/bakery-shop.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/farmers-market.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/orgamic-grain.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+
+                    <!-- Duplicated for infinite scroll effect -->
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/organic-food.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/farmer-life.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+                    <div
+                        class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="./images/certifications/bakery-shop.jpeg" alt=""
+                            class="h-16 md:h-20 w-auto object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. Contact Section -->
+    <section class="py-20 px-6 sm:px-10 bg-white" id="contact-form">
+        <div class="max-w-[800px] mx-auto">
+            <div class="text-center mb-10 section-element">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block"
+                    data-i18n="contact_eyebrow">GET IN TOUCH</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark" data-i18n="contact_title">Send us a message</h2>
+            </div>
+            <form action="#"
+                class="space-y-6 section-element delay-100 p-8 rounded-xl bg-light shadow-sm border border-border">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-dark" data-i18n="contact_name">Name</label>
+                        <input type="text"
+                            class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-dark" data-i18n="contact_phone">Phone</label>
+                        <input type="tel"
+                            class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-dark" data-i18n="contact_email">Email
+                            Address</label>
+                        <input type="email"
+                            class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-dark"
+                            data-i18n="contact_subject">Subject</label>
+                        <input type="text"
+                            class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold mb-2 text-dark" data-i18n="contact_msg">How can we help you?
+                        Feel free to get in touch!</label>
+                    <textarea rows="5"
+                        class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full md:w-auto px-10" data-i18n="contact_send">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 16. Footer -->
+    <footer id="footer" class="bg-[#1B3A2D] text-white pt-20 pb-6 px-6 sm:px-10 mt-auto">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+
+            <!-- Col 1: Brand -->
+            <div>
+                <a href="#" class="flex items-center gap-2 mb-6">
+                    <div class="text-primary text-3xl font-bold tracking-tighter"><i class="fa-solid fa-leaf"></i>
+                        GRILAND</div>
+                    <div class="text-white font-semibold leading-none text-sm">EGYPT</div>
+                </a>
+                <p class="text-white/70 text-sm leading-relaxed" data-i18n="foot_tagline">
+                    Together, let's give value to your farmland.
+                </p>
+                <div class="flex gap-4 mt-6">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Belgium -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-white/10 pb-3"><i
+                        class="fa-solid fa-location-dot text-primary"></i> <span data-i18n="foot_belgium_title">Belgium
+                        Address</span></h4>
+                <div class="text-white/70 text-sm space-y-2">
+                    <p class="font-semibold text-white" data-i18n="foot_belgium_o">European Administrative Office</p>
+                    <p data-i18n="foot_belgium_addr">Avenue Louise, 1050 Brussels, Belgium</p>
+                    <p><a href="tel:+32010232999" class="hover:text-primary transition-colors">+32 (0) 10232999</a></p>
+                </div>
+            </div>
+
+            <!-- Col 3: Egypt HQ -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-white/10 pb-3"><i
+                        class="fa-solid fa-building text-primary"></i> <span data-i18n="foot_egypt_title">Company HQ
+                        (Egypt)</span></h4>
+                <div class="text-white/70 text-sm space-y-2">
+                    <p data-i18n="foot_egypt_addr">36 (A) Morad St., ELoda masr tower, Giza, Egypt</p>
+                    <p><a href="tel:+201141116282" class="hover:text-primary transition-colors">+201141116282</a></p>
+                </div>
+                <div class="mt-6 text-white/70 text-sm space-y-2">
+                    <p class="font-bold flex items-center gap-2 text-white mb-2"><i
+                            class="fa-solid fa-envelope text-primary"></i> <span data-i18n="foot_email">Get In
+                            Touch</span></p>
+                    <a href="mailto:hr@grilandeg.com"
+                        class="hover:text-primary transition-colors block">hr@grilandeg.com</a>
+                    <a href="mailto:info@agrilandeg.com"
+                        class="hover:text-primary transition-colors block">info@agrilandeg.com</a>
+                    <a href="mailto:ziad@grilandeg.com"
+                        class="hover:text-primary transition-colors block">ziad@grilandeg.com</a>
+                    <a href="mailto:goerge@grilandeg.com"
+                        class="hover:text-primary transition-colors block">goerge@grilandeg.com</a>
+                    <a href="mailto:manager@grilandeg.com"
+                        class="hover:text-primary transition-colors block">manager@grilandeg.com</a>
+                </div>
+            </div>
+
+            <!-- Col 4: Branch -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-white/10 pb-3"><i
+                        class="fa-solid fa-code-branch text-primary"></i> <span data-i18n="foot_branch_title">Branch
+                        address (Egypt)</span></h4>
+                <div class="text-white/70 text-sm space-y-2">
+                    <p data-i18n="foot_branch_addr">3 Cairo-Belbeis Desert Road, P.O. Box: 3020 El Salam, 11785, Cairo
+                    </p>
+                    <p><a href="tel:0222655550" class="hover:text-primary transition-colors">0222655550</a> / <a
+                            href="tel:+201114515550" class="hover:text-primary transition-colors">+201114515550</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-6 border-t border-white/10 text-center text-white/50 text-xs">
+            <p data-i18n="copy_right">COPY RIGHT &copy; GRILAND EGYPT. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+
+</html>

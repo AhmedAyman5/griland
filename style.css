@@ -1,0 +1,94 @@
+/* Global Typography adjustments for English/Arabic */
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+}
+
+/* Hide scrollbar for badge strip */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:bg-[#3A6B47] uppercase tracking-wide text-sm;
+}
+
+/* Intersection Observer Animations */
+.section-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Drawer state */
+.drawer-open {
+  transform: translateX(0) !important;
+}
+
+/* Fixed hero animations missing from standard Tailwind */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Client slider infinite scroll effect */
+.logo-slider-container {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-slider-track {
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Requires duplicating logos to be seamless */
+}
+
+/* Add custom logical property utilities if needed, 
+Tailwind handles most but sometimes padding/margin inside elements can benefit from direct CSS */
+:dir(rtl) .logo-slider-track {
+  animation: scrollRtl 20s linear infinite;
+}
+
+@keyframes scrollRtl {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
