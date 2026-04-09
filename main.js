@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.classList.add('shadow-md', 'py-2');
-            navbar.classList.remove('py-4');
+            navbar.classList.add('text-dark', 'py-0');
+            navbar.classList.remove('text-white', 'py-1');
         } else {
-            navbar.classList.remove('shadow-md', 'py-2');
-            navbar.classList.add('py-4');
+            navbar.classList.remove('text-dark', 'py-0');
+            navbar.classList.add('text-white', 'py-1');
         }
     });
 
@@ -104,7 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
         en: {
             "nav_home": "Home",
             "nav_about": "About",
-            "nav_services": "Services",
+            "nav_services": "Service",
+            "nav_machinery": "Machinery & Equipment",
+            "nav_agri_inputs": "Agri-Inputs",
+            "nav_farms_production": "Farms & Production",
+            "nav_food_processing": "Food Processing",
+            "nav_trade_export": "Trade & Export",
             "nav_service_plus": "Service Plus",
             "nav_pesticides": "Pesticides",
             "nav_seeds": "Seeds",
@@ -277,6 +282,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "nav_home": "الرئيسية",
             "nav_about": "من نحن",
             "nav_services": "خدماتنا",
+            "nav_machinery": "الآلات والمعدات",
+            "nav_agri_inputs": "المدخلات الزراعية",
+            "nav_farms_production": "المزارع والإنتاج",
+            "nav_food_processing": "التصنيع الغذائي",
+            "nav_trade_export": "التجارة والتصدير",
             "nav_service_plus": "الخدمات الإضافية",
             "nav_pesticides": "المبيدات",
             "nav_seeds": "البذور",

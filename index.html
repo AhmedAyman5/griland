@@ -45,50 +45,56 @@
 <body class="bg-white text-body font-sans antialiased overflow-x-hidden">
 
     <!-- 1. Navbar -->
-    <nav id="navbar" class="fixed top-0 w-full bg-white z-50 transition-all duration-300 py-4 px-6 md:px-10">
+    <nav id="navbar"
+        class="fixed top-0 w-full bg-transparent text-white z-50 transition-all duration-300 py-1 px-6 md:px-10">
         <div class="max-w-[1200px] mx-auto flex items-center justify-between shadow-sm">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-2 group">
-                <div
-                    class="text-primary text-3xl font-bold tracking-tighter group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-leaf"></i> GRILAND
-                </div>
-                <div class="text-dark font-semibold leading-none text-sm hidden sm:block">EGYPT</div>
+            <a href="#" class="flex items-center group">
+                <img src="./images/logo/logo1.png" alt="Agriland Egypt"
+                    class="h-20 md:h-24 object-contain group-hover:scale-105 transition-transform">
             </a>
 
             <!-- Desktop Links -->
             <ul class="hidden md:flex items-center gap-8 font-semibold text-[15px]">
-                <li><a href="#" class="hover:text-primary transition-colors text-primary" data-i18n="nav_home">Home</a>
+                <li><a href="#"
+                        class="hover:text-primary transition-colors text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_home">Home</a>
                 </li>
-                <li><a href="#about" class="hover:text-primary transition-colors" data-i18n="nav_about">About</a></li>
+                <li><a href="#about"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_about">About</a></li>
                 <li class="relative group">
                     <a href="#services"
-                        class="hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
-                        <span data-i18n="nav_services">Services</span>
+                        class="hover:text-primary transition-colors flex items-center gap-1 cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300">
+                        <span data-i18n="nav_services">Service</span>
                         <i class="fa-solid fa-chevron-down text-[10px]"></i>
                     </a>
                     <!-- Dropdown -->
                     <ul
-                        class="absolute top-full start-0 mt-2 bg-white shadow-lg rounded-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-2 border border-border">
-                        <li><a href="#services"
+                        class="absolute top-full start-0 mt-2 bg-white text-dark shadow-lg rounded-md w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-2 border border-border">
+                        <li><a href="#machinery"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
-                                data-i18n="nav_service_plus">Service Plus</a></li>
-                        <li><a href="#pesticides"
+                                data-i18n="nav_machinery">Machinery & Equipment</a></li>
+                        <li><a href="#agri_inputs"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
-                                data-i18n="nav_pesticides">Pesticides</a></li>
-                        <li><a href="#import"
+                                data-i18n="nav_agri_inputs">Agri-Inputs</a></li>
+                        <li><a href="#farms_production"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
-                                data-i18n="nav_seeds">Seeds</a></li>
-                        <li><a href="#breeding"
+                                data-i18n="nav_farms_production">Farms & Production</a></li>
+                        <li><a href="#food_processing"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
-                                data-i18n="nav_dairy">Dairy Farm</a></li>
-                        <li><a href="#palms" class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
-                                data-i18n="nav_palms">Palms</a></li>
+                                data-i18n="nav_food_processing">Food Processing</a></li>
+                        <li><a href="#trade_export"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_trade_export">Trade & Export</a></li>
                     </ul>
                 </li>
-                <li><a href="#projects" class="hover:text-primary transition-colors"
-                        data-i18n="nav_portfolio">Portfolio</a></li>
-                <li><a href="#footer" class="hover:text-primary transition-colors" data-i18n="nav_contact">Contacts</a>
+                <li><a href="./pages/certifications/certification.html"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_certificates">Certificates</a></li>
+                <li><a href="#footer"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_contact">Contact</a>
                 </li>
 
                 <!-- Language Switcher -->
@@ -101,7 +107,7 @@
             </ul>
 
             <!-- Mobile Menu Btn -->
-            <button id="mobile-menu-btn" class="md:hidden text-2xl text-dark hover:text-primary transition-colors">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl hover:text-primary transition-colors">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -111,7 +117,7 @@
     <div id="mobile-drawer"
         class="fixed inset-y-0 start-0 w-64 bg-white z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
         <div class="p-6 flex justify-between items-center border-b border-border">
-            <span class="text-xl font-bold text-primary"><i class="fa-solid fa-leaf"></i> GRILAND</span>
+            <img src="./images/logo/logo1.png" alt="Agriland Egypt" class="h-16 md:h-20 object-contain">
             <div class="flex items-center gap-4">
                 <button id="lang-toggle-mobile"
                     class="bg-light text-dark px-3 py-1 rounded-full text-xs font-bold border border-border hover:bg-primary hover:text-white transition-colors">
@@ -125,19 +131,20 @@
             <a href="#" class="mobile-link text-primary" data-i18n="nav_home">Home</a>
             <a href="#about" class="mobile-link hover:text-primary" data-i18n="nav_about">About</a>
             <div class="border-y border-border py-4 my-2 flex flex-col gap-3">
-                <span class="text-muted text-sm uppercase" data-i18n="nav_services">Services</span>
-                <a href="#services" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_service_plus">-
-                    Service Plus</a>
-                <a href="#pesticides" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_pesticides">-
-                    Pesticides</a>
-                <a href="#import" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_seeds">-
-                    Seeds</a>
-                <a href="#breeding" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_dairy">- Dairy
-                    Farm</a>
-                <a href="#palms" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_palms">- Palms</a>
+                <span class="text-muted text-sm uppercase" data-i18n="nav_services">Service</span>
+                <a href="#machinery" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_machinery">-
+                    Machinery & Equipment</a>
+                <a href="#agri_inputs" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_agri_inputs">- Agri-Inputs</a>
+                <a href="#farms_production" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_farms_production">- Farms & Production</a>
+                <a href="#food_processing" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_food_processing">- Food Processing</a>
+                <a href="#trade_export" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_trade_export">- Trade & Export</a>
             </div>
-            <a href="#projects" class="mobile-link hover:text-primary" data-i18n="nav_portfolio">Portfolio</a>
-            <a href="#footer" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contacts</a>
+            <a href="#certificates" class="mobile-link hover:text-primary" data-i18n="nav_certificates">Certificates</a>
+            <a href="#footer" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contact</a>
         </div>
     </div>
     <!-- Drawer Overlay -->
@@ -809,10 +816,9 @@
 
             <!-- Col 1: Brand -->
             <div>
-                <a href="#" class="flex items-center gap-2 mb-6">
-                    <div class="text-primary text-3xl font-bold tracking-tighter"><i class="fa-solid fa-leaf"></i>
-                        GRILAND</div>
-                    <div class="text-white font-semibold leading-none text-sm">EGYPT</div>
+                <a href="#" class="flex items-center group">
+                    <img src="./images/logo/logo2.png" alt="Agriland Egypt"
+                        class="h-20 md:h-24 object-contain group-hover:scale-105 transition-transform">
                 </a>
                 <p class="text-white/70 text-sm leading-relaxed" data-i18n="foot_tagline">
                     Together, let's give value to your farmland.
