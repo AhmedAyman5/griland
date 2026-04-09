@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Agriland Egypt</title>
+    <meta name="description" content="Griland Egypt Certificates and global standards compliance.">
+
+    <!-- Google Fonts: Cairo (from index), Playfair Display & Inter (from prompt) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Inherited CSS for Navbar -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Certification Page Specific CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main site colors to preserve navbar styling
+                        primary: '#4A8C5C',
+                        dark: '#1B3A2D',
+                        light: '#F7F7F2',
+                        body: '#333333',
+                        muted: '#777777',
+                        border: '#E0E0E0',
+
+                        // Certification page specific colors
+                        'cert-primary': '#1B4332',
+                        'cert-secondary': '#2D6A4F',
+                        'cert-accent': '#C9A84C',
+                        'cert-cream': '#F5F0E8',
+                        'cert-dark': '#0D2B1E',
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-body font-sans antialiased overflow-x-hidden">
+
+    <!-- 1. Navbar from index.html -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white z-50 transition-all duration-300 py-4 px-6 md:px-10">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between shadow-sm">
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="text-primary text-3xl font-bold tracking-tighter group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-leaf"></i> GRILAND
+                </div>
+                <div class="text-dark font-semibold leading-none text-sm hidden sm:block">EGYPT</div>
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="hidden md:flex items-center gap-8 font-semibold text-[15px]">
+                <li><a href="../index.html" class="hover:text-primary transition-colors text-dark"
+                        data-i18n="nav_home">Home</a></li>
+                <li><a href="../index.html#about" class="hover:text-primary transition-colors"
+                        data-i18n="nav_about">About</a></li>
+                <li class="relative group">
+                    <a href="../index.html#services"
+                        class="hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
+                        <span data-i18n="nav_services">Services</span>
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </a>
+                    <!-- Dropdown -->
+                    <ul
+                        class="absolute top-full start-0 mt-2 bg-white shadow-lg rounded-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-2 border border-border">
+                        <li><a href="../index.html#services"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_service_plus">Service Plus</a></li>
+                        <li><a href="../index.html#pesticides"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_pesticides">Pesticides</a></li>
+                        <li><a href="../index.html#import"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_seeds">Seeds</a></li>
+                        <li><a href="../index.html#breeding"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_dairy">Dairy Farm</a></li>
+                        <li><a href="../index.html#palms"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_palms">Palms</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#projects" class="hover:text-primary transition-colors"
+                        data-i18n="nav_portfolio">Portfolio</a></li>
+                <li><a href="certification.html"
+                        class="hover:text-primary transition-colors text-primary border-b-2 border-primary pb-1"
+                        data-i18n="nav_certificates">Certificates</a></li>
+                <li><a href="../index.html#footer" class="hover:text-primary transition-colors"
+                        data-i18n="nav_contact">Contacts</a></li>
+
+                <!-- Language Switcher -->
+                <li>
+                    <button id="lang-toggle"
+                        class="bg-light text-dark px-3 py-1 rounded-full text-sm font-bold border border-border hover:bg-primary hover:text-white transition-colors">
+                        عربي
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-dark hover:text-primary transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer"
+        class="fixed inset-y-0 start-0 w-64 bg-white z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-border">
+            <span class="text-xl font-bold text-primary"><i class="fa-solid fa-leaf"></i> GRILAND</span>
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle-mobile"
+                    class="bg-light text-dark px-3 py-1 rounded-full text-xs font-bold border border-border hover:bg-primary hover:text-white transition-colors">
+                    عربي
+                </button>
+                <button id="close-drawer" class="text-2xl text-dark hover:text-primary"><i
+                        class="fa-solid fa-times"></i></button>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 text-lg font-semibold overflow-y-auto">
+            <a href="../index.html" class="mobile-link hover:text-primary" data-i18n="nav_home">Home</a>
+            <a href="../index.html#about" class="mobile-link hover:text-primary" data-i18n="nav_about">About</a>
+            <div class="border-y border-border py-4 my-2 flex flex-col gap-3">
+                <span class="text-muted text-sm uppercase" data-i18n="nav_services">Services</span>
+                <a href="../index.html#services" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_service_plus">- Service Plus</a>
+                <a href="../index.html#pesticides" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_pesticides">- Pesticides</a>
+                <a href="../index.html#import" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_seeds">- Seeds</a>
+                <a href="../index.html#breeding" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_dairy">- Dairy Farm</a>
+                <a href="../index.html#palms" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_palms">- Palms</a>
+            </div>
+            <a href="../index.html#projects" class="mobile-link hover:text-primary"
+                data-i18n="nav_portfolio">Portfolio</a>
+            <a href="certification.html" class="mobile-link text-primary" data-i18n="nav_certificates">Certificates</a>
+            <a href="../index.html#footer" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contacts</a>
+        </div>
+    </div>
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300">
+    </div>
+
+    <!-- WRAPPER FOR CERT PAGE STYLES -->
+    <main class="cert-page pt-20">
+
+        <!-- SECTION 3 — PAGE HERO BANNER -->
+        <section
+            class="w-full h-[280px] bg-cert-primary relative flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+            <!-- Background Image -->
+            <img src="../certifications/images/certificates.jpeg" alt="Certificates Background" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay z-0 pointer-events-none">
+            
+            <div class="absolute inset-0 z-0 pointer-events-none"
+                style="background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 8px);">
+            </div>
+            <div class="relative z-10">
+                <p class="text-cert-accent text-sm mb-2 font-inter" data-i18n="cert_breadcrumb">Home / Certificates</p>
+                <h1 class="text-white text-5xl font-bold font-serif" data-i18n="cert_title">Certificates</h1>
+                <div class="w-16 h-1 bg-cert-accent mx-auto mt-4"></div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — INTRO TAGLINE -->
+        <section class="py-16 bg-cert-cream text-center px-4">
+            <div class="reveal">
+                <div class="text-5xl mb-4 text-cert-accent">🏅</div>
+                <div class="uppercase tracking-widest text-cert-accent text-sm font-semibold tag-line mb-6"
+                    data-i18n="cert_badge">Our Badges
+                    of Honor</div>
+                <h2 class="text-3xl text-cert-primary max-w-2xl mx-auto font-serif" data-i18n="cert_desc">We are proud
+                    to hold multiple
+                    accreditations from leading organizations</h2>
+            </div>
+        </section>
+
+        <!-- SECTION 5 — CERTIFICATES GRID -->
+        <section class="bg-cert-cream py-16 px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                <!-- 1. KOSHER -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.1s">
+                    <img src="../certifications/images/kosher.png" alt="Kosher"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_kosher">Kosher</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_kosher">Kosher</h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_kosher_desc">The
+                        Kosher Certified seal assures
+                        consumers that the product in question, with its ingredients and entire production cycle,
+                        adheres to all the requirements of the Kosher law.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 2. HALAL -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.2s">
+                    <img src="../certifications/images/halal.png" alt="Halal"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_halal">Halal</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_halal">HALAL</h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_halal_desc">Halal
+                        certification attests that a
+                        product is manufactured in full compliance with the precepts of Islamic Law, containing no
+                        forbidden components and having had no contact with any substances considered impure.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 3. ISO 9001 -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.3s">
+                    <img src="../certifications/images/ISO.png" alt="ISO 9001"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_iso">ISO</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_iso9001">ISO 9001
+                    </h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_iso9001_desc">The
+                        international standard that
+                        specifies requirements for a quality management system (QMS). It demonstrates the ability to
+                        consistently provide products and services that meet customer and regulatory requirements.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 4. ISO 22000 -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.1s">
+                    <img src="../certifications/images/ISO2000.png" alt="ISO 22000"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_iso">ISO</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_iso22000">ISO 22000
+                    </h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_iso22000_desc">ISO
+                        22000 helps organizations
+                        identify and control food safety hazards. Applicable to all types of producer, it provides
+                        reassurance within the global food supply chain, helping products cross borders and earning
+                        consumer trust.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 5. FDA -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.2s">
+                    <img src="../certifications/images/FDA.png" alt="FDA" class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_fda">FDA</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_fda">FDA</h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_fda_desc">FDA
+                        export certification provides
+                        official attestation concerning a product's regulatory or marketing status, based on available
+                        information at the time FDA issues the certificate.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 6. SMETA -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.3s">
+                    <img src="../certifications/images/SMETA.png" alt="SMETA"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_smeta">SMETA</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_smeta">SMETA</h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_smeta_desc">SMETA
+                        (Sedex Members Ethical Trade
+                        Audit) is a social auditing standard businesses use to assess a supplier's working conditions
+                        across labor, health and safety, environment and business ethics.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 7. BIO Q-CHECK -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.1s">
+                    <img src="../certifications/images/bioqcheck.png" alt="Bio Q-Check"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_bio">Bio</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_bioqcheck">Bio
+                        Q-Check</h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_bioqcheck_desc">
+                        Q-Check is an independent,
+                        accredited certification body by the Hellenic Accreditation System (ESYD), providing evaluation,
+                        inspection and certification for Organic Farming and GLOBALG.A.P standards.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 8. GLOBAL G.A.P -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.2s">
+                    <img src="../certifications/images/GLOBAL.png" alt="Global G.A.P"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_globalgap_title">Global G.A.P</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_globalgap">GLOBAL
+                        G.A.P</h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_globalgap_desc">An
+                        internationally recognised
+                        certified standard ensuring Good Agricultural Practices, acting as a safeguard for food safety,
+                        workers' health and safety, animal welfare, and environmental protection.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+                <!-- 9. BRC GLOBAL STANDARDS -->
+                <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.3s">
+                    <img src="../certifications/images/BRC.png" alt="BRC Global Standards"
+                        class="mx-auto max-h-20 object-contain mb-6">
+                    <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
+                        data-i18n="cert_brc_title">BRC</p>
+                    <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_brc">BRC Global
+                        Standards</h3>
+                    <p class="font-inter text-sm text-gray-600 leading-relaxed mb-6" data-i18n="cert_brc_desc">Brand
+                        Reputation through Compliance
+                        (BRC) is a UK trade organization recognized globally. It established its first Global Standard
+                        for Food Safety in 1998 to help companies comply with UK and EU food safety legislation.</p>
+                    <div class="border-t border-cert-accent/30 pt-4 flex items-center gap-2">
+                        <span class="bg-cert-primary/10 text-cert-primary text-xs font-bold px-2 py-1 rounded"
+                            data-i18n="cert_certified">✓
+                            Certified</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 6 — CTA BAND -->
+        <section class="w-full bg-cert-primary py-16 text-center px-4">
+            <h2 class="font-serif text-3xl text-white mb-3" data-i18n="cert_cta_title">Are you looking for a close and
+                committed partner?</h2>
+            <p class="font-inter text-gray-300 mb-8" data-i18n="cert_cta_desc">Contact us today and let's grow together.
+            </p>
+            <a href="../index.html#footer"
+                class="inline-block bg-cert-accent text-white px-10 py-4 rounded font-semibold hover:bg-yellow-600 transition-colors"
+                data-i18n="btn_contact">Contact
+                Us</a>
+        </section>
+
+        <!-- SECTION 7 — FOOTER (from Claude prompt design as requested) -->
+        <footer class="bg-cert-dark text-white pt-16 pb-8 px-6 sm:px-10 font-inter">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                    <!-- COL 1 -->
+                    <div>
+                        <div class="font-serif text-2xl text-white font-bold tracking-tighter">
+                            <i class="fa-solid fa-leaf text-primary"></i> GRILAND EGYPT
+                        </div>
+                        <p class="italic text-gray-400 mt-2 text-sm" data-i18n="foot_tagline">Together, let's give value
+                            to your farmland.</p>
+                        <p class="text-gray-500 text-xs mt-4 leading-relaxed" data-i18n="foot_desc">
+                            Supporting farmers and landowners for over 35 years in the exploitation, management and
+                            development of agricultural land.
+                        </p>
+                    </div>
+
+                    <!-- COL 2 -->
+                    <div>
+                        <h4 class="text-cert-accent uppercase text-xs tracking-widest font-semibold mb-4"
+                            data-i18n="foot_quicklinks">Quick Links
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="../index.html" class="hover:text-white transition-colors"
+                                    data-i18n="nav_home">Home</a></li>
+                            <li><a href="../index.html#about" class="hover:text-white transition-colors"
+                                    data-i18n="nav_about">About</a></li>
+                            <li><a href="../index.html#services" class="hover:text-white transition-colors"
+                                    data-i18n="nav_services">Services</a>
+                            </li>
+                            <li><a href="../index.html#projects" class="hover:text-white transition-colors"
+                                    data-i18n="nav_portfolio">Portfolio</a></li>
+                            <li><a href="certification.html" class="text-white"
+                                    data-i18n="nav_certificates">Certificates</a></li>
+                            <li><a href="../index.html#footer" class="hover:text-white transition-colors"
+                                    data-i18n="nav_contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- COL 3 -->
+                    <div>
+                        <h4 class="text-cert-accent uppercase text-xs tracking-widest font-semibold mb-4"
+                            data-i18n="foot_services">Our Services
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="../index.html#services" class="hover:text-white transition-colors"
+                                    data-i18n="nav_service_plus">Service
+                                    Plus</a></li>
+                            <li><a href="../index.html#pesticides" class="hover:text-white transition-colors"
+                                    data-i18n="nav_pesticides">Pesticides</a></li>
+                            <li><a href="../index.html#import" class="hover:text-white transition-colors"
+                                    data-i18n="nav_seeds">Seeds</a></li>
+                            <li><a href="../index.html#breeding" class="hover:text-white transition-colors"
+                                    data-i18n="nav_dairy">Dairy
+                                    Farm</a></li>
+                            <li><a href="../index.html#palms" class="hover:text-white transition-colors"
+                                    data-i18n="nav_palms">Date Palms</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- COL 4 -->
+                    <div>
+                        <h4 class="text-cert-accent uppercase text-xs tracking-widest font-semibold mb-4"
+                            data-i18n="foot_getintouch">Get In Touch
+                        </h4>
+                        <div class="space-y-3 text-xs text-gray-400 leading-relaxed">
+                            <p class="flex gap-2 isolate">
+                                <i class="fa-solid fa-location-dot text-cert-accent mt-1"></i>
+                                <span>Belgium: Avenue Louise, 1050 Brussels<br>+32 (0) 10232999</span>
+                            </p>
+                            <p class="flex gap-2">
+                                <i class="fa-solid fa-location-dot text-cert-accent mt-1"></i>
+                                <span>Egypt HQ: 36 (A) Morad St., Giza<br>+201141116282</span>
+                            </p>
+                            <p class="flex gap-2">
+                                <i class="fa-solid fa-location-dot text-cert-accent mt-1"></i>
+                                <span>Egypt Branch: 3 Cairo-Belbeis Desert Road, El Salam, Cairo<br>+0222655550</span>
+                            </p>
+                            <p class="flex gap-2 items-center">
+                                <i class="fa-solid fa-envelope text-cert-accent"></i>
+                                <a href="mailto:info@grilandeg.com"
+                                    class="hover:text-white transition-colors">info@grilandeg.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-500 text-xs" data-i18n="copy_right">COPYRIGHT &copy; 2026 GRILAND EGYPT. All
+                        rights reserved.</p>
+                    <p class="text-gray-500 text-xs gap-4 flex">
+                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Specific functionality for Certificaiton Page -->
+    <script src="./js/script.js"></script>
+
+    <!-- Global Website JavaScript (Handles Mobile Drawer, Nav Scroll) -->
+    <script src="../main.js"></script>
+
+    <!-- Fallback if main.js does not handle navbar/drawer correctly since paths are slightly modified or IDs differ -->
+    <script>
+        // Simple fallback for navbar shadow and mobile menu in case main.js depends on specific homepage structure
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Simple drawer toggles
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const closeBtn = document.getElementById('close-drawer');
+
+        function toggleDrawer() {
+            const isClosed = drawer.classList.contains('-translate-x-full') || drawer.classList.contains('rtl:translate-x-full');
+            if (isClosed) {
+                drawer.classList.remove('-translate-x-full', 'rtl:translate-x-full');
+                overlay.classList.remove('opacity-0', 'invisible');
+            } else {
+                drawer.classList.add('-translate-x-full', 'rtl:translate-x-full');
+                overlay.classList.add('opacity-0', 'invisible');
+            }
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', toggleDrawer);
+        if (closeBtn) closeBtn.addEventListener('click', toggleDrawer);
+        if (overlay) overlay.addEventListener('click', toggleDrawer);
+    </script>
+</body>
+
+</html>
