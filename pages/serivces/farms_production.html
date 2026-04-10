@@ -51,10 +51,10 @@
     <div id="navigation-placeholder" data-basepath="../../"></div>
     <script src="../../components/navbar.js"></script>
 
-    <main class="pt-[72px] md:pt-[88px]">
+    <main>
 
         <!-- HERO SECTION -->
-        <section class="relative w-full h-[auto] min-h-[calc(100vh-88px)] flex flex-col justify-center items-center text-center overflow-hidden py-24">
+        <section class="relative w-full min-h-[70vh] flex flex-col justify-center items-center text-center overflow-hidden pt-36 pb-24">
             <!-- Background Image -->
             <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1920&auto=format&fit=crop" 
                  alt="Farms Background" 
@@ -69,18 +69,18 @@
             <div class="absolute inset-0 hero-overlay z-10"></div>
 
             <div class="relative z-20 px-5 max-w-4xl mx-auto text-white">
-                <div class="inline-block px-4 py-1 border border-white/30 rounded-full text-xs uppercase tracking-[0.2em] font-bold mb-6 backdrop-blur-sm bg-white/10">
+                <div class="inline-block px-4 py-1 border border-white/30 rounded-full text-xs uppercase tracking-[0.2em] font-bold mb-6 backdrop-blur-sm bg-white/10" data-i18n="fp_hero_tag">
                     The Source of Excellence
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">Farms & Production</h1>
-                <p class="text-lg md:text-2xl text-white/90 font-light max-w-2xl mx-auto drop-shadow-md">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg" data-i18n="fp_hero_title">Farms & Production</h1>
+                <p class="text-lg md:text-2xl text-white/90 font-light max-w-2xl mx-auto drop-shadow-md" data-i18n="fp_hero_desc">
                     Cultivating quality from rich soils to global markets. We oversee the entire journey.
                 </p>
             </div>
 
             <!-- Scroll Hint -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center scroll-indicator opacity-80">
-                <span class="text-white text-xs uppercase tracking-widest font-semibold mb-2">Scroll to explore</span>
+                <span class="text-white text-xs uppercase tracking-widest font-semibold mb-2" data-i18n="fp_scroll">Scroll to explore</span>
                 <i class="fa-solid fa-arrow-down text-white text-xl"></i>
             </div>
         </section>
@@ -89,9 +89,9 @@
         <section class="py-24 bg-white">
             <div class="max-w-[1200px] mx-auto px-5">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-                    <h2 class="text-brand uppercase tracking-widest font-bold text-sm mb-3">The Source</h2>
-                    <h3 class="text-3xl md:text-5xl font-bold text-dark mb-6">Rooted in Premium Origins</h3>
-                    <p class="text-[#666] leading-relaxed text-lg">
+                    <h2 class="text-brand uppercase tracking-widest font-bold text-sm mb-3" data-i18n="fp_src_tag">The Source</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold text-dark mb-6" data-i18n="fp_src_title">Rooted in Premium Origins</h3>
+                    <p class="text-[#666] leading-relaxed text-lg" data-i18n="fp_src_desc1">
                         Our lands are carefully selected for their rich nutrients and ideal climates, enabling us to grow the finest produce under absolute control.
                     </p>
                 </div>
@@ -106,13 +106,13 @@
                     <!-- Details -->
                     <div class="p-4 md:p-8">
                         <i class="fa-solid fa-map-location-dot text-brand text-4xl mb-6"></i>
-                        <h4 class="text-2xl font-bold text-dark mb-4">Prime Geographic Locations</h4>
-                        <p class="text-[#666] leading-relaxed mb-6">
+                        <h4 class="text-2xl font-bold text-dark mb-4" data-i18n="fp_src_loc_title">Prime Geographic Locations</h4>
+                        <p class="text-[#666] leading-relaxed mb-6" data-i18n="fp_src_loc_desc">
                             Positioned in Egypt's most fertile agricultural zones. The combination of intense sunlight, rich Nile-fed soil, and optimal weather windows gives our crops their distinct flavor profiles and robust shelf life.
                         </p>
                         <ul class="space-y-3 font-semibold text-dark">
-                            <li><i class="fa-solid fa-check text-brand mr-2"></i> Strategic export proximity</li>
-                            <li><i class="fa-solid fa-check text-brand mr-2"></i> Year-round cultivation cycles</li>
+                            <li><i class="fa-solid fa-check text-brand mr-2"></i> <span data-i18n="fp_src_loc_li1">Strategic export proximity</span></li>
+                            <li><i class="fa-solid fa-check text-brand mr-2"></i> <span data-i18n="fp_src_loc_li2">Year-round cultivation cycles</span></li>
                         </ul>
                     </div>
                 </div>
@@ -124,18 +124,18 @@
                             <i class="fa-solid fa-droplet text-brand text-4xl"></i>
                             <i class="fa-solid fa-seedling text-brand text-4xl"></i>
                         </div>
-                        <h4 class="text-2xl font-bold text-dark mb-4">Modern Irrigation & Soil Care</h4>
-                        <p class="text-[#666] leading-relaxed mb-6">
+                        <h4 class="text-2xl font-bold text-dark mb-4" data-i18n="fp_src_irr_title">Modern Irrigation & Soil Care</h4>
+                        <p class="text-[#666] leading-relaxed mb-6" data-i18n="fp_src_irr_desc">
                             We deploy state-of-the-art drip irrigation systems to conserve water and deliver precise macro-nutrients directly to the roots. Our soil is continuously audited to guarantee organic vitality.
                         </p>
                         <div class="grid grid-cols-2 gap-4 mt-8">
                             <div class="bg-light p-4 rounded-xl border border-border">
                                 <div class="text-brand font-bold text-2xl mb-1">90%</div>
-                                <div class="text-xs text-[#666] uppercase font-bold">Water Efficiency</div>
+                                <div class="text-xs text-[#666] uppercase font-bold" data-i18n="fp_src_eff">Water Efficiency</div>
                             </div>
                             <div class="bg-light p-4 rounded-xl border border-border">
                                 <div class="text-brand font-bold text-2xl mb-1">Rich</div>
-                                <div class="text-xs text-[#666] uppercase font-bold">Mineral Composition</div>
+                                <div class="text-xs text-[#666] uppercase font-bold" data-i18n="fp_src_min">Mineral Composition</div>
                             </div>
                         </div>
                     </div>
@@ -154,87 +154,138 @@
             
             <div class="max-w-[1200px] mx-auto px-5 relative z-10">
                 <div class="text-center mb-20 reveal-up">
-                    <h2 class="text-[#C9A84C] uppercase tracking-widest font-bold text-sm mb-3">Process</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold mb-4">The Production Journey</h3>
-                    <p class="text-white/70 max-w-2xl mx-auto">A seamless, fully traceable pipeline ensuring food safety from the field directly to worldwide retailers.</p>
+                    <h2 class="text-[#C9A84C] uppercase tracking-widest font-bold text-sm mb-3" data-i18n="fp_jrn_tag">Process</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="fp_jrn_title">The Production Journey</h3>
+                    <p class="text-white/70 max-w-2xl mx-auto" data-i18n="fp_jrn_desc">A seamless, fully traceable pipeline ensuring food safety from the field directly to worldwide retailers.</p>
                 </div>
 
                 <!-- Interactive Timeline Layout -->
-                <div class="relative w-full overflow-x-auto pb-16 pt-5 hide-scrollbar">
-                    <div class="min-w-[800px] relative px-10">
-                        <!-- Connecting Line -->
-                        <div class="timeline-connector"></div>
+                <div class="relative w-full pb-24 pt-10 px-0">
+                    <div class="w-full relative">
+                        <!-- Winding SVG Roadmap -->
+                        <div class="absolute inset-0 z-0 flex items-center shadow-lg">
+                            <svg viewBox="0 0 1000 256" preserveAspectRatio="none" class="w-full h-64 drop-shadow-2xl">
+                                <path d="M 0,128 Q 100,-72 200,128 T 400,128 T 600,128 T 800,128 T 1000,128" fill="none" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" />
+                                <path d="M 0,128 Q 100,-72 200,128 T 400,128 T 600,128 T 800,128 T 1000,128" fill="none" stroke="#333333" stroke-width="20" stroke-linecap="round" />
+                                <path d="M 0,128 Q 100,-72 200,128 T 400,128 T 600,128 T 800,128 T 1000,128" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="12 12" stroke-linecap="round" />
+                            </svg>
+                        </div>
 
-                        <!-- Grid for Steps -->
-                        <div class="grid grid-cols-5 gap-4 relative">
+                        <!-- Grid for Steps (Perfect alignment with SVG points) -->
+                        <div class="grid grid-cols-5 relative z-10 w-full h-full">
                             
-                            <!-- Step 1 -->
-                            <div class="timeline-step flex flex-col items-center group cursor-pointer reveal-up" style="transition-delay: 100ms;">
-                                <div class="w-16 h-16 rounded-full bg-white text-dark flex items-center justify-center text-2xl font-bold shadow-lg group-hover:bg-[#C9A84C] group-hover:text-white transition duration-300 relative z-10 border-4 border-[#1B3A2D]">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                </div>
-                                <h4 class="mt-4 font-bold text-center">Harvesting</h4>
-                                
-                                <!-- Tooltip -->
-                                <div class="timeline-tooltip absolute top-full mt-4 w-48 bg-white text-dark p-3 rounded-lg shadow-xl z-20">
-                                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=400&auto=format&fit=crop" alt="Harvest" class="w-full h-24 object-cover rounded-md mb-2">
-                                    <p class="text-xs font-semibold text-center">Hand-picked at peak ripeness.</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 2 -->
-                            <div class="timeline-step flex flex-col items-center group cursor-pointer reveal-up" style="transition-delay: 200ms;">
-                                <div class="w-16 h-16 rounded-full bg-[#3A6B47] text-white flex items-center justify-center text-2xl font-bold shadow-lg group-hover:bg-[#C9A84C] transition duration-300 relative z-10 border-4 border-[#1B3A2D]">
-                                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-                                </div>
-                                <h4 class="mt-4 font-bold text-center">Sorting & QC</h4>
-                                
-                                <!-- Tooltip -->
-                                <div class="timeline-tooltip absolute top-full mt-4 w-48 bg-white text-dark p-3 rounded-lg shadow-xl z-20">
-                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop" alt="QC" class="w-full h-24 object-cover rounded-md mb-2">
-                                    <p class="text-xs font-semibold text-center">Optical grading & strict selection.</p>
+                            <!-- Step 1 (Up) -->
+                            <div class="timeline-step h-64 relative group cursor-pointer reveal-up" style="transition-delay: 100ms;">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%+100px)] z-10">
+                                    <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-40 text-center pointer-events-none">
+                                        <h4 class="font-bold text-white drop-shadow-md text-sm md:text-base" data-i18n="fp_j_h_title">Harvesting</h4>
+                                    </div>
+                                    <div class="timeline-tooltip absolute bottom-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 w-72 bg-white text-dark rounded-xl shadow-2xl z-20 pointer-events-none border border-gray-100 overflow-hidden flex flex-col">
+                                        <div class="flex gap-3 p-3 items-center border-b border-gray-100 bg-gray-50">
+                                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=400&auto=format&fit=crop" alt="Harvest" class="w-10 h-10 object-cover rounded-full shadow-sm">
+                                            <h5 class="font-bold text-sm text-[#1B3A2D] whitespace-nowrap"><span class="mr-1">1.</span> <span data-i18n="fp_j_h_title">Harvesting</span></h5>
+                                        </div>
+                                        <div class="p-3">
+                                            <p class="text-xs leading-relaxed text-gray-600 pointer-events-auto" data-i18n="fp_j_h_desc">
+                                                The journey begins in our nutrient-rich soils. Every crop is meticulously hand-picked at peak ripeness to ensure optimal flavor, sugar levels, and maximum freshness.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full bg-white text-dark flex items-center justify-center text-2xl shadow-[0_10px_20px_rgba(0,0,0,0.3)] border-[6px] border-[#C9A84C] relative group-hover:bg-[#C9A84C] group-hover:text-white group-hover:scale-110 transition duration-300">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Step 3 -->
-                            <div class="timeline-step flex flex-col items-center group cursor-pointer reveal-up" style="transition-delay: 300ms;">
-                                <div class="w-16 h-16 rounded-full bg-[#3A6B47] text-white flex items-center justify-center text-2xl font-bold shadow-lg group-hover:bg-[#C9A84C] transition duration-300 relative z-10 border-4 border-[#1B3A2D]">
-                                    <i class="fa-solid fa-snowflake"></i>
-                                </div>
-                                <h4 class="mt-4 font-bold text-center text-sm md:text-base">Cooling/Processing</h4>
-                                
-                                <!-- Tooltip -->
-                                <div class="timeline-tooltip absolute top-full mt-4 w-48 bg-white text-dark p-3 rounded-lg shadow-xl z-20">
-                                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400&auto=format&fit=crop" alt="Processing" class="w-full h-24 object-cover rounded-md mb-2">
-                                    <p class="text-xs font-semibold text-center">IQF freezing to preserve nutrients.</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 4 -->
-                            <div class="timeline-step flex flex-col items-center group cursor-pointer reveal-up" style="transition-delay: 400ms;">
-                                <div class="w-16 h-16 rounded-full bg-[#3A6B47] text-white flex items-center justify-center text-2xl font-bold shadow-lg group-hover:bg-[#C9A84C] transition duration-300 relative z-10 border-4 border-[#1B3A2D]">
-                                    <i class="fa-solid fa-box-open"></i>
-                                </div>
-                                <h4 class="mt-4 font-bold text-center">Packaging</h4>
-                                
-                                <!-- Tooltip -->
-                                <div class="timeline-tooltip absolute top-full mt-4 w-48 bg-white text-dark p-3 rounded-lg shadow-xl z-20">
-                                    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=400&auto=format&fit=crop" alt="Packaging" class="w-full h-24 object-cover rounded-md mb-2">
-                                    <p class="text-xs font-semibold text-center">Custom cartons & hygienic sealing.</p>
+                            <!-- Step 2 (Down) -->
+                            <div class="timeline-step h-64 relative group cursor-pointer reveal-up" style="transition-delay: 200ms;">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%-100px)] z-10">
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 pb-4 w-40 text-center pointer-events-none">
+                                        <h4 class="font-bold text-white drop-shadow-md text-sm md:text-base" data-i18n="fp_j_s_title">Sorting & QC</h4>
+                                    </div>
+                                    <div class="timeline-tooltip absolute top-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 w-72 bg-white text-dark rounded-xl shadow-2xl z-20 pointer-events-none border border-gray-100 overflow-hidden flex flex-col">
+                                        <div class="flex gap-3 p-3 items-center border-b border-gray-100 bg-gray-50">
+                                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop" alt="QC" class="w-10 h-10 object-cover rounded-full shadow-sm">
+                                            <h5 class="font-bold text-sm text-[#1B3A2D] whitespace-nowrap"><span class="mr-1">2.</span> <span data-i18n="fp_j_s_title">Sorting & QC</span></h5>
+                                        </div>
+                                        <div class="p-3">
+                                            <p class="text-xs leading-relaxed text-gray-600 pointer-events-auto" data-i18n="fp_j_s_desc">
+                                                Harvested produce flows into our facilities where optical grading machines and expert quality-controllers strictly eliminate defects, ensuring only premium sizes proceed.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full bg-[#1B3A2D] text-white flex items-center justify-center text-2xl shadow-[0_10px_20px_rgba(0,0,0,0.3)] border-[6px] border-[#C9A84C] relative group-hover:bg-[#C9A84C] group-hover:scale-110 transition duration-300">
+                                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Step 5 -->
-                            <div class="timeline-step flex flex-col items-center group cursor-pointer reveal-up" style="transition-delay: 500ms;">
-                                <div class="w-16 h-16 rounded-full bg-white text-dark flex items-center justify-center text-2xl font-bold shadow-lg group-hover:bg-[#C9A84C] group-hover:text-white transition duration-300 relative z-10 border-4 border-[#1B3A2D]">
-                                    <i class="fa-solid fa-ship"></i>
+                            <!-- Step 3 (Up) -->
+                            <div class="timeline-step h-64 relative group cursor-pointer reveal-up" style="transition-delay: 300ms;">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%+100px)] z-10">
+                                    <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-40 text-center pointer-events-none">
+                                        <h4 class="font-bold text-white drop-shadow-md text-sm md:text-base leading-tight" data-i18n="fp_j_c_title">Cooling/<br>Processing</h4>
+                                    </div>
+                                    <div class="timeline-tooltip absolute bottom-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 w-72 bg-white text-dark rounded-xl shadow-2xl z-20 pointer-events-none border border-gray-100 overflow-hidden flex flex-col">
+                                        <div class="flex gap-3 p-3 items-center border-b border-gray-100 bg-gray-50">
+                                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=400&auto=format&fit=crop" alt="Processing" class="w-10 h-10 object-cover rounded-full shadow-sm">
+                                            <h5 class="font-bold text-sm text-[#1B3A2D] whitespace-nowrap"><span class="mr-1">3.</span> <span data-i18n="fp_j_c_h">Cooling/Processing</span></h5>
+                                        </div>
+                                        <div class="p-3">
+                                            <p class="text-xs leading-relaxed text-gray-600 pointer-events-auto" data-i18n="fp_j_c_desc">
+                                                Within hours of harvest, the produce is hydro-cooled to lock in vitality. Our rapid IQF freezers instantly trap essential nutrients and textures, preserving nature's perfection.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full bg-white text-dark flex items-center justify-center text-2xl shadow-[0_10px_20px_rgba(0,0,0,0.3)] border-[6px] border-[#C9A84C] relative group-hover:bg-[#C9A84C] group-hover:text-white group-hover:scale-110 transition duration-300">
+                                        <i class="fa-solid fa-snowflake"></i>
+                                    </div>
                                 </div>
-                                <h4 class="mt-4 font-bold text-center">Logistics</h4>
-                                
-                                <!-- Tooltip -->
-                                <div class="timeline-tooltip absolute top-full mt-4 w-48 bg-white text-dark p-3 rounded-lg shadow-xl z-20">
-                                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=400&auto=format&fit=crop" alt="Shipping" class="w-full h-24 object-cover rounded-md mb-2">
-                                    <p class="text-xs font-semibold text-center">Global shipping to 15+ countries.</p>
+                            </div>
+
+                            <!-- Step 4 (Down) -->
+                            <div class="timeline-step h-64 relative group cursor-pointer reveal-up" style="transition-delay: 400ms;">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%-100px)] z-10">
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 pb-4 w-40 text-center pointer-events-none">
+                                        <h4 class="font-bold text-white drop-shadow-md text-sm md:text-base" data-i18n="fp_j_p_title">Packaging</h4>
+                                    </div>
+                                    <div class="timeline-tooltip absolute top-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 w-72 bg-white text-dark rounded-xl shadow-2xl z-20 pointer-events-none border border-gray-100 overflow-hidden flex flex-col">
+                                        <div class="flex gap-3 p-3 items-center border-b border-gray-100 bg-gray-50">
+                                            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=400&auto=format&fit=crop" alt="Packaging" class="w-10 h-10 object-cover rounded-full shadow-sm">
+                                            <h5 class="font-bold text-sm text-[#1B3A2D] whitespace-nowrap"><span class="mr-1">4.</span> <span data-i18n="fp_j_p_title">Packaging</span></h5>
+                                        </div>
+                                        <div class="p-3">
+                                            <p class="text-xs leading-relaxed text-gray-600 pointer-events-auto" data-i18n="fp_j_p_desc">
+                                                The pristine produce is carefully nestled into hygienic, custom-ventilated cartons and food-grade packaging. This specialized padding prevents transit bruising.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full bg-[#1B3A2D] text-white flex items-center justify-center text-2xl shadow-[0_10px_20px_rgba(0,0,0,0.3)] border-[6px] border-[#C9A84C] relative group-hover:bg-[#C9A84C] group-hover:scale-110 transition duration-300">
+                                        <i class="fa-solid fa-box-open"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 5 (Up) -->
+                            <div class="timeline-step h-64 relative group cursor-pointer reveal-up" style="transition-delay: 500ms;">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%+100px)] z-10">
+                                    <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-40 text-center pointer-events-none">
+                                        <h4 class="font-bold text-white drop-shadow-md text-sm md:text-base" data-i18n="fp_j_l_title">Logistics</h4>
+                                    </div>
+                                    <div class="timeline-tooltip absolute bottom-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 w-72 bg-white text-dark rounded-xl shadow-2xl z-20 pointer-events-none border border-gray-100 overflow-hidden flex flex-col">
+                                        <div class="flex gap-3 p-3 items-center border-b border-gray-100 bg-gray-50">
+                                            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=400&auto=format&fit=crop" alt="Shipping" class="w-10 h-10 object-cover rounded-full shadow-sm">
+                                            <h5 class="font-bold text-sm text-[#1B3A2D] whitespace-nowrap"><span class="mr-1">5.</span> <span data-i18n="fp_j_l_title">Logistics</span></h5>
+                                        </div>
+                                        <div class="p-3">
+                                            <p class="text-xs leading-relaxed text-gray-600 pointer-events-auto" data-i18n="fp_j_l_desc">
+                                                Safely loaded into climate-controlled containers, our fleets dispatch across oceans. Real-time temperature monitoring ensures the harvest reaches optimal destinations worldwide.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-16 h-16 rounded-full bg-white text-dark flex items-center justify-center text-2xl shadow-[0_10px_20px_rgba(0,0,0,0.3)] border-[6px] border-[#C9A84C] relative group-hover:bg-[#C9A84C] group-hover:text-white group-hover:scale-110 transition duration-300">
+                                        <i class="fa-solid fa-ship"></i>
+                                    </div>
                                 </div>
                             </div>
 
@@ -245,112 +296,208 @@
         </section>
 
         <!-- SECTION 3: PRODUCT CATALOG (Interactive) -->
-        <section class="py-24 bg-light-bg" id="catalog">
-            <div class="max-w-[1200px] mx-auto px-5">
+        <section class="py-24 bg-light-bg relative overflow-hidden" id="catalog">
+            <!-- Background Image with High Transparency -->
+            <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1920&auto=format&fit=crop" 
+                 alt="Catalog Background" 
+                 class="absolute inset-0 w-full h-full object-cover z-0 opacity-10 pointer-events-none">
+                 
+            <div class="max-w-[1200px] mx-auto px-5 relative z-10">
                 <div class="text-center mb-12 reveal-up">
-                    <h2 class="text-brand uppercase tracking-widest font-bold text-sm mb-3">Portfolio</h2>
-                    <h3 class="text-3xl md:text-5xl font-bold text-dark mb-8">Technical Product Catalog</h3>
+                    <h2 class="text-brand uppercase tracking-widest font-bold text-sm mb-3" data-i18n="fp_cat_tag">Portfolio</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold text-dark mb-8" data-i18n="fp_cat_title">Technical Product Catalog</h3>
                     
                     <!-- Tabs Controls -->
                     <div class="inline-flex bg-white rounded-full p-1 border border-border shadow-sm mx-auto overflow-x-auto max-w-full">
-                        <button class="tab-btn active px-6 py-3 rounded-full text-sm font-bold text-dark border-transparent focus:outline-none whitespace-nowrap transition" data-target="tab-fresh">Fresh Products</button>
-                        <button class="tab-btn px-6 py-3 rounded-full text-sm font-bold text-dark border-transparent focus:outline-none whitespace-nowrap transition" data-target="tab-frozen">Frozen (IQF)</button>
-                        <button class="tab-btn px-6 py-3 rounded-full text-sm font-bold text-dark border-transparent focus:outline-none whitespace-nowrap transition" data-target="tab-processed">Processed & Puree</button>
+                        <button class="tab-btn active px-6 py-3 rounded-full text-sm font-bold text-dark border-transparent focus:outline-none whitespace-nowrap transition" data-target="tab-fresh" data-i18n="fp_tab_frsh">Fresh Products</button>
+                        <button class="tab-btn px-6 py-3 rounded-full text-sm font-bold text-dark border-transparent focus:outline-none whitespace-nowrap transition" data-target="tab-frozen" data-i18n="fp_tab_frzn">Frozen (IQF)</button>
+                        <button class="tab-btn px-6 py-3 rounded-full text-sm font-bold text-dark border-transparent focus:outline-none whitespace-nowrap transition" data-target="tab-processed" data-i18n="fp_tab_proc">Processed & Puree</button>
                     </div>
                 </div>
 
                 <!-- Tabs Content Container -->
                 <div class="relative min-h-[400px]">
                     
-                    <!-- FRESH TAB -->
-                    <div id="tab-fresh" class="tab-content active grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Product Card 1 -->
+                    <!-- FRESH TAB (3×2 = 6 cards) -->
+                    <div id="tab-fresh" class="tab-content active md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- 1: Citrus -->
                         <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
                             <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=600&auto=format&fit=crop" alt="Citrus" class="w-full h-48 object-cover">
                             <div class="p-6">
-                                <h4 class="text-xl font-bold text-dark mb-2">Citrus (Oranges & Lemons)</h4>
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_f1_t">Citrus (Oranges & Lemons)</h4>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">Baladi</span>
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">Navel</span>
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">Valencia</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f1_v1">Baladi</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f1_v2">Navel</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f1_v3">Valencia</span>
                                 </div>
-                                <ul class="text-sm text-[#555] space-y-2 mb-4">
-                                    <li><strong class="text-dark">Seasonality:</strong> Nov – May</li>
-                                    <li><strong class="text-dark">Packaging:</strong> Telescopic Cartons (15KG), Open Top</li>
-                                </ul>
+                                <ul class="text-sm text-[#555] space-y-2"><li data-i18n="fp_f1_sea"><strong>Season:</strong> Nov &ndash; May</li><li data-i18n="fp_f1_pack"><strong>Pack:</strong> Telescopic Cartons (15KG)</li></ul>
                             </div>
                         </div>
-
-                        <!-- Product Card 2 -->
+                        <!-- 2: Grapes -->
                         <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
                             <img src="https://images.unsplash.com/photo-1596363505729-4190a9506133?q=80&w=600&auto=format&fit=crop" alt="Grapes" class="w-full h-48 object-cover">
                             <div class="p-6">
-                                <h4 class="text-xl font-bold text-dark mb-2">Premium Grapes</h4>
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_f2_t">Premium Grapes</h4>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">Sugraone</span>
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">Flame</span>
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">Crimson</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f2_v1">Sugraone</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f2_v2">Flame</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f2_v3">Crimson</span>
                                 </div>
-                                <ul class="text-sm text-[#555] space-y-2 mb-4">
-                                    <li><strong class="text-dark">Seasonality:</strong> May – Sept</li>
-                                    <li><strong class="text-dark">Packaging:</strong> Plastic Punnets (500g), Loose (5KG)</li>
-                                </ul>
+                                <ul class="text-sm text-[#555] space-y-2"><li data-i18n="fp_f2_sea"><strong>Season:</strong> May &ndash; Sept</li><li data-i18n="fp_f2_pack"><strong>Pack:</strong> Punnets (500g), Loose (5KG)</li></ul>
                             </div>
                         </div>
-
-                        <!-- Product Card 3 -->
+                        <!-- 3: Onions -->
                         <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
                             <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?q=80&w=600&auto=format&fit=crop" alt="Onions" class="w-full h-48 object-cover">
                             <div class="p-6">
-                                <h4 class="text-xl font-bold text-dark mb-2">Onions & Fresh Garlic</h4>
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_f3_t">Onions & Fresh Garlic</h4>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">Red/Yellow</span>
-                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold">White Garlic</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f3_v1">Red/Yellow</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f3_v2">White Garlic</span>
                                 </div>
-                                <ul class="text-sm text-[#555] space-y-2 mb-4">
-                                    <li><strong class="text-dark">Seasonality:</strong> Feb – Aug</li>
-                                    <li><strong class="text-dark">Packaging:</strong> Mesh Bags (10KG/25KG)</li>
-                                </ul>
+                                <ul class="text-sm text-[#555] space-y-2"><li data-i18n="fp_f3_sea"><strong>Season:</strong> Feb &ndash; Aug</li><li data-i18n="fp_f3_pack"><strong>Pack:</strong> Mesh Bags (10KG/25KG)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 4: Pomegranates -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=600&auto=format&fit=crop" alt="Pomegranates" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_f4_t">Pomegranates</h4>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f4_v1">Wonderful</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f4_v2">Acco</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f4_v3">Early 116</span>
+                                </div>
+                                <ul class="text-sm text-[#555] space-y-2"><li data-i18n="fp_f4_sea"><strong>Season:</strong> Sept &ndash; Jan</li><li data-i18n="fp_f4_pack"><strong>Pack:</strong> Cartons (3.5KG), Telescopic (5KG)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 5: Strawberries -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=600&auto=format&fit=crop" alt="Strawberries" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_f5_t">Fresh Strawberries</h4>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f5_v1">Fortuna</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f5_v2">Festival</span>
+                                </div>
+                                <ul class="text-sm text-[#555] space-y-2"><li data-i18n="fp_f5_sea"><strong>Season:</strong> Dec &ndash; Apr</li><li data-i18n="fp_f5_pack"><strong>Pack:</strong> Punnets (250g/500g), Flat Trays</li></ul>
+                            </div>
+                        </div>
+                        <!-- 6: Mangoes -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?q=80&w=600&auto=format&fit=crop" alt="Mangoes" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_f6_t">Premium Mangoes</h4>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f6_v1">Kent</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f6_v2">Keitt</span>
+                                    <span class="text-xs bg-light border border-border px-2 py-1 rounded text-[#666] font-bold" data-i18n="fp_f6_v3">Ewais</span>
+                                </div>
+                                <ul class="text-sm text-[#555] space-y-2"><li data-i18n="fp_f6_sea"><strong>Season:</strong> Jul &ndash; Oct</li><li data-i18n="fp_f6_pack"><strong>Pack:</strong> Single Layer Cartons (4KG)</li></ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- FROZEN TAB -->
-                    <div id="tab-frozen" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft">
+                    <!-- FROZEN TAB (3×2 = 6 cards) -->
+                    <div id="tab-frozen" class="tab-content md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- 1: Frozen Strawberries -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
                             <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=600&auto=format&fit=crop" alt="Frozen Strawberries" class="w-full h-48 object-cover">
                             <div class="p-6">
-                                <h4 class="text-xl font-bold text-dark mb-2">Frozen Strawberries (IQF)</h4>
-                                <ul class="text-sm text-[#555] space-y-2 mb-4 mt-4">
-                                    <li><strong class="text-dark">Availability:</strong> Year-round</li>
-                                    <li><strong class="text-dark">Sizes:</strong> 15-25mm, 25-35mm</li>
-                                    <li><strong class="text-dark">Packaging:</strong> Polybags (400g), Bulk Cartons (10kg)</li>
-                                </ul>
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_fz1_t">Frozen Strawberries (IQF)</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_fz1_a"><strong>Availability:</strong> Year-round</li><li data-i18n="fp_fz1_s"><strong>Sizes:</strong> 15-25mm, 25-35mm</li><li data-i18n="fp_fz1_p"><strong>Pack:</strong> Polybags (400g), Bulk (10kg)</li></ul>
                             </div>
                         </div>
-                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft">
-                            <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?q=80&w=600&auto=format&fit=crop" alt="Frozen Mango Base" class="w-full h-48 object-cover">
+                        <!-- 2: Frozen Mango -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?q=80&w=600&auto=format&fit=crop" alt="Frozen Mango" class="w-full h-48 object-cover">
                             <div class="p-6">
-                                <h4 class="text-xl font-bold text-dark mb-2">Frozen Mango (Slices/Cubes)</h4>
-                                <ul class="text-sm text-[#555] space-y-2 mb-4 mt-4">
-                                    <li><strong class="text-dark">Availability:</strong> Year-round</li>
-                                    <li><strong class="text-dark">Cut:</strong> 10x10mm cubes, Half Slices</li>
-                                    <li><strong class="text-dark">Packaging:</strong> 1kg Bags, Bulk Cartons (15kg)</li>
-                                </ul>
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_fz2_t">Frozen Mango (Slices/Cubes)</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_fz2_a"><strong>Availability:</strong> Year-round</li><li data-i18n="fp_fz2_s"><strong>Cut:</strong> 10×10mm cubes, Half Slices</li><li data-i18n="fp_fz2_p"><strong>Pack:</strong> 1kg Bags, Bulk (15kg)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 3: Frozen Mixed Berries -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1563746098251-d35aef196e83?q=80&w=600&auto=format&fit=crop" alt="Frozen Mixed Berries" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_fz3_t">Frozen Mixed Berries</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_fz3_a"><strong>Availability:</strong> Year-round</li><li data-i18n="fp_fz3_s"><strong>Contents:</strong> Blueberry, Raspberry, Blackberry</li><li data-i18n="fp_fz3_p"><strong>Pack:</strong> Retail Bags (500g), Bulk (10kg)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 4: Frozen Green Peas -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1587735243615-c03f25aaff15?q=80&w=600&auto=format&fit=crop" alt="Frozen Green Peas" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_fz4_t">Frozen Green Peas</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_fz4_a"><strong>Availability:</strong> Year-round</li><li data-i18n="fp_fz4_s"><strong>Grade:</strong> Grade A, Extra Fine</li><li data-i18n="fp_fz4_p"><strong>Pack:</strong> Polybags (400g/1kg), Bulk (25kg)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 5: Frozen Sweet Corn -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?q=80&w=600&auto=format&fit=crop" alt="Frozen Sweet Corn" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_fz5_t">Frozen Sweet Corn Kernels</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_fz5_a"><strong>Availability:</strong> Year-round</li><li data-i18n="fp_fz5_s"><strong>Type:</strong> Super Sweet, IQF</li><li data-i18n="fp_fz5_p"><strong>Pack:</strong> Polybags (400g/1kg), Bulk (20kg)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 6: Frozen Broccoli -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=600&auto=format&fit=crop" alt="Frozen Broccoli" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_fz6_t">Frozen Broccoli Florets</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_fz6_a"><strong>Availability:</strong> Year-round</li><li data-i18n="fp_fz6_s"><strong>Cut:</strong> 30-50mm florets</li><li data-i18n="fp_fz6_p"><strong>Pack:</strong> Retail (400g), Foodservice (2.5kg)</li></ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- PROCESSED TAB -->
-                    <div id="tab-processed" class="tab-content grid md:grid-cols-2 gap-8">
-                        <div class="bg-white rounded-xl border border-border overflow-hidden flex flex-col md:flex-row shadow-soft">
-                            <img src="https://images.unsplash.com/photo-1546173159-315724a31696?q=80&w=600&auto=format&fit=crop" alt="Purees" class="w-full md:w-1/2 h-64 object-cover">
-                            <div class="p-8 flex items-center justify-center bg-white w-full">
-                                <div>
-                                    <h4 class="text-2xl font-bold text-dark mb-3">Fruit Purees & Concentrates</h4>
-                                    <p class="text-[#666] text-sm leading-relaxed mb-4">High-brix grade concentrates extracted directly from fresh crops, designed for the international beverage industry.</p>
-                                    <span class="inline-block bg-brand/10 text-brand px-3 py-1 rounded text-xs font-bold">Aseptic Drums (200L)</span>
-                                </div>
+                    <!-- PROCESSED & PUREE TAB (3×2 = 6 cards) -->
+                    <div id="tab-processed" class="tab-content md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- 1: Fruit Purees -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1546173159-315724a31696?q=80&w=600&auto=format&fit=crop" alt="Purees" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_p1_t">Fruit Purees & Concentrates</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_p1_a"><strong>Types:</strong> Mango, Guava, Strawberry</li><li data-i18n="fp_p1_s"><strong>Brix:</strong> 14-28° (Single Strength)</li><li data-i18n="fp_p1_p"><strong>Pack:</strong> Aseptic Drums (200L)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 2: Jams & Preserves -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop" alt="Jams" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_p2_t">Jams & Preserves</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_p2_a"><strong>Flavors:</strong> Apricot, Fig, Strawberry, Orange</li><li data-i18n="fp_p2_s"><strong>Sugar:</strong> Regular & Low-sugar options</li><li data-i18n="fp_p2_p"><strong>Pack:</strong> Glass Jars (340g/450g)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 3: Juices -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?q=80&w=600&auto=format&fit=crop" alt="Juices" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_p3_t">Natural Juices (NFC)</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_p3_a"><strong>Types:</strong> Orange, Pomegranate, Guava</li><li data-i18n="fp_p3_s"><strong>Process:</strong> Cold-pressed, Not From Concentrate</li><li data-i18n="fp_p3_p"><strong>Pack:</strong> Tetra Pak (200ml/1L), Bulk Drums</li></ul>
+                            </div>
+                        </div>
+                        <!-- 4: Olive Oil -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=600&auto=format&fit=crop" alt="Olive Oil" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_p4_t">Extra Virgin Olive Oil</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_p4_a"><strong>Grade:</strong> Extra Virgin, Cold Pressed</li><li data-i18n="fp_p4_s"><strong>Acidity:</strong> ≤ 0.8%</li><li data-i18n="fp_p4_p"><strong>Pack:</strong> Glass (500ml/750ml), Tin (3L/5L)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 5: Tomato Paste -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?q=80&w=600&auto=format&fit=crop" alt="Tomato Paste" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_p5_t">Tomato Paste & Sauce</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_p5_a"><strong>Brix:</strong> 22-24° (CB), 28-30° (HB)</li><li data-i18n="fp_p5_s"><strong>Color:</strong> Grade A (Deep Red)</li><li data-i18n="fp_p5_p"><strong>Pack:</strong> Tins (400g/800g), Drums (230kg)</li></ul>
+                            </div>
+                        </div>
+                        <!-- 6: Dried Herbs & Spices -->
+                        <div class="bg-white rounded-xl border border-border overflow-hidden shadow-soft hover:shadow-glow transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600&auto=format&fit=crop" alt="Spices" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-dark mb-2" data-i18n="fp_p6_t">Dried Herbs & Spices</h4>
+                                <ul class="text-sm text-[#555] space-y-2 mt-3"><li data-i18n="fp_p6_a"><strong>Types:</strong> Chamomile, Basil, Dill, Cumin</li><li data-i18n="fp_p6_s"><strong>Process:</strong> Air-dried, Steam Sterilized</li><li data-i18n="fp_p6_p"><strong>Pack:</strong> Bags (25g–1kg), Bulk (25kg)</li></ul>
                             </div>
                         </div>
                     </div>
@@ -364,11 +511,11 @@
                 
                 <div class="grid md:grid-cols-2 gap-16 items-center mb-16">
                     <div>
-                        <h2 class="text-3xl font-bold text-dark mb-6">Our Commitment to Sustainability</h2>
-                        <p class="text-[#666] leading-relaxed mb-6">
+                        <h2 class="text-3xl font-bold text-dark mb-6" data-i18n="fp_sus_title">Our Commitment to Sustainability</h2>
+                        <p class="text-[#666] leading-relaxed mb-6" data-i18n="fp_sus_1">
                             Agriculture is a partnership with nature. We focus on zero-waste initiatives, implementing renewable solar energy across our sorting facilities and utilizing organic compose derived from farm byproducts. 
                         </p>
-                        <p class="text-[#666] leading-relaxed">
+                        <p class="text-[#666] leading-relaxed" data-i18n="fp_sus_2">
                             Protecting the environment ensures the continued superior quality of the crops we deliver to your hands.
                         </p>
                     </div>
@@ -377,25 +524,59 @@
                         <div class="text-center p-6 border border-border rounded-xl bg-light hover:border-brand transition duration-300">
                             <i class="fa-solid fa-solar-panel text-brand text-4xl mb-3"></i>
                             <div class="text-2xl font-bold text-dark">40%</div>
-                            <div class="text-xs text-[#777] uppercase font-bold">Renewable Energy</div>
+                            <div class="text-xs text-[#777] uppercase font-bold" data-i18n="fp_sus_renew">Renewable Energy</div>
                         </div>
                         <div class="text-center p-6 border border-border rounded-xl bg-light hover:border-brand transition duration-300">
                             <i class="fa-solid fa-recycle text-brand text-4xl mb-3"></i>
-                            <div class="text-2xl font-bold text-dark">Zero</div>
-                            <div class="text-xs text-[#777] uppercase font-bold">Chemical Runoff</div>
+                            <div class="text-2xl font-bold text-dark" data-i18n="fp_sus_zero">Zero</div>
+                            <div class="text-xs text-[#777] uppercase font-bold" data-i18n="fp_sus_chem">Chemical Runoff</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Trust Bar Badges -->
                 <div class="border-t border-border pt-16">
-                    <h4 class="text-center text-[#777] uppercase tracking-widest text-sm font-bold mb-8">Internationally Certified Quality</h4>
-                    <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 opacity-70">
-                        <span class="text-2xl font-bold text-dark px-4 py-2 border-2 border-dark rounded">Global G.A.P.</span>
-                        <span class="text-2xl font-bold text-dark px-4 py-2 border-2 border-dark rounded">ISO 22000</span>
-                        <span class="text-2xl font-bold text-dark px-4 py-2 border-2 border-dark rounded">BRC Global</span>
-                        <span class="text-2xl font-bold text-dark px-4 py-2 border-2 border-dark rounded">HACCP</span>
-                        <span class="text-2xl font-bold text-dark px-4 py-2 border-2 border-dark rounded">FDA</span>
+                    <h4 class="text-center text-[#777] uppercase tracking-widest text-sm font-bold mb-10" data-i18n="fp_cert_title">Internationally Certified Quality</h4>
+                    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                        <!-- Global G.A.P. -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-32 h-20 flex items-center justify-center mb-3">
+                                <img src="../../images/certifications/global-gap.png" alt="Global G.A.P. Certification" class="max-w-full max-h-full object-contain mix-blend-multiply opacity-70 group-hover:opacity-100 transition duration-300">
+                            </div>
+                            <span class="text-sm font-bold text-[#666] group-hover:text-dark transition">Global G.A.P.</span>
+                        </div>
+                        
+                        <!-- ISO 22000 -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-32 h-20 flex items-center justify-center mb-3">
+                                <img src="../../images/certifications/iso-22000.png" alt="ISO 22000 Certification" class="max-w-full max-h-full object-contain mix-blend-multiply opacity-70 group-hover:opacity-100 transition duration-300">
+                            </div>
+                            <span class="text-sm font-bold text-[#666] group-hover:text-dark transition">ISO 22000</span>
+                        </div>
+                        
+                        <!-- BRC Global -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-32 h-20 flex items-center justify-center mb-3">
+                                <img src="../../images/certifications/brc-global.png" alt="BRC Global Certification" class="max-w-full max-h-full object-contain mix-blend-multiply opacity-70 group-hover:opacity-100 transition duration-300">
+                            </div>
+                            <span class="text-sm font-bold text-[#666] group-hover:text-dark transition">BRC Global</span>
+                        </div>
+                        
+                        <!-- HACCP -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-32 h-20 flex items-center justify-center mb-3">
+                                <img src="../../images/certifications/haccp.png" alt="HACCP Certification" class="max-w-full max-h-full object-contain mix-blend-multiply opacity-70 group-hover:opacity-100 transition duration-300">
+                            </div>
+                            <span class="text-sm font-bold text-[#666] group-hover:text-dark transition">HACCP</span>
+                        </div>
+                        
+                        <!-- FDA -->
+                        <div class="flex flex-col items-center group">
+                            <div class="w-32 h-20 flex items-center justify-center mb-3">
+                                <img src="../../images/certifications/fda.png" alt="FDA Certification" class="max-w-full max-h-full object-contain mix-blend-multiply opacity-70 group-hover:opacity-100 transition duration-300">
+                            </div>
+                            <span class="text-sm font-bold text-[#666] group-hover:text-dark transition">FDA</span>
+                        </div>
                     </div>
                 </div>
 
