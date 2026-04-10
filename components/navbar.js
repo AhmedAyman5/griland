@@ -1,9 +1,9 @@
-(function() {
+(function () {
     const placeholder = document.getElementById('navigation-placeholder');
     if (!placeholder) return;
-    
+
     const basePath = placeholder.getAttribute('data-basepath') || './';
-    
+
     const currentPath = window.location.pathname;
     const isHome = currentPath.endsWith('index.html') || currentPath.endsWith('/') || currentPath.endsWith('griland');
     const isAbout = currentPath.includes('/about.html');
@@ -47,7 +47,7 @@
                     <!-- Dropdown -->
                     <ul
                         class="absolute top-full start-0 mt-2 bg-white text-dark shadow-lg rounded-md w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-2 border border-border">
-                        <li><a href="${basePath}index.html#machinery"
+                        <li><a href="${basePath}pages/serivces/machinery/machinery.html"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_machinery">Machinery & Equipment</a></li>
                         <li><a href="${basePath}index.html#agri_inputs"
@@ -107,7 +107,7 @@
             <a href="${basePath}pages/about/about.html" class="mobile-link ${isAbout ? 'text-primary' : 'hover:text-primary'}" data-i18n="nav_about">About</a>
             <div class="border-y border-border py-4 my-2 flex flex-col gap-3">
                 <span class="text-muted text-sm uppercase" data-i18n="nav_services">Service</span>
-                <a href="${basePath}index.html#machinery" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_machinery">-
+                <a href="${basePath}pages/serivces/machinery/machinery.html" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_machinery">-
                     Machinery & Equipment</a>
                 <a href="${basePath}index.html#agri_inputs" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_agri_inputs">- Agri-Inputs</a>
