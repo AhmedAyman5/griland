@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Inputs | Agriland Egypt</title>
+    <meta name="description" content="Seeds, Fertilizers, Pesticides &amp; Machinery — Everything Your Land Needs">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Inherited CSS for Navbar -->
+    <link rel="stylesheet" href="../../../style.css">
+
+    <!-- Agricultural Inputs Page Specific CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A8C5C',
+                        dark: '#1B3A2D',
+                        light: '#F7F7F2',
+                        body: '#333333',
+                        muted: '#777777',
+                        border: '#E0E0E0',
+                        'cert-primary': '#1B4332',
+                        'cert-secondary': '#2D6A4F',
+                        'cert-accent': '#C9A84C',
+                        'cert-cream': '#F5F0E8',
+                        'cert-dark': '#0D2B1E',
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-body font-sans antialiased overflow-x-hidden">
+
+    <!-- 1. Navbar (Injected via JS) -->
+    <div id="navigation-placeholder" data-basepath="../../../"></div>
+    <script src="../../../components/navbar.js"></script>
+
+    <!-- WRAPPER FOR PAGE STYLES -->
+    <main class="agri-page pb-0">
+
+        <!-- SECTION 3 — PAGE HERO BANNER -->
+        <section
+            class="w-full h-80 relative flex flex-col items-center justify-center text-center px-4 overflow-hidden mt-8 md:mt-0">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1920&auto=format&fit=crop"
+                    alt="Agricultural Inputs" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-cert-dark/70"></div>
+                <div class="absolute inset-0"
+                    style="background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 50%);">
+                </div>
+            </div>
+            <div class="relative z-10 pt-16">
+                <p class="text-cert-accent text-sm mb-3 font-semibold tracking-wider uppercase" data-i18n="agri_breadcrumb">Home / Agricultural
+                    Inputs</p>
+                <h1 class="text-white text-5xl md:text-6xl font-bold font-serif" data-i18n="agri_title">Agricultural Inputs</h1>
+                <div class="gold-line mx-auto mt-6"></div>
+                <p class="text-gray-200 font-inter text-lg md:text-xl mt-6 max-w-2xl mx-auto" data-i18n="agri_subtitle">Seeds, Fertilizers,
+                    Pesticides &amp; Machinery — Everything Your Land Needs</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — INTRO + STATS STRIP -->
+        <section class="bg-cert-cream py-20 px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto">
+                <!-- LEFT COLUMN -->
+                <div class="reveal">
+                    <div class="uppercase text-xs tracking-widest text-cert-accent font-semibold" data-i18n="agri_supply_eyebrow">What We Supply</div>
+                    <div class="gold-line-left mb-6"></div>
+                    <h2 class="font-serif text-3xl md:text-4xl text-cert-primary mb-6 leading-tight" data-i18n="agri_supply_title">Complete
+                        Agricultural Input Solutions</h2>
+                    <p class="font-inter text-gray-600 text-sm md:text-base leading-relaxed mb-6" data-i18n="agri_supply_p1">
+                        Since 1923, companies like BayWa have proven that the link between farmers and food producers
+                        runs through quality agricultural inputs. At Griland Egypt, we carry that same philosophy —
+                        providing farmers, landowners, and operators with everything required to run a productive,
+                        sustainable, and profitable agricultural operation. From certified seeds and precision
+                        fertilizers to crop protection products and heavy-duty machinery, we import and supply the full
+                        spectrum of agricultural inputs from trusted international partners across Europe and Asia.
+                    </p>
+                    <p class="font-inter text-gray-600 text-sm md:text-base leading-relaxed" data-i18n="agri_supply_p2">
+                        Our agricultural inputs are sourced from globally recognized manufacturers and meet
+                        international quality standards including ISO 9001, GlobalG.A.P., and FDA certification —
+                        ensuring every input you receive is traceable, compliant, and proven.
+                    </p>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="reveal flex flex-col gap-6" style="transition-delay: 0.2s">
+                    <div class="w-full h-72 rounded-2xl overflow-hidden shadow-lg relative bg-gray-200">
+                        <img src="./images/solutions.jpg" alt="Agricultural Solutions"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded shadow text-xs font-bold text-cert-primary" data-i18n="agri_trusted_badge">
+                            Trusted Since 1989</div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+                            <div class="font-serif text-2xl text-cert-primary font-bold">35+</div>
+                            <div class="text-gray-500 text-[10px] mt-1 uppercase tracking-wider font-semibold" data-i18n="agri_stat_years">Years
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+                            <div class="font-serif text-2xl text-cert-primary font-bold">31+</div>
+                            <div class="text-gray-500 text-[10px] mt-1 uppercase tracking-wider font-semibold" data-i18n="agri_stat_products">Products
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+                            <div class="font-serif text-2xl text-cert-primary font-bold">10+</div>
+                            <div class="text-gray-500 text-[10px] mt-1 uppercase tracking-wider font-semibold" data-i18n="agri_stat_partners">Partners
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+                            <div class="font-serif text-2xl text-cert-primary font-bold">4</div>
+                            <div class="text-gray-500 text-[10px] mt-1 uppercase tracking-wider font-semibold" data-i18n="agri_stat_categories">
+                                Categories</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 — TABBED INPUT CATEGORIES -->
+        <section class="bg-white py-20 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 reveal">
+                    <div class="text-cert-accent uppercase text-xs tracking-widest font-semibold" data-i18n="agri_range_eyebrow">Our Input Range</div>
+                    <div class="gold-line mx-auto mb-4"></div>
+                    <h2 class="font-serif text-3xl text-cert-primary" data-i18n="agri_range_title">Four Pillars of Agricultural Input</h2>
+                </div>
+
+                <div class="flex gap-3 justify-center mb-10 flex-wrap">
+                    <button
+                        class="tab-btn flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold border-2 border-cert-primary text-cert-primary transition-all duration-300"
+                        data-tab="seeds">
+                        <img src="./logos/seeds.png" alt="Seeds" class="w-6 h-6 object-contain">
+                        <span data-i18n="agri_tab_seeds">Seeds</span>
+                    </button>
+                    <button
+                        class="tab-btn flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold border-2 border-cert-primary text-cert-primary transition-all duration-300"
+                        data-tab="fertilizers">
+                        <img src="./logos/fertilize.png" alt="Fertilizers" class="w-6 h-6 object-contain">
+                        <span data-i18n="agri_tab_fertilizers">Fertilizers</span>
+                    </button>
+                    <button
+                        class="tab-btn flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold border-2 border-cert-primary text-cert-primary transition-all duration-300"
+                        data-tab="pesticides">
+                        <img src="./logos/pesticide.png" alt="Pesticides" class="w-6 h-6 object-contain">
+                        <span data-i18n="agri_tab_pesticides">Pesticides</span>
+                    </button>
+                    <button
+                        class="tab-btn flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold border-2 border-cert-primary text-cert-primary transition-all duration-300"
+                        data-tab="machinery">
+                        <img src="./logos/machinery.png" alt="Machinery" class="w-6 h-6 object-contain">
+                        <span data-i18n="agri_tab_machinery">Machinery</span>
+                    </button>
+                </div>
+
+                <!-- TAB 1: SEEDS -->
+                <div id="tab-seeds" class="tab-content">
+                    <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
+                        <img src="./images/seedsAgri.avif" class="w-full h-full object-cover" alt="Quality Seeds">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
+                            <h3 class="text-white text-3xl font-serif font-bold mb-2" data-i18n="agri_seeds_banner_title">Certified Seeds &amp; Seedlings
+                            </h3>
+                            <p class="text-gray-200 text-sm max-w-2xl font-inter" data-i18n="agri_seeds_banner_desc">High-yield, disease-resistant seeds
+                                tailored for Egyptian soil and climate. Verified origins from top global breeders.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🥦</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_seeds_cat_veg">
+                                Vegetables</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_seeds_veg_title">Vegetable Seeds</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_seeds_veg_desc">A wide range of hybrid and
+                                non-hybrid vegetable seeds resistant to diseases, viruses, and heat. Our seeds cover
+                                major crops including tomatoes, peppers, cucumbers, and leafy greens — all certified and
+                                tested for Egyptian and regional climates.</p>
+                            <div class="text-xs text-cert-accent font-semibold mt-auto" data-i18n="agri_origin">🌍 Origin: Europe &amp; Asia
+                            </div>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🍇</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_seeds_cat_fruit">
+                                Fruits</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_seeds_fruit_title">Fruit Seeds &amp; Seedlings
+                            </h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_seeds_fruit_desc">Premium fruit crop
+                                varieties including grapes (Superior &amp; Seedless Flame), mangoes, citrus, and stone
+                                fruits. Our fruit seeds are sourced from certified European breeders and tested for
+                                high-yield performance.</p>
+                            <div class="text-xs text-cert-accent font-semibold" data-i18n="agri_origin">🌍 Origin: Europe &amp; Asia</div>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌾</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_seeds_cat_field">
+                                Field Crops</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_seeds_field_title">Field Crop Seeds</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_seeds_field_desc">Certified seeds for wheat,
+                                corn, barley, sorghum, and other staple field crops. Non-hybrid and hybrid varieties
+                                available, with documented performance data across Egyptian soil conditions.</p>
+                            <div class="text-xs text-cert-accent font-semibold" data-i18n="agri_origin">🌍 Origin: Europe &amp; Asia</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: FERTILIZERS -->
+                <div id="tab-fertilizers" class="tab-content">
+                    <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
+                        <img src="./images/FERTILIZERS.jpg" class="w-full h-full object-cover"
+                            alt="Fertilizers and Nutrients">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
+                            <h3 class="text-white text-3xl font-serif font-bold mb-2" data-i18n="agri_fert_banner_title">Advanced Plant Nutrition</h3>
+                            <p class="text-gray-200 text-sm max-w-2xl font-inter" data-i18n="agri_fert_banner_desc">Organic and chemical fertilizers,
+                                micro-nutrients, and bio-stimulants crafted to maximize your crop's biological
+                                potential.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">⚗️</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_fert_cat_macro">
+                                Macro Nutrients</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_fert_npk_title">NPK Fertilizers</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_fert_npk_desc">Complete NPK blends
+                                combining Nitrogen, Phosphorus, and Potassium — the three core macronutrients for crop
+                                growth. Our NPK formulations are calibrated for Egyptian soils and available in granular
+                                and liquid forms.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌿</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_fert_cat_bio">
+                                Bio Stimulants</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_fert_amino_title">Amino Acids &amp; Humic Acid
+                            </h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_fert_amino_desc">Griland's unique fertilizer
+                                blend includes growth regulators, amino acids, and humic acid — working together to
+                                raise production efficiency and crop quality even on poor and newly reclaimed land.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🧬</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_fert_cat_micro">
+                                Micro Nutrients</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_fert_micro_title">Micronutrient Blends</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_fert_micro_desc">Chelated micronutrient
+                                fertilizers including zinc, iron, manganese, and boron. Designed to correct deficiencies
+                                and optimize plant health across all crop types and soil profiles.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">💧</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_fert_cat_liquid">
+                                Liquid Nutrition</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_fert_liquid_title">Liquid Fertilizers</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_fert_liquid_desc">Ready-to-apply liquid
+                                formulations for foliar feeding and fertigation systems. Ideal for high-value crops
+                                requiring precise, fast-acting nutrition at critical growth stages.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">♻️</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_fert_cat_organic">
+                                Organic</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_fert_organic_title">Organic Fertilizers</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_fert_organic_desc">Bio-based organic
+                                fertilizers including compost concentrates, vermi-compost, and manure-based
+                                formulations. Supporting organic farming certification and sustainable soil management.
+                            </p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌱</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_fert_cat_soil">
+                                Soil Health</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_fert_soil_title">Soil Conditioners</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_fert_soil_desc">Products that improve soil
+                                structure, water retention, and microbial activity. Including bio-stimulants and natural
+                                extracts that enhance long-term soil productivity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: PESTICIDES -->
+                <div id="tab-pesticides" class="tab-content">
+                    <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
+                        <img src="./images/PESTICIDES.jpg" class="w-full h-full object-cover" alt="Crop Protection">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
+                            <h3 class="text-white text-3xl font-serif font-bold mb-2" data-i18n="agri_pest_banner_title">Complete Crop Protection</h3>
+                            <p class="text-gray-200 text-sm max-w-2xl font-inter" data-i18n="agri_pest_banner_desc">Herbicides, fungicides, and integrated
+                                pest management (IPM) solutions to safeguard your investment from planting to harvest.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🦠</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_pest_cat_fungi">
+                                Fungicides</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_pest_fungi_title">Fungicides</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_pest_fungi_desc">Systemic and contact
+                                fungicides for late blight, downy mildew, powdery mildew, and fungal complexes. Includes
+                                Colvid 25% EC (Difenoconazole 25%) and a wide range of preventive and curative products.
+                            </p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🐛</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_pest_cat_insect">
+                                Insecticides</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_pest_insect_title">Insecticides</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_pest_insect_desc">Broad-spectrum and
+                                selective insecticides targeting sucking pests, leaf feeders, and soil-dwelling insects.
+                                Products with different mechanisms of action to prevent resistance development.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌿</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_pest_cat_herb">
+                                Herbicides</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_pest_herb_title">Herbicides</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_pest_herb_desc">Selective and non-selective
+                                herbicides for weed control across field crops and horticulture. Pre-emergent and
+                                post-emergent formulations available to suit all crop calendars.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="mb-3"><img src="./logos/drone.png" alt="Nematicides"
+                                    class="w-10 h-10 object-contain"></div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_pest_cat_nema">
+                                Nematicides &amp; Acaricides</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_pest_nema_title">Nematicides &amp; Acaricides
+                            </h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_pest_nema_desc">Specialized products for
+                                the control of soil nematodes and mites — key pests in Egyptian vegetable and fruit
+                                production. Includes registered products from Syngenta and our own portfolio.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🧴</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_pest_cat_growth">
+                                Crop Protection</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_pest_growth_title">Plant Growth Regulators</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_pest_growth_desc">Growth regulators that
+                                manage plant development, fruit set, and stress response. Applied at critical crop
+                                stages to improve uniformity, yield, and post-harvest quality.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌾</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_pest_cat_bio">
+                                Bio Protection</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_pest_bio_title">Biological Crop Protection
+                            </h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_pest_bio_desc">Biopesticides and natural
+                                control agents as environmentally responsible alternatives to conventional chemicals.
+                                Supporting organic farming and integrated pest management (IPM) programs.</p>
+                        </div>
+                    </div>
+                    <p class="italic text-gray-500 text-sm text-center mt-8" data-i18n="agri_pest_registered">Griland Egypt holds 31 registered pesticide
+                        products with the Egyptian Ministry of Agriculture.</p>
+                </div>
+
+                <!-- TAB 4: MACHINERY -->
+                <div id="tab-machinery" class="tab-content">
+                    <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
+                        <img src="./images/MACHINERY.avif" class="w-full h-full object-cover"
+                            alt="Agricultural Machinery">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
+                            <h3 class="text-white text-3xl font-serif font-bold mb-2" data-i18n="agri_mach_banner_title">Heavy-Duty Machinery</h3>
+                            <p class="text-gray-200 text-sm max-w-2xl font-inter" data-i18n="agri_mach_banner_desc">Tractors, combine harvesters, and
+                                specialized attachments imported directly from top-tier European manufacturers.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-8 max-w-2xl text-center mx-auto" data-i18n="agri_mach_intro">Griland Egypt imports
+                        agricultural tractors and heavy equipment from leading European manufacturers. We also
+                        facilitate access to quality used machinery through our international partnerships — covering
+                        the full range of equipment a modern farm requires.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🚜</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_mach_cat_soil">
+                                Soil Preparation</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_mach_tractor_title">Agricultural Tractors</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_mach_tractor_desc">New and used tractors for
+                                continuous movement across agricultural lands, plowing, and transporting equipment.
+                                Sourced from European manufacturers and suitable for Egyptian field conditions.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌾</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_mach_cat_harvest">
+                                Harvesting</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_mach_combine_title">Combine Harvesters</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_mach_combine_desc">Full-spec combine
+                                harvesters for wheat, corn, and other field crops. Including maize adapters and
+                                sunflower headers for complete harvesting solutions across crop types.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🌱</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_mach_cat_plant">
+                                Planting</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_mach_drill_title">Seed Drills &amp; Planters
+                            </h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_mach_drill_desc">Conventional and precision
+                                seed drills for accurate seed placement and optimized plant populations. Ensuring
+                                uniform germination and maximizing yield potential from the first day.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🚿</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_pest_cat_growth">
+                                Crop Protection</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_mach_sprayer_title">Sprayers &amp; Applicators
+                            </h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_mach_sprayer_desc">Trailed and self-propelled
+                                sprayers for pesticide and fertilizer application. Calibrated for precise delivery rates
+                                to reduce waste and ensure uniform crop coverage.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">🪓</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_mach_cat_tillage">
+                                Soil Work</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_mach_harrow_title">Disc Harrows &amp; Ploughs
+                            </h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_mach_harrow_desc">Tillage equipment including
+                                disc harrows, ploughs, subsoilers, and seedbed preparators. For primary and secondary
+                                soil preparation across all crop rotations.</p>
+                        </div>
+                        <div class="input-card bg-cert-cream rounded-2xl p-6">
+                            <div class="text-4xl mb-3">📦</div>
+                            <div
+                                class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold" data-i18n="agri_mach_cat_post">
+                                Post-Harvest</div>
+                            <h3 class="font-serif text-lg font-bold text-cert-primary mb-2" data-i18n="agri_mach_loader_title">Telescopic Loaders &amp;
+                                Forklifts</h3>
+                            <p class="font-inter text-sm text-gray-600 leading-relaxed mb-4" data-i18n="agri_mach_loader_desc">Material handling equipment
+                                for farm logistics, cold storage, and post-harvest operations. Including telescopic
+                                loaders, electric forklifts, and skid loaders.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 6 — WHY GRILAND INPUTS STRIP -->
+        <section class="bg-cert-primary py-20 px-6">
+            <div class="text-center mb-14 reveal">
+                <div class="text-cert-accent uppercase text-xs tracking-widest" data-i18n="agri_why_eyebrow">Why Choose Us</div>
+                <div class="gold-line mx-auto mb-4"></div>
+                <h2 class="font-serif text-3xl text-white" data-i18n="agri_why_title">The Griland Quality Promise</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
+                <div class="reveal" style="transition-delay: 0.1s">
+                    <div class="text-5xl mb-4">🌍</div>
+                    <div class="font-serif text-white text-lg font-semibold mb-2" data-i18n="agri_why1_title">Internationally Sourced</div>
+                    <p class="font-inter text-gray-300 text-xs leading-relaxed" data-i18n="agri_why1_desc">Imported from the largest agencies in
+                        Europe and Asia with proven track records.</p>
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="text-5xl mb-4">🏛️</div>
+                    <div class="font-serif text-white text-lg font-semibold mb-2" data-i18n="agri_why2_title">Ministry Registered</div>
+                    <p class="font-inter text-gray-300 text-xs leading-relaxed" data-i18n="agri_why2_desc">31 products registered with the Egyptian
+                        Ministry of Agriculture for legal compliance.</p>
+                </div>
+                <div class="reveal" style="transition-delay: 0.3s">
+                    <div class="text-5xl mb-4">✅</div>
+                    <div class="font-serif text-white text-lg font-semibold mb-2" data-i18n="agri_why3_title">Certified &amp; Traceable</div>
+                    <p class="font-inter text-gray-300 text-xs leading-relaxed" data-i18n="agri_why3_desc">All inputs comply with ISO,
+                        GlobalG.A.P., FDA and Kosher/Halal standards.</p>
+                </div>
+                <div class="reveal" style="transition-delay: 0.4s">
+                    <div class="text-5xl mb-4">🤝</div>
+                    <div class="font-serif text-white text-lg font-semibold mb-2" data-i18n="agri_why4_title">Farmer-First Support</div>
+                    <p class="font-inter text-gray-300 text-xs leading-relaxed" data-i18n="agri_why4_desc">Technical agronomists available to
+                        advise on correct application, dosage and timing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8 — CTA BAND -->
+        <section class="bg-cert-secondary py-16 text-center px-4">
+            <h2 class="font-serif text-white text-3xl mb-3" data-i18n="agri_cta_title">Looking for a specific agricultural input?</h2>
+            <p class="font-inter text-gray-200 text-sm mt-3 max-w-xl mx-auto" data-i18n="agri_cta_desc">Our team will source it, import it, and
+                deliver it to your farm — contact us today.</p>
+            <div class="flex justify-center gap-4 mt-8 flex-wrap">
+                <a href="../../../index.html#footer"
+                    class="bg-cert-accent text-white px-8 py-4 rounded font-semibold hover:bg-yellow-600 transition-colors" data-i18n="agri_cta_contact">Contact
+                    Our Team →</a>
+                <a href="../../../index.html#services"
+                    class="border-2 border-white text-white px-8 py-4 rounded font-semibold hover:bg-white/10 transition-colors" data-i18n="agri_cta_services">View
+                    Our Services</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Injected via JS) -->
+    <div id="footer-placeholder" data-basepath="../../../"></div>
+    <script src="../../../components/footer.js"></script>
+
+    <!-- Global Website JavaScript (Handles Language Switcher & Fallback Mobile Drawer) -->
+    <script src="../../../main.js" defer></script>
+
+    <!-- Page Specific functionality (Intersection Observers & Tabs) -->
+    <script src="./js/script.js" defer></script>
+
+</body>
+
+</html>
