@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('invisible', 'opacity-0');
     }
 
-    mobileBtn.addEventListener('click', openMenu);
-    closeBtn.addEventListener('click', closeMenu);
-    overlay.addEventListener('click', closeMenu);
+    if(mobileBtn) mobileBtn.addEventListener('click', openMenu);
+    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if(overlay) overlay.addEventListener('click', closeMenu);
     
     mobileLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ================================================== */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('text-dark', 'py-0');
-            navbar.classList.remove('text-white', 'py-1');
-        } else {
-            navbar.classList.remove('text-dark', 'py-0');
-            navbar.classList.add('text-white', 'py-1');
+        if(navbar) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'text-dark', 'shadow-md', 'py-0');
+                navbar.classList.remove('bg-transparent', 'text-white', 'py-1');
+            } else {
+                navbar.classList.remove('bg-white', 'text-dark', 'shadow-md', 'py-0');
+                navbar.classList.add('bg-transparent', 'text-white', 'py-1');
+            }
         }
     });
 
@@ -490,7 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMenu();
     }
 
-    langBtnDesktop.addEventListener('click', toggleLanguage);
-    langBtnMobile.addEventListener('click', toggleLanguage);
+    if(langBtnDesktop) langBtnDesktop.addEventListener('click', toggleLanguage);
+    if(langBtnMobile) langBtnMobile.addEventListener('click', toggleLanguage);
 
 });
