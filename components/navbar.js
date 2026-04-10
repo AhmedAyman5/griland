@@ -90,7 +90,7 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-drawer"
-        class="fixed inset-y-0 start-0 w-64 bg-white z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        class="fixed inset-y-0 start-0 w-64 bg-white z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col md:hidden">
         <div class="p-6 flex justify-between items-center border-b border-border">
             <img src="${basePath}images/logo/logo1.png" alt="Agriland Egypt" class="h-16 md:h-20 object-contain">
             <div class="flex items-center gap-4">
@@ -123,7 +123,7 @@
         </div>
     </div>
     <!-- Drawer Overlay -->
-    <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300">
+    <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300 md:hidden">
     </div>
     `;
 

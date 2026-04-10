@@ -278,7 +278,49 @@ document.addEventListener('DOMContentLoaded', () => {
             "foot_desc": "Supporting farmers and landowners for over 35 years in the exploitation, management and development of agricultural land.",
             "foot_quicklinks": "Quick Links",
             "foot_services": "Our Services",
-            "foot_getintouch": "Get In Touch"
+            "foot_getintouch": "Get In Touch",
+            // About Page
+            "about_breadcrumb": "Home / About",
+            "about_title": "About",
+            "about_our_about": "our about",
+            "about_sec1_title": "Alongside farmers and farmland owners",
+            "about_sec1_p1": "Active throughout Egypt since its foundation in 1985, Griland supports farmers and agricultural landowners in the exploitation and development of their land. Our goal is to achieve a triple performance: economic, social and environmental.",
+            "about_sec1_li1": "To do this, we offer our customers a wide range of expertise, ranging from production to the marketing of local products.",
+            "about_sec1_li2": "But Grilandeg is above all a competent team that is committed to your side every day.",
+            "about_sec1_li3": "A network of large institutions throughout Egypt.",
+            "about_overview_p1": "<strong>GRILAND EGYPT</strong> has recently forayed into the business of trading in agricultural commodities and has a select presence across the value chain. We believe in exploring collaborative opportunities with partners to build a sustainable and synergistic business.",
+            "about_overview_p2": "Our strong network in Europe, ASEAN and Africa, combined with our experience in global trading and distribution, helps us nurture and grow this customer-oriented business. We manage all procedures related to export and import processes, logistics, records, certificates, and the coordination of all service providers involved.",
+            "about_overview_p3": "<strong>Our team</strong> creates efficient linkages across the commodity value chain, offering end-to-end solutions to customers while adhering to quality and food safety standards. Today we stand out in this highly competitive market because we have a lean corporate structure and can guarantee the success of every transaction.",
+            "about_overview_p4": "In the future, we expect to continually increase our turnover and diversify into new products and markets as conditions permit.",
+            "about_overview_p5": "We know the best way to secure, export, import your agriculture goods.",
+            "about_crop1": "As a principle such meetings build on the breadth of our business spanning not only crop protection but also seeds to provide a unique, customer-tailored offer of integrated crop management.",
+            "about_crop2": "The event concludes by offering complete crop solutions that increase plant vigor and yields whilst promoting the safe and effective use of our products.",
+            "about_crop3": "Consideration is also given to all aspects of good crop practice where they have a role to play. This may include choosing the appropriate seeds, husbandry practices, crop rotation and maintaining a good soil structure and cultural techniques.",
+            "about_food_ind": "Food Industry",
+            "about_crop_meet": "Focused Crop Meetings",
+            "about_crop_desc": "<strong>Focused crop meetings</strong> target a particular crop and provide an in-depth description of associated symptoms and damages caused by insects, disease and weed problems.",
+            "about_fresh_veg": "Fresh Vegetables",
+            "about_fresh_fruits": "Fresh Fruits",
+            "about_dt": "Dedicated Team",
+            "about_dt_desc": "Professional employees are there for you to pick the most amazing and fresh fruits.",
+            "about_fp": "Fresh Products",
+            "about_fp_desc": "100% fresh fruits delivery guaranteed. We inspect every package prior to shipping.",
+            "about_gc": "Gift Certificates",
+            "about_gc_desc": "Help your friends and family members stay healthy. Order our gift cards for them.",
+            "about_bo": "The Benefits Only",
+            "about_bo_desc": "We make sure that our regular clients get as many benefits as possible.",
+            "about_sec2_p1": "GRILAND EGYPT Import &amp; Export, we offer a comprehensive range of agricultural products specifically designed to meet the needs of farmers and agricultural projects of all kinds.",
+            "about_sec2_p2": "We are proud to provide high quality products, which makes them the ideal choice for those who strive to achieve exceptional results in the agricultural sector.",
+            "about_agro": "Agrochemicals",
+            "about_fert": "Advanced Fertilizers",
+            "about_seeds": "Seeds",
+            "about_pest": "Pesticides",
+            "about_spec": "GRILAND EGYPT is specialized in importing and registering public health products of pesticides, fertilizers and fruits and vegetable seeds and exporting fresh fruits and vegetables.",
+            "about_spec_p1": "We are active in a trading field that includes a variety of fertilizers, pesticides, seeds and agricultural machinery. In 2008, due to expansion, a new entity was created in the group for import, export and trading agencies.",
+            "about_spec_p2": "Due to more expansion of seeds-related business (nurseries grafting), Agro-Invest sister company was founded.",
+            "about_team_comp": "Our Team Company",
+            "about_team_multi": "A multidisciplinary team",
+
         },
         ar: {
             "nav_home": "الرئيسية",
@@ -455,40 +497,83 @@ document.addEventListener('DOMContentLoaded', () => {
             "foot_desc": "ندعم المزارعين وملاك الأراضي لأكثر من 35 عامًا في استغلال وإدارة وتطوير الأراضي الزراعية.",
             "foot_quicklinks": "روابط سريعة",
             "foot_services": "خدماتنا",
-            "foot_getintouch": "تواصل معنا"
+            "foot_getintouch": "تواصل معنا",
+            // ترجمات صفحة حول
+            "about_breadcrumb": "الرئيسية / من نحن",
+            "about_title": "من نحن",
+            "about_our_about": "عن شركتنا",
+            "about_sec1_title": "جنبًا إلى جنب مع المزارعين وملاك الأراضي",
+            "about_sec1_p1": "تنشط جريلاند في جميع أنحاء مصر منذ تأسيسها في عام 1985، وتدعم المزارعين وملاك الأراضي الزراعية في استغلال وتطوير أراضيهم. هدفنا هو تحقيق أداء ثلاثي: اقتصادي واجتماعي وبيئي.",
+            "about_sec1_li1": "للقيام بذلك، نقدم لعملائنا مجموعة واسعة من الخبرات، تتراوح بين الإنتاج وتسويق المنتجات المحلية.",
+            "about_sec1_li2": "لكن قبل كل شيء جريلاند هي فريق متمرس ملتزم بالوقوف بجانبك كل يوم.",
+            "about_sec1_li3": "شبكة من المؤسسات الكبرى في جميع أنحاء مصر.",
+            "about_overview_p1": "<strong>جريلاند مصر</strong> اقتحمت مؤخرًا مجال تجارة السلع الزراعية ولها حضور متميز عبر سلسلة القيمة. نحن نؤمن باستكشاف فرص التعاون مع الشركاء لبناء عمل تجاري مستدام ومترابط.",
+            "about_overview_p2": "تساعدنا شبكتنا القوية في أوروبا وآسيا وأفريقيا، بالإضافة إلى خبرتنا في التجارة والتوزيع العالميين، على رعاية وتنمية هذا العمل الموجه للعملاء. نحن ندير جميع الإجراءات المتعلقة بعمليات التصدير والاستيراد واللوجستيات والسجلات والشهادات، وتنسيق جميع مزودي الخدمات المعنيين.",
+            "about_overview_p3": "<strong>إن فريقنا</strong> ينشئ روابط فعالة عبر سلسلة قيمة السلع، ويقدم حلولاً متكاملة للعملاء مع الالتزام بمعايير الجودة وسلامة الأغذية. اليوم نحن نبرز في هذا السوق التنافسي للغاية لأن لدينا هيكلًا تنظيميًا مرنًا ويمكننا ضمان نجاح كل عملية.",
+            "about_overview_p4": "في المستقبل، نتوقع زيادة إيراداتنا باستمرار والتنويع في منتجات وأسواق جديدة كلما سمحت الظروف.",
+            "about_overview_p5": "نحن نعرف أفضل طريقة لتأمين وتصدير واستيراد سلعك الزراعية.",
+            "about_crop1": "كمبدأ، تستند مثل هذه الاجتماعات إلى اتساع نطاق عملنا الذي لا يغطي فقط وقاية المحاصيل بل أيضًا البذور، لتقديم عرض فريد ومصمم خصيصًا للعملاء في الإدارة المتكاملة للمحاصيل.",
+            "about_crop2": "يختتم الحدث بتقديم حلول متكاملة للمحاصيل تزيد من قوة النبات وغلة المحصول مع تعزيز الاستخدام الآمن والفعال لمنتجاتنا.",
+            "about_crop3": "كما يؤخذ في الاعتبار جميع جوانب الممارسات المحصولية الجيدة حيثما تلعب دورًا. قد يشمل هذا اختيار البذور المناسبة وممارسات التربية والتناوب المحصولي والحفاظ على بنية التربة وتقنيات الزراعة الجيدة.",
+            "about_food_ind": "الصناعات الغذائية",
+            "about_crop_meet": "اجتماعات المحاصيل المتخصصة",
+            "about_crop_desc": "<strong>تستهدف اجتماعات المحاصيل المتخصصة</strong> محصولًا معينًا وتقدم وصفًا تفصيليًا للأعراض والأضرار الناجمة عن الحشرات والأمراض ومشاكل الأعشاب الضارة.",
+            "about_fresh_veg": "خضروات طازجة",
+            "about_fresh_fruits": "فواكه طازجة",
+            "about_dt": "فريق متخصص",
+            "about_dt_desc": "موظفون محترفون موجودون لكي يختاروا لك أجود الفواكه الطازجة والمدهشة.",
+            "about_fp": "منتجات طازجة",
+            "about_fp_desc": "توصيل فواكه طازجة 100٪ مضمون. نقوم بفحص كل طرد قبل الشحن.",
+            "about_gc": "بطاقات الهدايا",
+            "about_gc_desc": "ساعد أصدقاءك وأفراد عائلتك على الحفاظ على صحتهم. اطلب لهم بطاقات الهدايا الخاصة بنا.",
+            "about_bo": "أفضل المزايا فقط",
+            "about_bo_desc": "نتأكد من أن يحصل عملاؤنا الدائمون على أكبر عدد ممكن من الامتيازات.",
+            "about_sec2_p1": "في أعمال التصدير والاستيراد بجريلاند مصر، نقدم مجموعة شاملة من المنتجات الزراعية المصممة خصيصًا لتلبية احتياجات المزارعين والمشاريع الزراعية من جميع الأنواع.",
+            "about_sec2_p2": "نحن فخورون بتقديم منتجات عالية الجودة، مما يجعلها الاختيار المثالي لأولئك الذين يطمحون لتحقيق نتائج استثنائية في القطاع الزراعي.",
+            "about_agro": "الكيماويات الزراعية",
+            "about_fert": "الأسمدة المتقدمة",
+            "about_seeds": "البذور",
+            "about_pest": "المبيدات",
+            "about_spec": "جريلاند مصر متخصصة في استيراد وتسجيل منتجات الصحة العامة والمبيدات والأسمدة وبذور الفواكه والخضار، وتصدير الخضار والفاكهة الطازجة.",
+            "about_spec_p1": "نحن ننشط في مجال التجارة الذي يشمل مجموعة متنوعة من الأسمدة، المبيدات، البذور والمعدات الزراعية. في عام 2008، نظراً للتوسع، تم تأسيس كيان جديد في المجموعة للاستيراد وتصدير ووكالات التجارة.",
+            "about_spec_p2": "نظراً لتوسع أكبر في مجال الأعمال المتعلق بالبذور والتطعيم، تم تأسيس الشركة الشقيقة (أجرو-إنفست).",
+            "about_team_comp": "شركتنا",
+            "about_team_multi": "فريق متعدد التخصصات",
+
         }
     };
 
-    let currentLang = 'en';
+    let currentLang = localStorage.getItem('griland_lang') || 'en';
     const langBtnDesktop = document.getElementById('lang-toggle');
     const langBtnMobile = document.getElementById('lang-toggle-mobile');
 
-    function toggleLanguage() {
-        currentLang = currentLang === 'en' ? 'ar' : 'en';
-        
-        // Update document dir and lang attributes
-        document.documentElement.dir = currentLang === 'en' ? 'ltr' : 'rtl';
-        document.documentElement.lang = currentLang;
+    function applyLanguage(lang) {
+        document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
+        document.documentElement.lang = lang;
 
-        // Update button texts
-        const nextLangText = currentLang === 'en' ? 'عربي' : 'English';
-        langBtnDesktop.innerText = nextLangText;
-        langBtnMobile.innerText = nextLangText;
+        const nextLangText = lang === 'en' ? 'عربي' : 'English';
+        if(langBtnDesktop) langBtnDesktop.innerText = nextLangText;
+        if(langBtnMobile) langBtnMobile.innerText = nextLangText;
 
-        // Update translations
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if (translations[currentLang][key]) {
+            if (translations[lang] && translations[lang][key]) {
                 if(el.tagName === 'STRONG') {
-                    // if part of HTML, some elements like the equip_body uses strong
-                    el.innerHTML = translations[currentLang][key];
+                    el.innerHTML = translations[lang][key];
                 } else {
-                    el.innerHTML = translations[currentLang][key]; // innerHTML supports <strong> 
+                    el.innerHTML = translations[lang][key];
                 }
             }
         });
+    }
 
-        // Close menu if open mapping translated content correctly on drawer alignment
+    // Apply initially
+    applyLanguage(currentLang);
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'en' ? 'ar' : 'en';
+        localStorage.setItem('griland_lang', currentLang);
+        applyLanguage(currentLang);
         closeMenu();
     }
 

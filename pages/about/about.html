@@ -43,9 +43,9 @@
 </head>
 
 <body class="about-bg font-sans text-[#333333]">
-    <!-- 1. Navbar (Injected via JS) -->
-    <div id="navigation-placeholder" data-basepath="../../"></div>
-    <script src="../../components/navbar.js"></script>
+  <!-- 1. Navbar (Injected via JS) -->
+  <div id="navigation-placeholder" data-basepath="../../"></div>
+  <script src="../../components/navbar.js"></script>
 
   <main>
     <!-- Page Hero Banner -->
@@ -57,8 +57,8 @@
         style="background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 8px);">
       </div>
       <div class="relative z-10 reveal" data-reveal>
-        <p class="text-[#C9A84C] text-sm mb-2 font-bold tracking-widest">Home / About</p>
-        <h1 class="text-white text-5xl font-bold">About</h1>
+        <p class="text-[#C9A84C] text-sm mb-2 font-bold tracking-widest" data-i18n="about_breadcrumb">Home / About</p>
+        <h1 class="text-white text-5xl font-bold" data-i18n="about_title">About</h1>
         <div class="w-16 h-1 bg-[#C9A84C] mx-auto mt-4"></div>
       </div>
     </section>
@@ -68,18 +68,22 @@
       <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
         <div class="grid md:grid-cols-12 gap-10 items-center">
           <div class="md:col-span-7">
-            <div class="text-brand uppercase tracking-wider font-semibold text-xs">our about</div>
-            <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">Alongside farmers and farmland owners</h2>
+            <div class="text-brand uppercase tracking-wider font-semibold text-xs" data-i18n="about_our_about">our about
+            </div>
+            <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold" data-i18n="about_sec1_title">Alongside
+              farmers and farmland owners</h2>
             <p class="mt-5 text-[#777777] leading-relaxed">
-              Active throughout Egypt since its foundation in 1985, Griland supports farmers and agricultural landowners
-              in the exploitation and development of their land.
-              Our goal is to achieve a triple performance: economic, social and environmental.
+              <span data-i18n="about_sec1_p1">Active throughout Egypt since its foundation in 1985, Griland supports
+                farmers and agricultural landowners
+                in the exploitation and development of their land.
+                Our goal is to achieve a triple performance: economic, social and environmental.
             </p>
             <ul class="mt-5 space-y-3 text-[#777777] list-disc pl-5">
               <li>To do this, we offer our customers a wide range of expertise, ranging from production to the marketing
                 of local products.</li>
-              <li>But Grilandeg is above all a competent team that is committed to your side every day.</li>
-              <li>A network of large institutions throughout Egypt.</li>
+              <li data-i18n="about_sec1_li2">But Grilandeg is above all a competent team that is committed to your side
+                every day.</li>
+              <li data-i18n="about_sec1_li3">A network of large institutions throughout Egypt.</li>
             </ul>
             <a href="./index.html#service-plus"
               class="btn-elegant inline-flex mt-7 items-center rounded bg-brand px-6 py-3 text-white font-semibold text-sm hover:bg-[#3A6B47] transition">
@@ -97,29 +101,30 @@
     <!-- Company Overview -->
     <section class="bg-light-bg">
       <div class="mx-auto max-w-[900px] px-5 py-16 text-center reveal" data-reveal>
-        <p class="leading-relaxed text-[#555]">
+        <p class="leading-relaxed text-[#555]" data-i18n="about_overview_p1">
           <strong>GRILAND EGYPT</strong> has recently forayed into the business of trading in agricultural commodities
           and has a select presence across the value chain.
           We believe in exploring collaborative opportunities with partners to build a sustainable and synergistic
           business.
         </p>
-        <p class="mt-5 leading-relaxed text-[#555]">
+        <p class="mt-5 leading-relaxed text-[#555]" data-i18n="about_overview_p2">
           Our strong network in Europe, ASEAN and Africa, combined with our experience in global trading and
           distribution, helps us nurture and grow this customer-oriented business.
           We manage all procedures related to export and import processes, logistics, records, certificates, and the
           coordination of all service providers involved.
         </p>
-        <p class="mt-5 leading-relaxed text-[#555]">
+        <p class="mt-5 leading-relaxed text-[#555]" data-i18n="about_overview_p2">
           <strong>Our team</strong> creates efficient linkages across the commodity value chain, offering end-to-end
           solutions to customers while adhering to quality and food safety standards.
           Today we stand out in this highly competitive market because we have a lean corporate structure and can
           guarantee the success of every transaction.
         </p>
-        <p class="mt-5 italic text-[#666]">
+        <p class="mt-5 italic text-[#666]" data-i18n="about_overview_p4">
           In the future, we expect to continually increase our turnover and diversify into new products and markets as
           conditions permit.
         </p>
-        <p class="mt-5 font-semibold text-[#1B3A2D]">We know the best way to secure, export, import your agriculture
+        <p class="mt-5 font-semibold text-[#1B3A2D]" data-i18n="about_overview_p5">We know the best way to secure,
+          export, import your agriculture
           goods.</p>
       </div>
     </section>
@@ -133,16 +138,16 @@
               src="images/ph4.avif" />
           </div>
           <div class="md:col-span-7 text-[#666] leading-relaxed">
-            <p>
+            <p data-i18n="about_crop1">
               As a principle such meetings build on the breadth of our business spanning not only crop protection but
               also seeds to provide a unique,
               customer-tailored offer of integrated crop management.
             </p>
-            <p class="mt-4">
+            <p class="mt-4" data-i18n="about_crop2">
               The event concludes by offering complete crop solutions that increase plant vigor and yields whilst
               promoting the safe and effective use of our products.
             </p>
-            <p class="mt-4">
+            <p class="mt-4" data-i18n="about_crop3">
               Consideration is also given to all aspects of good crop practice where they have a role to play. This may
               include choosing the appropriate seeds,
               husbandry practices, crop rotation and maintaining a good soil structure and cultural techniques.
@@ -156,18 +161,20 @@
     <section class="bg-light-bg">
       <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
         <div class="text-center">
-          <div class="text-brand uppercase tracking-wider font-semibold text-xs">Food Industry</div>
-          <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">Focused Crop Meetings</h2>
-          <p class="mt-4 max-w-[900px] mx-auto text-[#666] leading-relaxed">
+          <div class="text-brand uppercase tracking-wider font-semibold text-xs" data-i18n="about_food_ind">Food
+            Industry</div>
+          <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold" data-i18n="about_crop_meet">Focused Crop
+            Meetings</h2>
+          <p class="mt-4 max-w-[900px] mx-auto text-[#666] leading-relaxed" data-i18n="about_crop_desc">
             <strong>Focused crop meetings</strong> target a particular crop and provide an in-depth description of
             associated symptoms and damages caused by insects, disease and weed problems.
           </p>
           <div class="mt-4 flex justify-center gap-3">
-            <span
-              class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-semibold text-[#1B3A2D]">Fresh
+            <span class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-semibold text-[#1B3A2D]"
+              data-i18n="about_fresh_veg">Fresh
               Vegetables</span>
-            <span
-              class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-semibold text-[#1B3A2D]">Fresh
+            <span class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-semibold text-[#1B3A2D]"
+              data-i18n="about_fresh_fruits">Fresh
               Fruits</span>
           </div>
         </div>
@@ -176,26 +183,30 @@
           <div class="md:col-span-7 grid sm:grid-cols-2 gap-5">
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
               <div class="text-2xl"><img src="./images/dt.png" alt="" class="w-10 h-10"></div>
-              <h3 class="mt-3 font-bold text-[#1B3A2D]">Dedicated Team</h3>
-              <p class="mt-2 text-sm text-[#777]">Professional employees are there for you to pick the most amazing and
+              <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_dt">Dedicated Team</h3>
+              <p class="mt-2 text-sm text-[#777]" data-i18n="about_dt_desc">Professional employees are there for you to
+                pick the most amazing and
                 fresh fruits.</p>
             </div>
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
               <div class="text-2xl"><img src="./images/fp.png" alt="" class="w-10 h-10"></div>
-              <h3 class="mt-3 font-bold text-[#1B3A2D]">Fresh Products</h3>
-              <p class="mt-2 text-sm text-[#777]">100% fresh fruits delivery guaranteed. We inspect every package prior
+              <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_fp">Fresh Products</h3>
+              <p class="mt-2 text-sm text-[#777]" data-i18n="about_fp_desc">100% fresh fruits delivery guaranteed. We
+                inspect every package prior
                 to shipping.</p>
             </div>
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
               <div class="text-2xl"><img src="./images/gcpng.png" alt="" class="w-10 h-10"></div>
-              <h3 class="mt-3 font-bold text-[#1B3A2D]">Gift Certificates</h3>
-              <p class="mt-2 text-sm text-[#777]">Help your friends and family members stay healthy. Order our gift
+              <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_gc">Gift Certificates</h3>
+              <p class="mt-2 text-sm text-[#777]" data-i18n="about_gc_desc">Help your friends and family members stay
+                healthy. Order our gift
                 cards for them.</p>
             </div>
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
               <div class="text-2xl"><img src="./images/bf.png" alt="" class="w-10 h-10"></div>
-              <h3 class="mt-3 font-bold text-[#1B3A2D]">The Benefits Only</h3>
-              <p class="mt-2 text-sm text-[#777]">We make sure that our regular clients get as many benefits as
+              <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_bo">The Benefits Only</h3>
+              <p class="mt-2 text-sm text-[#777]" data-i18n="about_bo_desc">We make sure that our regular clients get as
+                many benefits as
                 possible.</p>
             </div>
           </div>
@@ -216,13 +227,15 @@
               src="images/ph2.avif" />
           </div>
           <div class="md:col-span-7">
-            <div class="text-brand uppercase tracking-wider font-semibold text-xs">our about</div>
-            <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">Alongside farmers and farmland owners</h2>
-            <p class="mt-5 text-[#666] leading-relaxed font-semibold">
+            <div class="text-brand uppercase tracking-wider font-semibold text-xs" data-i18n="about_our_about">our about
+            </div>
+            <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold" data-i18n="about_sec1_title">Alongside
+              farmers and farmland owners</h2>
+            <p class="mt-5 text-[#666] leading-relaxed font-semibold" data-i18n="about_sec2_p1">
               GRILAND EGYPT Import &amp; Export, we offer a comprehensive range of agricultural products specifically
               designed to meet the needs of farmers and agricultural projects of all kinds.
             </p>
-            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold" data-i18n="about_sec2_p2">
               We are proud to provide high quality products, which makes them the ideal choice for those who strive to
               achieve exceptional results in the agricultural sector.
             </p>
@@ -240,11 +253,12 @@
       <div class="mx-auto max-w-[1200px] px-5 py-20 space-y-16">
         <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
           <div class="md:col-span-7">
-            <h2 class="text-[#1B3A2D] text-3xl font-bold">Agrochemicals</h2>
-            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
-              We offer a wide range of agrochemicals that help protect crops and improve their productivity... Whether
-              you are looking for pesticides,
-              fungicides or weed killers, we have the right options that suit your need.
+            <h2 class="text-[#1B3A2D] text-3xl font-bold" data-i18n="about_agro">Agrochemicals</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold" data-i18n="about_sec2_p2">
+              <span data-i18n="about_agro_p">We offer a wide range of agrochemicals that help protect crops and improve
+                their productivity... Whether
+                you are looking for pesticides,
+                fungicides or weed killers, we have the right options that suit your need.</span>
             </p>
           </div>
           <div class="md:col-span-5">
@@ -259,22 +273,24 @@
               src="images/ph16.avif" />
           </div>
           <div class="md:col-span-7">
-            <h2 class="text-[#1B3A2D] text-3xl font-bold">Advanced Fertilizers</h2>
-            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
-              The needs of soil and crops make us offer a range of advanced fertilizers that enhance plant growth and
-              increase productivity.
-              Our products vary between organic and mineral fertilizers for optimal crop nutrition balance.
+            <h2 class="text-[#1B3A2D] text-3xl font-bold" data-i18n="about_fert">Advanced Fertilizers</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold" data-i18n="about_sec2_p2">
+              <span data-i18n="about_fert_p">The needs of soil and crops make us offer a range of advanced fertilizers
+                that enhance plant growth and
+                increase productivity.
+                Our products vary between organic and mineral fertilizers for optimal crop nutrition balance.</span>
             </p>
           </div>
         </div>
 
         <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
           <div class="md:col-span-7">
-            <h2 class="text-[#1B3A2D] text-3xl font-bold">Seeds</h2>
-            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
-              The seeds are imported from the best international suppliers and are distinguished by their ability to
-              adapt to diverse climatic conditions.
-              We provide a variety of vegetable, fruit and grain seeds that ensure high quality crops.
+            <h2 class="text-[#1B3A2D] text-3xl font-bold" data-i18n="about_seeds">Seeds</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold" data-i18n="about_sec2_p2">
+              <span data-i18n="about_seeds_p">The seeds are imported from the best international suppliers and are
+                distinguished by their ability to
+                adapt to diverse climatic conditions.
+                We provide a variety of vegetable, fruit and grain seeds that ensure high quality crops.</span>
             </p>
           </div>
           <div class="md:col-span-5">
@@ -289,13 +305,14 @@
               src="images/ph12.avif" />
           </div>
           <div class="md:col-span-7">
-            <h2 class="text-[#1B3A2D] text-3xl font-bold">Pesticides</h2>
-            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
-              At GRILAND EGYPT, we are committed to provide products that contribute to sustainable success for farmers.
-              We strive to provide the best agricultural solutions through cooperation with major international
-              companies.
+            <h2 class="text-[#1B3A2D] text-3xl font-bold" data-i18n="about_pest">Pesticides</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold" data-i18n="about_sec2_p2">
+              <span data-i18n="about_pest_p1">At GRILAND EGYPT, we are committed to provide products that contribute to
+                sustainable success for farmers.
+                We strive to provide the best agricultural solutions through cooperation with major international
+                companies.</span>
             </p>
-            <p class="mt-3 text-[#666] leading-relaxed font-semibold">
+            <p class="mt-3 text-[#666] leading-relaxed font-semibold" data-i18n="about_pest_p2">
               Our vision is to support the agricultural sector by providing products that enhance operational
               effectiveness and efficiency,
               while considering environmental and social responsibility.
@@ -308,16 +325,16 @@
     <!-- Committed to Quality + Slider -->
     <section class="bg-white">
       <div class="mx-auto max-w-[900px] px-5 py-20 text-center reveal" data-reveal>
-        <h3 class="text-[#1B3A2D] text-2xl md:text-3xl font-bold">
+        <h3 class="text-[#1B3A2D] text-2xl md:text-3xl font-bold" data-i18n="about_spec">
           GRILAND EGYPT is specialized in importing and registering public health products of pesticides, fertilizers
           and fruits and vegetable seeds and exporting fresh fruits and vegetables.
         </h3>
-        <p class="mt-5 text-[#666] leading-relaxed">
+        <p class="mt-5 text-[#666] leading-relaxed" data-i18n="about_spec_p1">
           We are active in a trading field that includes a variety of fertilizers, pesticides, seeds and agricultural
           machinery.
           In 2008, due to expansion, a new entity was created in the group for import, export and trading agencies.
         </p>
-        <p class="mt-4 text-[#666] leading-relaxed">
+        <p class="mt-4 text-[#666] leading-relaxed" data-i18n="about_spec_p2">
           Due to more expansion of seeds-related business (nurseries grafting), Agro-Invest sister company was founded.
         </p>
 
@@ -341,8 +358,10 @@
     <!-- Team Header -->
     <section class="bg-light-bg">
       <div class="mx-auto max-w-[1200px] px-5 py-14 text-center reveal" data-reveal>
-        <div class="text-brand uppercase tracking-wider font-semibold text-xs">Our Team Company</div>
-        <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">A multidisciplinary team</h2>
+        <div class="text-brand uppercase tracking-wider font-semibold text-xs" data-i18n="about_team_comp">Our Team
+          Company</div>
+        <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold" data-i18n="about_team_multi">A multidisciplinary
+          team</h2>
       </div>
     </section>
 
