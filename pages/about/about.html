@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - GRILAND EGYPT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4A8C5C',
+            dark: '#1B3A2D',
+            light: '#F7F7F2',
+            body: '#333333',
+            muted: '#777777',
+            border: '#E0E0E0',
+            brand: "#4A8C5C",
+            "brand-dark": "#1B3A2D",
+            "panel-alt": "#F5F5F0",
+            "light-bg": "#F7F7F2",
+          },
+          boxShadow: {
+            soft: "0 10px 25px rgba(0,0,0,0.12)",
+          },
+          fontFamily: {
+            sans: ['Cairo', 'sans-serif'],
+          }
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="./about.css" />
+</head>
+
+<body class="about-bg font-sans text-[#333333]">
+    <!-- 1. Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 w-full bg-transparent text-white z-50 transition-all duration-300 py-1 px-6 md:px-10">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between shadow-sm">
+            <!-- Logo -->
+            <a href="../../index.html" class="flex items-center group">
+                <img src="../../images/logo/logo1.png" alt="Agriland Egypt"
+                    class="h-20 md:h-24 object-contain group-hover:scale-105 transition-transform">
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="hidden md:flex items-center gap-8 font-semibold text-[15px]">
+                <li><a href="../../index.html"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_home">Home</a>
+                </li>
+                <li><a href="../about/about.html"
+                        class="hover:text-primary transition-colors text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_about">About</a></li>
+                <li class="relative group">
+                    <a href="../../index.html#services"
+                        class="hover:text-primary transition-colors flex items-center gap-1 cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300">
+                        <span data-i18n="nav_services">Service</span>
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </a>
+                    <!-- Dropdown -->
+                    <ul
+                        class="absolute top-full start-0 mt-2 bg-white text-dark shadow-lg rounded-md w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-2 border border-border">
+                        <li><a href="../../index.html#machinery"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_machinery">Machinery & Equipment</a></li>
+                        <li><a href="../../index.html#agri_inputs"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_agri_inputs">Agri-Inputs</a></li>
+                        <li><a href="../../index.html#farms_production"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_farms_production">Farms & Production</a></li>
+                        <li><a href="../../index.html#food_processing"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_food_processing">Food Processing</a></li>
+                        <li><a href="../../index.html#trade_export"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
+                                data-i18n="nav_trade_export">Trade & Export</a></li>
+                    </ul>
+                </li>
+                <li><a href="../certifications/certification.html"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_certificates">Certificates</a></li>
+                <li><a href="../../index.html#footer"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
+                        data-i18n="nav_contact">Contact</a>
+                </li>
+
+                <!-- Language Switcher -->
+                <li>
+                    <button id="lang-toggle"
+                        class="bg-light text-dark px-3 py-1 rounded-full text-sm font-bold border border-border hover:bg-primary hover:text-white transition-colors">
+                        عربي
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl hover:text-primary transition-colors">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer"
+        class="fixed inset-y-0 start-0 w-64 bg-white z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-border">
+            <img src="../../images/logo/logo1.png" alt="Agriland Egypt" class="h-16 md:h-20 object-contain">
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle-mobile"
+                    class="bg-light text-dark px-3 py-1 rounded-full text-xs font-bold border border-border hover:bg-primary hover:text-white transition-colors">
+                    عربي
+                </button>
+                <button id="close-drawer" class="text-2xl text-dark hover:text-primary"><i
+                        class="fa-solid fa-times"></i></button>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 text-lg font-semibold overflow-y-auto">
+            <a href="../../index.html" class="mobile-link hover:text-primary" data-i18n="nav_home">Home</a>
+            <a href="../about/about.html" class="mobile-link text-primary" data-i18n="nav_about">About</a>
+            <div class="border-y border-border py-4 my-2 flex flex-col gap-3">
+                <span class="text-muted text-sm uppercase" data-i18n="nav_services">Service</span>
+                <a href="../../index.html#machinery" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_machinery">-
+                    Machinery & Equipment</a>
+                <a href="../../index.html#agri_inputs" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_agri_inputs">- Agri-Inputs</a>
+                <a href="../../index.html#farms_production" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_farms_production">- Farms & Production</a>
+                <a href="../../index.html#food_processing" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_food_processing">- Food Processing</a>
+                <a href="../../index.html#trade_export" class="mobile-link hover:text-primary text-base ps-4"
+                    data-i18n="nav_trade_export">- Trade & Export</a>
+            </div>
+            <a href="../certifications/certification.html" class="mobile-link hover:text-primary" data-i18n="nav_certificates">Certificates</a>
+            <a href="../../index.html#footer" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contact</a>
+        </div>
+    </div>
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300">
+    </div>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section
+      class="w-full h-[320px] bg-[#1B3A2D] relative flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+      <img src="images/ph14.avif" alt="About Background"
+        class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay z-0 pointer-events-none">
+      <div class="absolute inset-0 z-0 pointer-events-none"
+        style="background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 8px);">
+      </div>
+      <div class="relative z-10 reveal" data-reveal>
+        <p class="text-[#C9A84C] text-sm mb-2 font-bold tracking-widest">Home / About</p>
+        <h1 class="text-white text-5xl font-bold">About</h1>
+        <div class="w-16 h-1 bg-[#C9A84C] mx-auto mt-4"></div>
+      </div>
+    </section>
+
+    <!-- Main About Intro -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-7">
+            <div class="text-brand uppercase tracking-wider font-semibold text-xs">our about</div>
+            <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">Alongside farmers and farmland owners</h2>
+            <p class="mt-5 text-[#777777] leading-relaxed">
+              Active throughout Egypt since its foundation in 1985, Griland supports farmers and agricultural landowners
+              in the exploitation and development of their land.
+              Our goal is to achieve a triple performance: economic, social and environmental.
+            </p>
+            <ul class="mt-5 space-y-3 text-[#777777] list-disc pl-5">
+              <li>To do this, we offer our customers a wide range of expertise, ranging from production to the marketing
+                of local products.</li>
+              <li>But Grilandeg is above all a competent team that is committed to your side every day.</li>
+              <li>A network of large institutions throughout Egypt.</li>
+            </ul>
+            <a href="./index.html#service-plus"
+              class="btn-elegant inline-flex mt-7 items-center rounded bg-brand px-6 py-3 text-white font-semibold text-sm hover:bg-[#3A6B47] transition">
+              Our Services
+            </a>
+          </div>
+          <div class="md:col-span-5 reveal" data-reveal>
+            <img alt="Farmland" class="w-full h-[380px] object-cover rounded-2xl border border-[#E0E0E0] shadow-soft"
+              src="images/photo-15.avif" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="bg-light-bg">
+      <div class="mx-auto max-w-[900px] px-5 py-16 text-center reveal" data-reveal>
+        <p class="leading-relaxed text-[#555]">
+          <strong>GRILAND EGYPT</strong> has recently forayed into the business of trading in agricultural commodities
+          and has a select presence across the value chain.
+          We believe in exploring collaborative opportunities with partners to build a sustainable and synergistic
+          business.
+        </p>
+        <p class="mt-5 leading-relaxed text-[#555]">
+          Our strong network in Europe, ASEAN and Africa, combined with our experience in global trading and
+          distribution, helps us nurture and grow this customer-oriented business.
+          We manage all procedures related to export and import processes, logistics, records, certificates, and the
+          coordination of all service providers involved.
+        </p>
+        <p class="mt-5 leading-relaxed text-[#555]">
+          <strong>Our team</strong> creates efficient linkages across the commodity value chain, offering end-to-end
+          solutions to customers while adhering to quality and food safety standards.
+          Today we stand out in this highly competitive market because we have a lean corporate structure and can
+          guarantee the success of every transaction.
+        </p>
+        <p class="mt-5 italic text-[#666]">
+          In the future, we expect to continually increase our turnover and diversify into new products and markets as
+          conditions permit.
+        </p>
+        <p class="mt-5 font-semibold text-[#1B3A2D]">We know the best way to secure, export, import your agriculture
+          goods.</p>
+      </div>
+    </section>
+
+    <!-- Focused Crop Meetings -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-5 reveal" data-reveal>
+            <img alt="Crop meeting" class="w-full h-[360px] object-cover rounded-2xl border border-[#E0E0E0]"
+              src="images/ph4.avif" />
+          </div>
+          <div class="md:col-span-7 text-[#666] leading-relaxed">
+            <p>
+              As a principle such meetings build on the breadth of our business spanning not only crop protection but
+              also seeds to provide a unique,
+              customer-tailored offer of integrated crop management.
+            </p>
+            <p class="mt-4">
+              The event concludes by offering complete crop solutions that increase plant vigor and yields whilst
+              promoting the safe and effective use of our products.
+            </p>
+            <p class="mt-4">
+              Consideration is also given to all aspects of good crop practice where they have a role to play. This may
+              include choosing the appropriate seeds,
+              husbandry practices, crop rotation and maintaining a good soil structure and cultural techniques.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Industry -->
+    <section class="bg-light-bg">
+      <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+        <div class="text-center">
+          <div class="text-brand uppercase tracking-wider font-semibold text-xs">Food Industry</div>
+          <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">Focused Crop Meetings</h2>
+          <p class="mt-4 max-w-[900px] mx-auto text-[#666] leading-relaxed">
+            <strong>Focused crop meetings</strong> target a particular crop and provide an in-depth description of
+            associated symptoms and damages caused by insects, disease and weed problems.
+          </p>
+          <div class="mt-4 flex justify-center gap-3">
+            <span
+              class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-semibold text-[#1B3A2D]">Fresh
+              Vegetables</span>
+            <span
+              class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-semibold text-[#1B3A2D]">Fresh
+              Fruits</span>
+          </div>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-12 gap-8 items-start">
+          <div class="md:col-span-7 grid sm:grid-cols-2 gap-5">
+            <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+              <div class="text-2xl"><img src="./images/dt.png" alt="" class="w-10 h-10"></div>
+              <h3 class="mt-3 font-bold text-[#1B3A2D]">Dedicated Team</h3>
+              <p class="mt-2 text-sm text-[#777]">Professional employees are there for you to pick the most amazing and
+                fresh fruits.</p>
+            </div>
+            <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+              <div class="text-2xl"><img src="./images/fp.png" alt="" class="w-10 h-10"></div>
+              <h3 class="mt-3 font-bold text-[#1B3A2D]">Fresh Products</h3>
+              <p class="mt-2 text-sm text-[#777]">100% fresh fruits delivery guaranteed. We inspect every package prior
+                to shipping.</p>
+            </div>
+            <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+              <div class="text-2xl"><img src="./images/gcpng.png" alt="" class="w-10 h-10"></div>
+              <h3 class="mt-3 font-bold text-[#1B3A2D]">Gift Certificates</h3>
+              <p class="mt-2 text-sm text-[#777]">Help your friends and family members stay healthy. Order our gift
+                cards for them.</p>
+            </div>
+            <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+              <div class="text-2xl"><img src="./images/bf.png" alt="" class="w-10 h-10"></div>
+              <h3 class="mt-3 font-bold text-[#1B3A2D]">The Benefits Only</h3>
+              <p class="mt-2 text-sm text-[#777]">We make sure that our regular clients get as many benefits as
+                possible.</p>
+            </div>
+          </div>
+          <div class="md:col-span-5 reveal" data-reveal>
+            <img alt="Food industry" class="w-full h-[380px] object-cover rounded-2xl border border-[#E0E0E0]"
+              src="images/ph7.avif" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Alongside Farmers -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-5 reveal" data-reveal>
+            <img alt="Plant life process" class="w-full h-[360px] object-cover rounded-2xl border border-[#E0E0E0]"
+              src="images/ph2.avif" />
+          </div>
+          <div class="md:col-span-7">
+            <div class="text-brand uppercase tracking-wider font-semibold text-xs">our about</div>
+            <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">Alongside farmers and farmland owners</h2>
+            <p class="mt-5 text-[#666] leading-relaxed font-semibold">
+              GRILAND EGYPT Import &amp; Export, we offer a comprehensive range of agricultural products specifically
+              designed to meet the needs of farmers and agricultural projects of all kinds.
+            </p>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
+              We are proud to provide high quality products, which makes them the ideal choice for those who strive to
+              achieve exceptional results in the agricultural sector.
+            </p>
+            <a href="./index.html#pesticides"
+              class="btn-elegant inline-flex mt-7 items-center rounded bg-brand px-6 py-3 text-white font-semibold text-sm hover:bg-[#3A6B47] transition">
+              Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="bg-light-bg">
+      <div class="mx-auto max-w-[1200px] px-5 py-20 space-y-16">
+        <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+          <div class="md:col-span-7">
+            <h2 class="text-[#1B3A2D] text-3xl font-bold">Agrochemicals</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
+              We offer a wide range of agrochemicals that help protect crops and improve their productivity... Whether
+              you are looking for pesticides,
+              fungicides or weed killers, we have the right options that suit your need.
+            </p>
+          </div>
+          <div class="md:col-span-5">
+            <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Agrochemicals"
+              src="images/ph16.avif" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+          <div class="md:col-span-5">
+            <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Advanced fertilizers"
+              src="images/ph16.avif" />
+          </div>
+          <div class="md:col-span-7">
+            <h2 class="text-[#1B3A2D] text-3xl font-bold">Advanced Fertilizers</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
+              The needs of soil and crops make us offer a range of advanced fertilizers that enhance plant growth and
+              increase productivity.
+              Our products vary between organic and mineral fertilizers for optimal crop nutrition balance.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+          <div class="md:col-span-7">
+            <h2 class="text-[#1B3A2D] text-3xl font-bold">Seeds</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
+              The seeds are imported from the best international suppliers and are distinguished by their ability to
+              adapt to diverse climatic conditions.
+              We provide a variety of vegetable, fruit and grain seeds that ensure high quality crops.
+            </p>
+          </div>
+          <div class="md:col-span-5">
+            <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Seeds"
+              src="images/see.avif" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+          <div class="md:col-span-5">
+            <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Pesticides"
+              src="images/ph12.avif" />
+          </div>
+          <div class="md:col-span-7">
+            <h2 class="text-[#1B3A2D] text-3xl font-bold">Pesticides</h2>
+            <p class="mt-4 text-[#666] leading-relaxed font-semibold">
+              At GRILAND EGYPT, we are committed to provide products that contribute to sustainable success for farmers.
+              We strive to provide the best agricultural solutions through cooperation with major international
+              companies.
+            </p>
+            <p class="mt-3 text-[#666] leading-relaxed font-semibold">
+              Our vision is to support the agricultural sector by providing products that enhance operational
+              effectiveness and efficiency,
+              while considering environmental and social responsibility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committed to Quality + Slider -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-[900px] px-5 py-20 text-center reveal" data-reveal>
+        <h3 class="text-[#1B3A2D] text-2xl md:text-3xl font-bold">
+          GRILAND EGYPT is specialized in importing and registering public health products of pesticides, fertilizers
+          and fruits and vegetable seeds and exporting fresh fruits and vegetables.
+        </h3>
+        <p class="mt-5 text-[#666] leading-relaxed">
+          We are active in a trading field that includes a variety of fertilizers, pesticides, seeds and agricultural
+          machinery.
+          In 2008, due to expansion, a new entity was created in the group for import, export and trading agencies.
+        </p>
+        <p class="mt-4 text-[#666] leading-relaxed">
+          Due to more expansion of seeds-related business (nurseries grafting), Agro-Invest sister company was founded.
+        </p>
+
+        <div class="mt-8 rounded-2xl border border-[#E0E0E0] overflow-hidden relative">
+          <img id="aboutSliderImage" class="w-full h-[360px] md:h-[430px] object-cover" src="images/ch-7.avif"
+            alt="Company slide" />
+          <button id="aboutPrevSlide" type="button"
+            class="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 border border-[#E0E0E0] text-[#1B3A2D] hover:text-brand"
+            aria-label="Previous slide">
+            ←
+          </button>
+          <button id="aboutNextSlide" type="button"
+            class="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 border border-[#E0E0E0] text-[#1B3A2D] hover:text-brand"
+            aria-label="Next slide">
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Header -->
+    <section class="bg-light-bg">
+      <div class="mx-auto max-w-[1200px] px-5 py-14 text-center reveal" data-reveal>
+        <div class="text-brand uppercase tracking-wider font-semibold text-xs">Our Team Company</div>
+        <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">A multidisciplinary team</h2>
+      </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-[1200px] px-5 py-12 reveal" data-reveal>
+        <div class="overflow-hidden rounded-2xl border border-[#E0E0E0] bg-white">
+          <div class="flex whitespace-nowrap gap-10 px-6 py-10 marquee">
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 1" src="images/clients1.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 2" src="images/clients2.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 3" src="images/clients3.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 4" src="images/clients4.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 5" src="images/clients5.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 6" src="images/clients6.png" />
+
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 1" src="images/clients1.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 2" src="images/clients2.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 3" src="images/clients3.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 4" src="images/clients4.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 5" src="images/clients5.png" />
+            <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
+              alt="Client logo 6" src="images/clients6.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts" class="bg-[#1B3A2D] text-white">
+    <div class="mx-auto max-w-[1200px] px-5 py-14 reveal" data-reveal>
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded bg-brand flex items-center justify-center">
+              <span class="text-white font-bold">G</span>
+            </div>
+            <div>
+              <div class="text-sm font-bold tracking-wide">GRILAND EGYPT</div>
+              <div class="text-xs text-white/70">Agriculture</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-white/80">Together, let's give value to your farmland.</p>
+        </div>
+        <div>
+          <div class="font-bold text-sm">Belgium Address</div>
+          <div class="mt-3 text-sm text-white/80">European Administrative Office</div>
+          <div class="text-sm text-white/80">Avenue Louise, 1050 Brussels, Belgium</div>
+          <a class="mt-2 inline-block text-sm text-white/90 hover:text-brand transition" href="tel:+3210232999">+32 (0)
+            10232999</a>
+        </div>
+        <div>
+          <div class="font-bold text-sm">Egypt HQ</div>
+          <div class="mt-3 text-sm text-white/80">36 (A) Morad St., ELoda masr tower, Giza, Egypt</div>
+          <a class="mt-2 inline-block text-sm text-white/90 hover:text-brand transition"
+            href="tel:+201141116282">+201141116282</a>
+        </div>
+        <div>
+          <div class="font-bold text-sm">Egypt Branch</div>
+          <div class="mt-3 text-sm text-white/80">3 Cairo-Belbeis Desert Road, P.O. Box: 3020 El Salam, 11785, Cairo,
+            Egypt</div>
+          <a class="mt-2 inline-block text-sm text-white/90 hover:text-brand transition"
+            href="tel:+20112655550">0222655550 / +201114515550</a>
+        </div>
+      </div>
+      <div class="mt-10 pt-8 border-t border-white/10 flex items-center justify-between gap-4">
+        <div class="text-sm text-white/80 font-semibold">Get In Touch</div>
+        <div class="text-sm text-white/80 text-right">COPY RIGHT &copy; GRILAND EGYPT.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../main.js" defer></script>
+  <script src="./about.js" defer></script>
+</body>
+
+</html>

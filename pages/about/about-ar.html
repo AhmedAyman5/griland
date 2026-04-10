@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>من نحن - جريلاند مصر</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#4A8C5C',
+              dark: '#1B3A2D',
+              light: '#F7F7F2',
+              body: '#333333',
+              muted: '#777777',
+              border: '#E0E0E0',
+              brand: "#4A8C5C",
+              "brand-dark": "#1B3A2D",
+              "panel-alt": "#F5F5F0",
+              "light-bg": "#F7F7F2",
+            },
+            boxShadow: {
+              soft: "0 10px 25px rgba(0,0,0,0.12)",
+            },
+            fontFamily: {
+              sans: ['Cairo', 'sans-serif'],
+            }
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./about.css" />
+    <style>
+      body {
+        font-family: 'Cairo', sans-serif;
+      }
+      .text-left {
+        text-align: right !important;
+      }
+      .pl-5 {
+        padding-right: 1.25rem !important;
+        padding-left: 0 !important;
+      }
+    </style>
+  </head>
+  <body class="about-bg text-[#333333]">
+    <!-- 1. Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 w-full bg-transparent text-white z-50 transition-all duration-300 py-1 px-6 md:px-10">
+        <div class="max-w-[1200px] mx-auto flex items-center justify-between shadow-sm">
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center group">
+                <img src="../images/logo/logo1.png" alt="Agriland Egypt"
+                    class="h-20 md:h-24 object-contain group-hover:scale-105 transition-transform">
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="hidden md:flex items-center gap-8 font-semibold text-[15px]">
+                <li><a href="../index.html"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:start-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300">الرئيسية</a>
+                </li>
+                <li><a href="./about-ar.html"
+                        class="hover:text-primary transition-colors text-primary relative after:content-[''] after:absolute after:-bottom-1 after:start-0 after:w-full hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300">من نحن</a></li>
+                <li class="relative group">
+                    <a href="../index.html#services"
+                        class="cursor-pointer hover:text-primary transition-colors flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:start-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300">
+                        <span>خدماتنا</span>
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </a>
+                    <!-- Dropdown -->
+                    <ul
+                        class="absolute top-full start-0 mt-2 bg-white text-dark shadow-lg rounded-md w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col py-2 border border-border">
+                        <li><a href="../index.html#machinery"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors">الآلات والمعدات</a></li>
+                        <li><a href="../index.html#agri_inputs"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors">المدخلات الزراعية</a></li>
+                        <li><a href="../index.html#farms_production"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors">المزارع والإنتاج</a></li>
+                        <li><a href="../index.html#food_processing"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors">التصنيع الغذائي</a></li>
+                        <li><a href="../index.html#trade_export"
+                                class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors">التجارة والتصدير</a></li>
+                    </ul>
+                </li>
+                <li><a href="../pages/certifications/certification.html"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:start-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300">الشهادات</a></li>
+                <li><a href="../index.html#footer"
+                        class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:start-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300">اتصل بنا</a>
+                </li>
+
+                <!-- Language Switcher -->
+                <li>
+                    <a href="./about.html"
+                        class="bg-light text-dark px-3 py-1 rounded-full text-sm font-bold border border-border hover:bg-primary hover:text-white transition-colors cursor-pointer inline-block" style="font-family: Poppins, sans-serif;">
+                        English
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl hover:text-primary transition-colors z-50">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer"
+        class="fixed inset-y-0 start-0 w-64 bg-white text-dark z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col text-start">
+        <div class="p-6 flex justify-between items-center border-b border-border">
+            <img src="../images/logo/logo1.png" alt="Agriland Egypt" class="h-16 md:h-20 object-contain">
+            <div class="flex items-center gap-4">
+                <a href="./about.html"
+                    class="bg-light text-dark px-3 py-1 rounded-full text-xs font-bold border border-border hover:bg-primary hover:text-white transition-colors cursor-pointer" style="font-family: Poppins, sans-serif;">
+                    English
+                </a>
+                <button id="close-drawer" class="text-2xl text-dark hover:text-primary"><i
+                        class="fa-solid fa-times"></i></button>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 text-lg font-semibold overflow-y-auto">
+            <a href="../index.html" class="mobile-link hover:text-primary">الرئيسية</a>
+            <a href="./about-ar.html" class="mobile-link text-primary">من نحن</a>
+            <div class="border-y border-border py-4 my-2 flex flex-col gap-3">
+                <span class="text-muted text-sm uppercase">خدماتنا</span>
+                <a href="../index.html#machinery" class="mobile-link hover:text-primary text-base ps-4">- الآلات والمعدات</a>
+                <a href="../index.html#agri_inputs" class="mobile-link hover:text-primary text-base ps-4">- المدخلات الزراعية</a>
+                <a href="../index.html#farms_production" class="mobile-link hover:text-primary text-base ps-4">- المزارع والإنتاج</a>
+                <a href="../index.html#food_processing" class="mobile-link hover:text-primary text-base ps-4">- التصنيع الغذائي</a>
+                <a href="../index.html#trade_export" class="mobile-link hover:text-primary text-base ps-4">- التجارة والتصدير</a>
+            </div>
+            <a href="../pages/certifications/certification.html" class="mobile-link hover:text-primary">الشهادات</a>
+            <a href="../index.html#footer" class="mobile-link hover:text-primary">اتصل بنا</a>
+        </div>
+    </div>
+    <!-- Drawer Overlay -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300">
+    </div>
+
+    <main>
+      <!-- Page Hero Banner -->
+      <section class="w-full h-[320px] bg-[#1B3A2D] relative flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        <img src="images/ph14.avif" alt="About Background"
+             class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay z-0 pointer-events-none" style="transform: scaleX(-1);">
+        <div class="absolute inset-0 z-0 pointer-events-none"
+             style="background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 8px);">
+        </div>
+        <div class="relative z-10 reveal" data-reveal>
+          <p class="text-[#C9A84C] text-sm mb-2 font-bold tracking-widest text-center" dir="rtl">الرئيسية / من نحن</p>
+          <h1 class="text-white text-5xl font-bold text-center">من نحن</h1>
+          <div class="w-16 h-1 bg-[#C9A84C] mx-auto mt-4"></div>
+        </div>
+      </section>
+
+      <!-- Main About Intro -->
+      <section class="bg-white">
+        <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+          <div class="grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-7">
+              <div class="text-brand uppercase tracking-wider font-bold text-xs">عن شركتنا</div>
+              <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">جنباً إلى جنب مع المزارعين وملاّك الأراضي الزراعية</h2>
+              <p class="mt-5 text-[#777777] leading-relaxed">
+                تنشط شركة جريلاند في جميع أنحاء مصر منذ تأسيسها عام 1985، وتدعم المزارعين وملاّك الأراضي الزراعية في استغلال وتطوير أراضيهم. هدفنا هو تحقيق أداء ثلاثي: اقتصادي، اجتماعي، وبيئي.
+              </p>
+              <ul class="mt-5 space-y-3 text-[#777777] list-disc pr-5">
+                <li>للقيام بذلك، نقدم لعملائنا مجموعة واسعة من الخبرات، بدءاً من الإنتاج وصولاً إلى تسويق المنتجات المحلية.</li>
+                <li>ولكن جريلاند هي قبل كل شيء فريق كفء ملتزم بالوقوف إلى جانبك كل يوم.</li>
+                <li>شبكة من المؤسسات الكبرى في جميع أنحاء مصر.</li>
+              </ul>
+              <a href="./index.html#service-plus" class="btn-elegant inline-flex mt-7 items-center rounded bg-brand px-6 py-3 text-white font-bold text-sm hover:bg-[#3A6B47] transition">
+                خدماتنا
+              </a>
+            </div>
+            <div class="md:col-span-5 reveal" data-reveal>
+              <img
+                alt="Farmland"
+                class="w-full h-[380px] object-cover rounded-2xl border border-[#E0E0E0] shadow-soft"
+                src="images/photo-15.avif"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Overview -->
+      <section class="bg-light-bg">
+        <div class="mx-auto max-w-[900px] px-5 py-16 text-center reveal" data-reveal>
+          <p class="leading-relaxed text-[#555]">
+            <strong>جريلاند مصر</strong> دخلت مؤخراً في مجال تجارة السلع الزراعية ولها حضور مميز عبر سلسلة القيمة. نحن نؤمن باستكشاف فرص التعاون مع الشركاء لبناء عمل تجاري مستدام وتآزري.
+          </p>
+          <p class="mt-5 leading-relaxed text-[#555]">
+            شبكتنا القوية في أوروبا ورابطة أمم جنوب شرق آسيا وإفريقيا، إلى جانب خبرتنا في التجارة العالمية والتوزيع، تساعدنا في رعاية وتنمية هذه الأعمال الموجهة نحو العملاء. نحن ندير جميع الإجراءات المتعلقة بعمليات التصدير والاستيراد، والخدمات اللوجستية، والسجلات، والشهادات، وتنسيق جميع مقدمي الخدمات المعنيين.
+          </p>
+          <p class="mt-5 leading-relaxed text-[#555]">
+            <strong>فريقنا</strong> يخلق روابط فعالة عبر سلسلة قيمة السلع، ويقدم حلولاً متكاملة للعملاء مع الالتزام بمعايير الجودة وسلامة الغذاء. اليوم نحن نبرز في هذا السوق شديد التنافسية لأننا نمتلك هيكل مؤسسي مرن ونستطيع ضمان نجاح كل معاملة.
+          </p>
+          <p class="mt-5 italic text-[#666]">
+            في المستقبل، نتوقع زيادة إيراداتنا باستمرار والتنويع في منتجات وأسواق جديدة كلما سمحت الظروف.
+          </p>
+          <p class="mt-5 font-bold text-[#1B3A2D]">نحن نعرف أفضل الطرق لتأمين وتصدير واستيراد منتجاتك الزراعية.</p>
+        </div>
+      </section>
+
+      <!-- Focused Crop Meetings -->
+      <section class="bg-white">
+        <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+          <div class="grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-5 reveal" data-reveal>
+              <img
+                alt="Crop meeting"
+                class="w-full h-[360px] object-cover rounded-2xl border border-[#E0E0E0]"
+                src="images/ph4.avif"
+              />
+            </div>
+            <div class="md:col-span-7 text-[#666] leading-relaxed">
+              <p>
+                كمبدأ، تُبنى مثل هذه الاجتماعات على اتساع نطاق أعمالنا الذي لا يقتصر على حماية المحاصيل فحسب، بل يشمل البذور أيضاً، لنقدم عروضاً فريدة ومصممة خصيصاً للعملاء لإدارة المحاصيل المتكاملة.
+              </p>
+              <p class="mt-4">
+                وتُختتم الفعالية بتقديم حلول متكاملة للمحاصيل تزيد من قوة النباتات وإنتاجيتها مع تعزيز الاستخدام الآمن والفعال لمنتجاتنا.
+              </p>
+              <p class="mt-4">
+                كما يتم إيلاء الاعتبار لجميع جوانب الممارسات الزراعية الجيدة حيث يكون لها دور لتلعبه. وقد يشمل ذلك اختيار البذور المناسبة، وممارسات التربية، والدورة الزراعية، والحفاظ على بنية تربة جيدة وتقنيات الزراعة والثقافة الزاعية.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Food Industry -->
+      <section class="bg-light-bg">
+        <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+          <div class="text-center">
+            <div class="text-brand uppercase tracking-wider font-bold text-xs">صناعة الأغذية</div>
+            <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">اجتماعات التركيز على المحاصيل</h2>
+            <p class="mt-4 max-w-[900px] mx-auto text-[#666] leading-relaxed">
+              <strong>تستهدف اجتماعات المحاصيل المتخصصة</strong> محصولاً معيناً وتقدم وصفاً متعمقاً للأعراض والأضرار المرتبطة بالحشرات والأمراض ومشاكل الحشائش.
+            </p>
+            <div class="mt-4 flex justify-center gap-3">
+              <span class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-bold text-[#1B3A2D]">خضروات طازجة</span>
+              <span class="px-4 py-2 rounded-full bg-white border border-[#E0E0E0] text-sm font-bold text-[#1B3A2D]">فواكه طازجة</span>
+            </div>
+          </div>
+
+          <div class="mt-10 grid md:grid-cols-12 gap-8 items-start">
+            <div class="md:col-span-7 grid sm:grid-cols-2 gap-5">
+              <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+                <div class="text-2xl">🌳</div>
+                <h3 class="mt-3 font-bold text-[#1B3A2D]">فريق متخصص</h3>
+                <p class="mt-2 text-sm text-[#777]">المهنيون متواجدون من أجلك لقطف أروع الفاكهة الطازجة.</p>
+              </div>
+              <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+                <div class="text-2xl">🎃</div>
+                <h3 class="mt-3 font-bold text-[#1B3A2D]">منتجات طازجة</h3>
+                <p class="mt-2 text-sm text-[#777]">توصيل فواكه طازجة 100% مضمون. نقوم بفحص كل طرد قبل الشحن.</p>
+              </div>
+              <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+                <div class="text-2xl">🍅</div>
+                <h3 class="mt-3 font-bold text-[#1B3A2D]">شهادات هدايا</h3>
+                <p class="mt-2 text-sm text-[#777]">ساعد أصدقاءك وأفراد عائلتك في الحفاظ على صحتهم. اطلب بطاقات الهدايا لهم.</p>
+              </div>
+              <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
+                <div class="text-2xl">🌱</div>
+                <h3 class="mt-3 font-bold text-[#1B3A2D]">الفوائد فقط</h3>
+                <p class="mt-2 text-sm text-[#777]">نحن نضمن حصول عملائنا المنتظمين على أكبر قدر ممكن من الفوائد.</p>
+              </div>
+            </div>
+            <div class="md:col-span-5 reveal" data-reveal>
+              <img
+                alt="Food industry"
+                class="w-full h-[380px] object-cover rounded-2xl border border-[#E0E0E0]"
+                src="images/ph7.avif"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Second Alongside Farmers -->
+      <section class="bg-white">
+        <div class="mx-auto max-w-[1200px] px-5 py-20 reveal" data-reveal>
+          <div class="grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-5 reveal" data-reveal>
+              <img
+                alt="Plant life process"
+                class="w-full h-[360px] object-cover rounded-2xl border border-[#E0E0E0]"
+                src="images/ph2.avif"
+              />
+            </div>
+            <div class="md:col-span-7">
+              <div class="text-brand uppercase tracking-wider font-bold text-xs">عن شركتنا</div>
+              <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">جنباً إلى جنب مع المزارعين وملاّك الأراضي الزراعية</h2>
+              <p class="mt-5 text-[#666] leading-relaxed font-bold">
+                في جريلاند مصر للاستيراد والتصدير، نقدم مجموعة شاملة من المنتجات الزراعية المصممة خصيصاً لتلبية احتياجات المزارعين والمشاريع الزراعية بمختلف أنواعها.
+              </p>
+              <p class="mt-4 text-[#666] leading-relaxed font-bold">
+                نحن فخورون بتقديم منتجات عالية الجودة، مما يجعلها الخيار الأمثل لمن يسعون لتحقيق نتائج استثنائية في القطاع الزراعي.
+              </p>
+              <a href="./index.html#pesticides" class="btn-elegant inline-flex mt-7 items-center rounded bg-brand px-6 py-3 text-white font-bold text-sm hover:bg-[#3A6B47] transition">
+                خدماتنا
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Categories -->
+      <section class="bg-light-bg">
+        <div class="mx-auto max-w-[1200px] px-5 py-20 space-y-16">
+          <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+            <div class="md:col-span-7">
+              <h2 class="text-[#1B3A2D] text-3xl font-bold">الكيماويات الزراعية</h2>
+              <p class="mt-4 text-[#666] leading-relaxed font-bold">
+                نحن نقدم مجموعة واسعة من الكيماويات الزراعية التي تساعد على حماية المحاصيل وتحسين إنتاجيتها... سواء كنت تبحث عن مبيدات حشرية أو فطرية أو مبيدات حشائش، لدينا الخيارات المناسبة التي تلبي حاجتك.
+              </p>
+            </div>
+            <div class="md:col-span-5">
+              <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Agrochemicals" src="images/ph16.avif" />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+            <div class="md:col-span-5">
+              <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Advanced fertilizers" src="images/ph16.avif" />
+            </div>
+            <div class="md:col-span-7">
+              <h2 class="text-[#1B3A2D] text-3xl font-bold">أسمدة متطورة</h2>
+              <p class="mt-4 text-[#666] leading-relaxed font-bold">
+                احتياجات التربة والمحاصيل تجعلنا نقدم مجموعة من الأسمدة المتطورة التي تعزز نمو النباتات وتزيد الإنتاج. تتنوع منتجاتنا بين الأسمدة العضوية والمعدنية لتوازن تغذية المحاصيل الأمثل.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+            <div class="md:col-span-7">
+              <h2 class="text-[#1B3A2D] text-3xl font-bold">البذور والتقاوي</h2>
+              <p class="mt-4 text-[#666] leading-relaxed font-bold">
+                تُستورد البذور من أفضل الموردين الدوليين وتتميز بقدرتها على التكيف مع التغيرات المناخية المختلفة. نقدم مجموعة متنوعة من بذور الخضراوات والفواكه والحبوب التي تضمن محاصيل عالية الجودة.
+              </p>
+            </div>
+            <div class="md:col-span-5">
+              <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Seeds" src="images/see.avif" />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
+            <div class="md:col-span-5">
+              <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Pesticides" src="images/ph12.avif" />
+            </div>
+            <div class="md:col-span-7">
+              <h2 class="text-[#1B3A2D] text-3xl font-bold">المبيدات</h2>
+              <p class="mt-4 text-[#666] leading-relaxed font-bold">
+                في جريلاند مصر، نحن ملتزمون بتقديم منتجات تساهم في النجاح المستدام للمزارعين. نحن نسعى لتقديم أفضل الحلول الزراعية من خلال التعاون مع كبرى الشركات الدولية.
+              </p>
+              <p class="mt-3 text-[#666] leading-relaxed font-bold">
+                رؤيتنا هي دعم القطاع الزراعي من خلال توفير منتجات تعزز الفعالية والكفاءة التشغيلية، مع مراعاة المسؤولية البيئية والاجتماعية.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Committed to Quality + Slider -->
+      <section class="bg-white">
+        <div class="mx-auto max-w-[900px] px-5 py-20 text-center reveal" data-reveal>
+          <h3 class="text-[#1B3A2D] text-2xl md:text-3xl font-bold">
+            جريلاند مصر متخصصة في استيراد وتسجيل منتجات الصحة العامة من مبيدات وأسمدة وبذور الفواكه والخضروات، وتصدير الفواكه والخضروات الطازجة.
+          </h3>
+          <p class="mt-5 text-[#666] leading-relaxed">
+            نحن نشطون في مجال التجارة الذي يشمل مجموعة متنوعة من الأسمدة والمبيدات والبذور والآلات الزراعية.
+            في عام 2008، وبسبب التوسع، تم إنشاء كيان جديد في المجموعة لوكالات الاستيراد والتصدير والتجارة.
+          </p>
+          <p class="mt-4 text-[#666] leading-relaxed">
+            ونظراً لمزيد من التوسع في الأعمال المتعلقة بالبذور (تطعيم المشاتل)، تم تأسيس شركة Agro-Invest الشقيقة.
+          </p>
+
+          <div class="mt-8 rounded-2xl border border-[#E0E0E0] overflow-hidden relative" style="direction: ltr;">
+            <img
+              id="aboutSliderImage"
+              class="w-full h-[360px] md:h-[430px] object-cover"
+              src="images/ch-7.avif"
+              alt="Company slide"
+            />
+            <button
+              id="aboutPrevSlide"
+              type="button"
+              class="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 border border-[#E0E0E0] text-[#1B3A2D] hover:text-brand"
+              aria-label="Previous slide"
+            >
+              ←
+            </button>
+            <button
+              id="aboutNextSlide"
+              type="button"
+              class="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 border border-[#E0E0E0] text-[#1B3A2D] hover:text-brand"
+              aria-label="Next slide"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Header -->
+      <section class="bg-light-bg">
+        <div class="mx-auto max-w-[1200px] px-5 py-14 text-center reveal" data-reveal>
+          <div class="text-brand uppercase tracking-wider font-bold text-xs">فريق شركتنا</div>
+          <h2 class="mt-3 text-[#1B3A2D] text-3xl md:text-4xl font-bold">فريق متعدد التخصصات</h2>
+        </div>
+      </section>
+
+      <!-- Client Logos -->
+      <section class="bg-white">
+        <div class="mx-auto max-w-[1200px] px-5 py-12 reveal" data-reveal>
+          <div class="overflow-hidden rounded-2xl border border-[#E0E0E0] bg-white" style="direction: ltr;">
+            <div class="flex whitespace-nowrap gap-10 px-6 py-10 marquee">
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 1" src="images/clients1.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 2" src="images/clients2.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 3" src="images/clients3.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 4" src="images/clients4.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 5" src="images/clients5.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 6" src="images/clients6.png" />
+
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 1" src="images/clients1.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 2" src="images/clients2.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 3" src="images/clients3.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 4" src="images/clients4.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 5" src="images/clients5.png" />
+              <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition" alt="Client logo 6" src="images/clients6.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts" class="bg-[#1B3A2D] text-white">
+      <div class="mx-auto max-w-[1200px] px-5 py-14 reveal" data-reveal>
+        <div class="grid md:grid-cols-4 gap-10">
+          <div class="md:col-span-1">
+            <div class="flex items-center gap-3">
+              <div class="h-9 w-9 rounded bg-brand flex items-center justify-center">
+                <span class="text-white font-bold">G</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold tracking-wide">جريلاند مصر</div>
+                <div class="text-xs text-white/70">الزراعة</div>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-white/80">معاً، لنعطي قيمة لأرضك الزراعية.</p>
+          </div>
+          <div>
+            <div class="font-bold text-sm">عنوان بلجيكا</div>
+            <div class="mt-3 text-sm text-white/80">المكتب الإداري الأوروبي</div>
+            <div class="text-sm text-white/80" style="direction: ltr; text-align: right;">Avenue Louise, 1050 Brussels, Belgium</div>
+            <a class="mt-2 text-left block text-sm text-white/90 hover:text-brand transition" href="tel:+3210232999" dir="ltr" style="text-align: right;">+32 (0) 10232999</a>
+          </div>
+          <div>
+            <div class="font-bold text-sm">المركز الرئيسي بمصر</div>
+            <div class="mt-3 text-sm text-white/80">٣٦ (أ) شارع مراد، برج العودة مصر، الجيزة، مصر</div>
+            <a class="mt-2 text-left block text-sm text-white/90 hover:text-brand transition" href="tel:+201141116282" dir="ltr" style="text-align: right;">+201141116282</a>
+          </div>
+          <div>
+            <div class="font-bold text-sm">فرع مصر</div>
+            <div class="mt-3 text-sm text-white/80">٣ طريق القاهرة - بلبيس الصحراوي، ص.ب: ٣٠٢٠ السلام، ١١٧٨٥، القاهرة، مصر</div>
+            <a class="mt-2 text-left block text-sm text-white/90 hover:text-brand transition" href="tel:+20112655550" dir="ltr" style="text-align: right;">0222655550 / +201114515550</a>
+          </div>
+        </div>
+        <div class="mt-10 pt-8 border-t border-white/10 flex items-center justify-between gap-4 flex-wrap">
+          <div class="text-sm text-white/80 font-bold">تواصل معنا</div>
+          <div class="text-sm text-white/80 text-left">حقوق النشر &copy; جريلاند مصر.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../main.js" defer></script>
+    <script src="./about.js" defer></script>
+  </body>
+</html>
