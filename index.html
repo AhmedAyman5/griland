@@ -53,55 +53,58 @@
         class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-16 px-6 sm:px-10 bg-dark overflow-hidden">
         <!-- Hero Background -->
         <div class="absolute inset-0 z-0">
-            <img src="./images/farmland.jpg" alt="Farmland"
-                class="w-full h-full object-cover opacity-60 mix-blend-overlay">
-            <div class="absolute inset-0 bg-dark/60"></div>
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="./videos/hero_video_compressed.mp4" type="video/mp4">
+            </video>
         </div>
 
         <div
-            class="relative z-10 max-w-[1200px] w-full mx-auto flex flex-col items-center md:items-start text-center md:text-start mt-10">
-            <h1 class="text-4xl md:text-6xl text-white font-bold max-w-3xl leading-tight mb-6 animate-fade-in"
+            class="relative z-10 max-w-[1200px] w-full mx-auto flex flex-col items-center md:items-start text-center md:text-start mt-10 drop-shadow-xl">
+            <h1 class="text-4xl md:text-6xl text-white font-bold max-w-3xl leading-tight mb-6 animate-fade-in drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]"
                 data-i18n="hero_title">
                 Cultivating Agriculture that Works for the Future
             </h1>
-            <p class="text-xl text-white/90 mb-8 max-w-2xl font-light animate-slide-up" data-i18n="hero_subtitle">
+            <p class="text-xl text-white/90 mb-8 max-w-2xl font-light animate-slide-up drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                data-i18n="hero_subtitle">
                 Enhance your heritage and offer you the best yield while respecting your project, the land and the
                 environment.
             </p>
-            <a href="#footer" class="btn-primary animate-slide-up" data-i18n="hero_cta">Contact Us now</a>
+            <a href="#footer"
+                class="inline-block bg-white text-primary hover:bg-dark hover:text-white font-bold text-lg md:text-xl py-4 px-10 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl shadow-black/40 animate-slide-up"
+                data-i18n="hero_cta">Contact Us Now</a>
         </div>
 
-        <!-- Badge Strip -->
-        <div class="absolute bottom-0 w-full bg-dark/90 backdrop-blur border-t border-white/10 z-20">
-            <div
-                class="max-w-[1200px] mx-auto hidden md:flex justify-between items-center px-4 overflow-hidden h-[60px]">
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
-                        Products</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
-                        Foods</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_env">Environmental
-                        Benefits</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_chemicals">No Synthetic
-                        Chemicals</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_prices">Best Prices</span>
-                </div>
-            </div>
-            <!-- Mobile badge scroller -->
-            <div class="flex md:hidden overflow-x-auto px-4 py-3 gap-6 hide-scrollbar h-[60px]">
-                <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
-                        Products</span></div>
-                <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
-                        Foods</span></div>
+    </section>
+
+    <!-- Badge Strip -->
+    <div class="w-full bg-dark z-20 relative">
+        <div class="max-w-[1200px] mx-auto hidden md:flex justify-between items-center px-4 overflow-hidden h-[60px]">
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
+                    Products</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
+                    Foods</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_env">Environmental
+                    Benefits</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_chemicals">No Synthetic
+                    Chemicals</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_prices">Best Prices</span>
             </div>
         </div>
-    </section>
+        <!-- Mobile badge scroller -->
+        <div class="flex md:hidden overflow-x-auto px-4 py-3 gap-6 hide-scrollbar h-[60px]">
+            <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
+                    Products</span></div>
+            <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
+                    Foods</span></div>
+        </div>
+    </div>
 
     <!-- 3. About / Mission Section -->
     <section id="about" class="py-20 px-6 sm:px-10 bg-white">
