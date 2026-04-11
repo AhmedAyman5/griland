@@ -1,0 +1,35 @@
+/* Contact Page Specific CSS */
+.contact-page .info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.contact-page .info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(27, 67, 50, 0.15);
+    border-color: #C9A84C;
+}
+
+.contact-page .form-input:focus {
+    outline: none;
+    border-color: #1B4332;
+    box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.15);
+}
+
+.contact-page .gold-line {
+    width: 48px;
+    height: 3px;
+    background-color: #C9A84C;
+}
+
+/* Reveal on scroll specific to contact page */
+.contact-page .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-page .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
