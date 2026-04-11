@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('invisible', 'opacity-0');
     }
 
-    if(mobileBtn) mobileBtn.addEventListener('click', openMenu);
-    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
-    if(overlay) overlay.addEventListener('click', closeMenu);
-    
+    if (mobileBtn) mobileBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
+
     mobileLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ================================================== */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if(navbar) {
+        if (navbar) {
             if (window.scrollY > 50) {
                 navbar.classList.add('bg-white', 'text-dark', 'shadow-md', 'py-0');
                 navbar.classList.remove('bg-transparent', 'text-white', 'py-1');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const target = +counter.getAttribute('data-target');
                 const duration = 2000; // ms
                 const increment = target / (duration / 16); // 60fps
-                
+
                 let current = 0;
                 const updateCounter = () => {
                     current += increment;
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }, { threshold: 0.5 });
-    
-    if(statsSection) statsObserver.observe(statsSection);
+
+    if (statsSection) statsObserver.observe(statsSection);
 
     /* ==================================================
        5. Language Switcher (English vs Arabic)
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_src_irr_desc": "We deploy state-of-the-art drip irrigation systems to conserve water and deliver precise macro-nutrients directly to the roots. Our soil is continuously audited to guarantee organic vitality.",
             "fp_src_eff": "Water Efficiency",
             "fp_src_min": "Mineral Composition",
-            
+
             "fp_jrn_tag": "Process",
             "fp_jrn_title": "The Production Journey",
             "fp_jrn_desc": "A seamless, fully traceable pipeline ensuring food safety from the field directly to worldwide retailers.",
@@ -275,73 +275,73 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_j_p_desc": "The pristine produce is carefully nestled into hygienic, custom-ventilated cartons and food-grade packaging. This specialized padding prevents transit bruising.",
             "fp_j_l_title": "Logistics",
             "fp_j_l_desc": "Safely loaded into climate-controlled containers, our fleets dispatch across oceans. Real-time temperature monitoring ensures the harvest reaches optimal destinations worldwide.",
-            
+
             "fp_cat_tag": "Portfolio",
             "fp_cat_title": "Technical Product Catalog",
             "fp_tab_frsh": "Fresh Products",
             "fp_tab_frzn": "Frozen (IQF)",
             "fp_tab_proc": "Processed & Puree",
-            
+
             "fp_f1_t": "Citrus (Oranges & Lemons)",
             "fp_f1_v1": "Baladi", "fp_f1_v2": "Navel", "fp_f1_v3": "Valencia",
             "fp_f1_sea": "<strong>Season:</strong> Nov &ndash; May", "fp_f1_pack": "<strong>Pack:</strong> Telescopic Cartons (15KG)",
-            
+
             "fp_f2_t": "Premium Grapes",
             "fp_f2_v1": "Sugraone", "fp_f2_v2": "Flame", "fp_f2_v3": "Crimson",
             "fp_f2_sea": "<strong>Season:</strong> May &ndash; Sept", "fp_f2_pack": "<strong>Pack:</strong> Punnets (500g), Loose (5KG)",
-            
+
             "fp_f3_t": "Onions & Fresh Garlic",
             "fp_f3_v1": "Red/Yellow", "fp_f3_v2": "White Garlic",
             "fp_f3_sea": "<strong>Season:</strong> Feb &ndash; Aug", "fp_f3_pack": "<strong>Pack:</strong> Mesh Bags (10KG/25KG)",
-            
+
             "fp_f4_t": "Pomegranates",
             "fp_f4_v1": "Wonderful", "fp_f4_v2": "Acco", "fp_f4_v3": "Early 116",
             "fp_f4_sea": "<strong>Season:</strong> Sept &ndash; Jan", "fp_f4_pack": "<strong>Pack:</strong> Cartons (3.5KG), Telescopic (5KG)",
-            
+
             "fp_f5_t": "Fresh Strawberries",
             "fp_f5_v1": "Fortuna", "fp_f5_v2": "Festival",
             "fp_f5_sea": "<strong>Season:</strong> Dec &ndash; Apr", "fp_f5_pack": "<strong>Pack:</strong> Punnets (250g/500g), Flat Trays",
-            
+
             "fp_f6_t": "Premium Mangoes",
             "fp_f6_v1": "Kent", "fp_f6_v2": "Keitt", "fp_f6_v3": "Ewais",
             "fp_f6_sea": "<strong>Season:</strong> Jul &ndash; Oct", "fp_f6_pack": "<strong>Pack:</strong> Single Layer Cartons (4KG)",
-            
+
             "fp_fz1_t": "Frozen Strawberries (IQF)",
             "fp_fz1_a": "<strong>Availability:</strong> Year-round", "fp_fz1_s": "<strong>Sizes:</strong> 15-25mm, 25-35mm", "fp_fz1_p": "<strong>Pack:</strong> Polybags (400g), Bulk (10kg)",
-            
+
             "fp_fz2_t": "Frozen Mango (Slices/Cubes)",
             "fp_fz2_a": "<strong>Availability:</strong> Year-round", "fp_fz2_s": "<strong>Cut:</strong> 10×10mm cubes, Half Slices", "fp_fz2_p": "<strong>Pack:</strong> 1kg Bags, Bulk (15kg)",
-            
+
             "fp_fz3_t": "Frozen Mixed Berries",
             "fp_fz3_a": "<strong>Availability:</strong> Year-round", "fp_fz3_s": "<strong>Contents:</strong> Blueberry, Raspberry, Blackberry", "fp_fz3_p": "<strong>Pack:</strong> Retail Bags (500g), Bulk (10kg)",
-            
+
             "fp_fz4_t": "Frozen Green Peas",
             "fp_fz4_a": "<strong>Availability:</strong> Year-round", "fp_fz4_s": "<strong>Grade:</strong> Grade A, Extra Fine", "fp_fz4_p": "<strong>Pack:</strong> Polybags (400g/1kg), Bulk (25kg)",
-            
+
             "fp_fz5_t": "Frozen Sweet Corn Kernels",
             "fp_fz5_a": "<strong>Availability:</strong> Year-round", "fp_fz5_s": "<strong>Type:</strong> Super Sweet, IQF", "fp_fz5_p": "<strong>Pack:</strong> Polybags (400g/1kg), Bulk (20kg)",
-            
+
             "fp_fz6_t": "Frozen Broccoli Florets",
             "fp_fz6_a": "<strong>Availability:</strong> Year-round", "fp_fz6_s": "<strong>Cut:</strong> 30-50mm florets", "fp_fz6_p": "<strong>Pack:</strong> Retail (400g), Foodservice (2.5kg)",
-            
+
             "fp_p1_t": "Fruit Purees & Concentrates",
             "fp_p1_a": "<strong>Types:</strong> Mango, Guava, Strawberry", "fp_p1_s": "<strong>Brix:</strong> 14-28° (Single Strength)", "fp_p1_p": "<strong>Pack:</strong> Aseptic Drums (200L)",
-            
+
             "fp_p2_t": "Jams & Preserves",
             "fp_p2_a": "<strong>Flavors:</strong> Apricot, Fig, Strawberry, Orange", "fp_p2_s": "<strong>Sugar:</strong> Regular & Low-sugar options", "fp_p2_p": "<strong>Pack:</strong> Glass Jars (340g/450g)",
-            
+
             "fp_p3_t": "Natural Juices (NFC)",
             "fp_p3_a": "<strong>Types:</strong> Orange, Pomegranate, Guava", "fp_p3_s": "<strong>Process:</strong> Cold-pressed, Not From Concentrate", "fp_p3_p": "<strong>Pack:</strong> Tetra Pak (200ml/1L), Bulk Drums",
-            
+
             "fp_p4_t": "Extra Virgin Olive Oil",
             "fp_p4_a": "<strong>Grade:</strong> Extra Virgin, Cold Pressed", "fp_p4_s": "<strong>Acidity:</strong> ≤ 0.8%", "fp_p4_p": "<strong>Pack:</strong> Glass (500ml/750ml), Tin (3L/5L)",
-            
+
             "fp_p5_t": "Tomato Paste & Sauce",
             "fp_p5_a": "<strong>Brix:</strong> 22-24° (CB), 28-30° (HB)", "fp_p5_s": "<strong>Color:</strong> Grade A (Deep Red)", "fp_p5_p": "<strong>Pack:</strong> Tins (400g/800g), Drums (230kg)",
-            
+
             "fp_p6_t": "Dried Herbs & Spices",
             "fp_p6_a": "<strong>Types:</strong> Chamomile, Basil, Dill, Cumin", "fp_p6_s": "<strong>Process:</strong> Air-dried, Steam Sterilized", "fp_p6_p": "<strong>Pack:</strong> Bags (25g–1kg), Bulk (25kg)",
-            
+
             "fp_sus_title": "Our Commitment to Sustainability",
             "fp_sus_1": "Agriculture is a partnership with nature. We focus on zero-waste initiatives, implementing renewable solar energy across our sorting facilities and utilizing organic compose derived from farm byproducts.",
             "fp_sus_2": "Protecting the environment ensures the continued superior quality of the crops we deliver to your hands.",
@@ -385,7 +385,142 @@ document.addEventListener('DOMContentLoaded', () => {
             "foot_quicklinks": "Quick Links",
             "foot_services": "Our Services",
             "foot_getintouch": "Get In Touch",
-            // About Page
+            
+            // Agricultural Inputs Page
+            "agri_breadcrumb": "Home / Agricultural Inputs",
+            "agri_title": "Agricultural Inputs",
+            "agri_subtitle": "Seeds, Fertilizers, Pesticides &amp; Machinery — Everything Your Land Needs",
+            "agri_supply_eyebrow": "What We Supply",
+            "agri_supply_title": "Complete Agricultural Input Solutions",
+            "agri_supply_p1": "Since 1923, companies like BayWa have proven that the link between farmers and food producers runs through quality agricultural inputs. At Griland Egypt, we carry that same philosophy — providing farmers, landowners, and operators with everything required to run a productive, sustainable, and profitable agricultural operation. From certified seeds and precision fertilizers to crop protection products and heavy-duty machinery, we import and supply the full spectrum of agricultural inputs from trusted international partners across Europe and Asia.",
+            "agri_supply_p2": "Our agricultural inputs are sourced from globally recognized manufacturers and meet international quality standards including ISO 9001, GlobalG.A.P., and FDA certification — ensuring every input you receive is traceable, compliant, and proven.",
+            "agri_trusted_badge": "Trusted Since 1989",
+            "agri_stat_years": "Years",
+            "agri_stat_products": "Products",
+            "agri_stat_partners": "Partners",
+            "agri_stat_categories": "Categories",
+            "agri_range_eyebrow": "Our Input Range",
+            "agri_range_title": "Four Pillars of Agricultural Input",
+            "agri_tab_seeds": "Seeds",
+            "agri_tab_fertilizers": "Fertilizers",
+            "agri_tab_pesticides": "Pesticides",
+            "agri_tab_machinery": "Machinery",
+            "agri_seeds_banner_title": "Certified Seeds &amp; Seedlings",
+            "agri_seeds_banner_desc": "High-yield, disease-resistant seeds tailored for Egyptian soil and climate. Verified origins from top global breeders.",
+            "agri_seeds_cat_veg": "Vegetables",
+            "agri_seeds_veg_title": "Vegetable Seeds",
+            "agri_seeds_veg_desc": "A wide range of hybrid and non-hybrid vegetable seeds resistant to diseases, viruses, and heat. Our seeds cover major crops including tomatoes, peppers, cucumbers, and leafy greens — all certified and tested for Egyptian and regional climates.",
+            "agri_origin": "🌍 Origin: Europe &amp; Asia",
+            "agri_seeds_cat_fruit": "Fruits",
+            "agri_seeds_fruit_title": "Fruit Seeds &amp; Seedlings",
+            "agri_seeds_fruit_desc": "Premium fruit crop varieties including grapes (Superior &amp; Seedless Flame), mangoes, citrus, and stone fruits. Our fruit seeds are sourced from certified European breeders and tested for high-yield performance.",
+            "agri_seeds_cat_field": "Field Crops",
+            "agri_seeds_field_title": "Field Crop Seeds",
+            "agri_seeds_field_desc": "Certified seeds for wheat, corn, barley, sorghum, and other staple field crops. Non-hybrid and hybrid varieties available, with documented performance data across Egyptian soil conditions.",
+            "agri_fert_banner_title": "Advanced Plant Nutrition",
+            "agri_fert_banner_desc": "Organic and chemical fertilizers, micro-nutrients, and bio-stimulants crafted to maximize your crop's biological potential.",
+            "agri_fert_cat_macro": "Macro Nutrients",
+            "agri_fert_npk_title": "NPK Fertilizers",
+            "agri_fert_npk_desc": "Complete NPK blends combining Nitrogen, Phosphorus, and Potassium — the three core macronutrients for crop growth. Our NPK formulations are calibrated for Egyptian soils and available in granular and liquid forms.",
+            "agri_fert_cat_bio": "Bio Stimulants",
+            "agri_fert_amino_title": "Amino Acids &amp; Humic Acid",
+            "agri_fert_amino_desc": "Griland's unique fertilizer blend includes growth regulators, amino acids, and humic acid — working together to raise production efficiency and crop quality even on poor and newly reclaimed land.",
+            "agri_fert_cat_micro": "Micro Nutrients",
+            "agri_fert_micro_title": "Micronutrient Blends",
+            "agri_fert_micro_desc": "Chelated micronutrient fertilizers including zinc, iron, manganese, and boron. Designed to correct deficiencies and optimize plant health across all crop types and soil profiles.",
+            "agri_fert_cat_liquid": "Liquid Nutrition",
+            "agri_fert_liquid_title": "Liquid Fertilizers",
+            "agri_fert_liquid_desc": "Ready-to-apply liquid formulations for foliar feeding and fertigation systems. Ideal for high-value crops requiring precise, fast-acting nutrition at critical growth stages.",
+            "agri_fert_cat_organic": "Organic",
+            "agri_fert_organic_title": "Organic Fertilizers",
+            "agri_fert_organic_desc": "Bio-based organic fertilizers including compost concentrates, vermi-compost, and manure-based formulations. Supporting organic farming certification and sustainable soil management.",
+            "agri_fert_cat_soil": "Soil Health",
+            "agri_fert_soil_title": "Soil Conditioners",
+            "agri_fert_soil_desc": "Products that improve soil structure, water retention, and microbial activity. Including bio-stimulants and natural extracts that enhance long-term soil productivity.",
+            "agri_pest_banner_title": "Complete Crop Protection",
+            "agri_pest_banner_desc": "Herbicides, fungicides, and integrated pest management (IPM) solutions to safeguard your investment from planting to harvest.",
+            "agri_pest_cat_fungi": "Fungicides",
+            "agri_pest_fungi_title": "Fungicides",
+            "agri_pest_fungi_desc": "Systemic and contact fungicides for late blight, downy mildew, powdery mildew, and fungal complexes. Includes Colvid 25% EC (Difenoconazole 25%) and a wide range of preventive and curative products.",
+            "agri_pest_cat_insect": "Insecticides",
+            "agri_pest_insect_title": "Insecticides",
+            "agri_pest_insect_desc": "Broad-spectrum and selective insecticides targeting sucking pests, leaf feeders, and soil-dwelling insects. Products with different mechanisms of action to prevent resistance development.",
+            "agri_pest_cat_herb": "Herbicides",
+            "agri_pest_herb_title": "Herbicides",
+            "agri_pest_herb_desc": "Selective and non-selective herbicides for weed control across field crops and horticulture. Pre-emergent and post-emergent formulations available to suit all crop calendars.",
+            "agri_pest_cat_nema": "Nematicides &amp; Acaricides",
+            "agri_pest_nema_title": "Nematicides &amp; Acaricides",
+            "agri_pest_nema_desc": "Specialized products for the control of soil nematodes and mites — key pests in Egyptian vegetable and fruit production. Includes registered products from Syngenta and our own portfolio.",
+            "agri_pest_cat_growth": "Crop Protection",
+            "agri_pest_growth_title": "Plant Growth Regulators",
+            "agri_pest_growth_desc": "Growth regulators that manage plant development, fruit set, and stress response. Applied at critical crop stages to improve uniformity, yield, and post-harvest quality.",
+            "agri_pest_cat_bio": "Bio Protection",
+            "agri_pest_bio_title": "Biological Crop Protection",
+            "agri_pest_bio_desc": "Biopesticides and natural control agents as environmentally responsible alternatives to conventional chemicals. Supporting organic farming and integrated pest management (IPM) programs.",
+            "agri_pest_registered": "Griland Egypt holds 31 registered pesticide products with the Egyptian Ministry of Agriculture.",
+            "agri_mach_banner_title": "Heavy-Duty Machinery",
+            "agri_mach_banner_desc": "Tractors, combine harvesters, and specialized attachments imported directly from top-tier European manufacturers.",
+            "agri_mach_intro": "Griland Egypt imports agricultural tractors and heavy equipment from leading European manufacturers. We also facilitate access to quality used machinery through our international partnerships — covering the full range of equipment a modern farm requires.",
+            "agri_mach_cat_soil": "Soil Preparation",
+            "agri_mach_tractor_title": "Agricultural Tractors",
+            "agri_mach_tractor_desc": "New and used tractors for continuous movement across agricultural lands, plowing, and transporting equipment. Sourced from European manufacturers and suitable for Egyptian field conditions.",
+            "agri_mach_cat_harvest": "Harvesting",
+            "agri_mach_combine_title": "Combine Harvesters",
+            "agri_mach_combine_desc": "Full-spec combine harvesters for wheat, corn, and other field crops. Including maize adapters and sunflower headers for complete harvesting solutions across crop types.",
+            "agri_mach_cat_plant": "Planting",
+            "agri_mach_drill_title": "Seed Drills &amp; Planters",
+            "agri_mach_drill_desc": "Conventional and precision seed drills for accurate seed placement and optimized plant populations. Ensuring uniform germination and maximizing yield potential from the first day.",
+            "agri_mach_cat_protect": "Crop Protection",
+            "agri_mach_sprayer_title": "Sprayers &amp; Applicators",
+            "agri_mach_sprayer_desc": "Trailed and self-propelled sprayers for pesticide and fertilizer application. Calibrated for precise delivery rates to reduce waste and ensure uniform crop coverage.",
+            "agri_mach_cat_tillage": "Soil Work",
+            "agri_mach_harrow_title": "Disc Harrows &amp; Ploughs",
+            "agri_mach_harrow_desc": "Tillage equipment including disc harrows, ploughs, subsoilers, and seedbed preparators. For primary and secondary soil preparation across all crop rotations.",
+            "agri_mach_cat_post": "Post-Harvest",
+            "agri_mach_loader_title": "Telescopic Loaders &amp; Forklifts",
+            "agri_mach_loader_desc": "Material handling equipment for farm logistics, cold storage, and post-harvest operations. Including telescopic loaders, electric forklifts, and skid loaders.",
+            "agri_why_eyebrow": "Why Choose Us",
+            "agri_why_title": "The Griland Quality Promise",
+            "agri_why1_title": "Internationally Sourced",
+            "agri_why1_desc": "Imported from the largest agencies in Europe and Asia with proven track records.",
+            "agri_why2_title": "Ministry Registered",
+            "agri_why2_desc": "31 products registered with the Egyptian Ministry of Agriculture for legal compliance.",
+            "agri_why3_title": "Certified &amp; Traceable",
+            "agri_why3_desc": "All inputs comply with ISO, GlobalG.A.P., FDA and Kosher/Halal standards.",
+            "agri_why4_title": "Farmer-First Support",
+            "agri_why4_desc": "Technical agronomists available to advise on correct application, dosage and timing.",
+            "agri_cta_title": "Looking for a specific agricultural input?",
+            "agri_cta_desc": "Our team will source it, import it, and deliver it to your farm — contact us today.",
+            "agri_cta_contact": "Contact Our Team →",
+            "agri_cta_services": "View Our Services",
+
+            // Contact Page
+            "contact_breadcrumb": "Home / Contacts",
+            "contact_title_hero": "Contacts",
+            "contact_hero_sub": "Have Questions? Get in Touch!",
+            "contact_form_title": "Send Us a Message",
+            "contact_form_desc": "Fill in the form below and our team will get back to you within 24 hours.",
+            "contact_ph_name": "Your full name",
+            "contact_ph_email": "your@email.com",
+            "contact_ph_phone": "+20 xxx xxx xxxx",
+            "contact_ph_subject": "What is this regarding?",
+            "contact_ph_message": "Write your message here...",
+            "contact_btn_send": "Send Message →",
+            "contact_hours_title": "Open Hours",
+            "contact_hours_1": "Saturday – Thursday: 9 AM – 6 PM",
+            "contact_hours_2": "Friday: Closed",
+            "contact_be_title": "Belgium Address",
+            "contact_be_addr": "Avenue Pasteur, 23 — 1300 Wavre, Belgium",
+            "contact_eg_hq_title": "Company Headquarters in Egypt",
+            "contact_eg_hq_addr": "36 (A) Morad St., ELoda Masr Tower, Giza, Egypt",
+            "contact_eg_branch_title": "Branch Address in Egypt",
+            "contact_eg_branch_addr": "3 Cairo-Belbeis Desert Road, P.O. Box 3020, El Salam, 11785, Cairo, Egypt",
+            "contact_get_in_touch_title": "Get In Touch",
+            "contact_find_us_title": "Find Us",
+            "contact_ready_title": "Ready to grow together?",
+            "contact_ready_desc": "Explore our services and discover how Griland Egypt can support your agricultural goals.",
+            "contact_btn_services": "Our Services →",
+// About Page
             "about_breadcrumb": "Home / About",
             "about_title": "About",
             "about_our_about": "our about",
@@ -426,74 +561,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "about_spec_p2": "Due to more expansion of seeds-related business (nurseries grafting), Agro-Invest sister company was founded.",
             "about_team_comp": "Our Team Company",
             "about_team_multi": "A multidisciplinary team",
-
-            // Trade & Export Page
-            "te_hero_eyebrow": "Global Supply Chain Excellence",
-            "te_hero_title": "Trade & Export",
-            "te_hero_desc": "Connecting premium Egyptian produce to global markets. A reliable, scalable, and quality-driven export partner built for international B2B procurement.",
-            "te_hero_btn1": "Request Product List",
-            "te_hero_btn2": "Become a Partner",
-            "te_hero_scroll": "Explore Capabilities",
-            "te_stat1_v": "41,000+",
-            "te_stat1_t": "Tons Exported Annually",
-            "te_stat2_v": "15+",
-            "te_stat2_t": "Countries Worldwide",
-            "te_stat3_v": "20,000+",
-            "te_stat3_t": "Tons Storage Capacity",
-            "te_story_title": "From Egypt to Your Market",
-            "te_story_desc": "We don't just export products; we export certainty. Egypt's finest agricultural zones coupled with our rigorous end-to-end supply chain ensures that our partners receive premium quality, on time, and completely tailored to their global market demands. Whether fresh, frozen, or processed, we handle the complexity so you can focus on distribution.",
-            "te_cat_eyebrow": "Our Categories",
-            "te_cat_title": "A Comprehensive Export Portfolio",
-            "te_cat1_badge": "Fresh",
-            "te_cat1_title": "Fresh Produce",
-            "te_cat1_desc": "Hand-picked at peak ripeness. Sourced directly from our GlobalG.A.P certified farms ensuring maximum shelf life.",
-            "te_cat1_li1": "Citrus (Oranges, Lemons)",
-            "te_cat1_li2": "Premium Grapes",
-            "te_cat1_li3": "Mango (Kent, Keitt)",
-            "te_cat1_li4": "Red & White Onions",
-            "te_cat2_badge": "IQF Frozen",
-            "te_cat2_title": "Frozen (IQF)",
-            "te_cat2_desc": "Rapidly frozen to lock in nutrients and texture. Stored in our state-of-the-art optimal temperature facilities.",
-            "te_cat2_li1": "Strawberries (Whole/Sliced)",
-            "te_cat2_li2": "Mango Cubes",
-            "te_cat2_li3": "Mixed Berries",
-            "te_cat2_li4": "Green Peas & Veggies",
-            "te_cat3_badge": "Processed",
-            "te_cat3_title": "Processed Goods",
-            "te_cat3_desc": "High-quality purees, jams, and canned foods tailored for retail and industrial bulk manufacturing.",
-            "te_cat3_li1": "Fruit Purees (Brix 14-28)",
-            "te_cat3_li2": "Natural Juices (NFC)",
-            "te_cat3_li3": "Tomato Paste",
-            "te_cat3_li4": "Jams & Preserves",
-            "te_jrn_eyebrow": "Traceability",
-            "te_jrn_title": "The Export Journey",
-            "te_jrn_desc": "End-to-end control guaranteeing safety, freshness, and regulatory compliance.",
-            "te_jrn_s1_t": "1. Sourcing",
-            "te_jrn_s1_d": "Direct harvest from trusted, certified Egyptian farms.",
-            "te_jrn_s2_t": "2. Quality Control",
-            "te_jrn_s2_d": "Optical sorting and strict elimination of defects.",
-            "te_jrn_s3_t": "3. Processing",
-            "te_jrn_s3_d": "Rapid IQF freezing & safe packaging to lock vitality.",
-            "te_jrn_s4_t": "4. Logistics",
-            "te_jrn_s4_d": "Climate-controlled packing and custom ventilation.",
-            "te_jrn_s5_t": "5. Global Delivery",
-            "te_jrn_s5_d": "Ocean & air dispatch with real-time tracking.",
-            "te_adv_eyebrow": "The Advantage",
-            "te_adv_title": "Why Partner With Us?",
-            "te_adv_b1_t": "Direct Sourcing",
-            "te_adv_b1_d": "Eliminating middlemen to ensure fair prices and full farm oversight.",
-            "te_adv_b2_t": "Private Labeling",
-            "te_adv_b2_d": "Custom packaging and OEM services tailored to your brand identity.",
-            "te_adv_b3_t": "Reliable Logistics",
-            "te_adv_b3_d": "In-house cold storage and streamlined customs networks.",
-            "te_adv_b4_t": "Competitive Edge",
-            "te_adv_b4_d": "Premium quality delivered at highly competitive market rates.",
-            "te_adv_yr": "Years Expertise",
-            "te_cert_title": "Internationally Certified Quality",
-            "te_cta_title": "Ready to Import?",
-            "te_cta_desc": "Get in touch with our export team today for pricing, technical specifications, and a detailed product list tailored to your market.",
-            "te_cta_btn1": "Contact Export Team",
-            "te_cta_btn2": "B2B Inquiry"
 
         },
         ar: {
@@ -653,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_src_irr_desc": "نستخدم أحدث أنظمة الري بالتنقيط للحفاظ على المياه وتوصيل المغذيات الدقيقة مباشرة إلى الجذور. يتم فحص تربتنا باستمرار لضمان حيويتها العضوية.",
             "fp_src_eff": "كفاءة استخدام المياه",
             "fp_src_min": "التركيب المعدني",
-            
+
             "fp_jrn_tag": "العملية",
             "fp_jrn_title": "رحلة الإنتاج",
             "fp_jrn_desc": "خط أنابيب سلس وقابل للتتبع بالكامل لضمان سلامة الأغذية من الحقل مباشرة إلى تجار التجزئة في جميع أنحاء العالم.",
@@ -668,73 +735,73 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_j_p_desc": "تُوضع المنتجات النقية بعناية في علب صحية ومخصصة التهوية وعبوات صالحة للطعام. هذه البطانة المتخصصة تمنع حدوث أي كدمات أثناء النقل.",
             "fp_j_l_title": "الخدمات اللوجستية",
             "fp_j_l_desc": "نقوم بالتحميل الآمن في حاويات يتم التحكم في درجة حرارتها، وتنطلق أساطيلنا عبر المحيطات. تضمن مراقبة درجة الحرارة في الوقت الفعلي وصول الحصاد إلى وجهاته المثالية حول العالم.",
-            
+
             "fp_cat_tag": "محفظتنا",
             "fp_cat_title": "الكتالوج الفني للمنتجات",
             "fp_tab_frsh": "المنتجات الطازجة",
             "fp_tab_frzn": "المنتجات المجمدة (IQF)",
             "fp_tab_proc": "المنتجات المصنعة والمهروسة",
-            
+
             "fp_f1_t": "الموالح (البرتقال والليمون)",
             "fp_f1_v1": "بلدي", "fp_f1_v2": "بصرة", "fp_f1_v3": "فالنسيا",
             "fp_f1_sea": "<strong>الموسم:</strong> نوفمبر – مايو", "fp_f1_pack": "<strong>التعبئة:</strong> كراتين تلسكوبية (15 كجم)",
-            
+
             "fp_f2_t": "عنب فاخر",
             "fp_f2_v1": "سوبيريور", "fp_f2_v2": "فليم", "fp_f2_v3": "كريمسون",
             "fp_f2_sea": "<strong>الموسم:</strong> مايو – سبتمبر", "fp_f2_pack": "<strong>التعبئة:</strong> علب صغيرة (500 جم)، سائب (5 كجم)",
-            
+
             "fp_f3_t": "بصل وثوم طازج",
             "fp_f3_v1": "أحمر/أصفر", "fp_f3_v2": "ثوم أبيض",
             "fp_f3_sea": "<strong>الموسم:</strong> فبراير – اغسطس", "fp_f3_pack": "<strong>التعبئة:</strong> شِباك (10 كجم/25 كجم)",
-            
+
             "fp_f4_t": "الرمان",
             "fp_f4_v1": "وندر فلا", "fp_f4_v2": "أكو", "fp_f4_v3": "إيرلي 116",
             "fp_f4_sea": "<strong>الموسم:</strong> سبتمبر – يناير", "fp_f4_pack": "<strong>التعبئة:</strong> كراتين (3.5 كجم)، تلسكوبية (5 كجم)",
-            
+
             "fp_f5_t": "فراولة طازجة",
             "fp_f5_v1": "فورتونا", "fp_f5_v2": "فيستيفال",
             "fp_f5_sea": "<strong>الموسم:</strong> ديسمبر – أبريل", "fp_f5_pack": "<strong>التعبئة:</strong> علب (250/500 جم)، أطباق مسطحة",
-            
+
             "fp_f6_t": "مانجو فاخر",
             "fp_f6_v1": "كنت", "fp_f6_v2": "كيت", "fp_f6_v3": "عويس",
             "fp_f6_sea": "<strong>الموسم:</strong> يوليو – أكتوبر", "fp_f6_pack": "<strong>التعبئة:</strong> كراتين طبقة واحدة (4 كجم)",
-            
+
             "fp_fz1_t": "فراولة مجمدة (IQF)",
             "fp_fz1_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz1_s": "<strong>الأحجام:</strong> 15-25 ملم، 25-35 ملم", "fp_fz1_p": "<strong>التعبئة:</strong> أكياس بولي (400 جم)، سائب (10 كجم)",
-            
+
             "fp_fz2_t": "مانجو مجمدة (شرائح/مكعبات)",
             "fp_fz2_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz2_s": "<strong>الشكل:</strong> مكعبات 10×10 ملم، نصف شرائح", "fp_fz2_p": "<strong>التعبئة:</strong> أكياس 1 كجم، سائب (15 كجم)",
-            
+
             "fp_fz3_t": "توت مشكل مجمد",
             "fp_fz3_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz3_s": "<strong>المحتويات:</strong> توت أزرق، توت العليق، توت أسود", "fp_fz3_p": "<strong>التعبئة:</strong> أكياس بيع بالتجزئة (500 جم)، سائب (10 كجم)",
-            
+
             "fp_fz4_t": "بازلاء خضراء مجمدة",
             "fp_fz4_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz4_s": "<strong>الدرجة:</strong> الفئة A، دقيقة جدًا", "fp_fz4_p": "<strong>التعبئة:</strong> أكياس بولي (400/1 كجم)، سائب (25 كجم)",
-            
+
             "fp_fz5_t": "حبوب الذرة الحلوة المجمدة",
             "fp_fz5_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz5_s": "<strong>النوع:</strong> حلوة جدًا، IQF", "fp_fz5_p": "<strong>التعبئة:</strong> أكياس بولي (400/1 كجم)، سائب (20 كجم)",
-            
+
             "fp_fz6_t": "زهرات القرنبيط (بروكلي) مجمدة",
             "fp_fz6_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz6_s": "<strong>الحجم:</strong> زهرات 30-50 ملم", "fp_fz6_p": "<strong>التعبئة:</strong> بالتجزئة (400 جم)، خدمة طعام (2.5 كجم)",
-            
+
             "fp_p1_t": "هريس (بيوريه) الفاكهة والمركزات",
             "fp_p1_a": "<strong>الأنواع:</strong> مانجو، جوافة، فراولة", "fp_p1_s": "<strong>بريكس:</strong> 14-28° (قوة فردية)", "fp_p1_p": "<strong>التعبئة:</strong> براميل معقمة (200 لتر)",
-            
+
             "fp_p2_t": "المربى والمعلبات",
             "fp_p2_a": "<strong>النكهات:</strong> مشمش، تين، فراولة، برتقال", "fp_p2_s": "<strong>السكر:</strong> عادي وقليل السكر", "fp_p2_p": "<strong>التعبئة:</strong> برطمانات زجاجية (340/450 جم)",
-            
+
             "fp_p3_t": "عصائر طبيعية (NFC)",
             "fp_p3_a": "<strong>الأنواع:</strong> برتقال، رمان، جوافة", "fp_p3_s": "<strong>المعالجة:</strong> معصور على البارد، غير مركز", "fp_p3_p": "<strong>التعبئة:</strong> تيترا باك (200 مل / 1 لتر)، براميل كبرى",
-            
+
             "fp_p4_t": "زيت زيتون بكر ممتاز",
             "fp_p4_a": "<strong>الدرجة:</strong> بكر ممتاز، معصور على البارد", "fp_p4_s": "<strong>الحموضة:</strong> ≤ 0.8%", "fp_p4_p": "<strong>التعبئة:</strong> زجاج (500/750 مل)، صفيح (3/5 لتر)",
-            
+
             "fp_p5_t": "معجون وصلصة الطماطم",
             "fp_p5_a": "<strong>بريكس:</strong> 22-24°، 28-30°", "fp_p5_s": "<strong>اللون:</strong> الفئة A (أحمر داكن)", "fp_p5_p": "<strong>التعبئة:</strong> صفيح (400/800 جم)، براميل (230 كجم)",
-            
+
             "fp_p6_t": "أعشاب مجففة وتوابل",
             "fp_p6_a": "<strong>الأنواع:</strong> بابونج، ريحان، شبت، كمون", "fp_p6_s": "<strong>المعالجة:</strong> تجفيف هوائي، تعقيم بالبخار", "fp_p6_p": "<strong>التعبئة:</strong> أكياس (25 جم - 1 كجم)، سائب (25 كجم)",
-            
+
             "fp_sus_title": "التزامنا بالاستدامة",
             "fp_sus_1": "الزراعة هي شراكة مع الطبيعة. نحن نركز على مبادرات التخلص من النفايات تماماً، وتنفيذ الطاقة الشمسية المتجددة في جميع منشآت الفرز لدينا واستخدام الأسمدة العضوية المستمدة من المنتجات الثانوية الزراعية.",
             "fp_sus_2": "تضمن حماية البيئة استمرار الجودة الفائقة للمحاصيل التي نقدمها بين يديك.",
@@ -778,7 +845,142 @@ document.addEventListener('DOMContentLoaded', () => {
             "foot_quicklinks": "روابط سريعة",
             "foot_services": "خدماتنا",
             "foot_getintouch": "تواصل معنا",
-            // ترجمات صفحة حول
+            
+            // Agricultural Inputs Page
+            "agri_breadcrumb": "الرئيسية / المدخلات الزراعية",
+            "agri_title": "المدخلات الزراعية",
+            "agri_subtitle": "البذور والأسمدة والمبيدات والآلات - كل ما تحتاجه أرضك",
+            "agri_supply_eyebrow": "ما نوفره",
+            "agri_supply_title": "حلول متكاملة للمدخلات الزراعية",
+            "agri_supply_p1": "منذ عام 1923، أثبتت شركات مثل BayWa أن الرابط بين المزارعين ومنتجي الأغذية يمر عبر المدخلات الزراعية عالية الجودة. في جريلاند مصر، نحمل نفس الفلسفة — حيث نوفر للمزارعين، وملاك الأراضي، والمشغلين كل ما يلزم لإدارة عملية زراعية منتجة ومستدامة ومربحة. من البذور المعتمدة والأسمدة إلى منتجات وقاية المحاصيل والآلات الثقيلة، نقوم باستيراد وتوريد مجموعة كاملة من المدخلات الزراعية من شركاء دوليين موثوق بهم في جميع أنحاء أوروبا وآسيا.",
+            "agri_supply_p2": "يتم الحصول على مدخلاتنا الزراعية من جهات تصنيع معترف بها عالميًا وتلبي معايير الجودة الدولية بما في ذلك شهادات ISO 9001 و GlobalG.A.P. و FDA — مما يضمن أن كل مدخل تتلقاه قابل للتتبع ومطابق ومثبت فعاليته.",
+            "agri_trusted_badge": "طريقك للثقة منذ 1989",
+            "agri_stat_years": "سنوات الثقة",
+            "agri_stat_products": "منتجات",
+            "agri_stat_partners": "شركاء دوليين",
+            "agri_stat_categories": "فئات",
+            "agri_range_eyebrow": "مجموعة مدخلاتنا",
+            "agri_range_title": "أربع ركائز للمدخلات الزراعية",
+            "agri_tab_seeds": "البذور",
+            "agri_tab_fertilizers": "الأسمدة",
+            "agri_tab_pesticides": "المبيدات",
+            "agri_tab_machinery": "الآلات",
+            "agri_seeds_banner_title": "بذور وشتلات معتمدة",
+            "agri_seeds_banner_desc": "بذور عالية الإنتاجية ومقاومة للأمراض مصممة لتناسب التربة والمناخ المصري. مصادر موثوقة من أفضل المربين العالميين.",
+            "agri_seeds_cat_veg": "الخضروات",
+            "agri_seeds_veg_title": "بذور الخضروات",
+            "agri_seeds_veg_desc": "مجموعة واسعة من بذور الخضروات الهجينة وغير الهجينة المقاومة للأمراض والفيروسات والحرارة. تغطي بذورنا المحاصيل الرئيسية بما في ذلك الطماطم والفلفل والخيار والخضروات الورقية — كلها معتمدة ومختبرة للمناخات المصرية والإقليمية.",
+            "agri_origin": "🌍 المنشأ: أوروبا وآسيا",
+            "agri_seeds_cat_fruit": "الفواكه",
+            "agri_seeds_fruit_title": "بذور وشتلات الفواكه",
+            "agri_seeds_fruit_desc": "أصناف محاصيل الفاكهة الممتازة بما في ذلك العنب (سوبيريور وفليم بدون بذور) والمانجو والحمضيات. يتم الحصول على بذور الفاكهة الخاصة بنا من مربيين أوروبيين معتمدين ويتم اختبارها لتحقيق أداء عالي الإنتاجية.",
+            "agri_seeds_cat_field": "المحاصيل الحقلية",
+            "agri_seeds_field_title": "بذور المحاصيل الحقلية",
+            "agri_seeds_field_desc": "بذور معتمدة للقمح والذرة والشعير وغيرها من المحاصيل الحقلية الأساسية. تتوفر أصناف غير هجينة وهجينة، مع بيانات أداء موثقة عبر ظروف التربة المصرية.",
+            "agri_fert_banner_title": "تغذية نباتية متطورة",
+            "agri_fert_banner_desc": "أسمدة عضوية وكيميائية، ومغذيات دقيقة، ومحفزات حيوية مصممة لزيادة الإمكانات البيولوجية لمحصولك.",
+            "agri_fert_cat_macro": "مغذيات كبرى",
+            "agri_fert_npk_title": "أسمدة NPK",
+            "agri_fert_npk_desc": "خلطات NPK كاملة تجمع بين النيتروجين والفوسفور والبوتاسيوم — المغذيات الكبرى الأساسية لنمو المحاصيل. تمت معايرة تركيبات NPK لتناسب التربة المصرية.",
+            "agri_fert_cat_bio": "محفزات حيوية",
+            "agri_fert_amino_title": "أحماض أمينية وحمض الهيوميك",
+            "agri_fert_amino_desc": "يتضمن مزيج الأسمدة الفريد من جريلاند منظمات النمو والأحماض الأمينية وحمض الهيوميك — التي تعمل معًا لرفع كفاءة الإنتاج وجودة المحاصيل حتى في الأراضي المستصلحة حديثًا.",
+            "agri_fert_cat_micro": "مغذيات دقيقة",
+            "agri_fert_micro_title": "مزيج المغذيات الدقيقة",
+            "agri_fert_micro_desc": "أسمدة المغذيات الدقيقة المخلبية بما في ذلك الزنك والحديد والمنغنيز والبورون. مصممة لتصحيح النقص وتحسين صحة النبات.",
+            "agri_fert_cat_liquid": "تغذية سائلة",
+            "agri_fert_liquid_title": "أسمدة سائلة",
+            "agri_fert_liquid_desc": "تركيبات سائلة جاهزة للتطبيق للتغذية الورقية وأنظمة الري بالتسميد. مثالية للمحاصيل عالية القيمة التي تتطلب تغذية دقيقة وسريعة المفعول.",
+            "agri_fert_cat_organic": "أسمدة عضوية",
+            "agri_fert_organic_title": "أسمدة عضوية",
+            "agri_fert_organic_desc": "أسمدة عضوية ذات أساس حيوي بما في ذلك الفيرمي كومبوست والتركيبات القائمة على السماد الطبيعي. تدعم الزراعة العضوية والمستدامة.",
+            "agri_fert_cat_soil": "صحة التربة",
+            "agri_fert_soil_title": "مصلحات ومحسنات التربة",
+            "agri_fert_soil_desc": "منتجات تحسن بنية التربة واحتفاظها بالماء والنشاط الميكروبي. تشمل المحفزات الحيوية والمستخلصات الطبيعية.",
+            "agri_pest_banner_title": "وقاية متكاملة للمحاصيل",
+            "agri_pest_banner_desc": "مبيدات الأعشاب ومبيدات الفطريات وحلول الإدارة المتكاملة للآفات لحماية استثماراتك من الزراعة للحصاد.",
+            "agri_pest_cat_fungi": "مبيدات فطرية",
+            "agri_pest_fungi_title": "المبيدات الفطرية",
+            "agri_pest_fungi_desc": "مبيدات فطرية جهازية وتلامسية لمكافحة اللفحة المتأخرة والبياض الزغبي والدقيقي. تشمل كولفيد 25% إي سي والعديد من المنتجات الوقائية والعلاجية.",
+            "agri_pest_cat_insect": "مبيدات حشرية",
+            "agri_pest_insect_title": "المبيدات الحشرية",
+            "agri_pest_insect_desc": "مبيدات حشرية واسعة الطيف وانتقائية تستهدف الآفات الماصة للغذاء، الحشرات التي تتغذى على الأوراق، والمنتجات بآليات عمل مختلفة لمنع تطور المقاومة.",
+            "agri_pest_cat_herb": "مبيدات الأعشاب",
+            "agri_pest_herb_title": "المبيدات العشبية",
+            "agri_pest_herb_desc": "مبيدات أعشاب انتقائية وغير انتقائية لمكافحة الحشائش في المحاصيل الحقلية والبستنة. تتوفر تركيبات قبل الانبثاق وبعد الانبثاق.",
+            "agri_pest_cat_nema": "مبيدات النيماتودا",
+            "agri_pest_nema_title": "مبيدات النيماتودا والعناكب",
+            "agri_pest_nema_desc": "منتجات متخصصة لمكافحة الديدان الخيطية والعناكب — الآفات الرئيسية في إنتاج الخضروات والفواكه المصري. تتضمن منتجات مسجلة لشركات عالمية.",
+            "agri_pest_cat_growth": "وقاية المحاصيل",
+            "agri_pest_growth_title": "منظمات نمو النبات",
+            "agri_pest_growth_desc": "منظمات النمو التي تدير نمو النبات، وعقد الثمار، والاستجابة للإجهاد. يتم تطبيقها لتحسين التجانس والإنتاجية وجودة ما بعد الحصاد.",
+            "agri_pest_cat_bio": "المبيدات الحيوية",
+            "agri_pest_bio_title": "المكافحة الحيوية",
+            "agri_pest_bio_desc": "المبيدات الحيوية وعوامل المكافحة الطبيعية كبدائل مسؤولة بيئيا للكيماويات التقليدية. تدعم برامج الزراعة العضوية والمكافحة المتكاملة للآفات.",
+            "agri_pest_registered": "تمتلك جريلاند مصر 31 منتجًا مبيدًا حشريًا مسجلًا لدى وزارة الزراعة المصرية.",
+            "agri_mach_banner_title": "آلات ومعدات ثقيلة",
+            "agri_mach_banner_desc": "جرارات وحصادات ومرفقات متخصصة مستوردة مباشرة من كبار المصنعين الأوروبيين.",
+            "agri_mach_intro": "تستورد جريلاند مصر الجرارات الزراعية والمعدات الثقيلة من كبار المصنعين الأوروبيين. كما نسهل الوصول إلى الآلات المستعملة عالية الجودة من خلال شراكاتنا الدولية.",
+            "agri_mach_cat_soil": "تحضير التربة",
+            "agri_mach_tractor_title": "جرارات زراعية",
+            "agri_mach_tractor_desc": "جرارات جديدة ومستعملة للحركة المستمرة عبر الأراضي الزراعية وللحراثة. مصنعة بمواصفات أوروبية تناسب ظروف الحقل المصري.",
+            "agri_mach_cat_harvest": "عمليات الحصاد",
+            "agri_mach_combine_title": "حصادات",
+            "agri_mach_combine_desc": "حصادات ذات مواصفات كاملة للقمح والذرة والمحاصيل الحقلية الأخرى. لحلول الحصاد المتكاملة لأنواع المحاصيل المختلفة.",
+            "agri_mach_cat_plant": "الغرس والزراعة",
+            "agri_mach_drill_title": "البذارات وآلات الزراعة",
+            "agri_mach_drill_desc": "بذارات بذور تقليدية ودقيقة لضمان أعداد نباتية مثالية والإنبات المتجانس لتعظيم قدرة الإنتاج من اليوم الأول.",
+            "agri_mach_cat_protect": "أعمال الرش",
+            "agri_mach_sprayer_title": "رشاشات ومعدات التطبيق",
+            "agri_mach_sprayer_desc": "رشاشات مقطورة وذاتية الدفع لتطبيق المبيدات والأسمدة. تمت معايرتها لمعدلات توصيل دقيقة لتقليل الهدر وضمان تغطية متساوية.",
+            "agri_mach_cat_tillage": "أعمال التربة",
+            "agri_mach_harrow_title": "أمشاط قرصية ومحاريث",
+            "agri_mach_harrow_desc": "معدات الحراثة تتضمن أمشاط قرصية ومحاريث ومهيئات لمهد البذور. للتحضير الأولي والثانوي للتربة عبر جميع دورات المحاصيل.",
+            "agri_mach_cat_post": "ما بعد الحصاد",
+            "agri_mach_loader_title": "روافع شوكية وغيرها",
+            "agri_mach_loader_desc": "معدات مناولة المواد الخاصة بلوجستيات المزارع والتخزين المبرد وعمليات ما بعد الحصاد. بما في ذلك الرافعات الشوكية الكهربائية والرافعات.",
+            "agri_why_eyebrow": "لماذا تختارنا",
+            "agri_why_title": "وعد جودة جريلاند",
+            "agri_why1_title": "موارد دولية",
+            "agri_why1_desc": "مستورد من أكبر الوكالات في أوروبا وآسيا بسجلات مثبتة.",
+            "agri_why2_title": "مسجل حكوميا",
+            "agri_why2_desc": "31 منتجًا مسجلاً لدى وزارة الزراعة المصرية للتوافق القانوني.",
+            "agri_why3_title": "معتمد وموثوق",
+            "agri_why3_desc": "تتوافق كافة المدخلات مع معايير الآيزو وGlobalG.A.P. وFDA وKosher / Halal.",
+            "agri_why4_title": "دعم المزارع أولاً",
+            "agri_why4_desc": "مهندسون زراعيون فنيون متاحون لتقديم النصيحة بشأن التطبيق والجرعة والمواعيد.",
+            "agri_cta_title": "هل تبحث عن مدخل زراعي معين؟",
+            "agri_cta_desc": "فريقنا سوف يبحث عنه ويستورده ويوصله إلى مزرعتك — اتصل بنا اليوم.",
+            "agri_cta_contact": "تواصل مع فريقنا ←",
+            "agri_cta_services": "اعرض خدماتنا",
+
+            // صفحة اتصل بنا
+            "contact_breadcrumb": "الرئيسية / اتصل بنا",
+            "contact_title_hero": "اتصل بنا",
+            "contact_hero_sub": "هل لديك أسئلة؟ تواصل معنا!",
+            "contact_form_title": "أرسل لنا رسالة",
+            "contact_form_desc": "املأ النموذج أدناه وسيقوم فريقنا بالرد عليك خلال 24 ساعة.",
+            "contact_ph_name": "اسمك الكامل",
+            "contact_ph_email": "البريد الإلكتروني",
+            "contact_ph_phone": "+20 xxx xxx xxxx",
+            "contact_ph_subject": "بخصوص ماذا؟",
+            "contact_ph_message": "اكتب رسالتك هنا...",
+            "contact_btn_send": "إرسال الرسالة ←",
+            "contact_hours_title": "ساعات العمل",
+            "contact_hours_1": "السبت – الخميس: 9 صباحاً – 6 مساءً",
+            "contact_hours_2": "الجمعة: مغلق",
+            "contact_be_title": "عنوان بلجيكا",
+            "contact_be_addr": "Avenue Pasteur, 23 — 1300 Wavre, Belgium",
+            "contact_eg_hq_title": "المكتب الرئيسي في مصر",
+            "contact_eg_hq_addr": "36 (أ) شارع مراد، برج الهدى مصر، الجيزة، مصر",
+            "contact_eg_branch_title": "عنوان الفرع في مصر",
+            "contact_eg_branch_addr": "3 طريق القاهرة بلبيس الصحراوي، ص.ب 3020، السلام، 11785، القاهرة، مصر",
+            "contact_get_in_touch_title": "تواصل معنا",
+            "contact_find_us_title": "اعثر علينا",
+            "contact_ready_title": "هل أنت مستعد للنمو معاً؟",
+            "contact_ready_desc": "استكشف خدماتنا واكتشف كيف يمكن لجريلاند مصر دعم أهدافك الزراعية.",
+            "contact_btn_services": "خدماتنا ←",
+// ترجمات صفحة حول
             "about_breadcrumb": "الرئيسية / من نحن",
             "about_title": "من نحن",
             "about_our_about": "عن شركتنا",
@@ -820,73 +1022,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "about_team_comp": "شركتنا",
             "about_team_multi": "فريق متعدد التخصصات",
 
-            // Trade & Export Page
-            "te_hero_eyebrow": "التميز في سلسلة الإمداد العالمية",
-            "te_hero_title": "التجارة والتصدير",
-            "te_hero_desc": "ربط المنتجات المصرية الفاخرة بالأسواق العالمية. شريك تصدير موثوق، قابل للتوسع، وموجه بالجودة ومصمم لمشتريات B2B الدولية.",
-            "te_hero_btn1": "اطلب قائمة المنتجات",
-            "te_hero_btn2": "كن شريكاً",
-            "te_hero_scroll": "اكتشف إمكانياتنا",
-            "te_stat1_v": "41,000+",
-            "te_stat1_t": "طن يتم تصديره سنوياً",
-            "te_stat2_v": "15+",
-            "te_stat2_t": "دولة حول العالم",
-            "te_stat3_v": "20,000+",
-            "te_stat3_t": "طن سعة تخزينية",
-            "te_story_title": "من مصر إلى سوقك",
-            "te_story_desc": "نحن لا نصدر المنتجات فحسب؛ بل نصدر اليقين. تضمن أفضل المناطق الزراعية في مصر إلى جانب سلسلة الإمداد الصارمة من البداية إلى النهاية حصول شركائنا على الجودة الممتازة، في الوقت المحدد، ومصممة بالكامل لتلبية متطلبات أسواقهم العالمية. سواء أكانت طازجة أو مجمدة أو مصنعة، نحن نتعامل مع التعقيد حتى تتمكن أنت من التركيز على التوزيع.",
-            "te_cat_eyebrow": "فئاتنا",
-            "te_cat_title": "محفظة تصدير شاملة",
-            "te_cat1_badge": "طازجة",
-            "te_cat1_title": "منتجات طازجة",
-            "te_cat1_desc": "مقطوفة يدوياً في ذروة نضجها. يتم الحصول عليها مباشرة من مزارعنا المعتمدة من GlobalG.A.P لضمان أطول فترة صلاحية.",
-            "te_cat1_li1": "الحمضيات (برتقال، ليمون)",
-            "te_cat1_li2": "عنب فاخر",
-            "te_cat1_li3": "مانجو (كنت، كيت)",
-            "te_cat1_li4": "بصل أحمر وأبيض",
-            "te_cat2_badge": "مجمد IQF",
-            "te_cat2_title": "مجمد (IQF)",
-            "te_cat2_desc": "يُجمد بسرعة للحفاظ على العناصر الغذائية والقوام. يُخزن في منشآتنا ذات درجة الحرارة المثالية الحديثة.",
-            "te_cat2_li1": "فراولة (كاملة / شرائح)",
-            "te_cat2_li2": "مكعبات المانجو",
-            "te_cat2_li3": "توت مشكل",
-            "te_cat2_li4": "بازلاء خضراء وخضروات",
-            "te_cat3_badge": "مصنع",
-            "te_cat3_title": "المنتجات المصنعة",
-            "te_cat3_desc": "هريس عالي الجودة ومربى وأطعمة معلبة مصممة لتجارة التجزئة والتصنيع الصناعي بالجملة.",
-            "te_cat3_li1": "هريس الفاكهة (بريكس 14-28)",
-            "te_cat3_li2": "عصائر طبيعية (NFC)",
-            "te_cat3_li3": "معجون الطماطم",
-            "te_cat3_li4": "مربى وحلويات",
-            "te_jrn_eyebrow": "إمكانية التتبع",
-            "te_jrn_title": "رحلة التصدير",
-            "te_jrn_desc": "تحكم شامل من البداية إلى النهاية يضمن السلامة والنضارة والامتثال التنظيمي.",
-            "te_jrn_s1_t": "1. التوريد",
-            "te_jrn_s1_d": "حصاد مباشر من مزارع مصرية معتمدة وموثوقة.",
-            "te_jrn_s2_t": "2. مراقبة الجودة",
-            "te_jrn_s2_d": "فرز بصري واستبعاد صارم للعيوب.",
-            "te_jrn_s3_t": "3. المعالجة",
-            "te_jrn_s3_d": "تجميد سريع IQF بتغليف آمن للحفاظ على الفيتامينات.",
-            "te_jrn_s4_t": "4. اللوجستيات",
-            "te_jrn_s4_d": "تغليف يمكن التحكم بمناخه وتهوية مخصصة.",
-            "te_jrn_s5_t": "5. التسليم العالمي",
-            "te_jrn_s5_d": "نقل جوي وبحري مع تتبع في الوقت الفعلي.",
-            "te_adv_eyebrow": "الميزة",
-            "te_adv_title": "لماذا تشاركنا؟",
-            "te_adv_b1_t": "التوريد المباشر",
-            "te_adv_b1_d": "القضاء على الوسطاء لضمان أسعار عادلة وإشراف كامل على المزارع.",
-            "te_adv_b2_t": "العلامة الخاصة",
-            "te_adv_b2_d": "تغليف مخصص وخدمات تشغيل تتناسب مع هوية علامتك.",
-            "te_adv_b3_t": "لوجستيات موثوقة",
-            "te_adv_b3_d": "تخزين بارد داخلي وشبكات جمركية مبسطة.",
-            "te_adv_b4_t": "ميزة تنافسية",
-            "te_adv_b4_d": "جودة فاخرة يتم تسليمها بأسعار سوق تنافسية للغاية.",
-            "te_adv_yr": "سنوات من الخبرة",
-            "te_cert_title": "جودة معتمدة دولياً",
-            "te_cta_title": "هل أنت مستعد للاستيراد؟",
-            "te_cta_desc": "تواصل مع فريق التصدير لدينا اليوم للحصول على الأسعار والمواصفات الفنية وقائمة منتجات مخصصة لسوقك.",
-            "te_cta_btn1": "اتصل بفريق التصدير",
-            "te_cta_btn2": "استفسار تجاري B2B"
         }
     };
 
@@ -899,19 +1034,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = lang;
 
         const nextLangText = lang === 'en' ? 'عربي' : 'English';
-        if(langBtnDesktop) langBtnDesktop.innerText = nextLangText;
-        if(langBtnMobile) langBtnMobile.innerText = nextLangText;
+        if (langBtnDesktop) langBtnDesktop.innerText = nextLangText;
+        if (langBtnMobile) langBtnMobile.innerText = nextLangText;
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
-                if(el.tagName === 'STRONG') {
+                if (el.tagName === 'STRONG') {
                     el.innerHTML = translations[lang][key];
                 } else {
                     el.innerHTML = translations[lang][key];
                 }
             }
         });
+
+        document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+            const key = el.getAttribute('data-i18n-ph');
+            if (translations[lang] && translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+
     }
 
     // Apply initially
@@ -924,7 +1067,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMenu();
     }
 
-    if(langBtnDesktop) langBtnDesktop.addEventListener('click', toggleLanguage);
-    if(langBtnMobile) langBtnMobile.addEventListener('click', toggleLanguage);
+    if (langBtnDesktop) langBtnDesktop.addEventListener('click', toggleLanguage);
+    if (langBtnMobile) langBtnMobile.addEventListener('click', toggleLanguage);
 
 });

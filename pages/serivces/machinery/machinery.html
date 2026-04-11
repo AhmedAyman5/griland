@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machinery & Equipment | Agriland Egypt</title>
+    <!-- Google Fonts: Cairo supports both English and Arabic beautifully -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A8C5C',
+                        dark: '#1B3A2D',
+                        light: '#F7F7F2',
+                        body: '#333333',
+                        muted: '#777777',
+                        border: '#E0E0E0'
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-body font-sans antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- 1. Navbar -->
+    <div id="navigation-placeholder" data-basepath="../../../"></div>
+    <script src="../../../components/navbar.js"></script>
+
+    <!-- 2. Hero Section -->
+    <section id="hero"
+        class="relative flex flex-col justify-center items-center pt-32 pb-20 px-6 sm:px-10 bg-dark overflow-hidden min-h-[60vh]">
+        <!-- Hero Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="./images/hero1.jpg" alt="Machinery Hero"
+                class="w-full h-full object-cover opacity-50 mix-blend-overlay">
+            <div class="absolute inset-0 bg-dark/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-[1200px] w-full mx-auto flex flex-col items-center text-center mt-10">
+            <span class="text-primary font-bold text-sm tracking-wider uppercase mb-4 block animate-fade-in"
+                data-i18n="mach_breadcrumb">Home / Services / Machinery & Equipment</span>
+            <h1 class="text-4xl md:text-6xl text-white font-bold max-w-4xl leading-tight mb-6 animate-fade-in"
+                data-i18n="mach_subtitle">
+                Complete Agricultural Machinery & Equipment
+            </h1>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl font-light animate-slide-up" data-i18n="mach_desc">
+                From planting to harvest — we supply the right machine for every stage of your farming operation.
+            </p>
+            <a href="#quote-cta" class="btn-primary animate-slide-up" data-i18n="mach_cta">Request a Quote</a>
+        </div>
+    </section>
+
+    <!-- Intro Paragraph -->
+    <section class="py-16 px-6 sm:px-10 bg-white">
+        <div class="max-w-[1000px] mx-auto text-center section-element">
+            <p class="text-xl md:text-2xl text-body leading-relaxed font-semibold text-dark" data-i18n="mach_intro">
+                We offer a comprehensive range of professional agricultural machines and farming equipment designed for
+                maximum productivity and efficiency. Whether you're looking for tractors, harvesters, planters, or soil
+                preparation tools — we have the expertise and inventory to match your farm's needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Category Cards Section -->
+    <section class="py-16 px-6 sm:px-10 bg-light">
+        <div class="max-w-[1200px] mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark text-center mb-12 section-element"
+                data-i18n="mach_category_title">Browse by Category</h2>
+
+            <div id="machinery-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be injected here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Script to render Category Cards -->
+    <script src="./js/script.js"></script>
+    <script>
+        renderMachineryCards();
+    </script>
+
+    <!-- Featured Brands Section -->
+    <section class="py-16 px-6 sm:px-10 bg-white border-y border-border">
+        <div class="max-w-[1200px] mx-auto text-center">
+            <h2 class="text-3xl font-bold text-dark mb-2 section-element" data-i18n="mach_brands_title">Trusted Brands
+                We Work With</h2>
+            <p class="text-body mb-12 max-w-2xl mx-auto section-element delay-100" data-i18n="mach_brands_subtitle">We
+                partner with the world's leading agricultural machinery manufacturers.</p>
+
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 section-element delay-200">
+                <img src="./images/brands/john-deere-150x150.png" alt="John Deere"
+                    class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all duration-300 cursor-default">
+                <img src="./images/brands/avg-150x150.png" alt="AVR"
+                    class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all duration-300 cursor-default">
+                <img src="./images/brands/kramer-150x150.png" alt="Kramer"
+                    class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all duration-300 cursor-default">
+                <img src="./images/brands/krampe-150x150.png" alt="Krampe"
+                    class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all duration-300 cursor-default">
+                <img src="./images/brands/stihl-150x150.png" alt="Stihl"
+                    class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all duration-300 cursor-default">
+                <img src="./images/brands/volvo-150x150.png" alt="Volvo"
+                    class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all duration-300 cursor-default">
+                <img src="./images/brands/giant-150x150.png" alt="Giant"
+                    class="h-16 md:h-20 object-contain opacity-70 hover:opacity-100 transition-all duration-300 cursor-default">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 px-6 sm:px-10 bg-light">
+        <div class="max-w-[1200px] mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-dark text-center mb-16 section-element"
+                data-i18n="mach_why_title">Why Choose Our Machinery?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Point 1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md border-t-4 border-primary hover:-translate-y-2 transition-all duration-300 section-element">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary text-3xl">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4" data-i18n="mach_w1_title">Full After-Sales Support</h3>
+                    <p class="text-body text-sm" data-i18n="mach_w1_desc">Spare parts, maintenance, and technical
+                        service available for all machine types.</p>
+                </div>
+
+                <!-- Point 2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md border-t-4 border-primary hover:-translate-y-2 transition-all duration-300 section-element delay-100">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary text-3xl">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4" data-i18n="mach_w2_title">Wide Product Range</h3>
+                    <p class="text-body text-sm" data-i18n="mach_w2_desc">From small hand tools to large combine
+                        harvesters — we cover the full spectrum of agricultural needs.</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md border-t-4 border-primary hover:-translate-y-2 transition-all duration-300 section-element delay-200">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary text-3xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4" data-i18n="mach_w3_title">Expert Consultation</h3>
+                    <p class="text-body text-sm" data-i18n="mach_w3_desc">Our agronomists and machinery specialists will
+                        help you choose the right equipment for your land and crops.</p>
+                </div>
+
+                <!-- Point 4 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md border-t-4 border-primary hover:-translate-y-2 transition-all duration-300 section-element delay-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary text-3xl">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4" data-i18n="mach_w4_title">Competitive Pricing</h3>
+                    <p class="text-body text-sm" data-i18n="mach_w4_desc">Direct sourcing and flexible payment options
+                        to fit your budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action Section -->
+    <section id="quote-cta" class="py-20 px-6 sm:px-10 bg-[#1a5c2a] text-white">
+        <div class="max-w-[800px] mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 section-element" data-i18n="mach_cta_title">Ready to Upgrade
+                Your Farm?</h2>
+            <p class="text-xl mb-10 text-white/90 section-element delay-100" data-i18n="mach_cta_subtitle">Contact us
+                today and get a personalized quote for any machine or equipment.</p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 section-element delay-200">
+                <a href="../../../index.html#contact-form"
+                    class="bg-white text-primary hover:bg-light font-bold py-3 px-8 rounded-md transition-colors duration-300 uppercase tracking-wide text-sm w-full sm:w-auto"
+                    data-i18n="mach_btn_quote">Get a Free Quote</a>
+                <a href="#"
+                    class="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 uppercase tracking-wide text-sm w-full sm:w-auto"
+                    data-i18n="mach_btn_browse">Browse All Equipment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Footer (from original layout) -->
+    <footer id="footer" class="bg-[#1B3A2D] text-white pt-20 pb-6 px-6 sm:px-10 mt-auto border-t border-white/10">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+
+            <!-- Col 1: Brand -->
+            <div>
+                <a href="../../../index.html" class="flex items-center group">
+                    <img src="../../../images/logo/logo2.png" alt="Agriland Egypt"
+                        class="h-20 md:h-24 object-contain group-hover:scale-105 transition-transform">
+                </a>
+                <p class="text-white/70 text-sm leading-relaxed" data-i18n="foot_tagline">
+                    Together, let's give value to your farmland.
+                </p>
+                <div class="flex gap-4 mt-6">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Belgium -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-white/10 pb-3"><i
+                        class="fa-solid fa-location-dot text-primary"></i> <span data-i18n="foot_belgium_title">Belgium
+                        Address</span></h4>
+                <div class="text-white/70 text-sm space-y-2">
+                    <p class="font-semibold text-white" data-i18n="foot_belgium_o">European Administrative Office</p>
+                    <p data-i18n="foot_belgium_addr">Avenue Louise, 1050 Brussels, Belgium</p>
+                    <p><a href="tel:+32010232999" class="hover:text-primary transition-colors">+32 (0) 10232999</a></p>
+                </div>
+            </div>
+
+            <!-- Col 3: Egypt HQ -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-white/10 pb-3"><i
+                        class="fa-solid fa-building text-primary"></i> <span data-i18n="foot_egypt_title">Company HQ
+                        (Egypt)</span></h4>
+                <div class="text-white/70 text-sm space-y-2">
+                    <p data-i18n="foot_egypt_addr">36 (A) Morad St., ELoda masr tower, Giza, Egypt</p>
+                    <p><a href="tel:+201141116282" class="hover:text-primary transition-colors">+201141116282</a></p>
+                </div>
+                <div class="mt-6 text-white/70 text-sm space-y-2">
+                    <p class="font-bold flex items-center gap-2 text-white mb-2"><i
+                            class="fa-solid fa-envelope text-primary"></i> <span data-i18n="foot_email">Get In
+                            Touch</span></p>
+                    <a href="mailto:hr@grilandeg.com"
+                        class="hover:text-primary transition-colors block">hr@grilandeg.com</a>
+                    <a href="mailto:info@agrilandeg.com"
+                        class="hover:text-primary transition-colors block">info@agrilandeg.com</a>
+                    <a href="mailto:ziad@grilandeg.com"
+                        class="hover:text-primary transition-colors block">ziad@grilandeg.com</a>
+                    <a href="mailto:goerge@grilandeg.com"
+                        class="hover:text-primary transition-colors block">goerge@grilandeg.com</a>
+                    <a href="mailto:manager@grilandeg.com"
+                        class="hover:text-primary transition-colors block">manager@grilandeg.com</a>
+                </div>
+            </div>
+
+            <!-- Col 4: Branch -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-white/10 pb-3"><i
+                        class="fa-solid fa-code-branch text-primary"></i> <span data-i18n="foot_branch_title">Branch
+                        address (Egypt)</span></h4>
+                <div class="text-white/70 text-sm space-y-2">
+                    <p data-i18n="foot_branch_addr">3 Cairo-Belbeis Desert Road, P.O. Box: 3020 El Salam, 11785, Cairo
+                    </p>
+                    <p><a href="tel:0222655550" class="hover:text-primary transition-colors">0222655550</a> / <a
+                            href="tel:+201114515550" class="hover:text-primary transition-colors">+201114515550</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-6 border-t border-white/10 text-center text-white/50 text-xs">
+            <p data-i18n="copy_right">COPY RIGHT &copy; GRILAND EGYPT. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Category Card Modal -->
+    <div id="machinery-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm opacity-0 invisible transition-all duration-300">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl max-w-5xl w-full max-h-[90vh] flex flex-col md:flex-row relative transform scale-95 transition-transform duration-300" id="machinery-modal-content">
+            
+            <!-- Close Button -->
+            <button onclick="closeMachineryModal()" class="absolute top-4 right-4 md:right-6 bg-white shrink-0 text-dark w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-red-50 text-xl font-bold hover:text-red-500 transition-colors z-20">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <!-- Image Section -->
+            <div id="modal-img-container" class="h-64 sm:h-80 md:h-auto md:w-1/2 relative flex justify-center items-center overflow-hidden group">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10 pointer-events-none"></div>
+                <img id="modal-img" src="" alt="" class="w-full h-full transform transition-transform duration-700 group-hover:scale-105">
+            </div>
+            
+            <!-- Content Section -->
+            <div class="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col overflow-y-auto bg-white relative">
+                <div class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold w-fit mb-6" data-i18n="mach_title">Machinery & Equipment</div>
+                <h3 id="modal-title" class="text-2xl md:text-3xl lg:text-4xl font-bold text-dark mb-6 leading-tight"></h3>
+                <div class="w-16 h-1 mt-2 mb-6 bg-primary rounded-full tracking-wider"></div>
+                <p id="modal-desc" class="text-body text-base lg:text-lg leading-relaxed flex-1"></p>
+                
+                <div class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-4 items-center">
+                    <a href="../../../index.html#footer" class="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30 hover:bg-dark transition-all duration-300 flex items-center gap-2" data-i18n="mach_modal_contact">
+                        Contact for more details
+                    </a>
+                    <button onclick="closeMachineryModal()" class="px-6 py-3 bg-light text-dark font-bold rounded-lg hover:bg-gray-200 transition-colors" data-i18n="mach_modal_close">
+                        Close
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../../main.js"></script>
+</body>
+
+</html>
