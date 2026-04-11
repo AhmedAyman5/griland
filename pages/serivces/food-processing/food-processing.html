@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Processing & Export | Griland Egypt</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Inherited CSS for Navbar & Form -->
+    <link rel="stylesheet" href="../../../style.css">
+
+    <!-- Tailwind CSS with custom tokens -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4332',
+                        secondary: '#2D6A4F',
+                        accent: '#C9A84C',
+                        cream: '#F5F0E8',
+                        dark: '#0D2B1E',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Internal Styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-line {
+            width: 48px;
+            height: 3px;
+            background-color: #C9A84C;
+        }
+
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #C9A84C;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- [1] & [2] Navbar and Top Info (Injected via JS) -->
+    <div id="navigation-placeholder" data-basepath="../../../"></div>
+    <script src="../../../components/navbar.js"></script>
+
+    <main class="food-processing">
+        <!-- [3] HERO -->
+        <section
+            class="relative w-full min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
+            <img src="images/processingHover.jpg" alt="Hero background"
+                class="absolute inset-0 w-full h-full object-cover z-0" loading="lazy">
+            <div class="absolute inset-0 z-0" style="background-color: rgba(13, 43, 30, 0.78);"></div>
+            <div class="relative z-10 px-4 mt-20 md:mt-0">
+                <p class="text-accent text-xs tracking-widest uppercase mb-5 font-sans font-bold"
+                    data-i18n="fdp_hero_tag">GRILAND EGYPT — Food
+                    Processing & Export</p>
+                <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight max-w-3xl mx-auto"
+                    data-i18n="fdp_hero_title">
+                    We Grow It.<br>We Process It.<br>We Deliver It.
+                </h1>
+                <p class="font-inter text-gray-200 text-lg md:text-xl mt-5 max-w-2xl mx-auto" data-i18n="fdp_hero_desc">
+                    From Egypt's farmlands to
+                    global tables — Griland Egypt exports premium fresh fruits, frozen produce, and processed food
+                    commodities to the EU, Gulf, USA, and 20+ countries worldwide.</p>
+
+                <div class="flex flex-wrap gap-5 mt-10 justify-center">
+                    <a href="#products"
+                        class="bg-accent text-white px-8 py-4 rounded font-semibold transition-colors hover:bg-yellow-600"
+                        data-i18n="fdp_btn_explore">Explore
+                        Our Products</a>
+                    <a href="../../../pages/contact/contact.html"
+                        class="border-2 border-white text-white px-8 py-4 rounded font-semibold transition-colors hover:bg-white/10"
+                        data-i18n="fdp_btn_quote">Request
+                        a Quote</a>
+                </div>
+            </div>
+
+            <!-- Stats strip at bottom of hero -->
+            <div class="absolute bottom-0 w-full py-5 px-6 z-10" style="background-color: rgba(27,67,50,0.92);">
+                <div class="flex justify-center gap-8 md:gap-16 flex-wrap max-w-6xl mx-auto">
+                    <div class="text-center">
+                        <div class="font-serif text-3xl text-accent font-bold" data-i18n="fdp_stat1_v">35+</div>
+                        <div class="text-gray-300 text-xs mt-1 font-inter" data-i18n="fdp_stat1_t">Years of Experience
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-serif text-3xl text-accent font-bold" data-i18n="fdp_stat2_v">10+</div>
+                        <div class="text-gray-300 text-xs mt-1 font-inter" data-i18n="fdp_stat2_t">Export Years to EU &
+                            Gulf</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-serif text-3xl text-accent font-bold" data-i18n="fdp_stat3_v">20+</div>
+                        <div class="text-gray-300 text-xs mt-1 font-inter" data-i18n="fdp_stat3_t">Countries Served
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-serif text-3xl text-accent font-bold" data-i18n="fdp_stat4_v">100%</div>
+                        <div class="text-gray-300 text-xs mt-1 font-inter" data-i18n="fdp_stat4_t">Organic & Certified
+                            Products</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [4] INTRO SECTION -->
+        <section class="bg-cream py-24 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+                <div class="reveal">
+                    <p class="text-accent text-xs uppercase tracking-widest font-sans font-bold mb-2"
+                        data-i18n="fdp_intro_tag">About Our Food
+                        Processing Division</p>
+                    <div class="gold-line mb-6 ml-0"></div>
+                    <h2 class="font-serif text-4xl text-primary font-bold mb-6" data-i18n="fdp_intro_title">Together,
+                        Let's Give Value to Your
+                        Farmland.</h2>
+
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_intro_p1">Active
+                        throughout Egypt since its
+                        foundation in 1985, Griland supports farmers and agricultural landowners in the exploitation and
+                        development of their land. Our goal is to achieve a triple performance: economic, social and
+                        environmental.</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_intro_p2">GRILAND
+                        EGYPT has recently forayed
+                        into the business of trading in agricultural commodities and has a select presence across the
+                        value chain. We manage all procedures related to export & import processes, logistics, records
+                        and certificates as well as the coordination of all service providers involved.</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_intro_p3">We are
+                        growers and exporters of
+                        vegetables and fruits varieties including grapes, mangoes, oranges and more. We are leaders in
+                        the grapes field especially the Superior and Seedless Flame varieties. We export to the EU and
+                        the Gulf area for more than 10 years and hold the Global Gap Certificate.</p>>
+
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <div class="bg-white border border-gray-200 rounded-full px-4 py-2 text-xs font-semibold text-primary shadow-sm hover:border-primary/30 transition"
+                            data-i18n="fdp_intro_b1">
+                            🌿 100% Organic</div>
+                        <div class="bg-white border border-gray-200 rounded-full px-4 py-2 text-xs font-semibold text-primary shadow-sm hover:border-primary/30 transition"
+                            data-i18n="fdp_intro_b2">
+                            ✅ Global Gap Certified</div>
+                        <div class="bg-white border border-gray-200 rounded-full px-4 py-2 text-xs font-semibold text-primary shadow-sm hover:border-primary/30 transition"
+                            data-i18n="fdp_intro_b3">
+                            🌍 35+ Years Experience</div>
+                        <div class="bg-white border border-gray-200 rounded-full px-4 py-2 text-xs font-semibold text-primary shadow-sm hover:border-primary/30 transition"
+                            data-i18n="fdp_intro_b4">
+                            ❄️ Fresh & Frozen</div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="h-80 rounded-2xl overflow-hidden shadow-xl w-full">
+                        <img src="./images/shutterstock_1937961247-910x610-1.jpg" alt="Griland Egypt Food Processing"
+                            class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        <div class="h-40 rounded-xl overflow-hidden shadow-md">
+                            <img src="./images/unnamed-1.webp" alt="Factory line 1" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                        <div class="h-40 rounded-xl overflow-hidden shadow-md">
+                            <img src="./images/unnamed.webp" alt="Factory line 2" class="w-full h-full object-cover"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [5] PRODUCTS SECTION -->
+        <section id="products" class="bg-white py-24 px-6">
+            <div class="reveal text-center mb-12">
+                <p class="text-accent text-xs uppercase tracking-widest font-sans font-bold mb-2"
+                    data-i18n="fdp_prod_tag">What We Export</p>
+                <div class="gold-line mx-auto mb-4"></div>
+                <h2 class="font-serif text-4xl text-primary font-bold" data-i18n="fdp_prod_title">Premium Fresh & Frozen
+                    Agricultural Products</h2>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-14 px-4 max-w-4xl mx-auto">
+                <button
+                    class="filter-btn active bg-primary text-white border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors"
+                    data-filter="all" data-i18n="fdp_filter_all">All</button>
+                <button
+                    class="filter-btn text-primary border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors hover:bg-primary/10"
+                    data-filter="fresh-fruits" data-i18n="fdp_filter_ff">🍇 Fresh Fruits</button>
+                <button
+                    class="filter-btn text-primary border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors hover:bg-primary/10"
+                    data-filter="frozen-fruits" data-i18n="fdp_filter_fzf">🥭 Frozen Fruits</button>
+                <button
+                    class="filter-btn text-primary border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors hover:bg-primary/10"
+                    data-filter="frozen-vegetables" data-i18n="fdp_filter_fzv">🥦 Frozen Vegetables</button>
+                <button
+                    class="filter-btn text-primary border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors hover:bg-primary/10"
+                    data-filter="processed" data-i18n="fdp_filter_prc">🫙 Processed</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                <!-- FRESH FRUITS -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-fruits">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/grabes.jpg" alt="Premium Table Grapes"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3 flex-wrap gap-2">
+                            <span class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1"
+                                data-i18n="fdp_pt_ff">Fresh
+                                Fruits</span>
+                            <span class="bg-accent text-white text-xs font-bold rounded-full px-2 py-0.5"
+                                data-i18n="fdp_pt_ml">🏆 Market
+                                Leader</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p1_t">Premium Table
+                            Grapes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p1_d">Griland
+                            Egypt is a market
+                            leader in grape exports, specializing in Superior and Seedless Flame varieties. Exported to
+                            the EU and Gulf area for over 10 years with Global Gap certification.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                            <span data-i18n="fdp_p1_b2">✅ Global Gap</span>
+                            <span data-i18n="fdp_p1_b3">📦 EU & Gulf</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-fruits">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/mangofrozen.jpg" alt="Fresh Mangoes"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_ff">Fresh
+                                Fruits</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p2_t">Fresh Mangoes
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p2_d">Egyptian
+                            mangoes of the finest
+                            quality, harvested at peak ripeness and exported fresh. Varieties include Keitt, Zebdya, and
+                            Kent — all meeting EU and Gulf market standards.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                            <span data-i18n="fdp_p1_b2">✅ Global Gap</span>
+                            <span data-i18n="fdp_p1_b3">📦 EU & Gulf</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-fruits">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/orangeAndcitrus.jpg" alt="Citrus & Oranges"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_ff">Fresh
+                                Fruits</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p3_t">Citrus & Oranges
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p3_d">Fresh
+                            Egyptian oranges and
+                            citrus fruits grown in fertile Nile Delta soil. Exported in refrigerated containers with
+                            full cold-chain integrity maintained throughout.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                            <span data-i18n="fdp_p3_b2">❄️ Cold chain</span>
+                            <span data-i18n="fdp_p3_b3">📦 Bulk & retail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FROZEN FRUITS -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="frozen-fruits">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/frozenStrabuieres.jfif" alt="IQF Frozen Strawberries"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_iqf">Frozen
+                                | IQF</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p4_t">IQF Frozen
+                            Strawberries</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p4_d">Harvested
+                            at optimum ripeness,
+                            washed and IQF frozen with strict sanitary controls. Festival variety. Rich in Vitamin C. No
+                            preservatives or artificial coloring.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p4_b1">❄️ -18°C</span>
+                            <span data-i18n="fdp_p4_b2">📦 400g / 1kg / 10kg carton</span>
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="frozen-fruits">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/mangoCubes1.jpeg" alt="IQF Frozen Mango Cubes"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_iqf">Frozen
+                                | IQF</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p5_t">IQF Frozen Mango
+                            Cubes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p5_d">Grade A
+                            mango IQF frozen per
+                            HACCP and GMP standards. Varieties: Keitt, Zebdya, Kent. No additives. BRC certified.
+                            Season: Mid November – End of May.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p4_b1">❄️ -18°C</span>
+                            <span data-i18n="fdp_p5_b2">📦 1kg / 2.5kg / 10kg</span>
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="frozen-fruits">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/Mango-slices.png" alt="IQF Frozen Mango Slices"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_iqf">Frozen
+                                | IQF</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p6_t">IQF Frozen Mango
+                            Slices</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p6_d">Premium
+                            Egyptian mango slices
+                            IQF frozen. HACCP, BRC and Halal certified. Ideal for juice, dessert, and food manufacturing
+                            applications worldwide.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p4_b1">❄️ -18°C</span>
+                            <span data-i18n="fdp_p6_b2">📦 Bulk & retail</span>
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FROZEN VEGETABLES -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="frozen-vegetables">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/frozenmolokhia.jpeg" alt="Frozen Molokhia"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_fzv">Frozen
+                                Vegetables | IQF</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p7_t">Frozen Molokhia
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p7_d">Egypt's
+                            signature leafy
+                            vegetable. Full of fibres that improve digestion and support heart health. Available in
+                            minced and whole leaf formats. BRC & Halal certified.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p4_b1">❄️ -18°C</span>
+                            <span data-i18n="fdp_p7_b2">📦 400g / 1kg / 2.5kg</span>
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="frozen-vegetables">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/frozenokra.avif" alt="IQF Frozen Okra"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_fzv">Frozen
+                                Vegetables | IQF</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p8_t">IQF Frozen Okra
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p8_d">Packed
+                            with nutrients that
+                            improve digestion and boost immunity. Available in 4 size grades (0–2.5 / 2.5–3.5 / 3.5–4.5
+                            / 4.5–5.5 cm). BRC & Halal certified.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p4_b1">❄️ -18°C</span>
+                            <span data-i18n="fdp_p8_b2">📦 4 grades, retail & bulk</span>
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PROCESSED -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="processed">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/frozenFries.jpg" alt="Frozen French Fries"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_pc_iqf">Processed
+                                | IQF</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p9_t">Frozen French
+                            Fries</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p9_d">Straight
+                            cut fries from high
+                            dry matter potatoes. Consistent golden color after frying. No additives. Available in retail
+                            and bulk foodservice formats.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p4_b1">❄️ -18°C</span>
+                            <span data-i18n="fdp_p6_b2">📦 Retail & bulk</span>
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="processed">
+                    <div class="h-52 overflow-hidden">
+                        <img src="images/tomatoes.jpeg" alt="Tomato Paste & Concentrate"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block"
+                                data-i18n="fdp_pt_pc_can">Processed
+                                | Canned</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p10_t">Tomato Paste &
+                            Concentrate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p10_d">CB Brix
+                            36/38 and HB Brix
+                            28/30. Multiple packaging: glass jars, tins (70g/400g/800g), Tetra Pack, and pouch packs.
+                            Halal, ISO 22000 and BRC certified.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_p10_b1">✅ ISO 22000</span>
+                            <span data-i18n="fdp_p10_b2">📦 Tin / Jar / Bulk</span>
+                            <span data-i18n="fdp_p1_b1">🌍 Egypt</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- [6] IQF PROCESS SECTION -->
+        <section class="bg-primary py-24 px-6 relative overflow-hidden text-center z-0">
+            <img src="https://ibicgroup.com/wp-content/uploads/2025/01/unnamed-2.webp" alt="Process Background"
+                class="absolute inset-0 w-full h-full object-cover opacity-10 z-[0] pointer-events-none" loading="lazy">
+
+            <div class="reveal mb-16 relative z-10">
+                <p class="text-accent text-xs uppercase tracking-widest font-sans font-bold mb-2"
+                    data-i18n="fdp_iqf_tag">Our Process</p>
+                <div class="gold-line mx-auto mb-4"></div>
+                <h2 class="font-serif text-4xl text-white font-bold" data-i18n="fdp_iqf_title">Farm to Frozen — 5 Steps
+                </h2>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto items-start relative z-10">
+                <div class="reveal text-center max-w-[200px]" style="transition-delay: 0s">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-accent bg-accent/20 flex items-center justify-center text-4xl mx-auto mb-4">
+                        🌱</div>
+                    <div class="text-accent text-xs font-bold tracking-widest uppercase mb-1" data-i18n="fdp_iqf_s1_t">
+                        STEP 01</div>
+                    <h3 class="font-serif text-white text-lg font-semibold mb-2" data-i18n="fdp_iqf_s1_t2">Harvest</h3>
+                    <p class="text-gray-300 text-xs leading-relaxed font-inter" data-i18n="fdp_iqf_s1_d">Crops harvested
+                        at peak ripeness
+                        directly from our contracted farms in Egypt's Nile Delta region.</p>
+                </div>
+
+                <div class="reveal text-center max-w-[200px]" style="transition-delay: 0.1s">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-accent bg-accent/20 flex items-center justify-center text-4xl mx-auto mb-4">
+                        🚛</div>
+                    <div class="text-accent text-xs font-bold tracking-widest uppercase mb-1" data-i18n="fdp_iqf_s2_t">
+                        STEP 02</div>
+                    <h3 class="font-serif text-white text-lg font-semibold mb-2" data-i18n="fdp_iqf_s2_t2">Cold
+                        Transport</h3>
+                    <p class="text-gray-300 text-xs leading-relaxed font-inter" data-i18n="fdp_iqf_s2_d">Cold-chain
+                        logistics from field to
+                        factory within hours — freshness never compromised at any stage.</p>
+                </div>
+
+                <div class="reveal text-center max-w-[200px]" style="transition-delay: 0.2s">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-accent bg-accent/20 flex items-center justify-center text-4xl mx-auto mb-4">
+                        🧼</div>
+                    <div class="text-accent text-xs font-bold tracking-widest uppercase mb-1" data-i18n="fdp_iqf_s3_t">
+                        STEP 03</div>
+                    <h3 class="font-serif text-white text-lg font-semibold mb-2" data-i18n="fdp_iqf_s3_t2">Wash &
+                        Prepare</h3>
+                    <p class="text-gray-300 text-xs leading-relaxed font-inter" data-i18n="fdp_iqf_s3_d">Multi-stage
+                        washing, cutting, and
+                        blanching in HACCP-certified processing lines.</p>
+                </div>
+
+                <div class="reveal text-center max-w-[200px]" style="transition-delay: 0.3s">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-accent bg-accent/20 flex items-center justify-center text-4xl mx-auto mb-4">
+                        ❄️</div>
+                    <div class="text-accent text-xs font-bold tracking-widest uppercase mb-1" data-i18n="fdp_iqf_s4_t">
+                        STEP 04</div>
+                    <h3 class="font-serif text-white text-lg font-semibold mb-2" data-i18n="fdp_iqf_s4_t2">IQF Freeze at
+                        -40°C</h3>
+                    <p class="text-gray-300 text-xs leading-relaxed font-inter" data-i18n="fdp_iqf_s4_d">Individual
+                        Quick Freeze technology. Each
+                        piece freezes separately — no clumping, full nutrients retained.</p>
+                </div>
+
+                <div class="reveal text-center max-w-[200px]" style="transition-delay: 0.4s">
+                    <div
+                        class="w-20 h-20 rounded-full border-2 border-accent bg-accent/20 flex items-center justify-center text-4xl mx-auto mb-4">
+                        📦</div>
+                    <div class="text-accent text-xs font-bold tracking-widest uppercase mb-1" data-i18n="fdp_iqf_s5_t">
+                        STEP 05</div>
+                    <h3 class="font-serif text-white text-lg font-semibold mb-2" data-i18n="fdp_iqf_s5_t2">Pack & Export
+                    </h3>
+                    <p class="text-gray-300 text-xs leading-relaxed font-inter" data-i18n="fdp_iqf_s5_d">Retail, bulk,
+                        and private-label formats.
+                        Shipped to 20+ countries with full documentation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- [7] FRUIT LOGISTICA SECTION -->
+        <section class="bg-cream py-24 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto items-center">
+                <div class="reveal">
+                    <p class="text-accent text-xs uppercase tracking-widest font-sans font-bold mb-2"
+                        data-i18n="fdp_trd_tag">International
+                        Trade Events</p>
+                    <div class="gold-line mb-6 ml-0"></div>
+                    <h2 class="font-serif text-4xl text-primary font-bold mb-4" data-i18n="fdp_trd_title">Fruit
+                        Logistica — We Are There.</h2>
+
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_trd_p1">Fruit
+                        Logistica is the world's
+                        leading trade fair for the fresh fruit and vegetable business, held annually in Berlin, Germany.
+                        It is the global meeting point for the entire fresh produce supply chain — from growers and
+                        exporters to importers, retailers, and logistics providers.</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_trd_p2">Griland
+                        Egypt participates in Fruit
+                        Logistica as part of our commitment to building direct relationships with European importers,
+                        distributors, and retail chains. It is where we showcase our fresh Egyptian grapes, mangoes,
+                        citrus, and frozen produce range to buyers from over 130 countries.</p>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_trd_p3">Being
+                        present at Fruit Logistica
+                        means our clients get direct access to the global fresh produce market — and global buyers get
+                        direct access to Egyptian-grown quality. If you are planning to attend, we would be delighted to
+                        meet and discuss your sourcing needs.</p>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200"
+                        alt="Fruit Logistica Trade Fair" class="h-72 w-full rounded-2xl object-cover shadow-xl mb-4"
+                        loading="lazy">
+
+                    <div class="bg-primary rounded-2xl p-6 text-white text-left shadow-md">
+                        <div class="text-3xl text-accent mb-3">🌍</div>
+                        <h3 class="font-serif text-white font-semibold text-xl mb-3" data-i18n="fdp_trd_w">Why Fruit
+                            Logistica Matters
+                        </h3>
+                        <ul class="text-gray-200 text-sm leading-loose space-y-1 font-inter">
+                            <li data-i18n="fdp_trd_l1">📅 Held annually in Berlin, Germany</li>
+                            <li data-i18n="fdp_trd_l2">🌐 Buyers from 130+ countries in one place</li>
+                            <li data-i18n="fdp_trd_l3">🏢 Griland exhibits to showcase Egyptian produce</li>
+                            <li data-i18n="fdp_trd_l4">🤝 Direct connections with EU importers & retailers</li>
+                            <li data-i18n="fdp_trd_l5">📦 Fresh produce + frozen range both showcased</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- [9] EXPORT MARKETS -->
+        <section class="bg-cream py-24 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto items-center">
+                <div class="reveal">
+                    <p class="text-accent text-xs uppercase tracking-widest font-sans font-bold mb-2"
+                        data-i18n="fdp_reach_tag">Global Reach</p>
+                    <div class="gold-line mb-6 ml-0"></div>
+                    <h2 class="font-serif text-4xl text-primary font-bold mb-4" data-i18n="fdp_reach_title">Exporting to
+                        the EU, Gulf, and Beyond
+                    </h2>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 font-inter" data-i18n="fdp_reach_p1">Griland
+                        Egypt's export network
+                        spans more than two decades of international relationships. We export fresh fruits, frozen
+                        vegetables, and processed food products through our established channels in Europe and the Gulf,
+                        backed by full logistics, documentation, and certification management.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🇪🇺</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_eu">European
+                                Union</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🇸🇦</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_gulf">Gulf
+                                Countries</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🇩🇪</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_ger">Germany
+                                (Fruit Logistica)</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🇮🇹</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_it">Italy</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🇫🇷</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_fr">France</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🇬🇧</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_uk">United
+                                Kingdom</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🌍</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_af">Africa</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
+                            <span class="text-2xl">🌏</span>
+                            <span class="text-sm font-medium text-primary font-inter" data-i18n="fdp_r_as">Asia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <img src="images/exportoperation.jpg" alt="Export operations"
+                        class="h-64 w-full rounded-2xl object-cover shadow-xl mb-6" loading="lazy">
+
+                    <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-left">
+                        <h3 class="font-serif text-primary font-semibold text-xl mb-3" data-i18n="fdp_r_off">🏢 Our
+                            Export Offices</h3>
+                        <div class="text-gray-600 text-sm leading-loose font-inter space-y-1">
+                            <div data-i18n="fdp_r_hq">📍 HQ: 36 (A) Morad St., Giza, Egypt</div>
+                            <div data-i18n="fdp_r_br">📍 Branch: Cairo-Belbeis Desert Road, El Salam</div>
+                            <div data-i18n="fdp_r_be">📍 Belgium: Avenue Louise, 1050 Brussels</div>
+                            <div>📞 +201141116282 | +32 (0) 10232999</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [10] CTA BAND -->
+        <section class="bg-primary py-20 px-6 text-center">
+            <h2 class="font-serif text-white text-4xl font-bold mb-4 reveal" data-i18n="fdp_cta_title">Ready to Source
+                from Egypt's Finest Farms?
+            </h2>
+            <p class="text-gray-300 text-sm max-w-2xl mx-auto mb-10 font-inter leading-relaxed reveal"
+                style="transition-delay: 0.1s" data-i18n="fdp_cta_desc">Contact our export team. We handle fresh,
+                frozen, and processed
+                commodities — full documentation, certified quality, reliable logistics.</p>
+
+            <div class="flex justify-center gap-6 flex-wrap reveal" style="transition-delay: 0.2s">
+                <a href="../../../pages/contact/contact.html"
+                    class="bg-accent text-white px-10 py-4 rounded font-semibold text-base transition-colors hover:bg-yellow-600"
+                    data-i18n="fdp_cta_btn">Contact</a>
+            </div>
+        </section>
+
+        <!-- [11] FOOTER -->
+        <div id="footer-placeholder" data-basepath="../../../"></div>
+        <script src="../../../components/footer.js"></script>
+
+    </main>
+
+    <!-- JS INCLUDES -->
+    <script src="../../../main.js"></script>
+
+    <!-- INLINE JAVASCRIPT FOR THIS PAGE -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // 1. Navbar scroll
+            window.addEventListener('scroll', () => {
+                document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // Active State Highlight for injected Nav
+            setTimeout(() => {
+                const navLinks = document.querySelectorAll('#navbar a, #mobile-drawer a');
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href') || '';
+                    if (href.includes('food_processing') || href.includes('food-processing')) {
+                        link.classList.remove('hover:text-primary', 'after:w-0');
+                        link.classList.add('text-accent');
+                        if (link.className.includes('after:')) {
+                            link.classList.add('after:w-full');
+                            link.classList.remove('after:bg-primary');
+                            link.classList.add('after:bg-accent');
+                        }
+                    }
+                });
+            }, 100);
+
+            // 2. Mobile menu
+            const menuBtn = document.getElementById('menu-btn') || document.getElementById('mobile-menu-btn');
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    const d = document.getElementById('mobile-drawer');
+                    const o = document.getElementById('drawer-overlay');
+                    if (d) {
+                        d.classList.toggle('-translate-x-full');
+                        d.classList.toggle('rtl:translate-x-full');
+                    }
+                    if (o) {
+                        o.classList.toggle('opacity-0');
+                        o.classList.toggle('invisible');
+                    }
+                });
+            }
+
+            // 3. Scroll reveal
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+            // 4. Product filter
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white');
+                        b.classList.add('text-primary');
+                    });
+
+                    btn.classList.remove('text-primary');
+                    btn.classList.add('active', 'bg-primary', 'text-white');
+
+                    const f = btn.dataset.filter;
+                    document.querySelectorAll('.product-card').forEach(card => {
+                        const show = (f === 'all' || card.dataset.category === f);
+                        card.style.display = show ? 'block' : 'none';
+                    });
+                });
+            });
+
+            // 5. Smooth scroll anchors
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', e => {
+                    const href = a.getAttribute('href');
+                    if (href && href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>
