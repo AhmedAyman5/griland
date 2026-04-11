@@ -56,7 +56,7 @@
                         <li><a href="${basePath}index.html#farms_production"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_farms_production">Farms & Production</a></li>
-                        <li><a href="${basePath}index.html#food_processing"
+                        <li><a href="${basePath}pages/serivces/food-processing/food-processing.html"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_food_processing">Food Processing</a></li>
                         <li><a href="${basePath}index.html#trade_export"
@@ -113,7 +113,7 @@
                     data-i18n="nav_agri_inputs">- Agri-Inputs</a>
                 <a href="${basePath}index.html#farms_production" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_farms_production">- Farms & Production</a>
-                <a href="${basePath}index.html#food_processing" class="mobile-link hover:text-primary text-base ps-4"
+                <a href="${basePath}pages/serivces/food-processing/food-processing.html" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_food_processing">- Food Processing</a>
                 <a href="${basePath}index.html#trade_export" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_trade_export">- Trade & Export</a>

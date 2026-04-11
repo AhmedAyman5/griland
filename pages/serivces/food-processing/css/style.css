@@ -1,0 +1,41 @@
+/* Food Processing Page Specific CSS */
+
+/* Global Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base product card styles */
+.food-processing-page .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.food-processing-page .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #C9A84C;
+}
+
+/* Scroll Reveal Animations */
+.food-processing-page .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: all 0.6s ease-out;
+}
+
+.food-processing-page .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Gold Line Divider */
+.food-processing-page .gold-line {
+    width: 48px;
+    height: 3px;
+    background-color: #C9A84C;
+}
+
+/* Override default focus outlines for buttons */
+.food-processing-page button:focus {
+    outline: none;
+}
