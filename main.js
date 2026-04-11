@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('invisible', 'opacity-0');
     }
 
-    if(mobileBtn) mobileBtn.addEventListener('click', openMenu);
-    if(closeBtn) closeBtn.addEventListener('click', closeMenu);
-    if(overlay) overlay.addEventListener('click', closeMenu);
-    
+    if (mobileBtn) mobileBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
+
     mobileLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ================================================== */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if(navbar) {
+        if (navbar) {
             if (window.scrollY > 50) {
                 navbar.classList.add('bg-white', 'text-dark', 'shadow-md', 'py-0');
                 navbar.classList.remove('bg-transparent', 'text-white', 'py-1');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const target = +counter.getAttribute('data-target');
                 const duration = 2000; // ms
                 const increment = target / (duration / 16); // 60fps
-                
+
                 let current = 0;
                 const updateCounter = () => {
                     current += increment;
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }, { threshold: 0.5 });
-    
-    if(statsSection) statsObserver.observe(statsSection);
+
+    if (statsSection) statsObserver.observe(statsSection);
 
     /* ==================================================
        5. Language Switcher (English vs Arabic)
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_src_irr_desc": "We deploy state-of-the-art drip irrigation systems to conserve water and deliver precise macro-nutrients directly to the roots. Our soil is continuously audited to guarantee organic vitality.",
             "fp_src_eff": "Water Efficiency",
             "fp_src_min": "Mineral Composition",
-            
+
             "fp_jrn_tag": "Process",
             "fp_jrn_title": "The Production Journey",
             "fp_jrn_desc": "A seamless, fully traceable pipeline ensuring food safety from the field directly to worldwide retailers.",
@@ -275,73 +275,73 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_j_p_desc": "The pristine produce is carefully nestled into hygienic, custom-ventilated cartons and food-grade packaging. This specialized padding prevents transit bruising.",
             "fp_j_l_title": "Logistics",
             "fp_j_l_desc": "Safely loaded into climate-controlled containers, our fleets dispatch across oceans. Real-time temperature monitoring ensures the harvest reaches optimal destinations worldwide.",
-            
+
             "fp_cat_tag": "Portfolio",
             "fp_cat_title": "Technical Product Catalog",
             "fp_tab_frsh": "Fresh Products",
             "fp_tab_frzn": "Frozen (IQF)",
             "fp_tab_proc": "Processed & Puree",
-            
+
             "fp_f1_t": "Citrus (Oranges & Lemons)",
             "fp_f1_v1": "Baladi", "fp_f1_v2": "Navel", "fp_f1_v3": "Valencia",
             "fp_f1_sea": "<strong>Season:</strong> Nov &ndash; May", "fp_f1_pack": "<strong>Pack:</strong> Telescopic Cartons (15KG)",
-            
+
             "fp_f2_t": "Premium Grapes",
             "fp_f2_v1": "Sugraone", "fp_f2_v2": "Flame", "fp_f2_v3": "Crimson",
             "fp_f2_sea": "<strong>Season:</strong> May &ndash; Sept", "fp_f2_pack": "<strong>Pack:</strong> Punnets (500g), Loose (5KG)",
-            
+
             "fp_f3_t": "Onions & Fresh Garlic",
             "fp_f3_v1": "Red/Yellow", "fp_f3_v2": "White Garlic",
             "fp_f3_sea": "<strong>Season:</strong> Feb &ndash; Aug", "fp_f3_pack": "<strong>Pack:</strong> Mesh Bags (10KG/25KG)",
-            
+
             "fp_f4_t": "Pomegranates",
             "fp_f4_v1": "Wonderful", "fp_f4_v2": "Acco", "fp_f4_v3": "Early 116",
             "fp_f4_sea": "<strong>Season:</strong> Sept &ndash; Jan", "fp_f4_pack": "<strong>Pack:</strong> Cartons (3.5KG), Telescopic (5KG)",
-            
+
             "fp_f5_t": "Fresh Strawberries",
             "fp_f5_v1": "Fortuna", "fp_f5_v2": "Festival",
             "fp_f5_sea": "<strong>Season:</strong> Dec &ndash; Apr", "fp_f5_pack": "<strong>Pack:</strong> Punnets (250g/500g), Flat Trays",
-            
+
             "fp_f6_t": "Premium Mangoes",
             "fp_f6_v1": "Kent", "fp_f6_v2": "Keitt", "fp_f6_v3": "Ewais",
             "fp_f6_sea": "<strong>Season:</strong> Jul &ndash; Oct", "fp_f6_pack": "<strong>Pack:</strong> Single Layer Cartons (4KG)",
-            
+
             "fp_fz1_t": "Frozen Strawberries (IQF)",
             "fp_fz1_a": "<strong>Availability:</strong> Year-round", "fp_fz1_s": "<strong>Sizes:</strong> 15-25mm, 25-35mm", "fp_fz1_p": "<strong>Pack:</strong> Polybags (400g), Bulk (10kg)",
-            
+
             "fp_fz2_t": "Frozen Mango (Slices/Cubes)",
             "fp_fz2_a": "<strong>Availability:</strong> Year-round", "fp_fz2_s": "<strong>Cut:</strong> 10×10mm cubes, Half Slices", "fp_fz2_p": "<strong>Pack:</strong> 1kg Bags, Bulk (15kg)",
-            
+
             "fp_fz3_t": "Frozen Mixed Berries",
             "fp_fz3_a": "<strong>Availability:</strong> Year-round", "fp_fz3_s": "<strong>Contents:</strong> Blueberry, Raspberry, Blackberry", "fp_fz3_p": "<strong>Pack:</strong> Retail Bags (500g), Bulk (10kg)",
-            
+
             "fp_fz4_t": "Frozen Green Peas",
             "fp_fz4_a": "<strong>Availability:</strong> Year-round", "fp_fz4_s": "<strong>Grade:</strong> Grade A, Extra Fine", "fp_fz4_p": "<strong>Pack:</strong> Polybags (400g/1kg), Bulk (25kg)",
-            
+
             "fp_fz5_t": "Frozen Sweet Corn Kernels",
             "fp_fz5_a": "<strong>Availability:</strong> Year-round", "fp_fz5_s": "<strong>Type:</strong> Super Sweet, IQF", "fp_fz5_p": "<strong>Pack:</strong> Polybags (400g/1kg), Bulk (20kg)",
-            
+
             "fp_fz6_t": "Frozen Broccoli Florets",
             "fp_fz6_a": "<strong>Availability:</strong> Year-round", "fp_fz6_s": "<strong>Cut:</strong> 30-50mm florets", "fp_fz6_p": "<strong>Pack:</strong> Retail (400g), Foodservice (2.5kg)",
-            
+
             "fp_p1_t": "Fruit Purees & Concentrates",
             "fp_p1_a": "<strong>Types:</strong> Mango, Guava, Strawberry", "fp_p1_s": "<strong>Brix:</strong> 14-28° (Single Strength)", "fp_p1_p": "<strong>Pack:</strong> Aseptic Drums (200L)",
-            
+
             "fp_p2_t": "Jams & Preserves",
             "fp_p2_a": "<strong>Flavors:</strong> Apricot, Fig, Strawberry, Orange", "fp_p2_s": "<strong>Sugar:</strong> Regular & Low-sugar options", "fp_p2_p": "<strong>Pack:</strong> Glass Jars (340g/450g)",
-            
+
             "fp_p3_t": "Natural Juices (NFC)",
             "fp_p3_a": "<strong>Types:</strong> Orange, Pomegranate, Guava", "fp_p3_s": "<strong>Process:</strong> Cold-pressed, Not From Concentrate", "fp_p3_p": "<strong>Pack:</strong> Tetra Pak (200ml/1L), Bulk Drums",
-            
+
             "fp_p4_t": "Extra Virgin Olive Oil",
             "fp_p4_a": "<strong>Grade:</strong> Extra Virgin, Cold Pressed", "fp_p4_s": "<strong>Acidity:</strong> ≤ 0.8%", "fp_p4_p": "<strong>Pack:</strong> Glass (500ml/750ml), Tin (3L/5L)",
-            
+
             "fp_p5_t": "Tomato Paste & Sauce",
             "fp_p5_a": "<strong>Brix:</strong> 22-24° (CB), 28-30° (HB)", "fp_p5_s": "<strong>Color:</strong> Grade A (Deep Red)", "fp_p5_p": "<strong>Pack:</strong> Tins (400g/800g), Drums (230kg)",
-            
+
             "fp_p6_t": "Dried Herbs & Spices",
             "fp_p6_a": "<strong>Types:</strong> Chamomile, Basil, Dill, Cumin", "fp_p6_s": "<strong>Process:</strong> Air-dried, Steam Sterilized", "fp_p6_p": "<strong>Pack:</strong> Bags (25g–1kg), Bulk (25kg)",
-            
+
             "fp_sus_title": "Our Commitment to Sustainability",
             "fp_sus_1": "Agriculture is a partnership with nature. We focus on zero-waste initiatives, implementing renewable solar energy across our sorting facilities and utilizing organic compose derived from farm byproducts.",
             "fp_sus_2": "Protecting the environment ensures the continued superior quality of the crops we deliver to your hands.",
@@ -433,11 +433,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_subtitle": "Complete Agricultural Machinery & Equipment",
             "mach_desc": "From planting to harvest — we supply the right machine for every stage of your farming operation.",
             "mach_cta": "Request a Quote",
-            
+
             "mach_intro": "We offer a comprehensive range of professional agricultural machines and farming equipment designed for maximum productivity and efficiency. Whether you're looking for tractors, harvesters, planters, or soil preparation tools — we have the expertise and inventory to match your farm's needs.",
-            
+
             "mach_category_title": "Browse by Category",
-            
+
             "mach_c1_title": "Potato Harvesters",
             "mach_c1_desc": "Self-propelled and trailed potato harvesters for efficient, high-capacity potato harvesting. Models include AVR Puma 4.0 (4-row, self-propelled) and Spirit series (1–2 row, trailed).",
             "mach_c2_title": "Potato Planters",
@@ -463,10 +463,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_c12_title": "Transport & Tipping Trailers",
             "mach_c12_desc": "Heavy-duty agricultural tipping trailers and transport wagons. Built for durability and large load capacity.",
             "mach_btn_learn": "Learn More",
-            
+
             "mach_brands_title": "Trusted Brands We Work With",
             "mach_brands_subtitle": "We partner with the world's leading agricultural machinery manufacturers.",
-            
+
             "mach_why_title": "Why Choose Our Machinery?",
             "mach_w1_title": "Full After-Sales Support",
             "mach_w1_desc": "Spare parts, maintenance, and technical service available for all machine types.",
@@ -476,7 +476,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_w3_desc": "Our agronomists and machinery specialists will help you choose the right equipment for your land and crops.",
             "mach_w4_title": "Competitive Pricing",
             "mach_w4_desc": "Direct sourcing and flexible payment options to fit your budget.",
-            
+
             "mach_cta_title": "Ready to Upgrade Your Farm?",
             "mach_cta_subtitle": "Contact us today and get a personalized quote for any machine or equipment.",
             "mach_btn_quote": "Get a Free Quote",
@@ -642,7 +642,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_src_irr_desc": "نستخدم أحدث أنظمة الري بالتنقيط للحفاظ على المياه وتوصيل المغذيات الدقيقة مباشرة إلى الجذور. يتم فحص تربتنا باستمرار لضمان حيويتها العضوية.",
             "fp_src_eff": "كفاءة استخدام المياه",
             "fp_src_min": "التركيب المعدني",
-            
+
             "fp_jrn_tag": "العملية",
             "fp_jrn_title": "رحلة الإنتاج",
             "fp_jrn_desc": "خط أنابيب سلس وقابل للتتبع بالكامل لضمان سلامة الأغذية من الحقل مباشرة إلى تجار التجزئة في جميع أنحاء العالم.",
@@ -657,73 +657,73 @@ document.addEventListener('DOMContentLoaded', () => {
             "fp_j_p_desc": "تُوضع المنتجات النقية بعناية في علب صحية ومخصصة التهوية وعبوات صالحة للطعام. هذه البطانة المتخصصة تمنع حدوث أي كدمات أثناء النقل.",
             "fp_j_l_title": "الخدمات اللوجستية",
             "fp_j_l_desc": "نقوم بالتحميل الآمن في حاويات يتم التحكم في درجة حرارتها، وتنطلق أساطيلنا عبر المحيطات. تضمن مراقبة درجة الحرارة في الوقت الفعلي وصول الحصاد إلى وجهاته المثالية حول العالم.",
-            
+
             "fp_cat_tag": "محفظتنا",
             "fp_cat_title": "الكتالوج الفني للمنتجات",
             "fp_tab_frsh": "المنتجات الطازجة",
             "fp_tab_frzn": "المنتجات المجمدة (IQF)",
             "fp_tab_proc": "المنتجات المصنعة والمهروسة",
-            
+
             "fp_f1_t": "الموالح (البرتقال والليمون)",
             "fp_f1_v1": "بلدي", "fp_f1_v2": "بصرة", "fp_f1_v3": "فالنسيا",
             "fp_f1_sea": "<strong>الموسم:</strong> نوفمبر – مايو", "fp_f1_pack": "<strong>التعبئة:</strong> كراتين تلسكوبية (15 كجم)",
-            
+
             "fp_f2_t": "عنب فاخر",
             "fp_f2_v1": "سوبيريور", "fp_f2_v2": "فليم", "fp_f2_v3": "كريمسون",
             "fp_f2_sea": "<strong>الموسم:</strong> مايو – سبتمبر", "fp_f2_pack": "<strong>التعبئة:</strong> علب صغيرة (500 جم)، سائب (5 كجم)",
-            
+
             "fp_f3_t": "بصل وثوم طازج",
             "fp_f3_v1": "أحمر/أصفر", "fp_f3_v2": "ثوم أبيض",
             "fp_f3_sea": "<strong>الموسم:</strong> فبراير – اغسطس", "fp_f3_pack": "<strong>التعبئة:</strong> شِباك (10 كجم/25 كجم)",
-            
+
             "fp_f4_t": "الرمان",
             "fp_f4_v1": "وندر فلا", "fp_f4_v2": "أكو", "fp_f4_v3": "إيرلي 116",
             "fp_f4_sea": "<strong>الموسم:</strong> سبتمبر – يناير", "fp_f4_pack": "<strong>التعبئة:</strong> كراتين (3.5 كجم)، تلسكوبية (5 كجم)",
-            
+
             "fp_f5_t": "فراولة طازجة",
             "fp_f5_v1": "فورتونا", "fp_f5_v2": "فيستيفال",
             "fp_f5_sea": "<strong>الموسم:</strong> ديسمبر – أبريل", "fp_f5_pack": "<strong>التعبئة:</strong> علب (250/500 جم)، أطباق مسطحة",
-            
+
             "fp_f6_t": "مانجو فاخر",
             "fp_f6_v1": "كنت", "fp_f6_v2": "كيت", "fp_f6_v3": "عويس",
             "fp_f6_sea": "<strong>الموسم:</strong> يوليو – أكتوبر", "fp_f6_pack": "<strong>التعبئة:</strong> كراتين طبقة واحدة (4 كجم)",
-            
+
             "fp_fz1_t": "فراولة مجمدة (IQF)",
             "fp_fz1_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz1_s": "<strong>الأحجام:</strong> 15-25 ملم، 25-35 ملم", "fp_fz1_p": "<strong>التعبئة:</strong> أكياس بولي (400 جم)، سائب (10 كجم)",
-            
+
             "fp_fz2_t": "مانجو مجمدة (شرائح/مكعبات)",
             "fp_fz2_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz2_s": "<strong>الشكل:</strong> مكعبات 10×10 ملم، نصف شرائح", "fp_fz2_p": "<strong>التعبئة:</strong> أكياس 1 كجم، سائب (15 كجم)",
-            
+
             "fp_fz3_t": "توت مشكل مجمد",
             "fp_fz3_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz3_s": "<strong>المحتويات:</strong> توت أزرق، توت العليق، توت أسود", "fp_fz3_p": "<strong>التعبئة:</strong> أكياس بيع بالتجزئة (500 جم)، سائب (10 كجم)",
-            
+
             "fp_fz4_t": "بازلاء خضراء مجمدة",
             "fp_fz4_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz4_s": "<strong>الدرجة:</strong> الفئة A، دقيقة جدًا", "fp_fz4_p": "<strong>التعبئة:</strong> أكياس بولي (400/1 كجم)، سائب (25 كجم)",
-            
+
             "fp_fz5_t": "حبوب الذرة الحلوة المجمدة",
             "fp_fz5_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz5_s": "<strong>النوع:</strong> حلوة جدًا، IQF", "fp_fz5_p": "<strong>التعبئة:</strong> أكياس بولي (400/1 كجم)، سائب (20 كجم)",
-            
+
             "fp_fz6_t": "زهرات القرنبيط (بروكلي) مجمدة",
             "fp_fz6_a": "<strong>التوافر:</strong> على مدار العام", "fp_fz6_s": "<strong>الحجم:</strong> زهرات 30-50 ملم", "fp_fz6_p": "<strong>التعبئة:</strong> بالتجزئة (400 جم)، خدمة طعام (2.5 كجم)",
-            
+
             "fp_p1_t": "هريس (بيوريه) الفاكهة والمركزات",
             "fp_p1_a": "<strong>الأنواع:</strong> مانجو، جوافة، فراولة", "fp_p1_s": "<strong>بريكس:</strong> 14-28° (قوة فردية)", "fp_p1_p": "<strong>التعبئة:</strong> براميل معقمة (200 لتر)",
-            
+
             "fp_p2_t": "المربى والمعلبات",
             "fp_p2_a": "<strong>النكهات:</strong> مشمش، تين، فراولة، برتقال", "fp_p2_s": "<strong>السكر:</strong> عادي وقليل السكر", "fp_p2_p": "<strong>التعبئة:</strong> برطمانات زجاجية (340/450 جم)",
-            
+
             "fp_p3_t": "عصائر طبيعية (NFC)",
             "fp_p3_a": "<strong>الأنواع:</strong> برتقال، رمان، جوافة", "fp_p3_s": "<strong>المعالجة:</strong> معصور على البارد، غير مركز", "fp_p3_p": "<strong>التعبئة:</strong> تيترا باك (200 مل / 1 لتر)، براميل كبرى",
-            
+
             "fp_p4_t": "زيت زيتون بكر ممتاز",
             "fp_p4_a": "<strong>الدرجة:</strong> بكر ممتاز، معصور على البارد", "fp_p4_s": "<strong>الحموضة:</strong> ≤ 0.8%", "fp_p4_p": "<strong>التعبئة:</strong> زجاج (500/750 مل)، صفيح (3/5 لتر)",
-            
+
             "fp_p5_t": "معجون وصلصة الطماطم",
             "fp_p5_a": "<strong>بريكس:</strong> 22-24°، 28-30°", "fp_p5_s": "<strong>اللون:</strong> الفئة A (أحمر داكن)", "fp_p5_p": "<strong>التعبئة:</strong> صفيح (400/800 جم)، براميل (230 كجم)",
-            
+
             "fp_p6_t": "أعشاب مجففة وتوابل",
             "fp_p6_a": "<strong>الأنواع:</strong> بابونج، ريحان، شبت، كمون", "fp_p6_s": "<strong>المعالجة:</strong> تجفيف هوائي، تعقيم بالبخار", "fp_p6_p": "<strong>التعبئة:</strong> أكياس (25 جم - 1 كجم)، سائب (25 كجم)",
-            
+
             "fp_sus_title": "التزامنا بالاستدامة",
             "fp_sus_1": "الزراعة هي شراكة مع الطبيعة. نحن نركز على مبادرات التخلص من النفايات تماماً، وتنفيذ الطاقة الشمسية المتجددة في جميع منشآت الفرز لدينا واستخدام الأسمدة العضوية المستمدة من المنتجات الثانوية الزراعية.",
             "fp_sus_2": "تضمن حماية البيئة استمرار الجودة الفائقة للمحاصيل التي نقدمها بين يديك.",
@@ -815,11 +815,11 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_subtitle": "معدات وآلات زراعية متكاملة",
             "mach_desc": "من الزراعة إلى الحصاد — نوفر الآلة المناسبة لكل مرحلة من عملياتك الزراعية.",
             "mach_cta": "اطلب عرض سعر",
-            
+
             "mach_intro": "نقدم مجموعة شاملة من الآلات الزراعية الاحترافية ومعدات الزراعة المصممة لتحقيق أقصى قدر من الإنتاجية والكفاءة. سواء كنت تبحث عن جرارات، أو حصادات، أو زرّاعات، أو أدوات تجهيز التربة — لدينا الخبرة والمخزون لتلبية احتياجات مزرعتك.",
-            
+
             "mach_category_title": "تصفح حسب الفئة",
-            
+
             "mach_c1_title": "حصادات البطاطس",
             "mach_c1_desc": "حصادات بطاطس ذاتية الدفع ومقطورة لحصاد البطاطس بكفاءة وقدرة عالية. تشمل الطرازات(AVR Puma 4.0) ذات 4 خطوط وسلسلة (Spirit) المقطورة بخط واحد أو خطين.",
             "mach_c2_title": "زرّاعات البطاطس",
@@ -845,10 +845,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_c12_title": "مقطورات النقل والقلابات",
             "mach_c12_desc": "مقطورات قلابة زراعية وعربات نقل للخدمة الشاقة. مصممة للمتانة وسعة الحمولة الكبيرة.",
             "mach_btn_learn": "اعرف المزيد",
-            
+
             "mach_brands_title": "علامات تجارية موثوقة نتعامل معها",
             "mach_brands_subtitle": "نتعاون مع أبرز مصنعي الآلات الزراعية في العالم.",
-            
+
             "mach_why_title": "لماذا تختار معداتنا؟",
             "mach_w1_title": "دعم كامل بعد البيع",
             "mach_w1_desc": "قطع الغيار والصيانة والخدمات الفنية متوفرة لجميع أنواع الآلات.",
@@ -858,7 +858,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_w3_desc": "سيساعدك المهندسون الزراعيون والمتخصصون في الآلات على اختيار المعدات المناسبة لأرضك ومحاصيلك.",
             "mach_w4_title": "أسعار تنافسية",
             "mach_w4_desc": "توريد مباشر وخيارات دفع مرنة تناسب ميزانيتك.",
-            
+
             "mach_cta_title": "هل أنت مستعد لتطوير مزرعتك؟",
             "mach_cta_subtitle": "اتصل بنا اليوم واحصل على عرض سعر مخصص لأي آلة أو معدة.",
             "mach_btn_quote": "اطلب عرض سعر مجاني",
@@ -878,13 +878,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = lang;
 
         const nextLangText = lang === 'en' ? 'عربي' : 'English';
-        if(langBtnDesktop) langBtnDesktop.innerText = nextLangText;
-        if(langBtnMobile) langBtnMobile.innerText = nextLangText;
+        if (langBtnDesktop) langBtnDesktop.innerText = nextLangText;
+        if (langBtnMobile) langBtnMobile.innerText = nextLangText;
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
-                if(el.tagName === 'STRONG') {
+                if (el.tagName === 'STRONG') {
                     el.innerHTML = translations[lang][key];
                 } else {
                     el.innerHTML = translations[lang][key];
@@ -903,7 +903,7 @@ document.addEventListener('DOMContentLoaded', () => {
         closeMenu();
     }
 
-    if(langBtnDesktop) langBtnDesktop.addEventListener('click', toggleLanguage);
-    if(langBtnMobile) langBtnMobile.addEventListener('click', toggleLanguage);
+    if (langBtnDesktop) langBtnDesktop.addEventListener('click', toggleLanguage);
+    if (langBtnMobile) langBtnMobile.addEventListener('click', toggleLanguage);
 
 });
