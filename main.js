@@ -691,6 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "fdp_cta_desc": "Contact our export team. We handle fresh, frozen, and processed commodities — full documentation, certified quality, reliable logistics.",
             "fdp_cta_btn": "Contact",
 
+
         },
         ar: {
             "nav_home": "الرئيسية",
@@ -1280,6 +1281,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "fdp_cta_title": "جاهز للاستيراد من أفضل المزارع المصرية؟",
             "fdp_cta_desc": "تواصل مع فريق التصدير لدينا. نتعامل مع السلع الطازجة، المجمدة والمصنعة — توثيق كامل، جودة معتمدة، لوجستيات موثوقة.",
             "fdp_cta_btn": "اتصل بنا",
+
 
         }
     };
