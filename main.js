@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "foot_quicklinks": "Quick Links",
             "foot_services": "Our Services",
             "foot_getintouch": "Get In Touch",
-            
+
             // Agricultural Inputs Page
             "agri_breadcrumb": "Home / Agricultural Inputs",
             "agri_title": "Agricultural Inputs",
@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "contact_ready_title": "Ready to grow together?",
             "contact_ready_desc": "Explore our services and discover how Griland Egypt can support your agricultural goals.",
             "contact_btn_services": "Our Services →",
-// About Page
+            // About Page
             "about_breadcrumb": "Home / About",
             "about_title": "About",
             "about_our_about": "our about",
@@ -597,6 +597,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_c11_desc": "Versatile telescopic loaders for lifting, loading, and handling on the farm. Available in various reach and capacity options.",
             "mach_c12_title": "Transport & Tipping Trailers",
             "mach_c12_desc": "Heavy-duty agricultural tipping trailers and transport wagons. Built for durability and large load capacity.",
+            "mach_c13_title": "Mechanical Weed Control",
+            "mach_c13_desc": "Discover our broad range of mechanical weed control solutions. Effective, environmentally friendly and robust machinery for chemical-free weed management.",
+            "mach_c14_title": "Vicon Pendulum Spreaders",
+            "mach_c14_desc": "Precision Vicon pendulum spreaders designed for optimal distribution of fertilizer and seeds. Maximum accuracy, minimum waste.",
+            "mach_c15_title": "Farmax Ringseeder",
+            "mach_c15_desc": "The Farmax Ringseeder delivers the perfect seedbed. Easily combined with spaders to save time and ensure precise seeding depth.",
+            "mach_c16_title": "Kramer Telehandlers",
+            "mach_c16_desc": "Versatile and powerful Kramer telehandlers. Compact design with all-wheel steering for exceptional maneuverability and high payload capacity on any farm.",
             "mach_btn_learn": "Learn More",
 
             "mach_brands_title": "Trusted Brands We Work With",
@@ -614,7 +622,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             "mach_cta_title": "Ready to Upgrade Your Farm?",
             "mach_cta_subtitle": "Contact us today and get a personalized quote for any machine or equipment.",
-            "mach_btn_quote": "Get a Free Quote",
+            "mach_btn_quote": "Contact Us",
             "mach_btn_browse": "Browse All Equipment",
             "mach_modal_contact": "Contact for more details",
             "mach_modal_close": "Close",
@@ -902,7 +910,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "foot_quicklinks": "روابط سريعة",
             "foot_services": "خدماتنا",
             "foot_getintouch": "تواصل معنا",
-            
+
             // Agricultural Inputs Page
             "agri_breadcrumb": "الرئيسية / المدخلات الزراعية",
             "agri_title": "المدخلات الزراعية",
@@ -1037,7 +1045,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "contact_ready_title": "هل أنت مستعد للنمو معاً؟",
             "contact_ready_desc": "استكشف خدماتنا واكتشف كيف يمكن لجريلاند مصر دعم أهدافك الزراعية.",
             "contact_btn_services": "خدماتنا ←",
-// ترجمات صفحة حول
+            // ترجمات صفحة حول
             "about_breadcrumb": "الرئيسية / من نحن",
             "about_title": "من نحن",
             "about_our_about": "عن شركتنا",
@@ -1114,6 +1122,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "mach_c11_desc": "لوادر تلسكوبية متعددة الاستخدامات للرفع والتحميل والمناولة في المزرعة. متوفرة بخيارات وصول وسعات مختلفة.",
             "mach_c12_title": "مقطورات النقل والقلابات",
             "mach_c12_desc": "مقطورات قلابة زراعية وعربات نقل للخدمة الشاقة. مصممة للمتانة وسعة الحمولة الكبيرة.",
+            "mach_c13_title": "مكافحة الحشائش الميكانيكية",
+            "mach_c13_desc": "اكتشف مجموعتنا الواسعة من حلول مكافحة الحشائش الميكانيكية. آلات فعالة وصديقة للبيئة وقوية لإدارة الحشائش بدون مواد كيميائية.",
+            "mach_c14_title": "ناثرات الأسمدة البندولية من فايكون",
+            "mach_c14_desc": "ناثرات الأسمدة البندولية من فايكون المصممة للتوزيع الأمثل للأسمدة والبذور. أقصى قدر من الدقة بأقل قدر من الهدر.",
+            "mach_c15_title": "بذارة حلقية فرماكس",
+            "mach_c15_desc": "توفر آلة بذر البذور Farmax Ringseeder مشتلًا مثاليًا للبذور. يمكن دمجها بسهولة مع آلات العزق لتوفير الوقت وضمان عمق بذر دقيق.",
+            "mach_c16_title": "رافعات تلسكوبية من كرامر",
+            "mach_c16_desc": "رافعات تلسكوبية تلسكوبية من كرامر، متعددة الاستخدامات وقوية. تصميم مدمج مع توجيه بجميع العجلات لتوفير قدرة استثنائية على المناورة وقدرة تحميل عالية في أي مزرعة.",
             "mach_btn_learn": "اعرف المزيد",
 
             "mach_brands_title": "علامات تجارية موثوقة نتعامل معها",
@@ -1131,7 +1147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             "mach_cta_title": "هل أنت مستعد لتطوير مزرعتك؟",
             "mach_cta_subtitle": "اتصل بنا اليوم واحصل على عرض سعر مخصص لأي آلة أو معدة.",
-            "mach_btn_quote": "اطلب عرض سعر مجاني",
+            "mach_btn_quote": "تواصل معنا",
             "mach_btn_browse": "تصفح جميع المعدات",
             "mach_modal_contact": "تواصل لمزيد من التفاصيل",
             "mach_modal_close": "إغلاق",

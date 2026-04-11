@@ -108,6 +108,42 @@ const machineryCardsData = [
         descI18n: "mach_c12_desc",
         desc: "Heavy-duty agricultural tipping trailers and transport wagons. Built for durability and large load capacity.",
         delayClass: "delay-200"
+    },
+    {
+        image: "./images/card13.png",
+        alt: "Mechanical Weed Control",
+        titleI18n: "mach_c13_title",
+        title: "Mechanical Weed Control",
+        descI18n: "mach_c13_desc",
+        desc: "Discover our broad range of mechanical weed control solutions. Effective, environmentally friendly and robust machinery for chemical-free weed management.",
+        delayClass: ""
+    },
+    {
+        image: "./images/card14.png",
+        alt: "Vicon Pendulum Spreaders",
+        titleI18n: "mach_c14_title",
+        title: "Vicon Pendulum Spreaders",
+        descI18n: "mach_c14_desc",
+        desc: "Precision Vicon pendulum spreaders designed for optimal distribution of fertilizer and seeds. Maximum accuracy, minimum waste.",
+        delayClass: "delay-100"
+    },
+    {
+        image: "./images/card15.jpg",
+        alt: "Farmax Ringseeder",
+        titleI18n: "mach_c15_title",
+        title: "Farmax Ringseeder",
+        descI18n: "mach_c15_desc",
+        desc: "The Farmax Ringseeder delivers the perfect seedbed. Easily combined with spaders to save time and ensure precise seeding depth.",
+        delayClass: "delay-200"
+    },
+    {
+        image: "./images/card16.png",
+        alt: "Kramer Telehandlers",
+        titleI18n: "mach_c16_title",
+        title: "Kramer Telehandlers",
+        descI18n: "mach_c16_desc",
+        desc: "Versatile and powerful Kramer telehandlers. Compact design with all-wheel steering for exceptional maneuverability and high payload capacity on any farm.",
+        delayClass: ""
     }
 ];
 
