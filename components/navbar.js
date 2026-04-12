@@ -50,16 +50,16 @@
                         <li><a href="${basePath}pages/serivces/machinery/machinery.html"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_machinery">Machinery & Equipment</a></li>
-                        <li><a href="${basePath}index.html#agri_inputs"
+                        <li><a href="${basePath}pages/serivces/agri-inputs/agricultural-inputs.html"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_agri_inputs">Agri-Inputs</a></li>
-                        <li><a href="${basePath}index.html#farms_production"
+                        <li><a href="${basePath}pages/serivces/Farm-porduction/farms_production.html"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_farms_production">Farms & Production</a></li>
                         <li><a href="${basePath}pages/serivces/food-processing/food-processing.html"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_food_processing">Food Processing</a></li>
-                        <li><a href="${basePath}index.html#trade_export"
+                        <li><a href="${basePath}pages/serivces/Trade-Export/trade_export.html"
                                 class="px-4 py-2 hover:bg-light hover:text-primary block transition-colors"
                                 data-i18n="nav_trade_export">Trade & Export</a></li>
                     </ul>
@@ -67,7 +67,7 @@
                 <li><a href="${basePath}pages/certifications/certification.html"
                         class="transition-colors ${certActive} relative after:content-[''] after:absolute after:-bottom-1 after:left-0 ${certAfter} hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
                         data-i18n="nav_certificates">Certificates</a></li>
-                <li><a href="${basePath}index.html#footer"
+                <li><a href="${basePath}pages/contact/contact.html"
                         class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
                         data-i18n="nav_contact">Contact</a>
                 </li>
@@ -109,17 +109,17 @@
                 <span class="text-muted text-sm uppercase" data-i18n="nav_services">Service</span>
                 <a href="${basePath}pages/serivces/machinery/machinery.html" class="mobile-link hover:text-primary text-base ps-4" data-i18n="nav_machinery">-
                     Machinery & Equipment</a>
-                <a href="${basePath}index.html#agri_inputs" class="mobile-link hover:text-primary text-base ps-4"
+                <a href="${basePath}pages/serivces/agri-inputs/agricultural-inputs.html" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_agri_inputs">- Agri-Inputs</a>
-                <a href="${basePath}index.html#farms_production" class="mobile-link hover:text-primary text-base ps-4"
+                <a href="${basePath}pages/serivces/Farm-porduction/farms_production.html" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_farms_production">- Farms & Production</a>
                 <a href="${basePath}pages/serivces/food-processing/food-processing.html" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_food_processing">- Food Processing</a>
-                <a href="${basePath}index.html#trade_export" class="mobile-link hover:text-primary text-base ps-4"
+                <a href="${basePath}pages/serivces/Trade-Export/trade_export.html" class="mobile-link hover:text-primary text-base ps-4"
                     data-i18n="nav_trade_export">- Trade & Export</a>
             </div>
             <a href="${basePath}pages/certifications/certification.html" class="mobile-link ${isCert ? 'text-primary' : 'hover:text-primary'}" data-i18n="nav_certificates">Certificates</a>
-            <a href="${basePath}index.html#footer" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contact</a>
+            <a href="${basePath}pages/contact/contact.html" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contact</a>
         </div>
     </div>
     <!-- Drawer Overlay -->
