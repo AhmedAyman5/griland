@@ -56,14 +56,8 @@
                     <p class="font-bold flex items-center gap-2 text-white mb-2"><i
                             class="fa-solid fa-envelope text-primary"></i> <span data-i18n="foot_email">Get In
                             Touch</span></p>
-                    <a href="mailto:hr@grilandeg.com"
-                        class="hover:text-primary transition-colors block">hr@grilandeg.com</a>
                     <a href="mailto:info@agrilandeg.com"
                         class="hover:text-primary transition-colors block">info@agrilandeg.com</a>
-                    <a href="mailto:ziad@grilandeg.com"
-                        class="hover:text-primary transition-colors block">ziad@grilandeg.com</a>
-                    <a href="mailto:goerge@grilandeg.com"
-                        class="hover:text-primary transition-colors block">goerge@grilandeg.com</a>
                     <a href="mailto:manager@grilandeg.com"
                         class="hover:text-primary transition-colors block">manager@grilandeg.com</a>
                 </div>

@@ -67,7 +67,7 @@
                 <li><a href="${basePath}pages/certifications/certification.html"
                         class="transition-colors ${certActive} relative after:content-[''] after:absolute after:-bottom-1 after:left-0 ${certAfter} hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
                         data-i18n="nav_certificates">Certificates</a></li>
-                <li><a href="${basePath}index.html#footer"
+                <li><a href="${basePath}pages/contact/contact.html"
                         class="hover:text-primary transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all after:duration-300"
                         data-i18n="nav_contact">Contact</a>
                 </li>
@@ -119,7 +119,7 @@
                     data-i18n="nav_trade_export">- Trade & Export</a>
             </div>
             <a href="${basePath}pages/certifications/certification.html" class="mobile-link ${isCert ? 'text-primary' : 'hover:text-primary'}" data-i18n="nav_certificates">Certificates</a>
-            <a href="${basePath}index.html#footer" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contact</a>
+            <a href="${basePath}pages/contact/contact.html" class="mobile-link hover:text-primary" data-i18n="nav_contact">Contact</a>
         </div>
     </div>
     <!-- Drawer Overlay -->
