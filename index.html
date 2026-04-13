@@ -54,56 +54,57 @@
         class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-16 px-6 sm:px-10 bg-dark overflow-hidden">
         <!-- Hero Background -->
         <div class="absolute inset-0 z-0">
-            <img src="./images/farmland.jpg" alt="Farmland"
-                class="w-full h-full object-cover opacity-60 mix-blend-overlay">
-            <div class="absolute inset-0 bg-dark/60"></div>
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="./videos/hero_video_compressed.mp4" type="video/mp4">
+            </video>
         </div>
 
         <div
-            class="relative z-10 max-w-[1200px] w-full mx-auto flex flex-col items-center md:items-start text-center md:text-start mt-10">
-            <h1 class="text-4xl md:text-6xl text-white font-bold max-w-3xl leading-tight mb-6 animate-fade-in"
+            class="relative z-10 max-w-[1200px] w-full mx-auto flex flex-col items-center md:items-start text-center md:text-start mt-10 drop-shadow-xl">
+            <h1 class="text-4xl md:text-6xl text-white font-bold max-w-3xl leading-tight mb-6 animate-fade-in drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]"
                 data-i18n="hero_title">
                 Cultivating Agriculture that Works for the Future
             </h1>
-            <p class="text-xl text-white/90 mb-8 max-w-2xl font-light animate-slide-up" data-i18n="hero_subtitle">
+            <p class="text-xl text-white/90 mb-8 max-w-2xl font-light animate-slide-up drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                data-i18n="hero_subtitle">
                 Enhance your heritage and offer you the best yield while respecting your project, the land and the
                 environment.
             </p>
-            <a href="./pages/contact/contact.html" class="btn-primary animate-slide-up" data-i18n="hero_cta">Contact Us
+            <a href="./pages/contact/contact.html" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm animate-slide-up" data-i18n="hero_cta">Contact Us
                 now</a>
         </div>
 
-        <!-- Badge Strip -->
-        <div class="absolute bottom-0 w-full bg-dark/90 backdrop-blur border-t border-white/10 z-20">
-            <div
-                class="max-w-[1200px] mx-auto hidden md:flex justify-between items-center px-4 overflow-hidden h-[60px]">
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
-                        Products</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
-                        Foods</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_env">Environmental
-                        Benefits</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_chemicals">No Synthetic
-                        Chemicals</span></div>
-                <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_prices">Best Prices</span>
-                </div>
-            </div>
-            <!-- Mobile badge scroller -->
-            <div class="flex md:hidden overflow-x-auto px-4 py-3 gap-6 hide-scrollbar h-[60px]">
-                <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
-                        Products</span></div>
-                <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
-                        class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
-                        Foods</span></div>
+    </section>
+
+    <!-- Badge Strip -->
+    <div class="w-full bg-dark z-20 relative">
+        <div class="max-w-[1200px] mx-auto hidden md:flex justify-between items-center px-4 overflow-hidden h-[60px]">
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
+                    Products</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
+                    Foods</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_env">Environmental
+                    Benefits</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_chemicals">No Synthetic
+                    Chemicals</span></div>
+            <div class="flex items-center gap-2 text-white text-sm font-semibold whitespace-nowrap"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_prices">Best Prices</span>
             </div>
         </div>
-    </section>
+        <!-- Mobile badge scroller -->
+        <div class="flex md:hidden overflow-x-auto px-4 py-3 gap-6 hide-scrollbar h-[60px]">
+            <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_organic">100% Organic
+                    Products</span></div>
+            <div class="flex flex-shrink-0 items-center gap-2 text-white text-sm font-semibold"><i
+                    class="fa-solid fa-leaf text-primary"></i> <span data-i18n="badge_fresh">Always Fresh & Natural
+                    Foods</span></div>
+        </div>
+    </div>
 
     <!-- 3. About / Mission Section -->
     <section id="about" class="py-20 px-6 sm:px-10 bg-white">
@@ -373,7 +374,7 @@
                     </p>
                     <h3 class="text-xl font-bold text-primary mb-4" data-i18n="equip_sub">Import of Agricultural
                         Equipment</h3>
-                    <a href="#" class="btn-primary inline-block text-sm" data-i18n="btn_more_about">More about
+                    <a href="#" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm inline-block text-sm" data-i18n="btn_more_about">More about
                         Agriland</a>
                 </div>
             </div>
@@ -433,7 +434,7 @@
                     sustainable investment opportunities… achieve attractive returns and foster sustainable economic
                     growth.
                 </p>
-                <a href="#palms" class="btn-primary" data-i18n="btn_more_about">More about Agriland</a>
+                <a href="#palms" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm" data-i18n="btn_more_about">More about Agriland</a>
             </div>
             <div class="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl section-element delay-100">
                 <img src="./images/date-palm.avif" alt="Date Palms"
@@ -482,7 +483,7 @@
             <div class="section-element delay-300">
                 <p class="text-xl font-semibold text-dark mb-6" data-i18n="breed_cta_text">Are you looking for a close
                     and committed partner to enhance your agricultural land?</p>
-                <a href="./pages/contact/contact.html" class="btn-primary" data-i18n="btn_contact">Contact Us</a>
+                <a href="./pages/contact/contact.html" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm" data-i18n="btn_contact">Contact Us</a>
             </div>
         </div>
     </section>
@@ -601,7 +602,7 @@
             </div>
 
             <div class="text-center mt-10 section-element">
-                <a href="#" class="btn-primary" data-i18n="btn_view_posts">View more posts</a>
+                <a href="#" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm" data-i18n="btn_view_posts">View more posts</a>
             </div>
         </div>
     </section>
@@ -701,7 +702,7 @@
                     <textarea rows="5"
                         class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white"></textarea>
                 </div>
-                <button type="submit" class="btn-primary w-full md:w-auto px-10" data-i18n="contact_send">Send
+                <button type="submit" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm w-full md:w-auto px-10" data-i18n="contact_send">Send
                     Message</button>
             </form>
         </div>
