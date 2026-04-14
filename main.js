@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "foot_belgium_title": "Belgium Address",
             "foot_belgium_o": "European Administrative Office",
             "foot_belgium_addr": "Avenue Louise, 1050 Brussels, Belgium",
-            "foot_egypt_title": "Company HQ (Egypt)",
+            "foot_egypt_title": "Company Headquarters (Egypt)",
             "foot_egypt_addr": "36 (A) Morad St., ELoda masr tower, Giza, Egypt",
             "foot_email": "Get In Touch",
             "foot_branch_title": "Branch address (Egypt)",

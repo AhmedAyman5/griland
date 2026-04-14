@@ -1,9 +1,9 @@
-(function() {
+(function () {
     const placeholder = document.getElementById('footer-placeholder');
     if (!placeholder) return;
-    
+
     const basePath = placeholder.getAttribute('data-basepath') || './';
-    
+
     const html = `
     <!-- 16. Footer -->
     <footer id="footer" class="bg-[#1B3A2D] text-white pt-12 pb-4 px-6 sm:px-10 mt-auto">
@@ -46,7 +46,7 @@
             <!-- Col 3: Egypt HQ -->
             <div>
                 <h4 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-white/10 pb-3"><i
-                        class="fa-solid fa-building text-primary"></i> <span data-i18n="foot_egypt_title">Company HQ
+                        class="fa-solid fa-building text-primary"></i> <span data-i18n="foot_egypt_title">Company Headquarters
                         (Egypt)</span></h4>
                 <div class="text-white/70 text-sm space-y-2">
                     <p data-i18n="foot_egypt_addr">36 (A) Morad St., ELoda masr tower, Giza, Egypt</p>
@@ -56,8 +56,8 @@
                     <p class="font-bold flex items-center gap-2 text-white mb-2"><i
                             class="fa-solid fa-envelope text-primary"></i> <span data-i18n="foot_email">Get In
                             Touch</span></p>
-                    <a href="mailto:info@agrilandeg.com"
-                        class="hover:text-primary transition-colors block">info@agrilandeg.com</a>
+                    <a href="mailto:info@grilandeg.com"
+                        class="hover:text-primary transition-colors block">info@grilandeg.com</a>
                     <a href="mailto:manager@grilandeg.com"
                         class="hover:text-primary transition-colors block">manager@grilandeg.com</a>
                 </div>
