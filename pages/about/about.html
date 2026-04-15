@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="./about.css" />
@@ -19,7 +20,7 @@
 <body class="about-bg font-sans text-[#333333]">
   <!-- 1. Navbar (Injected via JS) -->
   <div id="navigation-placeholder" data-basepath="../../"></div>
-  <script src="../../components/navbar.js"></script>
+  <script src="../../components/navbar.js" defer></script>
 
   <main>
     <!-- Page Hero Banner -->
@@ -66,7 +67,7 @@
           </div>
           <div class="md:col-span-5 reveal" data-reveal>
             <img alt="Farmland" class="w-full h-[380px] object-cover rounded-2xl border border-[#E0E0E0] shadow-soft"
-              src="images/photo-15.avif" />
+              src="images/photo-15.avif" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -109,7 +110,7 @@
         <div class="grid md:grid-cols-12 gap-10 items-center">
           <div class="md:col-span-5 reveal" data-reveal>
             <img alt="Crop meeting" class="w-full h-[360px] object-cover rounded-2xl border border-[#E0E0E0]"
-              src="images/ph4.avif" />
+              src="images/ph4.avif" loading="lazy" decoding="async" />
           </div>
           <div class="md:col-span-7 text-[#666] leading-relaxed">
             <p data-i18n="about_crop1">
@@ -156,28 +157,28 @@
         <div class="mt-10 grid md:grid-cols-12 gap-8 items-start">
           <div class="md:col-span-7 grid sm:grid-cols-2 gap-5">
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
-              <div class="text-2xl"><img src="./images/dt.png" alt="" class="w-10 h-10"></div>
+              <div class="text-2xl"><img src="./images/dt.png" alt="" class="w-10 h-10" loading="lazy" decoding="async"></div>
               <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_dt">Dedicated Team</h3>
               <p class="mt-2 text-sm text-[#777]" data-i18n="about_dt_desc">Professional employees are there for you to
                 pick the most amazing and
                 fresh fruits.</p>
             </div>
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
-              <div class="text-2xl"><img src="./images/fp.png" alt="" class="w-10 h-10"></div>
+              <div class="text-2xl"><img src="./images/fp.png" alt="" class="w-10 h-10" loading="lazy" decoding="async"></div>
               <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_fp">Fresh Products</h3>
               <p class="mt-2 text-sm text-[#777]" data-i18n="about_fp_desc">100% fresh fruits delivery guaranteed. We
                 inspect every package prior
                 to shipping.</p>
             </div>
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
-              <div class="text-2xl"><img src="./images/gcpng.png" alt="" class="w-10 h-10"></div>
+              <div class="text-2xl"><img src="./images/gcpng.png" alt="" class="w-10 h-10" loading="lazy" decoding="async"></div>
               <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_gc">Gift Certificates</h3>
               <p class="mt-2 text-sm text-[#777]" data-i18n="about_gc_desc">Help your friends and family members stay
                 healthy. Order our gift
                 cards for them.</p>
             </div>
             <div class="rounded-xl border border-[#E0E0E0] p-6 bg-white">
-              <div class="text-2xl"><img src="./images/bf.png" alt="" class="w-10 h-10"></div>
+              <div class="text-2xl"><img src="./images/bf.png" alt="" class="w-10 h-10" loading="lazy" decoding="async"></div>
               <h3 class="mt-3 font-bold text-[#1B3A2D]" data-i18n="about_bo">The Benefits Only</h3>
               <p class="mt-2 text-sm text-[#777]" data-i18n="about_bo_desc">We make sure that our regular clients get as
                 many benefits as
@@ -186,7 +187,7 @@
           </div>
           <div class="md:col-span-5 reveal" data-reveal>
             <img alt="Food industry" class="w-full h-[380px] object-cover rounded-2xl border border-[#E0E0E0]"
-              src="images/ph7.avif" />
+              src="images/ph7.avif" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -198,7 +199,7 @@
         <div class="grid md:grid-cols-12 gap-10 items-center">
           <div class="md:col-span-5 reveal" data-reveal>
             <img alt="Plant life process" class="w-full h-[360px] object-cover rounded-2xl border border-[#E0E0E0]"
-              src="images/ph2.avif" />
+              src="images/ph2.avif" loading="lazy" decoding="async" />
           </div>
           <div class="md:col-span-7">
             <div class="text-brand uppercase tracking-wider font-semibold text-xs" data-i18n="about_our_about">our about
@@ -237,14 +238,14 @@
           </div>
           <div class="md:col-span-5">
             <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Agrochemicals"
-              src="images/ph16.avif" />
+              src="images/ph16.avif" loading="lazy" decoding="async" />
           </div>
         </div>
 
         <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
           <div class="md:col-span-5">
             <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Advanced fertilizers"
-              src="images/ph16.avif" />
+              src="images/ph16.avif" loading="lazy" decoding="async" />
           </div>
           <div class="md:col-span-7">
             <h2 class="text-[#1B3A2D] text-3xl font-bold" data-i18n="about_fert">Advanced Fertilizers</h2>
@@ -269,14 +270,14 @@
           </div>
           <div class="md:col-span-5">
             <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Seeds"
-              src="images/see.avif" />
+              src="images/see.avif" loading="lazy" decoding="async" />
           </div>
         </div>
 
         <div class="grid md:grid-cols-12 gap-8 items-center reveal" data-reveal>
           <div class="md:col-span-5">
             <img class="w-full h-[280px] object-cover rounded-2xl border border-[#E0E0E0]" alt="Pesticides"
-              src="images/ph12.avif" />
+              src="images/ph12.avif" loading="lazy" decoding="async" />
           </div>
           <div class="md:col-span-7">
             <h2 class="text-[#1B3A2D] text-3xl font-bold" data-i18n="about_pest">Pesticides</h2>
@@ -314,7 +315,7 @@
 
         <div class="mt-8 rounded-2xl border border-[#E0E0E0] overflow-hidden relative">
           <img id="aboutSliderImage" class="w-full h-[360px] md:h-[430px] object-cover" src="images/ch-7.avif"
-            alt="Company slide" />
+            alt="Company slide" loading="lazy" decoding="async" />
           <button id="aboutPrevSlide" type="button"
             class="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 border border-[#E0E0E0] text-[#1B3A2D] hover:text-brand"
             aria-label="Previous slide">
@@ -345,30 +346,30 @@
         <div class="overflow-hidden rounded-2xl border border-[#E0E0E0] bg-white">
           <div class="flex whitespace-nowrap gap-10 px-6 py-10 marquee">
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 1" src="images/clients1.png" />
+              alt="Client logo 1" src="images/clients1.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 2" src="images/clients2.png" />
+              alt="Client logo 2" src="images/clients2.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 3" src="images/clients3.png" />
+              alt="Client logo 3" src="images/clients3.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 4" src="images/clients4.png" />
+              alt="Client logo 4" src="images/clients4.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 5" src="images/clients5.png" />
+              alt="Client logo 5" src="images/clients5.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 6" src="images/clients6.png" />
+              alt="Client logo 6" src="images/clients6.png" loading="lazy" decoding="async" />
 
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 1" src="images/clients1.png" />
+              alt="Client logo 1" src="images/clients1.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 2" src="images/clients2.png" />
+              alt="Client logo 2" src="images/clients2.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 3" src="images/clients3.png" />
+              alt="Client logo 3" src="images/clients3.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 4" src="images/clients4.png" />
+              alt="Client logo 4" src="images/clients4.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 5" src="images/clients5.png" />
+              alt="Client logo 5" src="images/clients5.png" loading="lazy" decoding="async" />
             <img class="h-10 w-auto grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition"
-              alt="Client logo 6" src="images/clients6.png" />
+              alt="Client logo 6" src="images/clients6.png" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -377,7 +378,7 @@
 
   <!-- Footer (Injected via JS) -->
   <div id="footer-placeholder" data-basepath="../../"></div>
-  <script src="../../components/footer.js"></script>
+  <script src="../../components/footer.js" defer></script>
 
   <script src="../../main.js" defer></script>
   <script src="./about.js" defer></script>

@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
@@ -26,14 +27,14 @@
 
     <!-- 1. Navbar -->
     <div id="navigation-placeholder" data-basepath="./"></div>
-    <script src="./components/navbar.js"></script>
+    <script src="./components/navbar.js" defer></script>
 
     <!-- 2. Hero Section -->
     <section id="hero"
         class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-16 px-6 sm:px-10 bg-dark overflow-hidden">
         <!-- Hero Background -->
         <div class="absolute inset-0 z-0">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+            <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover">
                 <source src="./videos/hero_video_compressed.mp4" type="video/mp4">
             </video>
         </div>
@@ -112,7 +113,7 @@
                 <a href="#"
                     class="group relative rounded-xl overflow-hidden h-[220px] shadow-md border border-border block section-element delay-100">
                     <img src="./images/fresh-fruit.avif" alt="Fresh Fruits"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     <div class="absolute bottom-0 start-0 p-6 w-full">
                         <span
@@ -126,7 +127,7 @@
                 <a href="#"
                     class="group relative rounded-xl overflow-hidden h-[220px] shadow-md border border-border block section-element delay-200">
                     <img src="./images/frozen.avif" alt="Frozen Products"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     <div class="absolute bottom-0 start-0 p-6 w-full">
                         <span
@@ -247,7 +248,7 @@
             <!-- Left Image -->
             <div class="md:w-[45%] w-full relative rounded-xl overflow-hidden shadow-2xl section-element">
                 <img src="./images/export-storage.jpg" alt="Export Storage"
-                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
             </div>
             <!-- Right Text -->
             <div class="md:w-[55%] section-element delay-100">
@@ -425,7 +426,7 @@
             </div>
             <div class="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl section-element delay-100">
                 <img src="./images/date-palm.avif" alt="Date Palms"
-                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -480,7 +481,7 @@
     <!-- 12. Stats / Trust Section -->
     <section class="py-24 px-6 sm:px-10 relative bg-dark text-white overflow-hidden" id="stats-section">
         <div class="absolute inset-0 z-0">
-            <img src="./images/fields.jpg" alt="Fields" class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+            <img src="./images/fields.jpg" alt="Fields" class="w-full h-full object-cover opacity-30 mix-blend-overlay" loading="lazy" decoding="async">
         </div>
         <div class="max-w-[1200px] mx-auto text-center relative z-10">
             <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block section-element"
@@ -521,7 +522,7 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block lg:col-span-2 lg:row-span-2 section-element">
                     <div class="relative h-[300px] lg:h-full w-full">
                         <img src="./images/project1.jpeg" alt="Project 1"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-6 w-full">
@@ -540,7 +541,7 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto section-element delay-100">
                     <div class="relative h-full w-full">
                         <img src="./images/project2.jpeg" alt="Project 2"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-5 w-full">
@@ -558,7 +559,7 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto section-element delay-200">
                     <div class="relative h-full w-full">
                         <img src="./images/project3.jpeg" alt="Project 3"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-5 w-full">
@@ -576,7 +577,7 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto lg:col-span-2 section-element delay-300">
                     <div class="relative h-full w-full">
                         <img src="./images/bees.avif" alt="Bees"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-5 w-full">
@@ -607,44 +608,44 @@
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/organic-food.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/farmer-life.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/bakery-shop.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/farmers-market.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/orgamic-grain.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
 
                     <!-- Duplicated for infinite scroll effect -->
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/organic-food.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/farmer-life.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/bakery-shop.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -703,10 +704,10 @@
 
     <!-- Footer (Injected via JS) -->
     <div id="footer-placeholder" data-basepath="./"></div>
-    <script src="./components/footer.js"></script>
+    <script src="./components/footer.js" defer></script>
 
     <!-- Scripts -->
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>

@@ -16,6 +16,7 @@
         rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Inherited CSS for Navbar -->
@@ -30,7 +31,7 @@
 
     <!-- 1. Navbar (Injected via JS) -->
     <div id="navigation-placeholder" data-basepath="../../"></div>
-    <script src="../../components/navbar.js"></script>
+    <script src="../../components/navbar.js" defer></script>
 
     <!-- WRAPPER FOR PAGE STYLES -->
     <main class="contact-page">
@@ -202,15 +203,15 @@
 
         <!-- Footer (Injected via JS) -->
         <div id="footer-placeholder" data-basepath="../../"></div>
-        <script src="../../components/footer.js"></script>
+        <script src="../../components/footer.js" defer></script>
 
     </main>
 
     <!-- Specific functionality for Contact Page -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
 
     <!-- Global Website JavaScript (Handles Mobile Drawer, Nav Scroll) -->
-    <script src="../../main.js"></script>
+    <script src="../../main.js" defer></script>
 
 </body>
 

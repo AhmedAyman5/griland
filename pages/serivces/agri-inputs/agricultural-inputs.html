@@ -16,6 +16,7 @@
         rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Inherited CSS for Navbar -->
@@ -30,7 +31,7 @@
 
     <!-- 1. Navbar (Injected via JS) -->
     <div id="navigation-placeholder" data-basepath="../../../"></div>
-    <script src="../../../components/navbar.js"></script>
+    <script src="../../../components/navbar.js" defer></script>
 
     <!-- WRAPPER FOR PAGE STYLES -->
     <main class="agri-page pb-0">
@@ -90,7 +91,7 @@
                 <div class="reveal flex flex-col gap-6" style="transition-delay: 0.2s">
                     <div class="w-full h-72 rounded-2xl overflow-hidden shadow-lg relative bg-gray-200">
                         <img src="./images/solutions.jpg" alt="Agricultural Solutions"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover" loading="lazy" decoding="async">
                         <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded shadow text-xs font-bold text-cert-primary"
                             data-i18n="agri_trusted_badge">
                             Trusted Since 1989</div>
@@ -166,7 +167,7 @@
                 <!-- TAB 1: SEEDS -->
                 <div id="tab-seeds" class="tab-content">
                     <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
-                        <img src="./images/seedsAgri.avif" class="w-full h-full object-cover" alt="Quality Seeds">
+                        <img src="./images/seedsAgri.avif" class="w-full h-full object-cover" alt="Quality Seeds" loading="lazy" decoding="async">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
                             <h3 class="text-white text-3xl font-serif font-bold mb-2"
@@ -231,7 +232,7 @@
                 <div id="tab-fertilizers" class="tab-content">
                     <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
                         <img src="./images/FERTILIZERS.jpg" class="w-full h-full object-cover"
-                            alt="Fertilizers and Nutrients">
+                            alt="Fertilizers and Nutrients" loading="lazy" decoding="async">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
                             <h3 class="text-white text-3xl font-serif font-bold mb-2"
@@ -324,7 +325,7 @@
                 <!-- TAB 3: PESTICIDES -->
                 <div id="tab-pesticides" class="tab-content">
                     <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
-                        <img src="./images/PESTICIDES.jpg" class="w-full h-full object-cover" alt="Crop Protection">
+                        <img src="./images/PESTICIDES.jpg" class="w-full h-full object-cover" alt="Crop Protection" loading="lazy" decoding="async">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
                             <h3 class="text-white text-3xl font-serif font-bold mb-2"
@@ -375,7 +376,7 @@
                         </div>
                         <div class="input-card bg-cert-cream rounded-2xl p-6">
                             <div class="mb-3"><img src="./logos/drone.png" alt="Nematicides"
-                                    class="w-10 h-10 object-contain"></div>
+                                    class="w-10 h-10 object-contain" loading="lazy" decoding="async"></div>
                             <div class="inline-block text-xs bg-cert-primary/10 text-cert-primary px-3 py-1 rounded-full mb-3 font-semibold"
                                 data-i18n="agri_pest_cat_nema">
                                 Nematicides &amp; Acaricides</div>
@@ -422,7 +423,7 @@
                 <div id="tab-machinery" class="tab-content">
                     <div class="mb-10 w-full h-72 rounded-2xl overflow-hidden relative shadow-lg">
                         <img src="./images/MACHINERY.avif" class="w-full h-full object-cover"
-                            alt="Agricultural Machinery">
+                            alt="Agricultural Machinery" loading="lazy" decoding="async">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-cert-dark/90 via-cert-dark/20 to-transparent flex flex-col justify-end p-8">
                             <h3 class="text-white text-3xl font-serif font-bold mb-2"
@@ -587,7 +588,7 @@
 
     <!-- Footer (Injected via JS) -->
     <div id="footer-placeholder" data-basepath="../../../"></div>
-    <script src="../../../components/footer.js"></script>
+    <script src="../../../components/footer.js" defer></script>
 
     <!-- Global Website JavaScript (Handles Language Switcher & Fallback Mobile Drawer) -->
     <script src="../../../main.js" defer></script>
