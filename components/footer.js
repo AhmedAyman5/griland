@@ -12,7 +12,7 @@
             <!-- Col 1: Brand -->
             <div>
                 <a href="${basePath}index.html" class="flex flex-col items-start group">
-                    <img src="${basePath}images/logo/footer-logo.png" alt="Agriland Egypt Footer Logo"
+                    <img src="${basePath}images/logo/footer-logo.png" alt="griland Egypt Footer Logo"
                         class="h-20 md:h-28 object-contain group-hover:scale-105 transition-transform mb-4">
                 </a>
                 <p class="text-white/70 text-sm leading-relaxed mt-2" data-i18n="foot_tagline">

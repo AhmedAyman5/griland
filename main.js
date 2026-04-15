@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "about_eyebrow": "OUR GRILAND EGYPT",
             "about_header": "Together, let's give value to your farmland.",
             "about_body": "Farmers, farmers and owners of agricultural land, griland has been supporting you for nearly 35 years in the exploitation, management and development of your agricultural land. Our goal: to enhance your heritage and offer you the best yield while respecting your project, the land and the environment.",
-            "btn_more_about": "More about Agriland \u2192", // →
+            "btn_more_about": "More about griland \u2192", // →
             "about_card1_tag": "Fresh Products",
             "about_card1_title": "We Grow And Sell The Best Fruits!",
             "about_card2_tag": "Frozen products",
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "proj_1": "griland enhances carbon storage on rapeseed cultivation",
             "proj_2": "Green architecture for green infrastructure",
             "proj_3": "Connected weather stations",
-            "proj_4": "Bees also work with Agrilandeg",
+            "proj_4": "Bees also work with grilandeg",
             "btn_view_posts": "View more posts",
 
             "contact_eyebrow": "GET IN TOUCH",

@@ -25,7 +25,7 @@
         <div class="max-w-[1200px] mx-auto flex items-center justify-between shadow-sm">
             <!-- Logo -->
             <a href="${basePath}index.html" class="flex items-center group">
-                <img src="${basePath}images/logo/logo1.png" alt="Agriland Egypt"
+                <img src="${basePath}images/logo/logo1.png" alt="griland Egypt"
                     class="h-20 md:h-24 object-contain group-hover:scale-105 transition-transform">
             </a>
 
@@ -92,7 +92,7 @@
     <div id="mobile-drawer"
         class="fixed inset-y-0 start-0 w-64 bg-white z-[60] transform -translate-x-full rtl:translate-x-full transition-transform duration-300 shadow-2xl flex flex-col md:hidden">
         <div class="p-6 flex justify-between items-center border-b border-border">
-            <img src="${basePath}images/logo/logo1.png" alt="Agriland Egypt" class="h-16 md:h-20 object-contain">
+            <img src="${basePath}images/logo/logo1.png" alt="griland Egypt" class="h-16 md:h-20 object-contain">
             <div class="flex items-center gap-4">
                 <button id="lang-toggle-mobile"
                     class="bg-light text-dark px-3 py-1 rounded-full text-xs font-bold border border-border hover:bg-primary hover:text-white transition-colors">
