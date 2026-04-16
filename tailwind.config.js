@@ -6,6 +6,15 @@ module.exports = {
     "./components/**/*.js",
     "./main.js"
   ],
+  safelist: [
+    'translate-x-0',
+    '-translate-x-full',
+    'rtl:translate-x-0',
+    'rtl:translate-x-full',
+    'opacity-100',
+    'opacity-0',
+    'invisible'
+  ],
   theme: {
     extend: {
       colors: {
