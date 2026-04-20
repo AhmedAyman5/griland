@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificates | Agriland Egypt</title>
+    <title>Certificates | griland Egypt</title>
+    <link rel="icon" type="image/png" href="../../images/logo/favicon.png">
     <meta name="description" content="Griland Egypt Certificates and global standards compliance.">
 
     <!-- Google Fonts: Cairo (from index), Playfair Display & Inter (from prompt) -->
@@ -15,6 +16,7 @@
         rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Inherited CSS for Navbar -->
@@ -23,44 +25,13 @@
     <!-- Certification Page Specific CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Main site colors to preserve navbar styling
-                        primary: '#4A8C5C',
-                        dark: '#1B3A2D',
-                        light: '#F7F7F2',
-                        body: '#333333',
-                        muted: '#777777',
-                        border: '#E0E0E0',
-
-                        // Certification page specific colors
-                        'cert-primary': '#1B4332',
-                        'cert-secondary': '#2D6A4F',
-                        'cert-accent': '#C9A84C',
-                        'cert-cream': '#F5F0E8',
-                        'cert-dark': '#0D2B1E',
-                    },
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body class="bg-white text-body font-sans antialiased overflow-x-hidden">
 
     <!-- 1. Navbar (Injected via JS) -->
     <div id="navigation-placeholder" data-basepath="../../"></div>
-    <script src="../../components/navbar.js"></script>
+    <script src="../../components/navbar.js" defer></script>
 
     <!-- WRAPPER FOR CERT PAGE STYLES -->
     <main class="cert-page">
@@ -102,7 +73,7 @@
                 <!-- 1. KOSHER -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.1s">
                     <img src="../certifications/images/kosher.png" alt="Kosher"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_kosher">Kosher</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_kosher">Kosher</h3>
@@ -120,7 +91,7 @@
                 <!-- 2. HALAL -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.2s">
                     <img src="../certifications/images/halal.png" alt="Halal"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_halal">Halal</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_halal">HALAL</h3>
@@ -138,7 +109,7 @@
                 <!-- 3. ISO 9001 -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.3s">
                     <img src="../certifications/images/ISO.png" alt="ISO 9001"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_iso">ISO</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_iso9001">ISO 9001
@@ -157,7 +128,7 @@
                 <!-- 4. ISO 22000 -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.1s">
                     <img src="../certifications/images/ISO2000.png" alt="ISO 22000"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_iso">ISO</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_iso22000">ISO 22000
@@ -176,7 +147,7 @@
 
                 <!-- 5. FDA -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.2s">
-                    <img src="../certifications/images/FDA.png" alt="FDA" class="mx-auto max-h-20 object-contain mb-6">
+                    <img src="../certifications/images/FDA.png" alt="FDA" class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_fda">FDA</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_fda">FDA</h3>
@@ -194,7 +165,7 @@
                 <!-- 6. SMETA -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.3s">
                     <img src="../certifications/images/SMETA.png" alt="SMETA"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_smeta">SMETA</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_smeta">SMETA</h3>
@@ -212,7 +183,7 @@
                 <!-- 7. BIO Q-CHECK -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.1s">
                     <img src="../certifications/images/bioqcheck.png" alt="Bio Q-Check"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_bio">Bio</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_bioqcheck">Bio
@@ -231,7 +202,7 @@
                 <!-- 8. GLOBAL G.A.P -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.2s">
                     <img src="../certifications/images/GLOBAL.png" alt="Global G.A.P"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_globalgap_title">Global G.A.P</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_globalgap">GLOBAL
@@ -250,7 +221,7 @@
                 <!-- 9. BRC GLOBAL STANDARDS -->
                 <div class="cert-card bg-white rounded-2xl p-8 shadow-md reveal" style="transition-delay: 0.3s">
                     <img src="../certifications/images/BRC.png" alt="BRC Global Standards"
-                        class="mx-auto max-h-20 object-contain mb-6">
+                        class="mx-auto max-h-20 object-contain mb-6" loading="lazy" decoding="async">
                     <p class="uppercase text-xs font-semibold tracking-widest text-cert-accent mb-2"
                         data-i18n="cert_brc_title">BRC</p>
                     <h3 class="font-serif text-xl font-bold text-cert-primary mb-4" data-i18n="cert_brc">BRC Global
@@ -284,15 +255,15 @@
         <!-- SECTION 7 — FOOTER (from Claude prompt design as requested) -->
         <!-- Footer (Injected via JS) -->
         <div id="footer-placeholder" data-basepath="../../"></div>
-        <script src="../../components/footer.js"></script>
+        <script src="../../components/footer.js" defer></script>
 
     </main>
 
     <!-- Specific functionality for Certificaiton Page -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
 
     <!-- Global Website JavaScript (Handles Mobile Drawer, Nav Scroll) -->
-    <script src="../../main.js"></script>
+    <script src="../../main.js" defer></script>
 </body>
 
 </html>

@@ -5,39 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trade & Export - GRILAND EGYPT</title>
+    <link rel="icon" type="image/png" href="../../../images/logo/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4A8C5C',
-                        dark: '#1B3A2D',
-                        light: '#F7F7F2',
-                        body: '#333333',
-                        muted: '#777777',
-                        border: '#E0E0E0',
-                        brand: "#4A8C5C",
-                        "brand-dark": "#1B3A2D",
-                        "panel-alt": "#F5F5F0",
-                        "light-bg": "#F7F7F2",
-                    },
-                    boxShadow: {
-                        soft: "0 10px 25px rgba(0,0,0,0.05)",
-                        glow: "0 10px 30px rgba(74, 140, 92, 0.2)",
-                    },
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                    }
-                },
-            },
-        };
-    </script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Core styles -->
@@ -49,7 +23,7 @@
 <body class="font-sans text-[#333333] overflow-x-hidden bg-light">
     <!-- Navbar (Injected via JS) -->
     <div id="navigation-placeholder" data-basepath="../../../"></div>
-    <script src="../../../components/navbar.js"></script>
+    <script src="../../../components/navbar.js" defer></script>
 
     <main>
 
@@ -57,7 +31,7 @@
         <section
             class="relative w-full min-h-[85vh] flex flex-col justify-center items-center text-center overflow-hidden pt-36 pb-24">
             <!-- Background Image (Large Port / Shipping Containers) -->
-            <img src="images/1.avif" alt="Global Export Port" class="absolute inset-0 w-full h-full object-cover z-0">
+            <img src="images/1.webp" alt="Global Export Port" class="absolute inset-0 w-full h-full object-cover z-0">
 
             <!-- Dark Overlay -->
             <div class="absolute inset-0 hero-overlay z-10"></div>
@@ -149,7 +123,7 @@
                     <!-- Category 1: Fresh -->
                     <div class="product-card bg-light-bg rounded-2xl border border-border overflow-hidden reveal-up">
                         <div class="h-56 overflow-hidden relative">
-                            <img src="images/2.avif" class="w-full h-full object-cover" alt="Fresh Produce">
+                            <img src="images/2.webp" class="w-full h-full object-cover" alt="Fresh Produce" loading="lazy" decoding="async">
                             <div data-i18n="te_cat1_badge"
                                 class="absolute top-4 left-4 bg-brand text-white px-3 py-1 rounded text-xs font-bold uppercase">
                                 Fresh</div>
@@ -177,7 +151,7 @@
                     <div
                         class="product-card bg-light-bg rounded-2xl border border-border overflow-hidden reveal-up delay-100">
                         <div class="h-56 overflow-hidden relative">
-                            <img src="images/3.avif" class="w-full h-full object-cover" alt="Frozen Fruits">
+                            <img src="images/3.webp" class="w-full h-full object-cover" alt="Frozen Fruits" loading="lazy" decoding="async">
                             <div data-i18n="te_cat2_badge"
                                 class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded text-xs font-bold uppercase">
                                 IQF Frozen</div>
@@ -205,7 +179,7 @@
                     <div
                         class="product-card bg-light-bg rounded-2xl border border-border overflow-hidden reveal-up delay-200">
                         <div class="h-56 overflow-hidden relative">
-                            <img src="images/4.avif" class="w-full h-full object-cover" alt="Processed Food">
+                            <img src="images/4.webp" class="w-full h-full object-cover" alt="Processed Food" loading="lazy" decoding="async">
                             <div data-i18n="te_cat3_badge"
                                 class="absolute top-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded text-xs font-bold uppercase">
                                 Processed</div>
@@ -229,6 +203,34 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGISTICS & COMPLIANCE -->
+        <section class="py-16 bg-white mt-10">
+            <div class="max-w-[1200px] mx-auto px-5 reveal-up">
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Cold chain -->
+                    <div class="p-8 rounded-2xl bg-light-bg border border-[#E0E0E0] shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-blue-500 text-2xl mb-6 shadow-sm border border-[#E0E0E0]">
+                            <i class="fa-solid fa-temperature-arrow-down"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-dark mb-4" data-i18n="te_coldchain_title">Cold Chain & Logistics Mastery</h4>
+                        <p class="text-[#666] leading-relaxed text-sm" data-i18n="te_coldchain_body">
+                            From the exact moment of harvest, our produce enters a strict, unbroken cold chain. Using rapid blast chillers, advanced hydro-cooling techniques, and real-time temperature-tracked maritime containers, we guarantee that the transit process virtually 'freezes time,' preserving the pristine texture, flavor, and nutritional value of our crops.
+                        </p>
+                    </div>
+                    <!-- Global compliance -->
+                    <div class="p-8 rounded-2xl bg-light-bg border border-[#E0E0E0] shadow-sm hover:-translate-y-1 hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-[#C9A84C] text-2xl mb-6 shadow-sm border border-[#E0E0E0]">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-dark mb-4" data-i18n="te_global_title">Global Compliance & Market Access</h4>
+                        <p class="text-[#666] leading-relaxed text-sm" data-i18n="te_global_body">
+                            Our export division meticulously navigates complex international trade regulations. Our produce consistently tests well below the Maximum Residue Limits (MRLs) required by the European Union and the FDA. We offer versatile shipping terms (FOB, CIF, CFR) to accommodate the varying distribution and clearance demands of our retail and wholesale partners worldwide.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -375,8 +377,8 @@
 
                     <!-- Side Image / Form abstract -->
                     <div class="relative reveal-up delay-200">
-                        <img src="images/5.avif" alt="Warehouse Workers"
-                            class="rounded-2xl shadow-xl w-full h-[500px] object-cover">
+                        <img src="images/5.webp" alt="Warehouse Workers"
+                            class="rounded-2xl shadow-xl w-full h-[500px] object-cover" loading="lazy" decoding="async">
                         <div
                             class="absolute -bottom-8 -left-8 bg-brand text-white p-8 rounded-xl shadow-2xl hidden md:block">
                             <div class="text-4xl font-bold mb-1">45+</div>
@@ -394,23 +396,23 @@
                     <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                         <a href="#" class="trust-badge block w-32 h-20">
                             <img src="../../../images/certifications/global-gap.png" alt="Global GAP"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </a>
                         <a href="#" class="trust-badge block w-32 h-20">
                             <img src="../../../images/certifications/iso-22000.png" alt="ISO 22000"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </a>
                         <a href="#" class="trust-badge block w-32 h-20">
                             <img src="../../../images/certifications/brc-global.png" alt="BRC Global"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </a>
                         <a href="#" class="trust-badge block w-32 h-20">
                             <img src="../../../images/certifications/haccp.png" alt="HACCP"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </a>
                         <a href="#" class="trust-badge block w-24 h-20">
                             <img src="../../../images/certifications/fda.png" alt="FDA"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -453,7 +455,7 @@
 
     <!-- Footer (Injected via JS) -->
     <div id="footer-placeholder" data-basepath="../../../"></div>
-    <script src="../../../components/footer.js"></script>
+    <script src="../../../components/footer.js" defer></script>
 
     <!-- Scripts -->
     <script src="../../../main.js" defer></script>

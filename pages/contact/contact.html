@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Agriland Egypt</title>
+    <title>Contact Us | griland Egypt</title>
+    <link rel="icon" type="image/png" href="../../images/logo/favicon.png">
     <meta name="description" content="Get in touch with Griland Egypt.">
 
     <!-- Google Fonts: Cairo (from index), Playfair Display & Inter (from prompt) -->
@@ -15,6 +16,7 @@
         rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Inherited CSS for Navbar -->
@@ -23,44 +25,13 @@
     <!-- Contact Page Specific CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Main site colors to preserve navbar styling
-                        primary: '#4A8C5C',
-                        dark: '#1B3A2D',
-                        light: '#F7F7F2',
-                        body: '#333333',
-                        muted: '#777777',
-                        border: '#E0E0E0',
-
-                        // Contact page specific colors
-                        'cert-primary': '#1B4332',
-                        'cert-secondary': '#2D6A4F',
-                        'cert-accent': '#C9A84C',
-                        'cert-cream': '#F5F0E8',
-                        'cert-dark': '#0D2B1E',
-                    },
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body class="bg-white text-body font-sans antialiased overflow-x-hidden">
 
     <!-- 1. Navbar (Injected via JS) -->
     <div id="navigation-placeholder" data-basepath="../../"></div>
-    <script src="../../components/navbar.js"></script>
+    <script src="../../components/navbar.js" defer></script>
 
     <!-- WRAPPER FOR PAGE STYLES -->
     <main class="contact-page">
@@ -197,14 +168,8 @@
                             <div class="flex flex-col mt-1 space-y-1">
                                 <a href="mailto:info@grilandeg.com"
                                     class="text-cert-accent text-sm hover:underline">info@grilandeg.com</a>
-                                <a href="mailto:export@grilandeg.com"
-                                    class="text-cert-accent text-sm hover:underline">export@grilandeg.com</a>
-                                <a href="mailto:sales@grilandeg.com"
-                                    class="text-cert-accent text-sm hover:underline">sales@grilandeg.com</a>
-                                <a href="mailto:import@grilandeg.com"
-                                    class="text-cert-accent text-sm hover:underline">import@grilandeg.com</a>
-                                <a href="mailto:hr@grilandeg.com"
-                                    class="text-cert-accent text-sm hover:underline">hr@grilandeg.com</a>
+                                <a href="mailto:manager@grilandeg.com"
+                                    class="text-cert-accent text-sm hover:underline">manager@grilandeg.com</a>
                             </div>
                         </div>
                     </div>
@@ -231,22 +196,22 @@
             <h2 class="font-serif text-3xl text-white mb-3" data-i18n="contact_ready_title">Ready to grow together?</h2>
             <p class="font-inter text-gray-300 mb-8 max-w-xl mx-auto" data-i18n="contact_ready_desc">Explore our
                 services and discover how Griland Egypt can support your agricultural goals.</p>
-            <a href="../../index.html#services"
+            <a href="../serivces/machinery/machinery.html"
                 class="inline-block bg-cert-accent text-white px-10 py-4 rounded font-semibold hover:bg-yellow-600 transition-colors"
                 data-i18n="contact_btn_services">Our Services →</a>
         </section>
 
         <!-- Footer (Injected via JS) -->
         <div id="footer-placeholder" data-basepath="../../"></div>
-        <script src="../../components/footer.js"></script>
+        <script src="../../components/footer.js" defer></script>
 
     </main>
 
     <!-- Specific functionality for Contact Page -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
 
     <!-- Global Website JavaScript (Handles Mobile Drawer, Nav Scroll) -->
-    <script src="../../main.js"></script>
+    <script src="../../main.js" defer></script>
 
 </body>
 

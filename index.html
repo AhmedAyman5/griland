@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -15,47 +15,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome for Icons -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4A8C5C',
-                        dark: '#1B3A2D',
-                        light: '#F7F7F2',
-                        body: '#333333',
-                        muted: '#777777',
-                        border: '#E0E0E0'
-                    },
-                    fontFamily: {
-                        sans: ['Cairo', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body class="bg-white text-body font-sans antialiased overflow-x-hidden">
 
     <!-- 1. Navbar -->
     <div id="navigation-placeholder" data-basepath="./"></div>
-    <script src="./components/navbar.js"></script>
+    <script src="./components/navbar.js" defer></script>
 
     <!-- 2. Hero Section -->
     <section id="hero"
         class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-16 px-6 sm:px-10 bg-dark overflow-hidden">
         <!-- Hero Background -->
         <div class="absolute inset-0 z-0">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
-                <source src="./videos/hero_video_compressed.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline preload="auto" poster="./videos/video_placeholder.png"
+                class="w-full h-full object-cover">
+                <source src="./videos/hero_video_2.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -70,12 +51,7 @@
                 Enhance your heritage and offer you the best yield while respecting your project, the land and the
                 environment.
             </p>
-<<<<<<< HEAD
-            <a href="./pages/contact/contact.html" class="btn-primary animate-slide-up" data-i18n="hero_cta">Contact Us now</a>
-=======
-            <a href="./pages/contact/contact.html" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm animate-slide-up" data-i18n="hero_cta">Contact Us
-                now</a>
->>>>>>> 05da9dce5cc4d3b560e39343a831ec47863c94c9
+<a href="./pages/contact/contact.html" class="btn-primary animate-slide-up" data-i18n="hero_cta">Contact Us now</a>
         </div>
 
     </section>
@@ -110,7 +86,90 @@
         </div>
     </div>
 
-    <!-- 3. About / Mission Section -->
+    <!-- Core Solutions Section -->
+    <section class="py-24 px-6 sm:px-10 bg-white z-10 relative">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block section-element delay-100" data-i18n="core_eyebrow">OUR CORE SOLUTIONS</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-dark section-element delay-200" data-i18n="core_title">Empowering Agriculture Through Innovation</h2>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Sol 1: Machinery (Span 7) -->
+                <a href="./pages/serivces/machinery/machinery.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-7 h-[340px] section-element delay-100 border border-border">
+                    <img src="./pages/serivces/machinery/images/hero1.webp" alt="Agricultural Machinery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 start-0 p-8 w-full flex flex-col items-start gap-2">
+                        <div class="bg-primary/95 p-3 rounded-xl text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                            <i class="fa-solid fa-tractor text-2xl w-8 text-center"></i>
+                        </div>
+                        <h3 class="text-white text-3xl font-bold group-hover:text-primary transition-colors" data-i18n="core_machinery">Agricultural Machinery</h3>
+                        <p class="text-white/90 text-sm md:text-base max-w-md font-light" data-i18n="core_machinery_desc">State-of-the-art equipment for every stage of your farming operation.</p>
+                        <span class="text-primary font-bold text-sm uppercase tracking-wider mt-2 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="core_btn_learn">Learn More &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Sol 2: Agri-Inputs (Span 5) -->
+                <a href="./pages/serivces/agri-inputs/agricultural-inputs.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-5 h-[340px] section-element delay-200 border border-border">
+                    <img src="./pages/serivces/agri-inputs/images/PESTICIDES.webp" alt="Agri-Inputs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 start-0 p-8 w-full flex flex-col items-start gap-2">
+                        <div class="bg-primary/95 p-3 rounded-xl text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                            <i class="fa-solid fa-flask text-2xl w-8 text-center"></i>
+                        </div>
+                        <h3 class="text-white text-3xl font-bold group-hover:text-primary transition-colors" data-i18n="core_inputs">Agri-Inputs</h3>
+                        <p class="text-white/90 text-sm md:text-base max-w-xs font-light" data-i18n="core_inputs_desc">Certified seeds, fertilizers, and pesticides to maximize your yield.</p>
+                        <span class="text-primary font-bold text-sm uppercase tracking-wider mt-2 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="core_btn_learn">Learn More &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Sol 3: Farms & Production (Span 4) -->
+                <a href="./pages/serivces/Farm-porduction/farms_production.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-4 h-[280px] section-element delay-300 border border-border">
+                    <img src="./pages/serivces/Farm-porduction/images/3.webp" alt="Farms & Production" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 start-0 p-6 w-full flex flex-col items-start gap-2">
+                        <div class="bg-primary/95 p-2.5 rounded-lg text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                            <i class="fa-solid fa-seedling text-xl w-6 text-center"></i>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold group-hover:text-primary transition-colors" data-i18n="core_farms">Farms & Production</h3>
+                        <p class="text-white/90 text-sm font-light" data-i18n="core_farms_desc">Expert management of agricultural land.</p>
+                        <span class="text-primary font-bold text-xs uppercase tracking-wider mt-1 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="core_btn_learn">Learn More &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Sol 4: Food Processing (Span 4) -->
+                <a href="./pages/serivces/food-processing/food-processing.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-4 h-[280px] section-element delay-400 border border-border">
+                    <img src="./pages/serivces/food-processing/images/unnamed-1.webp" alt="Food Processing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 start-0 p-6 w-full flex flex-col items-start gap-2">
+                        <div class="bg-primary/95 p-2.5 rounded-lg text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                            <i class="fa-solid fa-boxes-packing text-xl w-6 text-center"></i>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold group-hover:text-primary transition-colors" data-i18n="core_food">Food Processing</h3>
+                        <p class="text-white/90 text-sm font-light" data-i18n="core_food_desc">Premium fresh and frozen products prepared for export.</p>
+                        <span class="text-primary font-bold text-xs uppercase tracking-wider mt-1 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="core_btn_learn">Learn More &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Sol 5: Trade & Export (Span 4) -->
+                <a href="./pages/serivces/Trade-Export/trade_export.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-4 h-[280px] section-element delay-500 border border-border">
+                    <img src="./pages/serivces/Trade-Export/images/1.webp" alt="Trade & Export" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 start-0 p-6 w-full flex flex-col items-start gap-2">
+                        <div class="bg-primary/95 p-2.5 rounded-lg text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                            <i class="fa-solid fa-ship text-xl w-6 text-center"></i>
+                        </div>
+                        <h3 class="text-white text-2xl font-bold group-hover:text-primary transition-colors" data-i18n="core_trade">Trade & Export</h3>
+                        <p class="text-white/90 text-sm font-light" data-i18n="core_trade_desc">Connecting the finest Egyptian produce seamlessly.</p>
+                        <span class="text-primary font-bold text-xs uppercase tracking-wider mt-1 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" data-i18n="core_btn_learn">Learn More &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About/Mission Section -->
     <section id="about" class="py-20 px-6 sm:px-10 bg-white">
         <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
             <!-- Text Content -->
@@ -127,7 +186,7 @@
                 </p>
                 <a href="./pages/about/about.html"
                     class="text-primary font-bold hover:underline decoration-2 underline-offset-4"
-                    data-i18n="btn_more_about">More about Agriland &rarr;</a>
+data-i18n="btn_more_about">More about griland &rarr;</a>
             </div>
             <!-- Cards Column -->
             <div class="md:w-[45%] flex flex-col gap-6 w-full">
@@ -135,7 +194,8 @@
                 <a href="#"
                     class="group relative rounded-xl overflow-hidden h-[220px] shadow-md border border-border block section-element delay-100">
                     <img src="./images/fresh-fruit.avif" alt="Fresh Fruits"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     <div class="absolute bottom-0 start-0 p-6 w-full">
                         <span
@@ -149,7 +209,8 @@
                 <a href="#"
                     class="group relative rounded-xl overflow-hidden h-[220px] shadow-md border border-border block section-element delay-200">
                     <img src="./images/frozen.avif" alt="Frozen Products"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     <div class="absolute bottom-0 start-0 p-6 w-full">
                         <span
@@ -224,7 +285,8 @@
             </div>
 
             <div class="mt-12 section-element delay-500">
-                <a href="#about" class="text-primary font-bold hover:underline decoration-2 underline-offset-4"
+                <a href="./pages/about/about.html"
+                    class="text-primary font-bold hover:underline decoration-2 underline-offset-4"
                     data-i18n="btn_read_values">Read more about our values &rarr;</a>
             </div>
         </div>
@@ -269,7 +331,8 @@
             <!-- Left Image -->
             <div class="md:w-[45%] w-full relative rounded-xl overflow-hidden shadow-2xl section-element">
                 <img src="./images/export-storage.jpg" alt="Export Storage"
-                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy"
+                    decoding="async">
             </div>
             <!-- Right Text -->
             <div class="md:w-[55%] section-element delay-100">
@@ -379,13 +442,7 @@
                     </p>
                     <h3 class="text-xl font-bold text-primary mb-4" data-i18n="equip_sub">Import of Agricultural
                         Equipment</h3>
-<<<<<<< HEAD
-                    <a href="./pages/about/about.html" class="btn-primary inline-block text-sm"
-                        data-i18n="btn_more_about">More about
-=======
-                    <a href="#" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm inline-block text-sm" data-i18n="btn_more_about">More about
->>>>>>> 05da9dce5cc4d3b560e39343a831ec47863c94c9
-                        Agriland</a>
+<a href="./pages/about/about.html" class="btn-primary inline-block text-sm" data-i18n="btn_more_about">More about griland</a>
                 </div>
             </div>
 
@@ -427,7 +484,7 @@
                     </dl>
                     <a href="./pages/about/about.html"
                         class="text-primary font-bold hover:underline decoration-2 underline-offset-4 relative z-10 block mt-4"
-                        data-i18n="btn_more_about">More about Agriland &rarr;</a>
+                        data-i18n="btn_more_about">More about griland &rarr;</a>
                 </div>
             </div>
         </div>
@@ -444,16 +501,12 @@
                     sustainable investment opportunities… achieve attractive returns and foster sustainable economic
                     growth.
                 </p>
-<<<<<<< HEAD
-                <a href="./pages/about/about.html" class="btn-primary" data-i18n="btn_more_about">More about
-                    Agriland</a>
-=======
-                <a href="#palms" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm" data-i18n="btn_more_about">More about Agriland</a>
->>>>>>> 05da9dce5cc4d3b560e39343a831ec47863c94c9
+<a href="./pages/about/about.html" class="btn-primary" data-i18n="btn_more_about">More about griland</a>
             </div>
             <div class="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl section-element delay-100">
                 <img src="./images/date-palm.avif" alt="Date Palms"
-                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy"
+                    decoding="async">
             </div>
         </div>
     </section>
@@ -498,11 +551,7 @@
             <div class="section-element delay-300">
                 <p class="text-xl font-semibold text-dark mb-6" data-i18n="breed_cta_text">Are you looking for a close
                     and committed partner to enhance your agricultural land?</p>
-<<<<<<< HEAD
-                <a href="./pages/contact/contact.html" class="btn-primary" data-i18n="btn_contact">Contact Us</a>
-=======
-                <a href="./pages/contact/contact.html" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm" data-i18n="btn_contact">Contact Us</a>
->>>>>>> 05da9dce5cc4d3b560e39343a831ec47863c94c9
+<a href="./pages/contact/contact.html" class="btn-primary" data-i18n="btn_contact">Contact Us</a>
             </div>
         </div>
     </section>
@@ -510,7 +559,8 @@
     <!-- 12. Stats / Trust Section -->
     <section class="py-24 px-6 sm:px-10 relative bg-dark text-white overflow-hidden" id="stats-section">
         <div class="absolute inset-0 z-0">
-            <img src="./images/fields.jpg" alt="Fields" class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+            <img src="./images/fields.jpg" alt="Fields" class="w-full h-full object-cover opacity-30 mix-blend-overlay"
+                loading="lazy" decoding="async">
         </div>
         <div class="max-w-[1200px] mx-auto text-center relative z-10">
             <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block section-element"
@@ -551,7 +601,8 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block lg:col-span-2 lg:row-span-2 section-element">
                     <div class="relative h-[300px] lg:h-full w-full">
                         <img src="./images/project1.jpeg" alt="Project 1"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-6 w-full">
@@ -570,7 +621,8 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto section-element delay-100">
                     <div class="relative h-full w-full">
                         <img src="./images/project2.jpeg" alt="Project 2"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-5 w-full">
@@ -588,7 +640,8 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto section-element delay-200">
                     <div class="relative h-full w-full">
                         <img src="./images/project3.jpeg" alt="Project 3"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-5 w-full">
@@ -606,7 +659,8 @@
                     class="group relative rounded-xl overflow-hidden shadow-md block h-[250px] lg:h-auto lg:col-span-2 section-element delay-300">
                     <div class="relative h-full w-full">
                         <img src="./images/bees.avif" alt="Bees"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent"></div>
                     </div>
                     <div class="absolute bottom-0 start-0 p-5 w-full">
@@ -615,13 +669,15 @@
                             <span class="text-white/80">Dec 23, 2024</span>
                         </div>
                         <h3 class="text-white text-xl md:text-2xl font-bold group-hover:text-primary transition-colors leading-tight"
-                            data-i18n="proj_4">Bees also work with Agrilandeg</h3>
+                            data-i18n="proj_4">Bees also work with grilandeg</h3>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-10 section-element">
-                <a href="#" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm" data-i18n="btn_view_posts">View more posts</a>
+                <a href="./pages/serivces/agri-inputs/agricultural-inputs.html"
+                    class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm"
+                    data-i18n="btn_view_posts">View more posts</a>
             </div>
         </div>
     </section>
@@ -635,44 +691,44 @@
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/organic-food.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/farmer-life.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/bakery-shop.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/farmers-market.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/orgamic-grain.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
 
                     <!-- Duplicated for infinite scroll effect -->
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/organic-food.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/farmer-life.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                     <div
                         class="flex-shrink-0 opacity-50 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300">
                         <img src="./images/certifications/bakery-shop.jpeg" alt=""
-                            class="h-16 md:h-20 w-auto object-contain">
+                            class="h-16 md:h-20 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -721,7 +777,9 @@
                     <textarea rows="5"
                         class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white"></textarea>
                 </div>
-                <button type="submit" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm w-full md:w-auto px-10" data-i18n="contact_send">Send
+                <button type="submit"
+                    class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm w-full md:w-auto px-10"
+                    data-i18n="contact_send">Send
                     Message</button>
             </form>
         </div>
@@ -729,10 +787,10 @@
 
     <!-- Footer (Injected via JS) -->
     <div id="footer-placeholder" data-basepath="./"></div>
-    <script src="./components/footer.js"></script>
+    <script src="./components/footer.js" defer></script>
 
     <!-- Scripts -->
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>
