@@ -55,3 +55,9 @@
 .reveal-up.delay-400 { transition-delay: 400ms; }
 .reveal.delay-500,
 .reveal-up.delay-500 { transition-delay: 500ms; }
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-primary text-white font-bold py-3 px-8 text-center rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide;
+  }
+}
