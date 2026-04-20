@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Processing & Export | Griland Egypt</title>
-    <link rel="icon" type="image/webp" href="../../../images/logo/favicon.webp">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,34 @@
         rel="stylesheet">
 
     <!-- FontAwesome -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Inherited CSS for Navbar & Form -->
     <link rel="stylesheet" href="../../../style.css">
 
+    <!-- Tailwind CSS with custom tokens -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B4332',
+                        secondary: '#2D6A4F',
+                        accent: '#C9A84C',
+                        cream: '#F5F0E8',
+                        dark: '#0D2B1E',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- Internal Styles -->
     <style>
@@ -60,14 +82,14 @@
 
     <!-- [1] & [2] Navbar and Top Info (Injected via JS) -->
     <div id="navigation-placeholder" data-basepath="../../../"></div>
-    <script src="../../../components/navbar.js" defer></script>
+    <script src="../../../components/navbar.js"></script>
 
     <main class="food-processing">
         <!-- [3] HERO -->
         <section
             class="relative w-full min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
-            <img src="images/processingHover.webp" alt="Hero background"
-                class="absolute inset-0 w-full h-full object-cover z-0" decoding="async">
+            <img src="images/processingHover.jpg" alt="Hero background"
+                class="absolute inset-0 w-full h-full object-cover z-0" loading="lazy">
             <div class="absolute inset-0 z-0" style="background-color: rgba(13, 43, 30, 0.78);"></div>
             <div class="relative z-10 px-4 mt-20 md:mt-0">
                 <p class="text-accent text-xs tracking-widest uppercase mb-5 font-sans font-bold"
@@ -121,6 +143,76 @@
             </div>
         </section>
 
+        <!-- [NEW] QUALITY & PROCESSING SECTION -->
+        <section class="bg-white py-24 px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto items-center">
+                <div class="reveal">
+                    <p class="text-accent text-xs uppercase tracking-widest font-sans font-bold mb-2" data-i18n="fdp_q_tag">Quality &amp;
+                        Processing</p>
+                    <div class="gold-line mb-6 ml-0"></div>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-primary font-bold mb-6" data-i18n="fdp_q_title">Nature’s Best,<br>Processed
+                        to Perfection</h2>
+
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8 font-inter" data-i18n="fdp_q_desc">
+                        At Griland Egypt, we bring the finest fruits and vegetables directly from the fertile lands of
+                        Egypt to the global market. Our advanced food processing division ensures that every
+                        product—whether fresh, IQF frozen, or canned—retains its maximum flavor, nutritional value, and
+                        pristine quality, meeting the highest European and global standards.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
+                                <i class="fa-solid fa-leaf text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary font-inter text-base mb-1" data-i18n="fdp_q_b1_t">100% Organic &amp; Fresh
+                                </h4>
+                                <p class="text-gray-600 text-sm font-inter" data-i18n="fdp_q_b1_d">Hand-picked at peak ripeness.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
+                                <i class="fa-solid fa-snowflake text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary font-inter text-base mb-1" data-i18n="fdp_q_b2_t">Advanced IQF Technology
+                                </h4>
+                                <p class="text-gray-600 text-sm font-inter" data-i18n="fdp_q_b2_d">Locking in nutrients at -40°C.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20">
+                                <i class="fa-solid fa-certificate text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary font-inter text-base mb-1" data-i18n="fdp_q_b3_t">Global Certifications</h4>
+                                <p class="text-gray-600 text-sm font-inter" data-i18n="fdp_q_b3_d">Global Gap, BRC, and ISO 22000 certified.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#products"
+                        class="inline-block bg-accent text-white px-8 py-4 rounded font-semibold transition-colors hover:bg-yellow-600" data-i18n="fdp_q_btn">
+                        Explore Our Process
+                    </a>
+                </div>
+
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <div class="relative w-full h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-xl">
+                        <img src="images/produce_processing_ai.png" alt="Fresh Egyptian Produce Processing"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- [4] INTRO SECTION -->
         <section class="bg-cream py-24 px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
@@ -167,7 +259,7 @@
 
                 <div class="reveal" style="transition-delay: 0.2s">
                     <div class="h-80 rounded-2xl overflow-hidden shadow-xl w-full">
-                        <img src="./images/shutterstock_1937961247-910x610-1.webp" alt="Griland Egypt Food Processing"
+                        <img src="./images/shutterstock_1937961247-910x610-1.jpg" alt="Griland Egypt Food Processing"
                             class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
@@ -203,6 +295,9 @@
                     data-filter="fresh-fruits" data-i18n="fdp_filter_ff">🍇 Fresh Fruits</button>
                 <button
                     class="filter-btn text-primary border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors hover:bg-primary/10"
+                    data-filter="fresh-vegetables">🧅 Fresh Vegetables</button>
+                <button
+                    class="filter-btn text-primary border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors hover:bg-primary/10"
                     data-filter="frozen-fruits" data-i18n="fdp_filter_fzf">🥭 Frozen Fruits</button>
                 <button
                     class="filter-btn text-primary border-2 border-primary rounded-full px-5 py-2 text-sm font-semibold cursor-pointer transition-colors hover:bg-primary/10"
@@ -218,7 +313,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="fresh-fruits">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/grabes.webp" alt="Premium Table Grapes"
+                        <img src="images/grabes.jpg" alt="Premium Table Grapes"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -248,7 +343,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="fresh-fruits">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/mangofrozen.webp" alt="Fresh Mangoes"
+                        <img src="images/mangofrozen.jpg" alt="Fresh Mangoes"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -276,7 +371,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="fresh-fruits">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/orangeAndcitrus.webp" alt="Citrus & Oranges"
+                        <img src="images/orangeAndcitrus.jpg" alt="Citrus & Oranges"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -301,11 +396,136 @@
                     </div>
                 </div>
 
+                <!-- NEW FRESH & VEGETABLES PRODUCTS -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-fruits">
+                    <div class="h-52 overflow-hidden bg-gray-100">
+                        <img src="images/dates.avif" alt="Fresh Dates"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3 flex-wrap gap-2">
+                            <span class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1" data-i18n="fdp_lbl_ff">Fresh
+                                Fruits</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p11_t">Fresh Dates</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p11_d">Premium Egyptian dates
+                            naturally sweet and rich in fiber. Harvested from our certified palm groves for global
+                            export.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_badge_eg">🌍 Egypt</span>
+                            <span data-i18n="fdp_badge_gg">✅ Global Gap</span>
+                            <span data-i18n="fdp_badge_eu_gulf">📦 EU & Gulf</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-vegetables">
+                    <div class="h-52 overflow-hidden bg-gray-100">
+                        <img src="images/Fresh Garlic.avif" alt="Fresh Garlic"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block" data-i18n="fdp_lbl_fv">Fresh
+                                Vegetables</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p12_t">Fresh Garlic</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p12_d">High-quality Egyptian fresh
+                            garlic, known for its robust aroma and large cloves. Properly cured and packaged for
+                            long-distance export.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_badge_eg">🌍 Egypt</span>
+                            <span data-i18n="fdp_badge_brc">✅ BRC Certified</span>
+                            <span data-i18n="fdp_badge_bulk_mesh">📦 Bulk & Mesh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-vegetables">
+                    <div class="h-52 overflow-hidden bg-gray-100">
+                        <img src="images/resonions.avif" alt="Red Onions"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block" data-i18n="fdp_lbl_fv">Fresh
+                                Vegetables</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p13_t">Red Onions</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p13_d">Firm and flavorful Egyptian red
+                            onions with excellent shelf life. Grown in fertile soil and sorted to meet stringent
+                            European standards.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_badge_eg">🌍 Egypt</span>
+                            <span data-i18n="fdp_badge_gg">✅ Global Gap</span>
+                            <span data-i18n="fdp_badge_eu_gulf">📦 EU & Gulf </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-vegetables">
+                    <div class="h-52 overflow-hidden bg-gray-100">
+                        <img src="images/FreshArtichoke.avif" alt="Fresh Artichoke"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block" data-i18n="fdp_lbl_fv">Fresh
+                                Vegetables</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p14_t">Fresh Artichoke</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p14_d">Tender Egyptian artichokes
+                            loaded with antioxidants. Processed within hours of harvest to preserve maximum freshness
+                            and color.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_badge_eg">🌍 Egypt</span>
+                            <span data-i18n="fdp_badge_gg">✅ Global Gap</span>
+                            <span data-i18n="fdp_badge_fr_iqf">📦 Fresh & IQF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
+                    data-category="fresh-vegetables">
+                    <div class="h-52 overflow-hidden bg-gray-100">
+                        <img src="./images/greenbeans.jpg" alt="Fresh Green Beans"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="bg-primary/10 text-primary text-xs font-semibold rounded-full px-3 py-1 inline-block" data-i18n="fdp_lbl_fv">Fresh
+                                Vegetables</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-primary mb-2" data-i18n="fdp_p15_t">Fresh Green Beans</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 font-inter" data-i18n="fdp_p15_d">Crisp and vibrant green beans
+                            (Kentucky variety). Carefully hand-harvested to prevent bruising and to maintain their
+                            bright green color.</p>
+                        <div class="flex flex-wrap gap-4 text-xs text-gray-400 font-inter mt-auto">
+                            <span data-i18n="fdp_badge_eg">🌍 Egypt</span>
+                            <span data-i18n="fdp_badge_iso">✅ ISO 22000</span>
+                            <span data-i18n="fdp_badge_bulk_400">📦 Retail & Bulk</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- FROZEN FRUITS -->
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="frozen-fruits">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/frozenStrabuieres.webp" alt="IQF Frozen Strawberries"
+                        <img src="images/frozenStrabuieres.jfif" alt="IQF Frozen Strawberries"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -333,7 +553,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="frozen-fruits">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/mangoCubes1.webp" alt="IQF Frozen Mango Cubes"
+                        <img src="images/mangoCubes1.jpeg" alt="IQF Frozen Mango Cubes"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -361,7 +581,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="frozen-fruits">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/Mango-slices.webp" alt="IQF Frozen Mango Slices"
+                        <img src="images/Mango-slices.png" alt="IQF Frozen Mango Slices"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -390,7 +610,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="frozen-vegetables">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/frozenmolokhia.webp" alt="Frozen Molokhia"
+                        <img src="images/frozenmolokhia.jpeg" alt="Frozen Molokhia"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -418,7 +638,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="frozen-vegetables">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/frozenokra.webp" alt="IQF Frozen Okra"
+                        <img src="images/frozenokra.avif" alt="IQF Frozen Okra"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -448,7 +668,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="processed">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/frozenFries.webp" alt="Frozen French Fries"
+                        <img src="images/frozenFries.jpg" alt="Frozen French Fries"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -476,7 +696,7 @@
                 <div class="product-card bg-white rounded-2xl overflow-hidden shadow-md border-2 border-transparent group block"
                     data-category="processed">
                     <div class="h-52 overflow-hidden">
-                        <img src="images/tomatoes.webp" alt="Tomato Paste & Concentrate"
+                        <img src="images/tomatoes.jpeg" alt="Tomato Paste & Concentrate"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy">
                     </div>
@@ -693,7 +913,7 @@
                 </div>
 
                 <div class="reveal" style="transition-delay: 0.2s">
-                    <img src="images/exportoperation.webp" alt="Export operations"
+                    <img src="images/exportoperation.jpg" alt="Export operations"
                         class="h-64 w-full rounded-2xl object-cover shadow-xl mb-6" loading="lazy">
 
                     <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-left">
@@ -729,12 +949,12 @@
 
         <!-- [11] FOOTER -->
         <div id="footer-placeholder" data-basepath="../../../"></div>
-        <script src="../../../components/footer.js" defer></script>
+        <script src="../../../components/footer.js"></script>
 
     </main>
 
     <!-- JS INCLUDES -->
-    <script src="../../../main.js" defer></script>
+    <script src="../../../main.js"></script>
 
     <!-- INLINE JAVASCRIPT FOR THIS PAGE -->
     <script>
