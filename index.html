@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-white text-body font-sans antialiased overflow-x-hidden">
+<body class="bg-white text-body font-sans antialiased">
 
     <!-- 1. Navbar -->
     <div id="navigation-placeholder" data-basepath="./"></div>
@@ -87,20 +87,20 @@
     </div>
 
     <!-- Core Solutions Section -->
-    <section class="py-24 px-6 sm:px-10 bg-white z-10 relative">
-        <div class="max-w-[1200px] mx-auto">
+    <section id="core-solutions-section" class="py-24 px-6 sm:px-10 bg-white z-10 relative">
+        <div class="max-w-[1200px] mx-auto w-full">
             <div class="text-center mb-16">
                 <span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block section-element delay-100" data-i18n="core_eyebrow">OUR CORE SOLUTIONS</span>
                 <h2 class="text-3xl md:text-5xl font-bold text-dark section-element delay-200" data-i18n="core_title">Empowering Agriculture Through Innovation</h2>
             </div>
 
-            <!-- Bento Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- Bento Grid / Stacked Container -->
+            <div id="stacked-cards-container" class="flex flex-col gap-12 w-[95%] lg:w-[90%] max-w-[1000px] mx-auto relative pb-[50vh]">
                 <!-- Sol 1: Machinery (Span 7) -->
-                <a href="./pages/serivces/machinery/machinery.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-7 h-[340px] section-element delay-100 border border-border">
-                    <img src="./pages/serivces/machinery/images/hero1.webp" alt="Agricultural Machinery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
-                    <div class="absolute bottom-0 start-0 p-8 w-full flex flex-col items-start gap-2">
+                <a href="./pages/serivces/machinery/machinery.html" class="sticky top-24 shadow-2xl bg-white border-t border-border group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[550px] md:min-h-[65vh] z-[1] section-element delay-100">
+                    <img src="./pages/serivces/machinery/images/hero1.webp" alt="Agricultural Machinery" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-dark/50 group-hover:bg-dark/60 transition-colors duration-500"></div>
+                    <div class="relative z-10 w-full py-24 px-10 lg:py-32 lg:px-20 flex flex-col items-start gap-3">
                         <div class="bg-primary/95 p-3 rounded-xl text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
                             <i class="fa-solid fa-tractor text-2xl w-8 text-center"></i>
                         </div>
@@ -111,10 +111,10 @@
                 </a>
 
                 <!-- Sol 2: Agri-Inputs (Span 5) -->
-                <a href="./pages/serivces/agri-inputs/agricultural-inputs.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-5 h-[340px] section-element delay-200 border border-border">
-                    <img src="./pages/serivces/agri-inputs/images/PESTICIDES.webp" alt="Agri-Inputs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
-                    <div class="absolute bottom-0 start-0 p-8 w-full flex flex-col items-start gap-2">
+                <a href="./pages/serivces/agri-inputs/agricultural-inputs.html" class="sticky top-32 shadow-2xl bg-white border-t border-border group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[550px] md:min-h-[65vh] z-[2] section-element delay-200">
+                    <img src="./pages/serivces/agri-inputs/images/PESTICIDES.webp" alt="Agri-Inputs" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-dark/50 group-hover:bg-dark/60 transition-colors duration-500"></div>
+                    <div class="relative z-10 w-full py-24 px-10 lg:py-32 lg:px-20 flex flex-col items-start gap-3">
                         <div class="bg-primary/95 p-3 rounded-xl text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
                             <i class="fa-solid fa-flask text-2xl w-8 text-center"></i>
                         </div>
@@ -125,10 +125,10 @@
                 </a>
 
                 <!-- Sol 3: Farms & Production (Span 4) -->
-                <a href="./pages/serivces/Farm-porduction/farms_production.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-4 h-[280px] section-element delay-300 border border-border">
-                    <img src="./pages/serivces/Farm-porduction/images/3.webp" alt="Farms & Production" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
-                    <div class="absolute bottom-0 start-0 p-6 w-full flex flex-col items-start gap-2">
+                <a href="./pages/serivces/Farm-porduction/farms_production.html" class="sticky top-40 shadow-2xl bg-white border-t border-border group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[550px] md:min-h-[65vh] z-[3] section-element delay-300">
+                    <img src="./pages/serivces/Farm-porduction/images/3.webp" alt="Farms & Production" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-dark/50 group-hover:bg-dark/60 transition-colors duration-500"></div>
+                    <div class="relative z-10 w-full py-24 px-10 lg:py-32 lg:px-20 flex flex-col items-start gap-3">
                         <div class="bg-primary/95 p-2.5 rounded-lg text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
                             <i class="fa-solid fa-seedling text-xl w-6 text-center"></i>
                         </div>
@@ -139,10 +139,10 @@
                 </a>
 
                 <!-- Sol 4: Food Processing (Span 4) -->
-                <a href="./pages/serivces/food-processing/food-processing.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-4 h-[280px] section-element delay-400 border border-border">
-                    <img src="./pages/serivces/food-processing/images/unnamed-1.webp" alt="Food Processing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
-                    <div class="absolute bottom-0 start-0 p-6 w-full flex flex-col items-start gap-2">
+                <a href="./pages/serivces/food-processing/food-processing.html" class="sticky top-48 shadow-2xl bg-white border-t border-border group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[550px] md:min-h-[65vh] z-[4] section-element delay-400">
+                    <img src="./pages/serivces/food-processing/images/unnamed-1.webp" alt="Food Processing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-dark/50 group-hover:bg-dark/60 transition-colors duration-500"></div>
+                    <div class="relative z-10 w-full py-24 px-10 lg:py-32 lg:px-20 flex flex-col items-start gap-3">
                         <div class="bg-primary/95 p-2.5 rounded-lg text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
                             <i class="fa-solid fa-boxes-packing text-xl w-6 text-center"></i>
                         </div>
@@ -153,10 +153,10 @@
                 </a>
 
                 <!-- Sol 5: Trade & Export (Span 4) -->
-                <a href="./pages/serivces/Trade-Export/trade_export.html" class="group relative rounded-2xl overflow-hidden shadow-md block md:col-span-4 h-[280px] section-element delay-500 border border-border">
-                    <img src="./pages/serivces/Trade-Export/images/1.webp" alt="Trade & Export" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/30 to-transparent"></div>
-                    <div class="absolute bottom-0 start-0 p-6 w-full flex flex-col items-start gap-2">
+                <a href="./pages/serivces/Trade-Export/trade_export.html" class="sticky top-56 shadow-2xl bg-white border-t border-border group relative rounded-2xl overflow-hidden flex flex-col justify-center min-h-[550px] md:min-h-[65vh] z-[5] section-element delay-500">
+                    <img src="./pages/serivces/Trade-Export/images/1.webp" alt="Trade & Export" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
+                    <div class="absolute inset-0 bg-dark/50 group-hover:bg-dark/60 transition-colors duration-500"></div>
+                    <div class="relative z-10 w-full py-24 px-10 lg:py-32 lg:px-20 flex flex-col items-start gap-3">
                         <div class="bg-primary/95 p-2.5 rounded-lg text-white inline-block mb-1 group-hover:bg-primary group-hover:-translate-y-1 transition-all duration-300 shadow-lg">
                             <i class="fa-solid fa-ship text-xl w-6 text-center"></i>
                         </div>
