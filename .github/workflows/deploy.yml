@@ -16,9 +16,10 @@ jobs:
       - name: Deploy website to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ ftp://141.136.39.190}}
-          username: ${{ u659359819.grilandeg.com }}
-          password: ${{ OOstora609@ }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
           local-dir: ./
           server-dir: /public_html/
           exclude: |
@@ -26,9 +27,10 @@ jobs:
             **/.git*/**
             **/node_modules/**
             .github/**
+            .vscode/**
             package.json
             package-lock.json
             tailwind.config.js
-            results.json
             scraping.py
+            results.json
             scratch_main.js
