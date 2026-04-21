@@ -16,9 +16,9 @@ jobs:
       - name: Deploy website to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ ftp://141.136.39.190}}
+          username: ${{ u659359819.grilandeg.com }}
+          password: ${{ OOstora609@ }}
           local-dir: ./
           server-dir: /public_html/
           exclude: |
