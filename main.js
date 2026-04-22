@@ -1897,4 +1897,57 @@ document.addEventListener("DOMContentLoaded", () => {
   (h(f),
     g && g.addEventListener("click", m),
     u && u.addEventListener("click", m));
+
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = "Sending...";
+      submitBtn.disabled = true;
+
+      const formData = new FormData(this);
+      
+      const msgBox = document.getElementById("form-message");
+      if (msgBox) {
+        msgBox.classList.add("hidden");
+        msgBox.classList.remove("bg-green-100", "text-green-800", "bg-red-100", "text-red-800");
+      }
+
+      fetch(this.action, {
+        method: this.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => response.json().then(data => ({ status: response.status, body: data })).catch(() => ({ status: response.status, body: { message: "Network error" } })))
+      .then(res => {
+        const data = res.body;
+        if (msgBox) {
+          msgBox.classList.remove("hidden");
+          msgBox.innerText = data.message || "Message sent successfully!";
+          if (res.status === 200 && data.status === "success") {
+            msgBox.classList.add("bg-green-100", "text-green-800");
+            contactForm.reset();
+          } else {
+            msgBox.classList.add("bg-red-100", "text-red-800");
+          }
+        }
+      })
+      .catch(error => {
+        if (msgBox) {
+          msgBox.classList.remove("hidden");
+          msgBox.classList.add("bg-red-100", "text-red-800");
+          msgBox.innerText = "Oops! Something went wrong and we couldn't send your message.";
+        }
+      })
+      .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      });
+    });
+  }
 });

@@ -795,9 +795,8 @@
                     data-i18n="contact_eyebrow">GET IN TOUCH</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-dark" data-i18n="contact_title">Send us a message</h2>
             </div>
-            <form action="https://formsubmit.co/info@grilandeg.com" method="POST"
+            <form id="contact-form" action="./send_mail.php" method="POST"
                 class="space-y-6 section-element delay-100 p-8 rounded-xl bg-light shadow-sm border border-border">
-                <input type="hidden" name="_captcha" value="false">
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -831,6 +830,9 @@
                     <textarea rows="5" name="message" required
                         class="w-full border border-border p-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white"></textarea>
                 </div>
+                <!-- Error msg placeholder -->
+                <div id="form-message" class="hidden text-sm font-bold p-3 rounded mb-4"></div>
+                
                 <button type="submit"
                     class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-md transition-colors duration-300 hover:brightness-90 uppercase tracking-wide text-sm w-full md:w-auto px-10"
                     data-i18n="contact_send">Send
