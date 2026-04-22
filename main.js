@@ -1931,14 +1931,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 10);
   }
 
-  const contactForms = document.querySelectorAll('form[action*="send_mail.php"]');
+  const contactForms = document.querySelectorAll('form[action^="https://api.web3forms.com/submit"]');
   contactForms.forEach(form => {
     form.addEventListener("submit", function(e) {
       e.preventDefault();
       
       const submitBtn = this.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = "Sending...";
+      submitBtn.innerHTML = document.documentElement.lang === 'ar' ? "جاري الإرسال..." : "Sending...";
       submitBtn.disabled = true;
 
       const formData = new FormData(this);
@@ -1953,17 +1953,17 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(response => response.json().then(data => ({ status: response.status, body: data })).catch(() => ({ status: response.status, body: { message: "Network error" } })))
       .then(res => {
         const data = res.body;
-        if (res.status === 200 && data.status === "success") {
+        if (res.status === 200 && data.success) {
             showPopupMessage(
-              document.documentElement.lang === 'ar' ? 'تم الإرسال!' : 'Message Sent!',
-              data.message || (document.documentElement.lang === 'ar' ? 'لقد تلقينا رسالتك بنجاح وسنتواصل معك قريباً.' : 'We have received your message successfully and will get back to you soon.'),
+              document.documentElement.lang === 'ar' ? 'تم الإرسال بنجاح' : 'Message Sent!',
+              document.documentElement.lang === 'ar' ? 'لقد تلقينا رسالتك بنجاح وسنتواصل معك قريباً.' : 'We have received your message successfully and will get back to you soon.',
               'success'
             );
             this.reset();
         } else {
             showPopupMessage(
               document.documentElement.lang === 'ar' ? 'خطأ!' : 'Error!',
-              data.message || (document.documentElement.lang === 'ar' ? 'عذرا، حدث خطأ ولم نتمكن من إرسال رسالتك.' : 'Oops! Something went wrong and we couldn\'t send your message.'),
+              data.message || (document.documentElement.lang === 'ar' ? 'حدث خطأ أثناء الإرسال، حاول مرة أخرى' : 'Oops! Something went wrong and we couldn\'t send your message.'),
               'error'
             );
         }
@@ -1971,7 +1971,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(error => {
         showPopupMessage(
           document.documentElement.lang === 'ar' ? 'خطأ!' : 'Error!',
-          document.documentElement.lang === 'ar' ? 'تعذر الاتصال بالخادم. الرجاء المحاولة لاحقاً.' : 'Could not connect to the server. Please try again later.',
+          document.documentElement.lang === 'ar' ? 'تعذر الاتصال بخادم البريد. الرجاء المحاولة لاحقاً.' : 'Could not connect to the mail server. Please try again later.',
           'error'
         );
       })
