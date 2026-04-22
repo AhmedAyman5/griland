@@ -1898,23 +1898,50 @@ document.addEventListener("DOMContentLoaded", () => {
     g && g.addEventListener("click", m),
     u && u.addEventListener("click", m));
 
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function(e) {
+  function showPopupMessage(title, text, type = 'success') {
+    const overlay = document.createElement('div');
+    overlay.className = 'fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity opacity-0';
+    
+    const icon = type === 'success' 
+      ? `<div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 mb-4">
+           <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+           </svg>
+         </div>`
+      : `<div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 mb-4">
+           <svg class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+           </svg>
+         </div>`;
+
+    overlay.innerHTML = `
+      <div class="bg-white rounded-2xl p-8 max-w-sm w-full mx-4 shadow-2xl transform scale-95 transition-transform duration-300 text-center relative pointer-events-auto">
+         ${icon}
+         <h3 class="text-2xl font-bold font-serif text-[#1B4332] mb-2">${title}</h3>
+         <p class="text-gray-500 text-sm mb-6">${text}</p>
+         <button class="bg-[#1B4332] text-white w-full py-3 rounded-lg font-bold hover:brightness-90 transition-colors" onclick="this.closest('.fixed').remove()">OK</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    
+    setTimeout(() => {
+      overlay.classList.remove('opacity-0');
+      overlay.firstElementChild.classList.remove('scale-95');
+      overlay.firstElementChild.classList.add('scale-100');
+    }, 10);
+  }
+
+  const contactForms = document.querySelectorAll('form[action*="send_mail.php"]');
+  contactForms.forEach(form => {
+    form.addEventListener("submit", function(e) {
       e.preventDefault();
       
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const submitBtn = this.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
       submitBtn.innerHTML = "Sending...";
       submitBtn.disabled = true;
 
       const formData = new FormData(this);
-      
-      const msgBox = document.getElementById("form-message");
-      if (msgBox) {
-        msgBox.classList.add("hidden");
-        msgBox.classList.remove("bg-green-100", "text-green-800", "bg-red-100", "text-red-800");
-      }
 
       fetch(this.action, {
         method: this.method,
@@ -1926,28 +1953,32 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(response => response.json().then(data => ({ status: response.status, body: data })).catch(() => ({ status: response.status, body: { message: "Network error" } })))
       .then(res => {
         const data = res.body;
-        if (msgBox) {
-          msgBox.classList.remove("hidden");
-          msgBox.innerText = data.message || "Message sent successfully!";
-          if (res.status === 200 && data.status === "success") {
-            msgBox.classList.add("bg-green-100", "text-green-800");
-            contactForm.reset();
-          } else {
-            msgBox.classList.add("bg-red-100", "text-red-800");
-          }
+        if (res.status === 200 && data.status === "success") {
+            showPopupMessage(
+              document.documentElement.lang === 'ar' ? 'تم الإرسال!' : 'Message Sent!',
+              data.message || (document.documentElement.lang === 'ar' ? 'لقد تلقينا رسالتك بنجاح وسنتواصل معك قريباً.' : 'We have received your message successfully and will get back to you soon.'),
+              'success'
+            );
+            this.reset();
+        } else {
+            showPopupMessage(
+              document.documentElement.lang === 'ar' ? 'خطأ!' : 'Error!',
+              data.message || (document.documentElement.lang === 'ar' ? 'عذرا، حدث خطأ ولم نتمكن من إرسال رسالتك.' : 'Oops! Something went wrong and we couldn\'t send your message.'),
+              'error'
+            );
         }
       })
       .catch(error => {
-        if (msgBox) {
-          msgBox.classList.remove("hidden");
-          msgBox.classList.add("bg-red-100", "text-red-800");
-          msgBox.innerText = "Oops! Something went wrong and we couldn't send your message.";
-        }
+        showPopupMessage(
+          document.documentElement.lang === 'ar' ? 'خطأ!' : 'Error!',
+          document.documentElement.lang === 'ar' ? 'تعذر الاتصال بالخادم. الرجاء المحاولة لاحقاً.' : 'Could not connect to the server. Please try again later.',
+          'error'
+        );
       })
       .finally(() => {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
       });
     });
-  }
+  });
 });
