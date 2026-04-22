@@ -67,8 +67,9 @@
                         team will get back to you within 24 hours.</p>
 
                     <div class="bg-white rounded-2xl shadow-lg p-8 relative">
-                        <form id="contact-form" action="../../send_mail.php" method="POST" class="space-y-4">
-
+                        <form id="contact-form" action="https://formsubmit.co/info@grilandeg.com" method="POST" class="space-y-4">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://grilandeg.com/">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input type="text" name="name"
                                     class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-sm bg-white"
@@ -79,8 +80,8 @@
                             </div>
                             <input type="tel" name="phone"
                                 class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-sm bg-white"
-                                placeholder="+20 xxx xxx xxxx" data-i18n-ph="contact_ph_phone" required pattern="[0-9\+\-\s\(\)]+" title="يرجى إدخال رقم هاتف صحيح">
-                            <input type="text" name="Topic"
+                                placeholder="+20 xxx xxx xxxx" data-i18n-ph="contact_ph_phone" required>
+                            <input type="text" name="_subject"
                                 class="form-input w-full border border-gray-200 rounded-lg px-4 py-3 text-sm bg-white"
                                 placeholder="What is this regarding?" data-i18n-ph="contact_ph_subject" required>
                             <textarea name="message"
@@ -212,7 +213,7 @@
     <script src="./js/script.js" defer></script>
 
     <!-- Global Website JavaScript (Handles Mobile Drawer, Nav Scroll) -->
-    <script src="../../main.js?v=2" defer></script>
+    <script src="../../main.js" defer></script>
 
 </body>
 
