@@ -1931,7 +1931,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 10);
   }
 
-  const contactForms = document.querySelectorAll('form[action^="https://api.web3forms.com/submit"]');
+  const contactForms = document.querySelectorAll('form[action*="send_mail.php"]');
   contactForms.forEach(form => {
     form.addEventListener("submit", function(e) {
       e.preventDefault();

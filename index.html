@@ -795,15 +795,8 @@
                     data-i18n="contact_eyebrow">GET IN TOUCH</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-dark" data-i18n="contact_title">Send us a message</h2>
             </div>
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST"
+            <form id="contact-form" action="./send_mail.php" method="POST"
                 class="space-y-6 section-element delay-100 p-8 rounded-xl bg-light shadow-sm border border-border">
-                
-                <!-- Web3Forms Access Key (Replace with the one matching info@grilandeg.com) -->
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                <input type="hidden" name="subject" value="رسالة جديدة من موقع Griland">
-                <input type="hidden" name="from_name" value="Griland Website">
-                <!-- Honeypot for spam protection -->
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
