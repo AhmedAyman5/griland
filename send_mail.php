@@ -19,8 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
+    // Prevent CRLF injection in headers
+    $name = str_replace(array("\r", "\n"), array(" ", " "), $name);
+    $email = str_replace(array("\r", "\n"), array(" ", " "), $email);
+
     // Build the email content
-    $email_content = "Name: $name\n";
+    $email_content = "You have received a new contact form submission from your website.\n\n";
+    $email_content .= "Name: $name\n";
     $email_content .= "Email: $email\n";
     if (!empty($phone)) {
         $email_content .= "Phone: $phone\n";
@@ -29,14 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content .= "Message:\n$message\n";
 
     // Build the email headers
-    // It's best to send FROM a domain-associated email to prevent it from going to spam
-    // The Reply-To header ensures that if you reply to the email, it goes to the user
     $email_headers = "From: Griland Website Contact <info@grilandeg.com>\r\n";
     $email_headers .= "Reply-To: $name <$email>\r\n";
+    $email_headers .= "MIME-Version: 1.0\r\n";
+    $email_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     $email_headers .= "X-Mailer: PHP/".phpversion();
 
-    // Send the email
-    if (mail($to, $subject, $email_content, $email_headers)) {
+    // Send the email with the -f parameter (crucial for Hostinger delivery)
+    if (mail($to, $subject, $email_content, $email_headers, "-finfo@grilandeg.com")) {
         // Success: Redirect back or to the _next url
         header("Location: $next");
         exit;
