@@ -8,6 +8,8 @@ on:
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repository
@@ -20,12 +22,12 @@ jobs:
           [ -n "${{ secrets.FTP_PASSWORD }}" ] && echo "FTP_PASSWORD ok" || (echo "FTP_PASSWORD missing" && exit 1)
 
       - name: Deploy website to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
           security: loose
           timeout: 300000
